@@ -63,7 +63,7 @@ export async function Hero() {
           ))}
         </div>
 
-        <Carousel
+        {/* <Carousel
           opts={{
             align: 'start',
           }}
@@ -91,7 +91,7 @@ export async function Hero() {
             className="top-auto right-auto bottom-3 left-1/2 h-9 w-9 translate-x-[25%] translate-y-0 border-white/35 bg-black/50 text-white hover:bg-black/70 sm:bottom-4"
             aria-label="Next featured project"
           />
-        </Carousel>
+        </Carousel> */}
       </section>
     </div>
   );
