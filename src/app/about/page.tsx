@@ -19,7 +19,7 @@ export default function AboutPage() {
         <div className="bigger-container">
           <div className="relative h-[335px] w-full overflow-hidden md:h-[450px] lg:h-[900px]">
             <Image
-              src="/images/torekull/projects/walthon-1.jpg"
+              src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/walthon-1.jpg"
               alt="TOREKULL studio"
               fill
               className="object-cover object-center"

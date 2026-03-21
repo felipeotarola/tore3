@@ -6,10 +6,6 @@ import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
   project: EnrichedProject;
-  /**
-   * Whether to show the project name below the image
-   * @default true
-   */
   showName?: boolean;
   className?: string;
 }
@@ -29,15 +25,12 @@ export function ProjectCard({
     hideLogoOverlay,
   } = project;
   const primaryImage = images[0] ?? {
-    src: '/images/torekull/projects/3sixty-1.jpg',
+    src: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/3sixty-1.jpg',
     alt: `${name} primary image`,
   };
 
   return (
-    <Link
-      href={`/projects/${slug}`}
-      className={cn('group flex flex-col items-start gap-4')}
-    >
+    <Link href={`/projects/${slug}`} className={cn('group flex flex-col items-start gap-4')}>
       <div className={cn('relative h-full w-full overflow-hidden', className)}>
         <Image
           src={primaryImage.src}
@@ -51,18 +44,10 @@ export function ProjectCard({
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           priority
         />
-        {/* Hover overlay */}
         <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/3" />
-        {/* Project logo overlay */}
         {!hideLogoOverlay && Logo && (
           <div className="absolute inset-0 flex items-center justify-center transition-all delay-50 duration-1000 ease-out group-hover:scale-80">
-            <Logo
-              className={cn(
-                'flex h-24 text-white',
-                logoClassName, // Custom logo classes from MDX
-              )}
-              wordmarkClassName="hidden"
-            />
+            <Logo className={cn('flex h-24 text-white', logoClassName)} wordmarkClassName="hidden" />
           </div>
         )}
       </div>
@@ -70,3 +55,4 @@ export function ProjectCard({
     </Link>
   );
 }
+

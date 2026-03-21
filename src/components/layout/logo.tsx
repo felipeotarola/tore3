@@ -7,7 +7,7 @@ const Logo = ({ className }: { className?: string }) => {
   return (
     <Link href="/" aria-label="TOREKULL">
       <Image
-        src="/images/torekull/brand/Torekull_logo_new2.png"
+        src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/Torekull_logo_new2.png"
         alt="TOREKULL"
         width={328}
         height={80}

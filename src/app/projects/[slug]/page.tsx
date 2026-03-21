@@ -82,7 +82,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   const images = frontmatter.images ?? [];
   const heroImage = images[0] ?? {
-    src: '/images/torekull/projects/3sixty-1.jpg',
+    src: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/3sixty-1.jpg',
     alt: `${frontmatter.name} hero image`,
   };
   const galleryImages = images.slice(1);
@@ -125,3 +125,4 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     </>
   );
 }
+

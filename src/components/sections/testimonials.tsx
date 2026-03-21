@@ -10,28 +10,32 @@ const testimonials = [
       'TOREKULL translated our brief into a complete interior concept that performs well in daily operation and still feels distinctive.',
     author: 'Hospitality Client',
     role: 'Stockholm Restaurant Group',
-    image: '/images/torekull/projects/moyagi-1.jpg',
+    image:
+      'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/moyagi-1.jpg',
   },
   {
     quote:
       'The process was clear from concept to delivery. Every decision was purposeful and grounded in function.',
     author: 'Commercial Client',
     role: 'Office Development Partner',
-    image: '/images/torekull/projects/walthon-1.jpg',
+    image:
+      'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/walthon-1.jpg',
   },
   {
     quote:
       'TOREKULL balanced atmosphere, flow, and detailing with confidence. The result feels crafted and operationally strong.',
     author: 'Bar Operator',
     role: 'Central Stockholm',
-    image: '/images/torekull/projects/3sixty-1.jpg',
+    image:
+      'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/3sixty-1.jpg',
   },
   {
     quote:
       'Cross-cultural references were handled with precision. The interior language feels international and rooted at the same time.',
     author: 'International Client',
     role: 'London Hospitality Project',
-    image: '/images/torekull/projects/moyagi-2.jpg',
+    image:
+      'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/moyagi-2.jpg',
   },
 ];
 

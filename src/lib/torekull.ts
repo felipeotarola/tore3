@@ -1,5 +1,7 @@
 import { ProjectCategory } from '@/lib/types';
 
+const BLOB_ORIGIN = 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com';
+
 export const TOREKULL = {
   name: 'TOREKULL',
   legalName: 'TOREKULL Interior Architecture and Design & Partners AB',
@@ -128,43 +130,43 @@ export const SERVICES = [
 export const PRESS_ITEMS = [
   {
     title: 'Modern Interior 2024 - Issue 4',
-    image: '/images/torekull/press/press-modern-interior-2024-4.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-modern-interior-2024-4.jpg`,
   },
   {
     title: 'International Property Awards 2022',
-    image: '/images/torekull/press/press-ipa-2022-p114.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-ipa-2022-p114.jpg`,
   },
   {
     title: "World's Best Interior Design 2022-2023",
-    image: '/images/torekull/press/press-worlds-best-2022-2023.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-worlds-best-2022-2023.jpg`,
   },
   {
     title: 'Modern Interior 2024 - Issue 3',
-    image: '/images/torekull/press/press-modern-interior-2024-3.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-modern-interior-2024-3.jpg`,
   },
   {
     title: 'The World of Hospitality 2024',
-    image: '/images/torekull/press/press-hospitality-2024-p1.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-hospitality-2024-p1.jpg`,
   },
   {
     title: 'The World of Hospitality 2024 - p.28',
-    image: '/images/torekull/press/press-hospitality-2024-p2.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-hospitality-2024-p2.jpg`,
   },
   {
     title: "World's Best Interior Design 2021-2022",
-    image: '/images/torekull/press/press-worlds-best-2021-2022-ipa.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-worlds-best-2021-2022-ipa.jpg`,
   },
   {
     title: 'Property and Travel 2022 - Issue 3',
-    image: '/images/torekull/press/press-property-travel-3.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-property-travel-3.jpg`,
   },
   {
     title: 'Aftonbladet 2022',
-    image: '/images/torekull/press/press-aftonbladet-2022.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-aftonbladet-2022.jpg`,
   },
   {
     title: 'Nojesguiden',
-    image: '/images/torekull/press/press-nojesguiden.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/press/press-nojesguiden.jpg`,
   },
 ] as const;
 
@@ -172,22 +174,22 @@ export const AWARDS = [
   {
     title: 'European Property Awards',
     year: '2021-2022',
-    image: '/images/torekull/awards/award-eu-2021-1.png',
+    image: `${BLOB_ORIGIN}/images/torekull/awards/award-eu-2021-1.png`,
   },
   {
     title: 'European Property Awards',
     year: '2021-2022',
-    image: '/images/torekull/awards/award-eu-2021-2.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/awards/award-eu-2021-2.jpg`,
   },
   {
     title: 'European Property Awards',
     year: '2022-2023',
-    image: '/images/torekull/awards/award-eu-2022-1.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/awards/award-eu-2022-1.jpg`,
   },
   {
     title: 'European Property Awards',
     year: '2022-2023',
-    image: '/images/torekull/awards/award-eu-2022-2.jpg',
+    image: `${BLOB_ORIGIN}/images/torekull/awards/award-eu-2022-2.jpg`,
   },
 ] as const;
 
@@ -230,3 +232,6 @@ export const WHAT_WE_DO_PROCESS = [
       'Hands-on involvement from idea to finished project, on time and within budget.',
   },
 ] as const;
+
+export const BLOB_IMAGE_BASE = `${BLOB_ORIGIN}/images/torekull`;
+

@@ -51,15 +51,25 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/images/torekull/brand/Torekull_logo_new1.png',
+        url: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/Torekull_logo_new1.png',
         type: 'image/png',
       },
-      { url: '/images/torekull/brand/logo_svg.svg', type: 'image/svg+xml' },
+      {
+        url: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/logo_svg.svg',
+        type: 'image/svg+xml',
+      },
     ],
     apple: [
-      { url: '/images/torekull/brand/Torekull_logo_new1.png', sizes: '180x180' },
+      {
+        url: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/Torekull_logo_new1.png',
+        sizes: '180x180',
+      },
     ],
-    shortcut: [{ url: '/images/torekull/brand/Torekull_logo_new1.png' }],
+    shortcut: [
+      {
+        url: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/Torekull_logo_new1.png',
+      },
+    ],
   },
   openGraph: {
     title: 'TOREKULL - Interior Architecture and Design',
@@ -71,7 +81,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/torekull/projects/3sixty-1.jpg',
+        url: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/3sixty-1.jpg',
         width: 1200,
         height: 630,
         alt: 'TOREKULL Interior Architecture',
@@ -83,7 +93,9 @@ export const metadata: Metadata = {
     title: 'TOREKULL - Interior Architecture and Design',
     description:
       'Creative and innovative solutions within interior architecture, furniture and product design.',
-    images: ['/images/torekull/projects/3sixty-1.jpg'],
+    images: [
+      'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/3sixty-1.jpg',
+    ],
   },
 };
 
@@ -117,3 +129,4 @@ export default async function RootLayout({
     </html>
   );
 }
+

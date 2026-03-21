@@ -20,14 +20,14 @@ export const AboutIntro = () => {
         <Image
           width={924}
           height={664}
-          src="/images/torekull/projects/walthon-1.jpg"
+          src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/walthon-1.jpg"
           alt="TOREKULL studio interior detail"
           className="size-full object-cover"
         />
         <Image
           width={924}
           height={664}
-          src="/images/torekull/awards/award-eu-2022-1.jpg"
+          src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/awards/award-eu-2022-1.jpg"
           alt="TOREKULL award recognition"
           className="size-full object-cover"
         />
