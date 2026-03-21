@@ -8,7 +8,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel';
 import { getAllProjectsWithLogos } from '@/lib/projects';
-import { HOME_HERO_SLUGS } from '@/lib/torekull';
+import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
 import { cn } from '@/lib/utils';
 
 export async function Hero() {
@@ -32,7 +32,7 @@ export async function Hero() {
           playsInline
           className="absolute inset-0 z-0 h-full w-full object-cover"
         >
-          <source src="/loopdrone2.mp4" type="video/mp4" />
+          <source src={HERO_VIDEO_URL} type="video/mp4" />
         </video>
         <div className="absolute inset-0 z-[1] bg-black/60" />
 

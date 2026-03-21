@@ -15,6 +15,9 @@ export const TOREKULL = {
   quoteAuthor: 'Micha Commeren',
 } as const;
 
+export const HERO_VIDEO_URL =
+  'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/videos/loopdrone2-1774133795723.mp4';
+
 export const NAV_PRIMARY = [
   { label: 'PROJECTS', href: '/projects' },
   {
@@ -227,4 +230,3 @@ export const WHAT_WE_DO_PROCESS = [
       'Hands-on involvement from idea to finished project, on time and within budget.',
   },
 ] as const;
-
