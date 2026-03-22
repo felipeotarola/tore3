@@ -1,17 +1,50 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 import { AboutFounderHero } from '@/components/sections/about-founder-hero';
 import { Cta } from '@/components/sections/cta';
-import { ABOUT_LANGUAGES, TOREKULL } from '@/lib/torekull';
+import { getAllProjects } from '@/lib/projects';
+import { ABOUT_LANGUAGES, HOME_FEATURED_SLUGS, TOREKULL } from '@/lib/torekull';
 
 export const metadata: Metadata = {
   title: 'About',
 };
 
-export default function AboutPage() {
+const FALLBACK_ABOUT_HERO_IMAGE =
+  'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/3sixty-1.jpg';
+
+export default async function AboutPage() {
+  const projects = await getAllProjects();
+  const featuredProjects = projects.filter((project) =>
+    HOME_FEATURED_SLUGS.includes(project.slug as (typeof HOME_FEATURED_SLUGS)[number]),
+  );
+  const sourceProjects = featuredProjects.length > 0 ? featuredProjects : projects;
+  const imageFromDatabase = sourceProjects
+    .map((project) => ({
+      src: project.images[0]?.src,
+      alt: project.images[0]?.alt || `${project.name} project image`,
+    }))
+    .find((image) => Boolean(image.src));
+
+  const heroImageSrc = imageFromDatabase?.src || FALLBACK_ABOUT_HERO_IMAGE;
+  const heroImageAlt = imageFromDatabase?.alt || 'TOREKULL studio';
+
   return (
     <>
       <AboutFounderHero />
+
+      <section className="section-padding-tight bigger-container">
+        <div className="relative h-[335px] w-full overflow-hidden md:h-[450px] lg:h-[900px]">
+          <Image
+            src={heroImageSrc}
+            alt={heroImageAlt}
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            priority
+          />
+        </div>
+      </section>
 
       <section className="section-padding container grid gap-10 md:grid-cols-2">
         <h2 className="text-4xl">Who We Are</h2>
@@ -64,4 +97,3 @@ export default function AboutPage() {
     </>
   );
 }
-
