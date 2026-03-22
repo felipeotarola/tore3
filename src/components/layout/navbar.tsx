@@ -98,50 +98,53 @@ export const Navbar = ({
               : '-translate-y-full'),
         )}
       >
-        <div className="flex w-full items-center justify-between gap-6">
-          <div className="flex items-center gap-6">
-            <button
-              onClick={handleToggle}
-              className={cn(
-                'relative z-50 h-3.5 w-[18px] cursor-pointer',
-                'after:absolute after:-inset-2 after:content-[""]',
-              )}
-              aria-label="Toggle menu"
-            >
-              <span className="sr-only">Open main menu</span>
-              <div className="hamburger-lines">
-                <span
-                  aria-hidden="true"
-                  className={cn(
-                    'hamburger-line hamburger-line-1',
-                    isMenuOpen && 'menu-open',
-                  )}
-                ></span>
-                <span
-                  aria-hidden="true"
-                  className={cn(
-                    'hamburger-line hamburger-line-2',
-                    isMenuOpen && 'menu-open',
-                  )}
-                ></span>
-                <span
-                  aria-hidden="true"
-                  className={cn(
-                    'hamburger-line hamburger-line-3',
-                    isMenuOpen && 'menu-open',
-                  )}
-                ></span>
-              </div>
-            </button>
-
-            <div onClick={() => setIsMenuOpen(false)}>
-              <Logo
+        <div className="relative flex w-full items-center justify-between gap-6">
+          {/* Hamburger - mobile only */}
+          <button
+            onClick={handleToggle}
+            className={cn(
+              'relative z-50 h-3.5 w-[18px] cursor-pointer md:hidden',
+              'after:absolute after:-inset-2 after:content-[""]',
+            )}
+            aria-label="Toggle menu"
+          >
+            <span className="sr-only">Open main menu</span>
+            <div className="hamburger-lines">
+              <span
+                aria-hidden="true"
                 className={cn(
-                  shouldInvertLogo && 'brightness-0 invert',
-                  'h-7 md:h-8',
+                  'hamburger-line hamburger-line-1',
+                  isMenuOpen && 'menu-open',
                 )}
-              />
+              ></span>
+              <span
+                aria-hidden="true"
+                className={cn(
+                  'hamburger-line hamburger-line-2',
+                  isMenuOpen && 'menu-open',
+                )}
+              ></span>
+              <span
+                aria-hidden="true"
+                className={cn(
+                  'hamburger-line hamburger-line-3',
+                  isMenuOpen && 'menu-open',
+                )}
+              ></span>
             </div>
+          </button>
+
+          {/* Logo - centered on mobile, left-aligned on desktop */}
+          <div
+            className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Logo
+              className={cn(
+                shouldInvertLogo && 'brightness-0 invert',
+                'h-16 md:h-10',
+              )}
+            />
           </div>
 
           <AnimatePresence mode="wait">
