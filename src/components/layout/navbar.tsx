@@ -136,13 +136,12 @@ export const Navbar = ({
 
           {/* Logo - centered on mobile, left-aligned on desktop */}
           <div
-            className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-4 md:static md:translate-x-0 md:translate-y-0 md:mt-0"
             onClick={() => setIsMenuOpen(false)}
           >
             <Logo
               className={cn(
-                shouldInvertLogo && 'brightness-0 invert',
-                'h-16 md:h-10',
+                'h-20 md:h-20',
               )}
             />
           </div>

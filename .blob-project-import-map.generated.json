@@ -1,0 +1,465 @@
+[
+  {
+    "folderName": "3Sixty Skybar",
+    "slug": "3sixty-skybar",
+    "title": "3Sixty Skybar",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/01-foto-anja-callius-u2a1058-editlow-res-jpg.jpg",
+    "galleryCount": 16,
+    "uploaded": [
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1058-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/01-foto-anja-callius-u2a1058-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/01-foto-anja-callius-u2a1058-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1065-Edit-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/02-foto-anja-callius-u2a1065-edit-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/02-foto-anja-callius-u2a1065-edit-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1069-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/03-foto-anja-callius-u2a1069-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/03-foto-anja-callius-u2a1069-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1079-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/04-foto-anja-callius-u2a1079-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/04-foto-anja-callius-u2a1079-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1113-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/05-foto-anja-callius-u2a1113-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/05-foto-anja-callius-u2a1113-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1212-Edit-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/06-foto-anja-callius-u2a1212-edit-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/06-foto-anja-callius-u2a1212-edit-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1230-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/07-foto-anja-callius-u2a1230-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/07-foto-anja-callius-u2a1230-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1241-Edit-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/08-foto-anja-callius-u2a1241-edit-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/08-foto-anja-callius-u2a1241-edit-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1253Low res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/09-foto-anja-callius-u2a1253low-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/09-foto-anja-callius-u2a1253low-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1262-Edit-Edit-Edit-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/10-foto-anja-callius-u2a1262-edit-edit-edit-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/10-foto-anja-callius-u2a1262-edit-edit-edit-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1270-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/11-foto-anja-callius-u2a1270-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/11-foto-anja-callius-u2a1270-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1271-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/12-foto-anja-callius-u2a1271-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/12-foto-anja-callius-u2a1271-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1272-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/13-foto-anja-callius-u2a1272-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/13-foto-anja-callius-u2a1272-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1287-Edit-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/14-foto-anja-callius-u2a1287-edit-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/14-foto-anja-callius-u2a1287-edit-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1294-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/15-foto-anja-callius-u2a1294-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/15-foto-anja-callius-u2a1294-editlow-res-jpg.jpg"
+      },
+      {
+        "localPath": "public/images/3Sixty Skybar/Foto Anja Callius_U2A1334-HDR-Edit-EditLow res.JPG",
+        "blobPath": "images/torekull/projects/imports/3sixty-skybar/16-foto-anja-callius-u2a1334-hdr-edit-editlow-res-jpg.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/16-foto-anja-callius-u2a1334-hdr-edit-editlow-res-jpg.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Biblioteket Live The Bar",
+    "slug": "biblioteket-live-bar",
+    "title": "Biblioteket Live The Bar",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/01-inc-6161.jpg",
+    "galleryCount": 12,
+    "uploaded": [
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/INC_6161.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/01-inc-6161.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/01-inc-6161.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/INC_6181.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/02-inc-6181.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/02-inc-6181.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/INC_6214.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/03-inc-6214.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/03-inc-6214.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/INC_6219.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/04-inc-6219.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/04-inc-6219.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/INC_6256.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/05-inc-6256.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/05-inc-6256.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/Lasse Olsson Photo-16798.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/06-lasse-olsson-photo-16798.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/06-lasse-olsson-photo-16798.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/Lasse Olsson Photo-16799-2.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/07-lasse-olsson-photo-16799-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/07-lasse-olsson-photo-16799-2.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/Lasse Olsson Photo-16799.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/08-lasse-olsson-photo-16799.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/08-lasse-olsson-photo-16799.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/Lasse Olsson Photo-16800.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/09-lasse-olsson-photo-16800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/09-lasse-olsson-photo-16800.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/Lasse Olsson Photo-16801-2.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/10-lasse-olsson-photo-16801-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/10-lasse-olsson-photo-16801-2.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/Lasse Olsson Photo-16802.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/11-lasse-olsson-photo-16802.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/11-lasse-olsson-photo-16802.jpg"
+      },
+      {
+        "localPath": "public/images/Biblioteket Live The Bar/Lasse Olsson Photo-16803.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-bar/12-lasse-olsson-photo-16803.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-bar/12-lasse-olsson-photo-16803.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Botanica",
+    "slug": "la-botanica",
+    "title": "La Botanica",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/01-mgf8213-dec-final.jpg",
+    "galleryCount": 19,
+    "uploaded": [
+      {
+        "localPath": "public/images/Botanica/_MGF8213-DEC-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/01-mgf8213-dec-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/01-mgf8213-dec-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/_MGF8218-DEC-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/02-mgf8218-dec-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/02-mgf8218-dec-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/_MGF8263-DEC-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/03-mgf8263-dec-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/03-mgf8263-dec-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/_MGF8336-DEC-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/04-mgf8336-dec-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/04-mgf8336-dec-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/_MGF8348-DEC-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/05-mgf8348-dec-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/05-mgf8348-dec-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/_MGF8353-DEC-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/06-mgf8353-dec-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/06-mgf8353-dec-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/_MGF8716-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/07-mgf8716-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/07-mgf8716-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica Pres_Sida_1.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/08-botanica-pres-sida-1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/08-botanica-pres-sida-1.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_002-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/09-botanica-002-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/09-botanica-002-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_003-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/10-botanica-003-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/10-botanica-003-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_004-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/11-botanica-004-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/11-botanica-004-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_005-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/12-botanica-005-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/12-botanica-005-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_006-FINAL - kopia.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/13-botanica-006-final-kopia.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/13-botanica-006-final-kopia.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_011-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/14-botanica-011-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/14-botanica-011-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_012-FINAL - kopia.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/15-botanica-012-final-kopia.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/15-botanica-012-final-kopia.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_017-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/16-botanica-017-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/16-botanica-017-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_018-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/17-botanica-018-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/17-botanica-018-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_019-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/18-botanica-019-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/18-botanica-019-final.jpg"
+      },
+      {
+        "localPath": "public/images/Botanica/Botanica_020-FINAL.jpg",
+        "blobPath": "images/torekull/projects/imports/la-botanica/19-botanica-020-final.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/19-botanica-020-final.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Kasai, Stockholm",
+    "slug": "kasai-stockholm",
+    "title": "Kasai Stockholm",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/01-20221007-165941.jpg",
+    "galleryCount": 7,
+    "uploaded": [
+      {
+        "localPath": "public/images/Kasai, Stockholm/20221007_165941.jpg",
+        "blobPath": "images/torekull/projects/imports/kasai-stockholm/01-20221007-165941.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/01-20221007-165941.jpg"
+      },
+      {
+        "localPath": "public/images/Kasai, Stockholm/20221007_173251.jpg",
+        "blobPath": "images/torekull/projects/imports/kasai-stockholm/02-20221007-173251.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/02-20221007-173251.jpg"
+      },
+      {
+        "localPath": "public/images/Kasai, Stockholm/20221007_173300.jpg",
+        "blobPath": "images/torekull/projects/imports/kasai-stockholm/03-20221007-173300.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/03-20221007-173300.jpg"
+      },
+      {
+        "localPath": "public/images/Kasai, Stockholm/20221007_181305.jpg",
+        "blobPath": "images/torekull/projects/imports/kasai-stockholm/04-20221007-181305.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/04-20221007-181305.jpg"
+      },
+      {
+        "localPath": "public/images/Kasai, Stockholm/20221007_181531.jpg",
+        "blobPath": "images/torekull/projects/imports/kasai-stockholm/05-20221007-181531.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/05-20221007-181531.jpg"
+      },
+      {
+        "localPath": "public/images/Kasai, Stockholm/20221007_181616.jpg",
+        "blobPath": "images/torekull/projects/imports/kasai-stockholm/06-20221007-181616.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/06-20221007-181616.jpg"
+      },
+      {
+        "localPath": "public/images/Kasai, Stockholm/IMG-20221026-WA0001.jpg",
+        "blobPath": "images/torekull/projects/imports/kasai-stockholm/07-img-20221026-wa0001.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/07-img-20221026-wa0001.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Moyagi London",
+    "slug": "moyagi-london",
+    "title": "MOYAGI - London",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/01-img-20240316-wa0003.jpg",
+    "galleryCount": 10,
+    "uploaded": [
+      {
+        "localPath": "public/images/Moyagi London/IMG-20240316-WA0003.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/01-img-20240316-wa0003.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/01-img-20240316-wa0003.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi London/IMG-20240316-WA0007.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/02-img-20240316-wa0007.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/02-img-20240316-wa0007.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi London/IMG-20240316-WA0008.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/03-img-20240316-wa0008.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/03-img-20240316-wa0008.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi London/IMG-20240316-WA0010.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/04-img-20240316-wa0010.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/04-img-20240316-wa0010.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi London/IMG-20240316-WA0011.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/05-img-20240316-wa0011.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/05-img-20240316-wa0011.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi London/L1050477.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/06-l1050477.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/06-l1050477.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi London/L1060779.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/07-l1060779.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/07-l1060779.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi London/L1060780.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/08-l1060780.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/08-l1060780.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi London/L1060784.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/09-l1060784.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/09-l1060784.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi London/Moyagi_Karaoke_Corridor.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-london/10-moyagi-karaoke-corridor.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/10-moyagi-karaoke-corridor.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Moyagi Malmö",
+    "slug": "moyagi-malmo",
+    "title": "Moyagi Malmo",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/01-img-20230829-wa0000.jpg",
+    "galleryCount": 13,
+    "uploaded": [
+      {
+        "localPath": "public/images/Moyagi Malmö/IMG-20230829-WA0000.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/01-img-20230829-wa0000.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/01-img-20230829-wa0000.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/IMG-20230829-WA0005.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/02-img-20230829-wa0005.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/02-img-20230829-wa0005.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-10.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/03-torekull-interior-architecture-10.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/03-torekull-interior-architecture-10.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-11.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/04-torekull-interior-architecture-11.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/04-torekull-interior-architecture-11.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-12.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/05-torekull-interior-architecture-12.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/05-torekull-interior-architecture-12.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-16.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/06-torekull-interior-architecture-16.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/06-torekull-interior-architecture-16.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-17.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/07-torekull-interior-architecture-17.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/07-torekull-interior-architecture-17.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-2.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/08-torekull-interior-architecture-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/08-torekull-interior-architecture-2.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-21.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/09-torekull-interior-architecture-21.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/09-torekull-interior-architecture-21.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-26.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/10-torekull-interior-architecture-26.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/10-torekull-interior-architecture-26.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-7.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/11-torekull-interior-architecture-7.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/11-torekull-interior-architecture-7.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-8.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/12-torekull-interior-architecture-8.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/12-torekull-interior-architecture-8.jpg"
+      },
+      {
+        "localPath": "public/images/Moyagi Malmö/Torekull Interior Architecture-9.jpg",
+        "blobPath": "images/torekull/projects/imports/moyagi-malmo/13-torekull-interior-architecture-9.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-malmo/13-torekull-interior-architecture-9.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Walthon nytt kontor",
+    "slug": "walthon-advokater-office",
+    "title": "Walthon Advokater Office",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/walthon-advokater-office/01-screenshot-20221117-223319-instagram.jpg",
+    "galleryCount": 3,
+    "uploaded": [
+      {
+        "localPath": "public/images/Walthon nytt kontor/Screenshot_20221117_223319_Instagram.jpg",
+        "blobPath": "images/torekull/projects/imports/walthon-advokater-office/01-screenshot-20221117-223319-instagram.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/walthon-advokater-office/01-screenshot-20221117-223319-instagram.jpg"
+      },
+      {
+        "localPath": "public/images/Walthon nytt kontor/Screenshot_20221117_223330_Instagram.jpg",
+        "blobPath": "images/torekull/projects/imports/walthon-advokater-office/02-screenshot-20221117-223330-instagram.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/walthon-advokater-office/02-screenshot-20221117-223330-instagram.jpg"
+      },
+      {
+        "localPath": "public/images/Walthon nytt kontor/Screenshot_20221124_120521_Instagram.jpg",
+        "blobPath": "images/torekull/projects/imports/walthon-advokater-office/03-screenshot-20221124-120521-instagram.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/walthon-advokater-office/03-screenshot-20221124-120521-instagram.jpg"
+      }
+    ]
+  }
+]

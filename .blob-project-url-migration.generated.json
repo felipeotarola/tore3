@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "hallwylska-bar",
+    "before": [
+      "https://lenelhluvepajmuueard.supabase.co/storage/v1/object/public/site-media/projects/hallwylska-1.jpg",
+      "https://lenelhluvepajmuueard.supabase.co/storage/v1/object/public/site-media/projects/hallwylska-2.jpg",
+      "https://lenelhluvepajmuueard.supabase.co/storage/v1/object/public/site-media/projects/hallwylska-3.jpg"
+    ],
+    "after": [
+      "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/migrated/hallwylska-bar/01-hallwylska-1.jpg",
+      "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/migrated/hallwylska-bar/02-hallwylska-2.jpg",
+      "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/migrated/hallwylska-bar/03-hallwylska-3.jpg"
+    ]
+  },
+  {
+    "slug": "rose-club",
+    "before": [
+      "https://lenelhluvepajmuueard.supabase.co/storage/v1/object/public/site-media/projects/rose-1.jpg",
+      "https://lenelhluvepajmuueard.supabase.co/storage/v1/object/public/site-media/projects/rose-2.jpg",
+      "https://lenelhluvepajmuueard.supabase.co/storage/v1/object/public/site-media/projects/rose-3.jpg"
+    ],
+    "after": [
+      "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/migrated/rose-club/01-rose-1.jpg",
+      "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/migrated/rose-club/02-rose-2.jpg",
+      "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/migrated/rose-club/03-rose-3.jpg"
+    ]
+  }
+]

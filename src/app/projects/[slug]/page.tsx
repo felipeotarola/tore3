@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { compileMDX } from 'next-mdx-remote/rsc';
 
 import { Cta } from '@/components/sections/cta';
 import { Process } from '@/components/sections/process';
@@ -14,7 +13,6 @@ import {
   getProjectBySlug,
   getProjectSlugs,
 } from '@/lib/projects';
-import { ProjectFrontmatter } from '@/lib/types';
 
 interface ProjectPageProps {
   params: Promise<{
@@ -25,7 +23,7 @@ interface ProjectPageProps {
 export async function generateStaticParams() {
   const slugs = await getProjectSlugs();
   return slugs.map((slug) => ({
-    slug: slug.replace(/\.mdx$/, ''),
+    slug,
   }));
 }
 
@@ -39,10 +37,7 @@ export async function generateMetadata({
     return {};
   }
 
-  const { frontmatter } = await compileMDX<ProjectFrontmatter>({
-    source: project.content,
-    options: { parseFrontmatter: true },
-  });
+  const { frontmatter } = project;
 
   return {
     title: frontmatter.name,
@@ -70,10 +65,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     return notFound();
   }
 
-  const { frontmatter } = await compileMDX<ProjectFrontmatter>({
-    source: project.content,
-    options: { parseFrontmatter: true },
-  });
+  const { frontmatter } = project;
 
   const allProjects = await getAllProjects();
   const currentIndex = allProjects.findIndex((item) => item.slug === slug);
@@ -125,4 +117,3 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     </>
   );
 }
-

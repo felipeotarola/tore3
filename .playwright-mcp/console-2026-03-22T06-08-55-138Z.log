@@ -1,0 +1,566 @@
+[ 1547895ms] [ERROR] ./src/components/sections/case-studies.tsx:2:1
+Module not found: Can't resolve '@/lib/projects'
+  1 | import { CaseStudyCarousel } from '@/components/sections/case-study-carousel';
+> 2 | import { getAllProjects } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { HOME_FEATURED_SLUGS } from '@/lib/torekull';
+  4 |
+  5 | export const CaseStudies = async () => {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/case-studies.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1547895ms] [ERROR] ./src/components/sections/hero.tsx:12:1
+Module not found: Can't resolve '@/lib/projects'
+  10 |   CarouselPrevious,
+  11 | } from '@/components/ui/carousel';
+> 12 | import { getAllProjectsWithLogos } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
+  14 | import { cn } from '@/lib/utils';
+  15 |
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/hero.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1547895ms] [ERROR] ./src/app/projects/[slug]/page.tsx:11:1
+Module not found: Can't resolve '@/lib/projects'
+   9 | import { ProjectOverview } from '@/components/sections/project-overview';
+  10 | import { Button } from '@/components/ui/button';
+> 11 | import {
+     | ^^^^^^^^
+> 12 |   getAllProjects,
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   getProjectBySlug,
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   getProjectSlugs,
+     | ^^^^^^^^^^^^^^^^^
+> 15 | } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 |
+  17 | interface ProjectPageProps {
+  18 |   params: Promise<{
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1547895ms] [ERROR] ./src/app/projects/page.tsx:6:1
+Module not found: Can't resolve '@/lib/projects'
+  4 | import { ScrollArea } from '@/components/ui/scroll-area';
+  5 | import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+> 6 | import { getAllProjectsWithLogos } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { PROJECT_FILTERS } from '@/lib/torekull';
+  8 |
+  9 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1547966ms] [ERROR] ./src/components/sections/case-studies.tsx:2:1
+Module not found: Can't resolve '@/lib/projects'
+  1 | import { CaseStudyCarousel } from '@/components/sections/case-study-carousel';
+> 2 | import { getAllProjects } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { HOME_FEATURED_SLUGS } from '@/lib/torekull';
+  4 |
+  5 | export const CaseStudies = async () => {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/case-studies.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1547966ms] [ERROR] ./src/components/sections/hero.tsx:12:1
+Module not found: Can't resolve '@/lib/projects'
+  10 |   CarouselPrevious,
+  11 | } from '@/components/ui/carousel';
+> 12 | import { getAllProjectsWithLogos } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
+  14 | import { cn } from '@/lib/utils';
+  15 |
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/hero.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1547967ms] [ERROR] ./src/app/projects/[slug]/page.tsx:11:1
+Module not found: Can't resolve '@/lib/projects'
+   9 | import { ProjectOverview } from '@/components/sections/project-overview';
+  10 | import { Button } from '@/components/ui/button';
+> 11 | import {
+     | ^^^^^^^^
+> 12 |   getAllProjects,
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   getProjectBySlug,
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   getProjectSlugs,
+     | ^^^^^^^^^^^^^^^^^
+> 15 | } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 |
+  17 | interface ProjectPageProps {
+  18 |   params: Promise<{
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1547967ms] [ERROR] ./src/app/projects/page.tsx:6:1
+Module not found: Can't resolve '@/lib/projects'
+  4 | import { ScrollArea } from '@/components/ui/scroll-area';
+  5 | import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+> 6 | import { getAllProjectsWithLogos } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { PROJECT_FILTERS } from '@/lib/torekull';
+  8 |
+  9 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591420ms] [ERROR] ./src/components/sections/case-studies.tsx:2:1
+Module not found: Can't resolve '@/lib/projects'
+  1 | import { CaseStudyCarousel } from '@/components/sections/case-study-carousel';
+> 2 | import { getAllProjects } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { HOME_FEATURED_SLUGS } from '@/lib/torekull';
+  4 |
+  5 | export const CaseStudies = async () => {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/case-studies.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591420ms] [ERROR] ./src/components/sections/hero.tsx:12:1
+Module not found: Can't resolve '@/lib/projects'
+  10 |   CarouselPrevious,
+  11 | } from '@/components/ui/carousel';
+> 12 | import { getAllProjectsWithLogos } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
+  14 | import { cn } from '@/lib/utils';
+  15 |
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/hero.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591420ms] [ERROR] ./src/app/projects/[slug]/page.tsx:11:1
+Module not found: Can't resolve '@/lib/projects'
+   9 | import { ProjectOverview } from '@/components/sections/project-overview';
+  10 | import { Button } from '@/components/ui/button';
+> 11 | import {
+     | ^^^^^^^^
+> 12 |   getAllProjects,
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   getProjectBySlug,
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   getProjectSlugs,
+     | ^^^^^^^^^^^^^^^^^
+> 15 | } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 |
+  17 | interface ProjectPageProps {
+  18 |   params: Promise<{
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591420ms] [ERROR] ./src/app/projects/page.tsx:6:1
+Module not found: Can't resolve '@/lib/projects'
+  4 | import { ScrollArea } from '@/components/ui/scroll-area';
+  5 | import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+> 6 | import { getAllProjectsWithLogos } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { PROJECT_FILTERS } from '@/lib/torekull';
+  8 |
+  9 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591514ms] [ERROR] ./src/components/sections/case-studies.tsx:2:1
+Module not found: Can't resolve '@/lib/projects'
+  1 | import { CaseStudyCarousel } from '@/components/sections/case-study-carousel';
+> 2 | import { getAllProjects } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { HOME_FEATURED_SLUGS } from '@/lib/torekull';
+  4 |
+  5 | export const CaseStudies = async () => {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/case-studies.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591515ms] [ERROR] ./src/components/sections/hero.tsx:12:1
+Module not found: Can't resolve '@/lib/projects'
+  10 |   CarouselPrevious,
+  11 | } from '@/components/ui/carousel';
+> 12 | import { getAllProjectsWithLogos } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
+  14 | import { cn } from '@/lib/utils';
+  15 |
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/hero.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591515ms] [ERROR] ./src/app/projects/[slug]/page.tsx:11:1
+Module not found: Can't resolve '@/lib/projects'
+   9 | import { ProjectOverview } from '@/components/sections/project-overview';
+  10 | import { Button } from '@/components/ui/button';
+> 11 | import {
+     | ^^^^^^^^
+> 12 |   getAllProjects,
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   getProjectBySlug,
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   getProjectSlugs,
+     | ^^^^^^^^^^^^^^^^^
+> 15 | } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 |
+  17 | interface ProjectPageProps {
+  18 |   params: Promise<{
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591515ms] [ERROR] ./src/app/projects/page.tsx:6:1
+Module not found: Can't resolve '@/lib/projects'
+  4 | import { ScrollArea } from '@/components/ui/scroll-area';
+  5 | import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+> 6 | import { getAllProjectsWithLogos } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { PROJECT_FILTERS } from '@/lib/torekull';
+  8 |
+  9 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591517ms] [ERROR] ./src/components/sections/case-studies.tsx:2:1
+Module not found: Can't resolve '@/lib/projects'
+  1 | import { CaseStudyCarousel } from '@/components/sections/case-study-carousel';
+> 2 | import { getAllProjects } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { HOME_FEATURED_SLUGS } from '@/lib/torekull';
+  4 |
+  5 | export const CaseStudies = async () => {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/case-studies.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591517ms] [ERROR] ./src/components/sections/hero.tsx:12:1
+Module not found: Can't resolve '@/lib/projects'
+  10 |   CarouselPrevious,
+  11 | } from '@/components/ui/carousel';
+> 12 | import { getAllProjectsWithLogos } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
+  14 | import { cn } from '@/lib/utils';
+  15 |
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/hero.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591517ms] [ERROR] ./src/app/projects/[slug]/page.tsx:11:1
+Module not found: Can't resolve '@/lib/projects'
+   9 | import { ProjectOverview } from '@/components/sections/project-overview';
+  10 | import { Button } from '@/components/ui/button';
+> 11 | import {
+     | ^^^^^^^^
+> 12 |   getAllProjects,
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   getProjectBySlug,
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   getProjectSlugs,
+     | ^^^^^^^^^^^^^^^^^
+> 15 | } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 |
+  17 | interface ProjectPageProps {
+  18 |   params: Promise<{
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591517ms] [ERROR] ./src/app/projects/page.tsx:6:1
+Module not found: Can't resolve '@/lib/projects'
+  4 | import { ScrollArea } from '@/components/ui/scroll-area';
+  5 | import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+> 6 | import { getAllProjectsWithLogos } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { PROJECT_FILTERS } from '@/lib/torekull';
+  8 |
+  9 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591566ms] [ERROR] ./src/components/sections/case-studies.tsx:2:1
+Module not found: Can't resolve '@/lib/projects'
+  1 | import { CaseStudyCarousel } from '@/components/sections/case-study-carousel';
+> 2 | import { getAllProjects } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { HOME_FEATURED_SLUGS } from '@/lib/torekull';
+  4 |
+  5 | export const CaseStudies = async () => {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/case-studies.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591567ms] [ERROR] ./src/components/sections/hero.tsx:12:1
+Module not found: Can't resolve '@/lib/projects'
+  10 |   CarouselPrevious,
+  11 | } from '@/components/ui/carousel';
+> 12 | import { getAllProjectsWithLogos } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
+  14 | import { cn } from '@/lib/utils';
+  15 |
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/hero.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591567ms] [ERROR] ./src/app/projects/[slug]/page.tsx:11:1
+Module not found: Can't resolve '@/lib/projects'
+   9 | import { ProjectOverview } from '@/components/sections/project-overview';
+  10 | import { Button } from '@/components/ui/button';
+> 11 | import {
+     | ^^^^^^^^
+> 12 |   getAllProjects,
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   getProjectBySlug,
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   getProjectSlugs,
+     | ^^^^^^^^^^^^^^^^^
+> 15 | } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 |
+  17 | interface ProjectPageProps {
+  18 |   params: Promise<{
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591567ms] [ERROR] ./src/app/projects/page.tsx:6:1
+Module not found: Can't resolve '@/lib/projects'
+  4 | import { ScrollArea } from '@/components/ui/scroll-area';
+  5 | import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+> 6 | import { getAllProjectsWithLogos } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { PROJECT_FILTERS } from '@/lib/torekull';
+  8 |
+  9 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591569ms] [ERROR] ./src/components/sections/case-studies.tsx:2:1
+Module not found: Can't resolve '@/lib/projects'
+  1 | import { CaseStudyCarousel } from '@/components/sections/case-study-carousel';
+> 2 | import { getAllProjects } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { HOME_FEATURED_SLUGS } from '@/lib/torekull';
+  4 |
+  5 | export const CaseStudies = async () => {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/case-studies.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591569ms] [ERROR] ./src/components/sections/hero.tsx:12:1
+Module not found: Can't resolve '@/lib/projects'
+  10 |   CarouselPrevious,
+  11 | } from '@/components/ui/carousel';
+> 12 | import { getAllProjectsWithLogos } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
+  14 | import { cn } from '@/lib/utils';
+  15 |
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/hero.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591570ms] [ERROR] ./src/app/projects/[slug]/page.tsx:11:1
+Module not found: Can't resolve '@/lib/projects'
+   9 | import { ProjectOverview } from '@/components/sections/project-overview';
+  10 | import { Button } from '@/components/ui/button';
+> 11 | import {
+     | ^^^^^^^^
+> 12 |   getAllProjects,
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   getProjectBySlug,
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   getProjectSlugs,
+     | ^^^^^^^^^^^^^^^^^
+> 15 | } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 |
+  17 | interface ProjectPageProps {
+  18 |   params: Promise<{
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591570ms] [ERROR] ./src/app/projects/page.tsx:6:1
+Module not found: Can't resolve '@/lib/projects'
+  4 | import { ScrollArea } from '@/components/ui/scroll-area';
+  5 | import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+> 6 | import { getAllProjectsWithLogos } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { PROJECT_FILTERS } from '@/lib/torekull';
+  8 |
+  9 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591605ms] [ERROR] ./src/components/sections/case-studies.tsx:2:1
+Module not found: Can't resolve '@/lib/projects'
+  1 | import { CaseStudyCarousel } from '@/components/sections/case-study-carousel';
+> 2 | import { getAllProjects } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import { HOME_FEATURED_SLUGS } from '@/lib/torekull';
+  4 |
+  5 | export const CaseStudies = async () => {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/case-studies.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591605ms] [ERROR] ./src/components/sections/hero.tsx:12:1
+Module not found: Can't resolve '@/lib/projects'
+  10 |   CarouselPrevious,
+  11 | } from '@/components/ui/carousel';
+> 12 | import { getAllProjectsWithLogos } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  13 | import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
+  14 | import { cn } from '@/lib/utils';
+  15 |
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/sections/hero.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591605ms] [ERROR] ./src/app/projects/[slug]/page.tsx:11:1
+Module not found: Can't resolve '@/lib/projects'
+   9 | import { ProjectOverview } from '@/components/sections/project-overview';
+  10 | import { Button } from '@/components/ui/button';
+> 11 | import {
+     | ^^^^^^^^
+> 12 |   getAllProjects,
+     | ^^^^^^^^^^^^^^^^^
+> 13 |   getProjectBySlug,
+     | ^^^^^^^^^^^^^^^^^
+> 14 |   getProjectSlugs,
+     | ^^^^^^^^^^^^^^^^^
+> 15 | } from '@/lib/projects';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^
+  16 |
+  17 | interface ProjectPageProps {
+  18 |   params: Promise<{
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 1591605ms] [ERROR] ./src/app/projects/page.tsx:6:1
+Module not found: Can't resolve '@/lib/projects'
+  4 | import { ScrollArea } from '@/components/ui/scroll-area';
+  5 | import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+> 6 | import { getAllProjectsWithLogos } from '@/lib/projects';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { PROJECT_FILTERS } from '@/lib/torekull';
+  8 |
+  9 | export const metadata: Metadata = {
+
+Import map: aliased to relative './src/lib/projects' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 2998700ms] [WARNING] Image with src "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/01-foto-anja-callius-u2a1058-editlow-res-jpg.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 2998702ms] [WARNING] Image with src "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/01-img-20240316-wa0003.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 2998704ms] [WARNING] Image with src "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/01-mgf8213-dec-final.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 2998707ms] [WARNING] Image with src "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/01-20221007-165941.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 4092032ms] [WARNING] Image with src "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/3sixty-skybar/02-foto-anja-callius-u2a1065-edit-editlow-res-jpg.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 4092034ms] [WARNING] Image with src "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/moyagi-london/06-l1050477.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 4092036ms] [WARNING] Image with src "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/08-botanica-pres-sida-1.jpg" is using quality "90" which is not configured in images.qualities [75]. Please update your config to [75, 90].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297

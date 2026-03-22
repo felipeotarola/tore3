@@ -1,0 +1,35 @@
+{
+  "servers": {
+    "supabase": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--access-token",
+        "sbp_7a7817df4ddf998218202dcf9f65ae23171263f8"
+      ]
+    },
+     "linear": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/mcp"]
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": ["shadcn@latest", "mcp"]
+    },
+     "firecrawl-mcp": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "fc-cf02bfada4d54d6c809050825e1d3079"
+      }
+    },
+        "playwright": {
+      "command": "pnpm",
+      "args": [
+        "dlx",
+        "@playwright/mcp@latest"
+      ]
+    },
+  }
+}

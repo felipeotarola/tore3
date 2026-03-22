@@ -17,20 +17,24 @@ export const AboutIntro = () => {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <Image
-          width={924}
-          height={664}
-          src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/walthon-1.jpg"
-          alt="TOREKULL studio interior detail"
-          className="size-full object-cover"
-        />
-        <Image
-          width={924}
-          height={664}
-          src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/awards/award-eu-2022-1.jpg"
-          alt="TOREKULL award recognition"
-          className="size-full object-cover"
-        />
+        <div className="relative h-[300px] md:h-[400px] lg:h-[500px]">
+          <Image
+            fill
+            src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/09-botanica-002-final.jpg"
+            alt="TOREKULL interior design - Botanica project"
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
+        <div className="relative h-[300px] md:h-[400px] lg:h-[500px]">
+          <Image
+            fill
+            src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/03-20221007-173300.jpg"
+            alt="TOREKULL interior design - Kasai Stockholm"
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
       </div>
 
       <div className="container grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -44,4 +48,3 @@ export const AboutIntro = () => {
     </section>
   );
 };
-

@@ -20,16 +20,14 @@ const Footer = () => {
       <footer className="bg-foreground text-background relative m-5 mt-0! overflow-hidden py-12 md:m-6 md:py-14">
         <div className="bigger-container space-y-12">
           <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1fr]">
-            <div className="space-y-6">
-              <Logo className="h-8 brightness-0 invert" />
-              <p className="text-sm leading-relaxed">{TOREKULL.legalName}</p>
+            <div className="space-y-8">
+              <Logo className="h-24" />
               <p className="text-background/70 text-sm italic">
                 &quot;{TOREKULL.quote}&quot; - {TOREKULL.quoteAuthor}
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="nav-caps text-xs">Navigation</h3>
               <nav className="flex flex-col gap-2">
                 {footerLinks.map((item) => (
                   <Link key={item.href} href={item.href} className="animated-underline w-fit text-sm">

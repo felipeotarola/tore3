@@ -36,12 +36,13 @@ export function ProjectCard({
           src={primaryImage.src}
           alt={primaryImage.alt}
           fill
+          quality={90}
           className={cn(
             'object-cover transition-all duration-500 ease-out group-hover:scale-110',
             imageClassName,
             !hideLogoOverlay && 'group-hover:blur-[5px]',
           )}
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 1023px) 100vw, 33vw"
           priority
         />
         <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/3" />
@@ -55,4 +56,3 @@ export function ProjectCard({
     </Link>
   );
 }
-
