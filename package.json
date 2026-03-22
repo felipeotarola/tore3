@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
+    "import:press:blob-supabase": "node scripts/import-press-images-to-blob-and-supabase.mjs",
     "import:projects:blob-supabase": "node scripts/import-public-images-to-blob-and-supabase.mjs",
     "migrate:projects:supabase-urls-to-blob": "node scripts/migrate-supabase-project-images-to-blob.mjs"
   },

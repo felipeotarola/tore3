@@ -3,55 +3,13 @@
 import { useEffect, useState } from 'react';
 
 type Phase = 'draw' | 'fill' | 'text' | 'exit' | 'done';
-const SPLASH_KEY = 'splash-shown';
-
-const hasShownSplash = () => {
-  try {
-    return sessionStorage.getItem(SPLASH_KEY) === '1';
-  } catch {
-    return false;
-  }
-};
-
-const markSplashShown = () => {
-  try {
-    sessionStorage.setItem(SPLASH_KEY, '1');
-  } catch {
-    // Ignore storage write failures (private mode, strict browser settings, etc.)
-  }
-};
-
-const shouldSkipSplashFromNavigation = () => {
-  if (typeof window === 'undefined') return false;
-  const entry = performance.getEntriesByType(
-    'navigation',
-  )[0] as PerformanceNavigationTiming | undefined;
-  if (!entry) return false;
-  return entry.type === 'reload' || entry.type === 'back_forward';
-};
 
 const SplashScreen = () => {
-  const [phase, setPhase] = useState<Phase>(() => {
-    if (typeof window === 'undefined') return 'draw';
-    if (shouldSkipSplashFromNavigation()) return 'done';
-    return hasShownSplash() ? 'done' : 'draw';
-  });
+  const [phase, setPhase] = useState<Phase>('draw');
 
   useEffect(() => {
-    if (shouldSkipSplashFromNavigation()) {
-      document.documentElement.removeAttribute('data-splash');
-      markSplashShown();
-      return;
-    }
-
-    if (hasShownSplash()) {
-      document.documentElement.removeAttribute('data-splash');
-      return;
-    }
-
     const finishSplash = () => {
       setPhase('done');
-      markSplashShown();
       document.documentElement.removeAttribute('data-splash');
     };
 

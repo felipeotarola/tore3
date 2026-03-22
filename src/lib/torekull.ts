@@ -156,6 +156,7 @@ export const SERVICES = [
 
 /** Magazine / article tiles; optional `url` opens the publication in a new tab. */
 export type PressItem = {
+  slug: string;
   title: string;
   image: string;
   url?: string;
@@ -163,42 +164,52 @@ export type PressItem = {
 
 export const PRESS_ITEMS: readonly PressItem[] = [
   {
+    slug: 'modern-interior-2024-issue-4',
     title: 'Modern Interior 2024 - Issue 4',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-modern-interior-2024-4.jpg`,
   },
   {
+    slug: 'international-property-awards-2022',
     title: 'International Property Awards 2022',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-ipa-2022-p114.jpg`,
   },
   {
+    slug: 'worlds-best-interior-design-2022-2023',
     title: "World's Best Interior Design 2022-2023",
     image: `${BLOB_ORIGIN}/images/torekull/press/press-worlds-best-2022-2023.jpg`,
   },
   {
+    slug: 'modern-interior-2024-issue-3',
     title: 'Modern Interior 2024 - Issue 3',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-modern-interior-2024-3.jpg`,
   },
   {
+    slug: 'the-world-of-hospitality-2024',
     title: 'The World of Hospitality 2024',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-hospitality-2024-p1.jpg`,
   },
   {
+    slug: 'the-world-of-hospitality-2024-p-28',
     title: 'The World of Hospitality 2024 - p.28',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-hospitality-2024-p2.jpg`,
   },
   {
+    slug: 'worlds-best-interior-design-2021-2022',
     title: "World's Best Interior Design 2021-2022",
     image: `${BLOB_ORIGIN}/images/torekull/press/press-worlds-best-2021-2022-ipa.jpg`,
   },
   {
+    slug: 'property-and-travel-2022-issue-3',
     title: 'Property and Travel 2022 - Issue 3',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-property-travel-3.jpg`,
   },
   {
+    slug: 'aftonbladet-2022',
     title: 'Aftonbladet 2022',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-aftonbladet-2022.jpg`,
   },
   {
+    slug: 'nojesguiden',
     title: 'Nojesguiden',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-nojesguiden.jpg`,
   },

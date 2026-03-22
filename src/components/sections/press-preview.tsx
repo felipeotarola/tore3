@@ -2,9 +2,11 @@ import Link from 'next/link';
 
 import { PressTile } from '@/components/press/press-tile';
 import { Button } from '@/components/ui/button';
-import { PRESS_ITEMS } from '@/lib/torekull';
+import { getPressItems } from '@/lib/press-items';
 
-export const PressPreview = () => {
+export const PressPreview = async () => {
+  const pressItems = await getPressItems();
+
   return (
     <section className="section-padding-tight container space-y-10">
       <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
@@ -18,12 +20,12 @@ export const PressPreview = () => {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {PRESS_ITEMS.slice(0, 6).map((item) => (
+        {pressItems.slice(0, 6).map((item) => (
           <PressTile
-            key={item.title}
+            key={item.slug}
+            slug={item.slug}
             title={item.title}
             image={item.image}
-            href={item.url}
             headingLevel="h3"
           />
         ))}

@@ -1,13 +1,15 @@
 import { Metadata } from 'next';
 
 import { PressTile } from '@/components/press/press-tile';
-import { PRESS_ITEMS } from '@/lib/torekull';
+import { getPressItems } from '@/lib/press-items';
 
 export const metadata: Metadata = {
   title: 'Articles & Magazines',
 };
 
-export default function PressPage() {
+export default async function PressPage() {
+  const pressItems = await getPressItems();
+
   return (
     <section className="hero-padding container space-y-12">
       <div className="space-y-4">
@@ -16,12 +18,12 @@ export default function PressPage() {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {PRESS_ITEMS.map((item) => (
+        {pressItems.map((item) => (
           <PressTile
-            key={item.title}
+            key={item.slug}
+            slug={item.slug}
             title={item.title}
             image={item.image}
-            href={item.url}
             headingLevel="h2"
           />
         ))}

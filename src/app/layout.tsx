@@ -112,13 +112,7 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function () {
-                try {
-                  if (sessionStorage.getItem('splash-shown') !== '1') {
-                    document.documentElement.setAttribute('data-splash', 'pending');
-                  }
-                } catch (_) {
-                  document.documentElement.setAttribute('data-splash', 'pending');
-                }
+                document.documentElement.setAttribute('data-splash', 'pending');
               })();
             `,
           }}

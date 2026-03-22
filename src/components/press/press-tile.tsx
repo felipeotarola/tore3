@@ -9,10 +9,11 @@ import {
 import { cn } from '@/lib/utils';
 
 type PressTileProps = {
+  slug: string;
   title: string;
   image: string;
   headingLevel?: 'h2' | 'h3';
-  /** Publication URL (https). If omitted, links to the Articles & Magazines page. */
+  /** Optional external publication URL for override behavior. */
   href?: string;
 };
 
@@ -21,6 +22,7 @@ function isExternalHref(href: string) {
 }
 
 export function PressTile({
+  slug,
   title,
   image,
   headingLevel = 'h3',
@@ -30,7 +32,7 @@ export function PressTile({
   const [line1, line2] = splitPressTitleForLines(label);
   const Heading = headingLevel;
 
-  const destination = href ?? '/press';
+  const destination = href ?? `/press/${slug}`;
   const external = isExternalHref(destination);
 
   const ariaLabel = external
