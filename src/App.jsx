@@ -1,3 +1,7 @@
+import './App.css'
+
+import { ArrowRight, Menu, X } from 'lucide-react'
+import { animate, stagger } from 'motion'
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import {
@@ -8,18 +12,15 @@ import {
   useLocation,
   useParams,
 } from 'react-router-dom'
-import { animate, stagger } from 'motion'
-import { ArrowRight, Menu, X } from 'lucide-react'
+
 import EditorPanel, { EditorLoginModal } from './components/EditorPanel'
 import {
+  defaultSiteSettings,
   footerNav,
   heroFallbackImage,
   navLinks,
-  defaultSiteSettings,
 } from './content/defaultContent'
 import { useCmsContent } from './hooks/useCmsContent'
-import SplashScreen from './SplashScreen'
-import './App.css'
 
 const prefersReducedMotion = () =>
   typeof window !== 'undefined' &&
@@ -661,14 +662,11 @@ const EditorFab = ({
 }
 
 function App() {
-  const [showSplash, setShowSplash] = useState(true)
   const [editorOpen, setEditorOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const [loginLoading, setLoginLoading] = useState(false)
   const [loginError, setLoginError] = useState('')
   const cms = useCmsContent()
-
-  const handleSplashComplete = useCallback(() => setShowSplash(false), [])
 
   const handleLogin = useCallback(
     async (email, password) => {
@@ -687,7 +685,6 @@ function App() {
 
   return (
     <>
-      {showSplash ? <SplashScreen onComplete={handleSplashComplete} /> : null}
       <BrowserRouter>
         <ScrollToHash />
         <Routes>

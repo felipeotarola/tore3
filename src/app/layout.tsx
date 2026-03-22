@@ -5,7 +5,6 @@ import { Cormorant_Garamond, Inter } from 'next/font/google';
 
 import Footer from '@/components/layout/footer';
 import { Navbar } from '@/components/layout/navbar';
-import SplashScreen from '@/components/layout/splash-screen';
 import { NavigationProvider } from '@/components/providers/navigation-provider';
 import { StyleGlideProvider } from '@/components/providers/styleglide-provider';
 import { ThemeProvider } from '@/components/providers/theme-provider';
@@ -107,17 +106,7 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function () {
-                document.documentElement.setAttribute('data-splash', 'pending');
-              })();
-            `,
-          }}
-        />
-      </head>
+      <head />
       <body
         className={cn(
           'flex min-h-screen flex-col antialiased',
@@ -132,7 +121,6 @@ export default async function RootLayout({
         >
           <NavigationProvider>
             <StyleGlideProvider />
-            <SplashScreen />
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />

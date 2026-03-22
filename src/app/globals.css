@@ -163,14 +163,6 @@
   body {
     @apply bg-background text-foreground font-text font-weight-text;
   }
-  html[data-splash='pending'] nav,
-  html[data-splash='pending'] main,
-  html[data-splash='pending'] footer {
-    opacity: 0;
-  }
-  html[data-splash='pending'] body {
-    background: #ffffff;
-  }
   h1,
   h2,
   h3,
@@ -356,21 +348,6 @@ html.page-transition-back::view-transition-new(root) {
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes splash-force-hide {
-  0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  85% {
-    opacity: 1;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
   }
 }
 
