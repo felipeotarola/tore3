@@ -40,6 +40,14 @@ export interface ProjectFrontmatter {
   description?: string;
   date?: string;
   industry?: string;
+  website?: string;
+  photo?: string;
+  via?: string;
+  awards?: Array<{
+    title: string;
+    year?: string;
+    category?: string;
+  }>;
   collaborators?: string[];
   hideLogoOverlay?: boolean;
   images: ProjectImage[];

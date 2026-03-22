@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { CATEGORY_LABELS } from '@/lib/torekull';
 import { ProjectFrontmatter } from '@/lib/types';
 
@@ -16,6 +18,8 @@ export function ProjectOverview({
   description,
   project,
 }: ProjectOverviewProps) {
+  const website = project.website;
+
   return (
     <section className="section-padding container">
       <div className="grid gap-10 md:grid-cols-2">
@@ -56,6 +60,34 @@ export function ProjectOverview({
           <p className="text-muted-foreground text-lg">Services</p>
           <p className="text-lg">{getCategoryName(project.category)}</p>
         </div>
+
+        {website && (
+          <div className="flex flex-col gap-2">
+            <p className="text-muted-foreground text-lg">Website</p>
+            <Link
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animated-underline text-lg break-all"
+            >
+              {website}
+            </Link>
+          </div>
+        )}
+
+        {project.photo && (
+          <div className="flex flex-col gap-2">
+            <p className="text-muted-foreground text-lg">Photo</p>
+            <p className="text-lg">{project.photo}</p>
+          </div>
+        )}
+
+        {project.via && (
+          <div className="flex flex-col gap-2">
+            <p className="text-muted-foreground text-lg">Via</p>
+            <p className="text-lg">{project.via}</p>
+          </div>
+        )}
       </div>
 
       {project.collaborators && project.collaborators.length > 0 && (
@@ -64,6 +96,21 @@ export function ProjectOverview({
           <ul className="space-y-2 text-lg">
             {project.collaborators.map((entry) => (
               <li key={entry}>{entry}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {project.awards && project.awards.length > 0 && (
+        <div className="mt-12 space-y-3">
+          <p className="text-muted-foreground text-lg">Awards</p>
+          <ul className="space-y-2 text-lg">
+            {project.awards.map((award) => (
+              <li key={`${award.title}-${award.year || ''}`}>
+                {award.title}
+                {award.year ? ` (${award.year})` : ''}
+                {award.category ? ` — ${award.category}` : ''}
+              </li>
             ))}
           </ul>
         </div>

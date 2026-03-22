@@ -1,0 +1,975 @@
+[
+  {
+    "folderName": "Adlon Hotel",
+    "slug": "adlon-hotel",
+    "title": "Adlon Hotel",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/adlon-hotel/01-aldon-hotell-interior-design-architecture-torekull-1.jpg",
+    "galleryCount": 3,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Adlon Hotel/aldon-hotell-interior-design-architecture-torekull-1.jpg",
+        "blobPath": "images/torekull/projects/imports/adlon-hotel/01-aldon-hotell-interior-design-architecture-torekull-1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/adlon-hotel/01-aldon-hotell-interior-design-architecture-torekull-1.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Adlon Hotel/aldon-hotell-interior-design-architecture-torekull-2.jpg",
+        "blobPath": "images/torekull/projects/imports/adlon-hotel/02-aldon-hotell-interior-design-architecture-torekull-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/adlon-hotel/02-aldon-hotell-interior-design-architecture-torekull-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Adlon Hotel/aldon-hotell-interior-design-architecture-torekull-3.jpg",
+        "blobPath": "images/torekull/projects/imports/adlon-hotel/03-aldon-hotell-interior-design-architecture-torekull-3.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/adlon-hotel/03-aldon-hotell-interior-design-architecture-torekull-3.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Alcron Luxury Hotel",
+    "slug": "alcron-luxury-hotel",
+    "title": "Alcron Luxury Hotel",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/alcron-luxury-hotel/01-alcron-hotel-torekull-interior-project-1.jpg",
+    "galleryCount": 4,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Alcron Luxury Hotel/alcron-hotel-torekull-interior-project-1.jpg",
+        "blobPath": "images/torekull/projects/imports/alcron-luxury-hotel/01-alcron-hotel-torekull-interior-project-1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/alcron-luxury-hotel/01-alcron-hotel-torekull-interior-project-1.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Alcron Luxury Hotel/alcron-hotel-torekull-interior-project-2.jpg",
+        "blobPath": "images/torekull/projects/imports/alcron-luxury-hotel/02-alcron-hotel-torekull-interior-project-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/alcron-luxury-hotel/02-alcron-hotel-torekull-interior-project-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Alcron Luxury Hotel/alcron-hotel-torekull-interior-project-3.jpg",
+        "blobPath": "images/torekull/projects/imports/alcron-luxury-hotel/03-alcron-hotel-torekull-interior-project-3.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/alcron-luxury-hotel/03-alcron-hotel-torekull-interior-project-3.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Alcron Luxury Hotel/Torekull-interior-architecure-design-alcron-hotel-O-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/alcron-luxury-hotel/04-torekull-interior-architecure-design-alcron-hotel-o-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/alcron-luxury-hotel/04-torekull-interior-architecure-design-alcron-hotel-o-1000x800.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Beer Café",
+    "slug": "beer-cafe",
+    "title": "Beer Café",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/beer-cafe/01-beercafe-torekull-interior-architecture-design-stockholm-1-1000x800.jpg",
+    "galleryCount": 6,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Beer Café/BeerCafe_Torekull_interior_architecture_design_stockholm_1-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/beer-cafe/01-beercafe-torekull-interior-architecture-design-stockholm-1-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/beer-cafe/01-beercafe-torekull-interior-architecture-design-stockholm-1-1000x800.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Beer Café/BeerCafe_Torekull_interior_architecture_design_stockholm_2-1200x800.jpg",
+        "blobPath": "images/torekull/projects/imports/beer-cafe/02-beercafe-torekull-interior-architecture-design-stockholm-2-1200x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/beer-cafe/02-beercafe-torekull-interior-architecture-design-stockholm-2-1200x800.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Beer Café/BeerCafe_Torekull_interior_architecture_design_stockholm_3.jpg",
+        "blobPath": "images/torekull/projects/imports/beer-cafe/03-beercafe-torekull-interior-architecture-design-stockholm-3.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/beer-cafe/03-beercafe-torekull-interior-architecture-design-stockholm-3.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Beer Café/BeerCafe_Torekull_interior_architecture_design_stockholm_4-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/beer-cafe/04-beercafe-torekull-interior-architecture-design-stockholm-4-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/beer-cafe/04-beercafe-torekull-interior-architecture-design-stockholm-4-1000x800.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Beer Café/BeerCafe_Torekull_interior_architecture_design_stockholm_5-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/beer-cafe/05-beercafe-torekull-interior-architecture-design-stockholm-5-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/beer-cafe/05-beercafe-torekull-interior-architecture-design-stockholm-5-1000x800.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Beer Café/BeerCafe_Torekull_interior_architecture_design_stockholm_6-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/beer-cafe/06-beercafe-torekull-interior-architecture-design-stockholm-6-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/beer-cafe/06-beercafe-torekull-interior-architecture-design-stockholm-6-1000x800.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Biblioteket Live Arkivet",
+    "slug": "biblioteket-live-arkivet",
+    "title": "Biblioteket Live Arkivet",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/01-inc-5510.jpg",
+    "galleryCount": 14,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/INC_5510.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/01-inc-5510.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/01-inc-5510.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/INC_5513.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/02-inc-5513.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/02-inc-5513.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/INC_5522.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/03-inc-5522.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/03-inc-5522.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/INC_5523.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/04-inc-5523.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/04-inc-5523.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/INC_6046.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/05-inc-6046.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/05-inc-6046.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/INC_6051.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/06-inc-6051.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/06-inc-6051.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/INC_6054.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/07-inc-6054.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/07-inc-6054.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/Lasse Olsson Photo-16792.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/08-lasse-olsson-photo-16792.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/08-lasse-olsson-photo-16792.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/Lasse Olsson Photo-16793.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/09-lasse-olsson-photo-16793.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/09-lasse-olsson-photo-16793.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/Lasse Olsson Photo-16794.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/10-lasse-olsson-photo-16794.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/10-lasse-olsson-photo-16794.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/Lasse Olsson Photo-16795.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/11-lasse-olsson-photo-16795.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/11-lasse-olsson-photo-16795.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/Lasse Olsson Photo-16796.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/12-lasse-olsson-photo-16796.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/12-lasse-olsson-photo-16796.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/Lasse Olsson Photo-16797-2.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/13-lasse-olsson-photo-16797-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/13-lasse-olsson-photo-16797-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Arkivet/Lasse Olsson Photo-16797.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-arkivet/14-lasse-olsson-photo-16797.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-arkivet/14-lasse-olsson-photo-16797.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Biblioteket Live Cocktail Bar",
+    "slug": "biblioteket-live-cocktail-bar",
+    "title": "Biblioteket Live Cocktail Bar",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/01-biblioteket-banner-hemsida.jpg",
+    "galleryCount": 27,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/Biblioteket banner hemsida.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/01-biblioteket-banner-hemsida.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/01-biblioteket-banner-hemsida.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5980_2C logga 2.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/02-inc-5980-2c-logga-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/02-inc-5980-2c-logga-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5980_2C logga.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/03-inc-5980-2c-logga.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/03-inc-5980-2c-logga.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5980_2C.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/04-inc-5980-2c.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/04-inc-5980-2c.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5980_edited.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/05-inc-5980-edited.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/05-inc-5980-edited.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5980_home logga 2.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/06-inc-5980-home-logga-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/06-inc-5980-home-logga-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5980_home logga.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/07-inc-5980-home-logga.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/07-inc-5980-home-logga.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5980.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/08-inc-5980.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/08-inc-5980.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5984_edited.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/09-inc-5984-edited.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/09-inc-5984-edited.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5984.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/10-inc-5984.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/10-inc-5984.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5992.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/11-inc-5992.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/11-inc-5992.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_5999.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/12-inc-5999.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/12-inc-5999.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6021.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/13-inc-6021.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/13-inc-6021.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6025.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/14-inc-6025.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/14-inc-6025.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6029.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/15-inc-6029.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/15-inc-6029.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6031.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/16-inc-6031.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/16-inc-6031.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6034.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/17-inc-6034.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/17-inc-6034.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6036.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/18-inc-6036.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/18-inc-6036.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6298.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/19-inc-6298.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/19-inc-6298.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6328.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/20-inc-6328.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/20-inc-6328.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6332.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/21-inc-6332.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/21-inc-6332.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/INC_6383.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/22-inc-6383.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/22-inc-6383.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/Lasse Olsson Photo-16804.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/23-lasse-olsson-photo-16804.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/23-lasse-olsson-photo-16804.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/Lasse Olsson Photo-16806.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/24-lasse-olsson-photo-16806.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/24-lasse-olsson-photo-16806.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/Lasse Olsson Photo-16807-2.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/25-lasse-olsson-photo-16807-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/25-lasse-olsson-photo-16807-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/Lasse Olsson Photo-16853.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/26-lasse-olsson-photo-16853.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/26-lasse-olsson-photo-16853.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Cocktail Bar/Screenshot_20220116-232542_Instagram.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-cocktail-bar/27-screenshot-20220116-232542-instagram.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-cocktail-bar/27-screenshot-20220116-232542-instagram.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Biblioteket Live Ljusgården",
+    "slug": "biblioteket-live-ljusgarden",
+    "title": "Biblioteket Live Ljusgården",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-ljusgarden/01-inc-6057.jpg",
+    "galleryCount": 7,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Ljusgården/INC_6057.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-ljusgarden/01-inc-6057.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-ljusgarden/01-inc-6057.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Ljusgården/INC_6059.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-ljusgarden/02-inc-6059.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-ljusgarden/02-inc-6059.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Ljusgården/INC_6064.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-ljusgarden/03-inc-6064.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-ljusgarden/03-inc-6064.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Ljusgården/INC_6385.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-ljusgarden/04-inc-6385.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-ljusgarden/04-inc-6385.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Ljusgården/INC_6408.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-ljusgarden/05-inc-6408.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-ljusgarden/05-inc-6408.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Ljusgården/Lasse Olsson Photo-16810.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-ljusgarden/06-lasse-olsson-photo-16810.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-ljusgarden/06-lasse-olsson-photo-16810.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Biblioteket Live Ljusgården/Lasse Olsson Photo-16811.jpg",
+        "blobPath": "images/torekull/projects/imports/biblioteket-live-ljusgarden/07-lasse-olsson-photo-16811.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/biblioteket-live-ljusgarden/07-lasse-olsson-photo-16811.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "CantaLola",
+    "slug": "canta-lola",
+    "title": "Canta Lola",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/01-canta-lola-ipa-logo-2.jpg",
+    "galleryCount": 25,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/CantaLola/CANTA LOLA IPA logo 2.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/01-canta-lola-ipa-logo-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/01-canta-lola-ipa-logo-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/CANTA LOLA IPA logo 2021.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/02-canta-lola-ipa-logo-2021.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/02-canta-lola-ipa-logo-2021.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/CANTA LOLA IPA.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/03-canta-lola-ipa.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/03-canta-lola-ipa.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/canta_lola.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/04-canta-lola.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/04-canta-lola.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/canta_lola8.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/05-canta-lola8.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/05-canta-lola8.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/canta_lola12.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/06-canta-lola12.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/06-canta-lola12.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/canta_lola14.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/07-canta-lola14.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/07-canta-lola14.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/canta_lola20.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/08-canta-lola20.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/08-canta-lola20.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/canta_lola27.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/09-canta-lola27.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/09-canta-lola27.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/canta_lola34.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/10-canta-lola34.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/10-canta-lola34.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/canta_lola39.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/11-canta-lola39.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/11-canta-lola39.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14693 - HR.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/12-lasse-olsson-photo-14693-hr.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/12-lasse-olsson-photo-14693-hr.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14693-2.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/13-lasse-olsson-photo-14693-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/13-lasse-olsson-photo-14693-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14693.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/14-lasse-olsson-photo-14693.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/14-lasse-olsson-photo-14693.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14694.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/15-lasse-olsson-photo-14694.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/15-lasse-olsson-photo-14694.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14695.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/16-lasse-olsson-photo-14695.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/16-lasse-olsson-photo-14695.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14696.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/17-lasse-olsson-photo-14696.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/17-lasse-olsson-photo-14696.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14697.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/18-lasse-olsson-photo-14697.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/18-lasse-olsson-photo-14697.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14698.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/19-lasse-olsson-photo-14698.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/19-lasse-olsson-photo-14698.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14699.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/20-lasse-olsson-photo-14699.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/20-lasse-olsson-photo-14699.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14700.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/21-lasse-olsson-photo-14700.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/21-lasse-olsson-photo-14700.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14701.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/22-lasse-olsson-photo-14701.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/22-lasse-olsson-photo-14701.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14702.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/23-lasse-olsson-photo-14702.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/23-lasse-olsson-photo-14702.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Lasse Olsson Photo-14703.jpg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/24-lasse-olsson-photo-14703.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/24-lasse-olsson-photo-14703.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/CantaLola/Slide-Canta-Lola_1-1024x576.jpeg",
+        "blobPath": "images/torekull/projects/imports/canta-lola/25-slide-canta-lola-1-1024x576.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/canta-lola/25-slide-canta-lola-1-1024x576.jpeg"
+      }
+    ]
+  },
+  {
+    "folderName": "Cava Bar Signalfabriken",
+    "slug": "cava-bar-signalfabriken",
+    "title": "Cava Bar Signalfabriken",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-signalfabriken/01-cava-bar-sundbyberg-torekull-interior-architecture-design-stockholm-1-1000x800.jpg",
+    "galleryCount": 4,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Cava Bar Signalfabriken/Cava-Bar-Sundbyberg_Torekull_interior_architecture_design_stockholm_1-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-signalfabriken/01-cava-bar-sundbyberg-torekull-interior-architecture-design-stockholm-1-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-signalfabriken/01-cava-bar-sundbyberg-torekull-interior-architecture-design-stockholm-1-1000x800.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Cava Bar Signalfabriken/Cava-Bar-Sundbyberg_Torekull_interior_architecture_design_stockholm_2.jpg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-signalfabriken/02-cava-bar-sundbyberg-torekull-interior-architecture-design-stockholm-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-signalfabriken/02-cava-bar-sundbyberg-torekull-interior-architecture-design-stockholm-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Cava Bar Signalfabriken/Cava-Bar-Sundbyberg_Torekull_interior_architecture_design_stockholm_3.jpg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-signalfabriken/03-cava-bar-sundbyberg-torekull-interior-architecture-design-stockholm-3.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-signalfabriken/03-cava-bar-sundbyberg-torekull-interior-architecture-design-stockholm-3.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Cava Bar Signalfabriken/Cava-Bar-Sundbyberg_Torekull_interior_architecture_design_stockholm_4.jpg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-signalfabriken/04-cava-bar-sundbyberg-torekull-interior-architecture-design-stockholm-4.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-signalfabriken/04-cava-bar-sundbyberg-torekull-interior-architecture-design-stockholm-4.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "CavaBar Centralstation",
+    "slug": "cava-bar-centralstation",
+    "title": "Cava Bar Centralstation",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/01-cava-bar-centralstation-stockholm-torekull-interior-architecture-design-1.jpeg",
+    "galleryCount": 9,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/CavaBar Centralstation/cava-bar-centralstation-stockholm-torekull-interior-architecture-design_1.jpeg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-centralstation/01-cava-bar-centralstation-stockholm-torekull-interior-architecture-design-1.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/01-cava-bar-centralstation-stockholm-torekull-interior-architecture-design-1.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/CavaBar Centralstation/cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork_1.jpeg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-centralstation/02-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-1.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/02-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-1.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/CavaBar Centralstation/cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork_2.jpeg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-centralstation/03-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-2.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/03-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-2.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/CavaBar Centralstation/cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork_3.jpeg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-centralstation/04-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-3.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/04-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-3.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/CavaBar Centralstation/cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork_4.jpeg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-centralstation/05-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-4.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/05-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-4.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/CavaBar Centralstation/cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork_5.jpeg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-centralstation/06-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-5.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/06-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-5.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/CavaBar Centralstation/cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork_6.jpeg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-centralstation/07-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-6.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/07-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-6.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/CavaBar Centralstation/cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork_7.jpeg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-centralstation/08-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-7.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/08-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-7.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/CavaBar Centralstation/cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork_8.jpeg",
+        "blobPath": "images/torekull/projects/imports/cava-bar-centralstation/09-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-8.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/cava-bar-centralstation/09-cava-bar-centralstation-torekull-architecture-interior-design-stockhol-newyork-8.jpeg"
+      }
+    ]
+  },
+  {
+    "folderName": "ChouChou",
+    "slug": "chouchou",
+    "title": "ChouChou",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/01-20220202-142802-resized-1.jpg",
+    "galleryCount": 21,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/ChouChou/20220202_142802_resized_1.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/01-20220202-142802-resized-1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/01-20220202-142802-resized-1.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/20220202_142807_resized_1.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/02-20220202-142807-resized-1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/02-20220202-142807-resized-1.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16822.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/03-lasse-olsson-photo-16822.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/03-lasse-olsson-photo-16822.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16823-2 logga 2.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/04-lasse-olsson-photo-16823-2-logga-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/04-lasse-olsson-photo-16823-2-logga-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16823-2 logga.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/05-lasse-olsson-photo-16823-2-logga.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/05-lasse-olsson-photo-16823-2-logga.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16823-2.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/06-lasse-olsson-photo-16823-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/06-lasse-olsson-photo-16823-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16823.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/07-lasse-olsson-photo-16823.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/07-lasse-olsson-photo-16823.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16824.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/08-lasse-olsson-photo-16824.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/08-lasse-olsson-photo-16824.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16825.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/09-lasse-olsson-photo-16825.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/09-lasse-olsson-photo-16825.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16826.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/10-lasse-olsson-photo-16826.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/10-lasse-olsson-photo-16826.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16827.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/11-lasse-olsson-photo-16827.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/11-lasse-olsson-photo-16827.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16828.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/12-lasse-olsson-photo-16828.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/12-lasse-olsson-photo-16828.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16829.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/13-lasse-olsson-photo-16829.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/13-lasse-olsson-photo-16829.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16830.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/14-lasse-olsson-photo-16830.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/14-lasse-olsson-photo-16830.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16831.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/15-lasse-olsson-photo-16831.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/15-lasse-olsson-photo-16831.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16832.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/16-lasse-olsson-photo-16832.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/16-lasse-olsson-photo-16832.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16833.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/17-lasse-olsson-photo-16833.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/17-lasse-olsson-photo-16833.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16834.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/18-lasse-olsson-photo-16834.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/18-lasse-olsson-photo-16834.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16836.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/19-lasse-olsson-photo-16836.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/19-lasse-olsson-photo-16836.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16837.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/20-lasse-olsson-photo-16837.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/20-lasse-olsson-photo-16837.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/ChouChou/Lasse Olsson Photo-16838.jpg",
+        "blobPath": "images/torekull/projects/imports/chouchou/21-lasse-olsson-photo-16838.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/chouchou/21-lasse-olsson-photo-16838.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Delish",
+    "slug": "delish",
+    "title": "Delish",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/delish/01-delish-bakehouse-interior-design-1-1024x576.jpeg",
+    "galleryCount": 7,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Delish/delish_bakehouse_interior_design_1-1024x576.jpeg",
+        "blobPath": "images/torekull/projects/imports/delish/01-delish-bakehouse-interior-design-1-1024x576.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/delish/01-delish-bakehouse-interior-design-1-1024x576.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/Delish/Delish_bakehouse_torekull_interior_design_stockholm_1-768x1024.jpeg",
+        "blobPath": "images/torekull/projects/imports/delish/02-delish-bakehouse-torekull-interior-design-stockholm-1-768x1024.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/delish/02-delish-bakehouse-torekull-interior-design-stockholm-1-768x1024.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/Delish/Delish_bakehouse_torekull_interior_design_stockholm_2.jpeg",
+        "blobPath": "images/torekull/projects/imports/delish/03-delish-bakehouse-torekull-interior-design-stockholm-2.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/delish/03-delish-bakehouse-torekull-interior-design-stockholm-2.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/Delish/Delish_bakehouse_torekull_interior_design_stockholm_3.jpeg",
+        "blobPath": "images/torekull/projects/imports/delish/04-delish-bakehouse-torekull-interior-design-stockholm-3.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/delish/04-delish-bakehouse-torekull-interior-design-stockholm-3.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/Delish/Delish_bakehouse_torekull_interior_design_stockholm_4.jpeg",
+        "blobPath": "images/torekull/projects/imports/delish/05-delish-bakehouse-torekull-interior-design-stockholm-4.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/delish/05-delish-bakehouse-torekull-interior-design-stockholm-4.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/Delish/Delish_bakehouse_torekull_interior_design_stockholm_5.jpeg",
+        "blobPath": "images/torekull/projects/imports/delish/06-delish-bakehouse-torekull-interior-design-stockholm-5.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/delish/06-delish-bakehouse-torekull-interior-design-stockholm-5.jpeg"
+      },
+      {
+        "localPath": "src/assets/projects/Delish/Delish_bakehouse_torekull_interior_design_stockholm_6.jpeg",
+        "blobPath": "images/torekull/projects/imports/delish/07-delish-bakehouse-torekull-interior-design-stockholm-6.jpeg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/delish/07-delish-bakehouse-torekull-interior-design-stockholm-6.jpeg"
+      }
+    ]
+  },
+  {
+    "folderName": "E.A.T",
+    "slug": "eat",
+    "title": "E.A.T",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/eat/01-e-a-t-torekull-interior-architecture-design-1.jpg",
+    "galleryCount": 3,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/E.A.T/E-a-t_Torekull_interior-architecture-design-1.jpg",
+        "blobPath": "images/torekull/projects/imports/eat/01-e-a-t-torekull-interior-architecture-design-1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/eat/01-e-a-t-torekull-interior-architecture-design-1.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/E.A.T/E-a-t_Torekull_interior-architecture-design-2.jpg",
+        "blobPath": "images/torekull/projects/imports/eat/02-e-a-t-torekull-interior-architecture-design-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/eat/02-e-a-t-torekull-interior-architecture-design-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/E.A.T/eat-torekull-interior-architecture-design2.jpg",
+        "blobPath": "images/torekull/projects/imports/eat/03-eat-torekull-interior-architecture-design2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/eat/03-eat-torekull-interior-architecture-design2.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Hestra Glove Store – Helsinki, Finland",
+    "slug": "hestra-glove-store-helsinki-finland",
+    "title": "Hestra Glove Store – Helsinki, Finland",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-helsinki-finland/01-torekull-interior-architecture-design-sweden-portfolio-hestra-glove.jpg",
+    "galleryCount": 4,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Hestra Glove Store – Helsinki, Finland/torekull-interior-architecture-design-sweden-portfolio-hestra-glove.jpg",
+        "blobPath": "images/torekull/projects/imports/hestra-glove-store-helsinki-finland/01-torekull-interior-architecture-design-sweden-portfolio-hestra-glove.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-helsinki-finland/01-torekull-interior-architecture-design-sweden-portfolio-hestra-glove.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Hestra Glove Store – Helsinki, Finland/torekull-interior-architecture-design-sweden-portfolio-hestra-glove1.jpg",
+        "blobPath": "images/torekull/projects/imports/hestra-glove-store-helsinki-finland/02-torekull-interior-architecture-design-sweden-portfolio-hestra-glove1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-helsinki-finland/02-torekull-interior-architecture-design-sweden-portfolio-hestra-glove1.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Hestra Glove Store – Helsinki, Finland/torekull-interior-architecture-design-sweden-portfolio-hestra-glove2.jpg",
+        "blobPath": "images/torekull/projects/imports/hestra-glove-store-helsinki-finland/03-torekull-interior-architecture-design-sweden-portfolio-hestra-glove2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-helsinki-finland/03-torekull-interior-architecture-design-sweden-portfolio-hestra-glove2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Hestra Glove Store – Helsinki, Finland/torekull-interior-architecture-design-sweden-portfolio-hestra-glove3.jpg",
+        "blobPath": "images/torekull/projects/imports/hestra-glove-store-helsinki-finland/04-torekull-interior-architecture-design-sweden-portfolio-hestra-glove3.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-helsinki-finland/04-torekull-interior-architecture-design-sweden-portfolio-hestra-glove3.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Hestra Glove Store – Oslo, Norway",
+    "slug": "hestra-glove-store-oslo-norway",
+    "title": "Hestra Glove Store – Oslo, Norway",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-oslo-norway/01-hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-1.jpg",
+    "galleryCount": 4,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Hestra Glove Store – Oslo, Norway/hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-1.jpg",
+        "blobPath": "images/torekull/projects/imports/hestra-glove-store-oslo-norway/01-hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-oslo-norway/01-hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-1.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Hestra Glove Store – Oslo, Norway/hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-2.jpg",
+        "blobPath": "images/torekull/projects/imports/hestra-glove-store-oslo-norway/02-hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-oslo-norway/02-hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Hestra Glove Store – Oslo, Norway/hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-3.jpg",
+        "blobPath": "images/torekull/projects/imports/hestra-glove-store-oslo-norway/03-hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-3.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-oslo-norway/03-hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-3.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Hestra Glove Store – Oslo, Norway/hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-4.jpg",
+        "blobPath": "images/torekull/projects/imports/hestra-glove-store-oslo-norway/04-hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-4.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/hestra-glove-store-oslo-norway/04-hestra-glove-portfolio-torekull-interior-architecture-design-stockholm-4.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "J’s Place Gym",
+    "slug": "j-s-place-gym",
+    "title": "J’s Place Gym",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/j-s-place-gym/01-torekull-interior-architecture-design-sweden-portfolio-js-place-gym.jpg",
+    "galleryCount": 4,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/J’s Place Gym/torekull-interior-architecture-design-sweden-portfolio-js-place-gym.jpg",
+        "blobPath": "images/torekull/projects/imports/j-s-place-gym/01-torekull-interior-architecture-design-sweden-portfolio-js-place-gym.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/j-s-place-gym/01-torekull-interior-architecture-design-sweden-portfolio-js-place-gym.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/J’s Place Gym/torekull-interior-architecture-design-sweden-portfolio-js-place-gym2.jpg",
+        "blobPath": "images/torekull/projects/imports/j-s-place-gym/02-torekull-interior-architecture-design-sweden-portfolio-js-place-gym2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/j-s-place-gym/02-torekull-interior-architecture-design-sweden-portfolio-js-place-gym2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/J’s Place Gym/torekull-interior-architecture-design-sweden-portfolio-js-place-gym3.jpg",
+        "blobPath": "images/torekull/projects/imports/j-s-place-gym/03-torekull-interior-architecture-design-sweden-portfolio-js-place-gym3.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/j-s-place-gym/03-torekull-interior-architecture-design-sweden-portfolio-js-place-gym3.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/J’s Place Gym/torekull-interior-architecture-design-sweden-portfolio-js-place-gym4.jpg",
+        "blobPath": "images/torekull/projects/imports/j-s-place-gym/04-torekull-interior-architecture-design-sweden-portfolio-js-place-gym4.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/j-s-place-gym/04-torekull-interior-architecture-design-sweden-portfolio-js-place-gym4.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "The Public Sundbyberg",
+    "slug": "the-public-sundbyberg",
+    "title": "The Public Sundbyberg",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/the-public-sundbyberg/01-interior-design-torekull-archtecture-public-sundbyberg1.jpg",
+    "galleryCount": 8,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/The Public Sundbyberg/interior-design-torekull-archtecture-public-sundbyberg1.jpg",
+        "blobPath": "images/torekull/projects/imports/the-public-sundbyberg/01-interior-design-torekull-archtecture-public-sundbyberg1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/the-public-sundbyberg/01-interior-design-torekull-archtecture-public-sundbyberg1.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/The Public Sundbyberg/Public_Sundybyberg_Torekull_interior_architecture_design_stockholm_1-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/the-public-sundbyberg/02-public-sundybyberg-torekull-interior-architecture-design-stockholm-1-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/the-public-sundbyberg/02-public-sundybyberg-torekull-interior-architecture-design-stockholm-1-1000x800.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/The Public Sundbyberg/Public_Sundybyberg_Torekull_interior_architecture_design_stockholm_2.jpg",
+        "blobPath": "images/torekull/projects/imports/the-public-sundbyberg/03-public-sundybyberg-torekull-interior-architecture-design-stockholm-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/the-public-sundbyberg/03-public-sundybyberg-torekull-interior-architecture-design-stockholm-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/The Public Sundbyberg/Public_Sundybyberg_Torekull_interior_architecture_design_stockholm_3.jpg",
+        "blobPath": "images/torekull/projects/imports/the-public-sundbyberg/04-public-sundybyberg-torekull-interior-architecture-design-stockholm-3.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/the-public-sundbyberg/04-public-sundybyberg-torekull-interior-architecture-design-stockholm-3.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/The Public Sundbyberg/Public_Sundybyberg_Torekull_interior_architecture_design_stockholm_4.jpg",
+        "blobPath": "images/torekull/projects/imports/the-public-sundbyberg/05-public-sundybyberg-torekull-interior-architecture-design-stockholm-4.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/the-public-sundbyberg/05-public-sundybyberg-torekull-interior-architecture-design-stockholm-4.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/The Public Sundbyberg/Public_Sundybyberg_Torekull_interior_architecture_design_stockholm_5-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/the-public-sundbyberg/06-public-sundybyberg-torekull-interior-architecture-design-stockholm-5-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/the-public-sundbyberg/06-public-sundybyberg-torekull-interior-architecture-design-stockholm-5-1000x800.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/The Public Sundbyberg/Public_Sundybyberg_Torekull_interior_architecture_design_stockholm_7-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/the-public-sundbyberg/07-public-sundybyberg-torekull-interior-architecture-design-stockholm-7-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/the-public-sundbyberg/07-public-sundybyberg-torekull-interior-architecture-design-stockholm-7-1000x800.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/The Public Sundbyberg/Public_Sundybyberg_Torekull_interior_architecture_design_stockholm_8-1000x800.jpg",
+        "blobPath": "images/torekull/projects/imports/the-public-sundbyberg/08-public-sundybyberg-torekull-interior-architecture-design-stockholm-8-1000x800.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/the-public-sundbyberg/08-public-sundybyberg-torekull-interior-architecture-design-stockholm-8-1000x800.jpg"
+      }
+    ]
+  },
+  {
+    "folderName": "Wiener Caféet",
+    "slug": "wiener-cafeet",
+    "title": "Wiener Caféet",
+    "coverImage": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/01-torekull-wiene-cafeet-interior-architecture-design-stockholm-1.jpg",
+    "galleryCount": 14,
+    "uploaded": [
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-1.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/01-torekull-wiene-cafeet-interior-architecture-design-stockholm-1.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/01-torekull-wiene-cafeet-interior-architecture-design-stockholm-1.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-2.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/02-torekull-wiene-cafeet-interior-architecture-design-stockholm-2.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/02-torekull-wiene-cafeet-interior-architecture-design-stockholm-2.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-3.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/03-torekull-wiene-cafeet-interior-architecture-design-stockholm-3.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/03-torekull-wiene-cafeet-interior-architecture-design-stockholm-3.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-4.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/04-torekull-wiene-cafeet-interior-architecture-design-stockholm-4.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/04-torekull-wiene-cafeet-interior-architecture-design-stockholm-4.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-5.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/05-torekull-wiene-cafeet-interior-architecture-design-stockholm-5.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/05-torekull-wiene-cafeet-interior-architecture-design-stockholm-5.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-6.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/06-torekull-wiene-cafeet-interior-architecture-design-stockholm-6.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/06-torekull-wiene-cafeet-interior-architecture-design-stockholm-6.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-7.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/07-torekull-wiene-cafeet-interior-architecture-design-stockholm-7.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/07-torekull-wiene-cafeet-interior-architecture-design-stockholm-7.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-8.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/08-torekull-wiene-cafeet-interior-architecture-design-stockholm-8.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/08-torekull-wiene-cafeet-interior-architecture-design-stockholm-8.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-9.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/09-torekull-wiene-cafeet-interior-architecture-design-stockholm-9.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/09-torekull-wiene-cafeet-interior-architecture-design-stockholm-9.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-10.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/10-torekull-wiene-cafeet-interior-architecture-design-stockholm-10.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/10-torekull-wiene-cafeet-interior-architecture-design-stockholm-10.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-11.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/11-torekull-wiene-cafeet-interior-architecture-design-stockholm-11.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/11-torekull-wiene-cafeet-interior-architecture-design-stockholm-11.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-12.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/12-torekull-wiene-cafeet-interior-architecture-design-stockholm-12.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/12-torekull-wiene-cafeet-interior-architecture-design-stockholm-12.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-13.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/13-torekull-wiene-cafeet-interior-architecture-design-stockholm-13.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/13-torekull-wiene-cafeet-interior-architecture-design-stockholm-13.jpg"
+      },
+      {
+        "localPath": "src/assets/projects/Wiener Caféet/torekull-wiene-cafeet-interior-architecture-design-stockholm-14.jpg",
+        "blobPath": "images/torekull/projects/imports/wiener-cafeet/14-torekull-wiene-cafeet-interior-architecture-design-stockholm-14.jpg",
+        "url": "https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/wiener-cafeet/14-torekull-wiene-cafeet-interior-architecture-design-stockholm-14.jpg"
+      }
+    ]
+  }
+]

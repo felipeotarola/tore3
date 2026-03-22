@@ -29,7 +29,12 @@ interface SupabaseProjectRow {
   completion: string | null;
   description: string | null;
   website: string | null;
+  photo: string | null;
+  via: string | null;
   credits: Array<{ label?: string; value?: string }> | null;
+  awards:
+    | Array<{ title?: string; year?: string; category?: string }>
+    | null;
   cover_image: string | null;
   gallery_images: string[] | null;
   sort_order: number | null;
@@ -183,6 +188,18 @@ function toProjectFrontmatter(
     description,
     date: normalizeText(row.completion) || undefined,
     industry: inferIndustry(category),
+    website: normalizeText(row.website) || undefined,
+    photo: normalizeText(row.photo) || undefined,
+    via: normalizeText(row.via) || undefined,
+    awards: Array.isArray(row.awards)
+      ? row.awards
+          .map((entry) => ({
+            title: normalizeText(entry?.title),
+            year: normalizeText(entry?.year) || undefined,
+            category: normalizeText(entry?.category) || undefined,
+          }))
+          .filter((entry) => Boolean(entry.title))
+      : undefined,
     collaborators: buildCollaborators(row),
     hideLogoOverlay: true,
     images: buildProjectImages(row, name),
@@ -204,7 +221,7 @@ async function fetchPublishedSupabaseProjects(): Promise<SupabaseProjectRow[]> {
 
   const params = new URLSearchParams({
     select:
-      'slug,title,location,completion,description,website,credits,cover_image,gallery_images,sort_order',
+      'slug,title,location,completion,description,website,photo,via,credits,awards,cover_image,gallery_images,sort_order',
     is_published: 'eq.true',
     order: 'sort_order.asc.nullslast,created_at.asc',
   });
