@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { ProjectsShowcase } from '@/components/projects/projects-showcase';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { getAllProjectsWithLogos } from '@/lib/projects';
+import { getAllProjects } from '@/lib/projects';
 import { PROJECT_FILTERS } from '@/lib/torekull';
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ProjectsPage() {
-  const allProjects = await getAllProjectsWithLogos();
+  const allProjects = await getAllProjects();
 
   return (
     <div className="hero-padding container flex flex-col gap-10 lg:gap-12">

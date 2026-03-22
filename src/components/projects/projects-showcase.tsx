@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 import { Badge } from '@/components/ui/badge';
 import { CATEGORY_LABELS } from '@/lib/torekull';
-import type { EnrichedProject } from '@/lib/types';
+import type { ProjectFrontmatter } from '@/lib/types';
 import { cn } from '@/lib/utils';
 
 function excerpt(text: string, max = 200) {
@@ -20,7 +20,7 @@ const FALLBACK_IMG =
   'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/3sixty-1.jpg';
 
 type ProjectsShowcaseProps = {
-  projects: EnrichedProject[];
+  projects: ProjectFrontmatter[];
 };
 
 export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
