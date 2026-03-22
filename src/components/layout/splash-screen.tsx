@@ -21,13 +21,29 @@ const markSplashShown = () => {
   }
 };
 
+const shouldSkipSplashFromNavigation = () => {
+  if (typeof window === 'undefined') return false;
+  const entry = performance.getEntriesByType(
+    'navigation',
+  )[0] as PerformanceNavigationTiming | undefined;
+  if (!entry) return false;
+  return entry.type === 'reload' || entry.type === 'back_forward';
+};
+
 const SplashScreen = () => {
   const [phase, setPhase] = useState<Phase>(() => {
     if (typeof window === 'undefined') return 'draw';
+    if (shouldSkipSplashFromNavigation()) return 'done';
     return hasShownSplash() ? 'done' : 'draw';
   });
 
   useEffect(() => {
+    if (shouldSkipSplashFromNavigation()) {
+      document.documentElement.removeAttribute('data-splash');
+      markSplashShown();
+      return;
+    }
+
     if (hasShownSplash()) {
       document.documentElement.removeAttribute('data-splash');
       return;
@@ -78,6 +94,8 @@ const SplashScreen = () => {
         visibility: phase === 'exit' ? 'hidden' : 'visible',
         transition: 'opacity 0.8s cubic-bezier(0.4,0,0.2,1), visibility 0.8s',
         pointerEvents: phase === 'exit' ? 'none' : 'auto',
+        // CSS fallback: even if React state/effects stall, force-hide overlay.
+        animation: 'splash-force-hide 5s forwards',
       }}
     >
       <div style={{ width: 'clamp(160px, 30vw, 300px)' }}>

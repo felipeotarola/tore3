@@ -325,6 +325,21 @@ html.page-transition::view-transition-new(root) {
   }
 }
 
+@keyframes splash-force-hide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  85% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 @keyframes fade-out-scale {
   from {
     transform: scale(1);
