@@ -8,6 +8,7 @@ import { Cta } from '@/components/sections/cta';
 import { Button } from '@/components/ui/button';
 import {
   formatPressDisplayTitle,
+  getPressTitleParts,
   splitPressTitleForLines,
 } from '@/lib/press';
 import { getPressItems } from '@/lib/press-items';
@@ -58,10 +59,12 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
 
   const item = pressItems[index];
   const nextItem = pressItems[(index + 1) % pressItems.length];
-  const label = formatPressDisplayTitle(item.title);
+  const titleParts = getPressTitleParts(item.title);
+  const label = titleParts.fullTitle;
   const [line1, line2] = splitPressTitleForLines(label);
-  const publication = line2 ? line1 : label;
-  const year = line2 ?? 'Feature';
+  const publication = titleParts.publication;
+  const year = titleParts.year ?? 'Not specified';
+  const reference = titleParts.secondary ?? 'Feature';
 
   return (
     <>
@@ -100,7 +103,7 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
       </section>
 
       <section className="section-padding container">
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-3">
           <div className="space-y-2">
             <p className="text-muted-foreground text-lg">Publication</p>
             <p className="text-2xl">{publication}</p>
@@ -108,6 +111,10 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
           <div className="space-y-2">
             <p className="text-muted-foreground text-lg">Year</p>
             <p className="text-2xl">{year}</p>
+          </div>
+          <div className="space-y-2">
+            <p className="text-muted-foreground text-lg">Reference</p>
+            <p className="text-2xl">{reference}</p>
           </div>
         </div>
 

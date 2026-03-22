@@ -13,6 +13,138 @@ type SupabasePressItemRow = {
   is_published: boolean | null;
 };
 
+type NormalizedPressValue = {
+  slug: string;
+  title: string;
+};
+
+const LEGACY_PRESS_NORMALIZATION: Record<string, NormalizedPressValue> = {
+  'aftonbladet-sondag-no-12-2022': {
+    slug: 'aftonbladet-sondag-no-12-2022',
+    title: 'Aftonbladet Söndag No. 12 (2022)',
+  },
+  'eat-white-guide-se-o-1': {
+    slug: 'eat-white-guide-feature',
+    title: 'EAT by White Guide (Feature)',
+  },
+  'fb-img-1630518115295': {
+    slug: 'the-new-generation-feature',
+    title: 'The New Generation (Feature)',
+  },
+  'fb-img-1630518128595': {
+    slug: 'krog-och-mat-august-2021',
+    title: 'Krog & Mat (August 2021)',
+  },
+  'h-o-m-e-dekor-magazine-2017-torekull-o-1': {
+    slug: 'home-dekor-magazine-2017',
+    title: 'H.O.M.E Dekor Magazine (2017)',
+  },
+  'hl-articles-torekull-interior-design-stockholm': {
+    slug: 'hl-articles-torekull-interior-design-stockholm',
+    title: 'HL Articles: Torekull Interior Design Stockholm',
+  },
+  'hospitality-p1-2024': {
+    slug: 'world-of-hospitality-2024-page-1',
+    title: 'The World of Hospitality (2024) - Page 1',
+  },
+  'hospitality-p2-2024': {
+    slug: 'world-of-hospitality-2024-page-2',
+    title: 'The World of Hospitality (2024) - Page 2',
+  },
+  'img-20201205-120230-089': {
+    slug: 'editorial-feature-dec-2020',
+    title: 'Editorial Feature (December 2020)',
+  },
+  'img-20210129-105029-148': {
+    slug: 'editorial-feature-jan-2021-1',
+    title: 'Editorial Feature (January 2021) - 1',
+  },
+  'img-20210129-110508-892': {
+    slug: 'editorial-feature-jan-2021-2',
+    title: 'Editorial Feature (January 2021) - 2',
+  },
+  'img-20210203-125258-756': {
+    slug: 'editorial-feature-feb-2021',
+    title: 'Editorial Feature (February 2021)',
+  },
+  'innovation-torekull-interior-desing-articles': {
+    slug: 'innovation-torekull-interior-design',
+    title: 'Innovation: Torekull Interior Design',
+  },
+  'international-property-travel-the-world-s-best-21-22': {
+    slug: 'international-property-travel-worlds-best-2021-2022',
+    title: "International Property & Travel - World's Best (2021-2022)",
+  },
+  'international-property-travel-the-world-s-best-22-23-p-114': {
+    slug: 'international-property-travel-worlds-best-2022-2023-page-114',
+    title: "International Property & Travel - World's Best (2022-2023) - Page 114",
+  },
+  'international-property-travel-the-world-s-best-22-23': {
+    slug: 'international-property-travel-worlds-best-2022-2023',
+    title: "International Property & Travel - World's Best (2022-2023)",
+  },
+  'international-property-travel-the-world-s-finest-homes-travel-and-lifestyle-1': {
+    slug: 'international-property-travel-lifestyle-issue-1',
+    title: 'International Property & Travel - Homes, Travel & Lifestyle (Issue 1)',
+  },
+  'international-property-travel-the-world-s-finest-homes-travel-and-lifestyle-3': {
+    slug: 'international-property-travel-lifestyle-issue-3-cover',
+    title: 'International Property & Travel - Homes, Travel & Lifestyle (Issue 3 Cover)',
+  },
+  'international-property-travel-the-world-s-finest-homes-travel-and-lifestyle-3-2': {
+    slug: 'international-property-travel-lifestyle-issue-3-spread',
+    title: 'International Property & Travel - Homes, Travel & Lifestyle (Issue 3 Spread)',
+  },
+  'international-property-travel-the-world-s-finest-homes-travel-and-lifestyle': {
+    slug: 'international-property-travel-lifestyle-special',
+    title: 'International Property & Travel - Homes, Travel & Lifestyle (Special Edition)',
+  },
+  'modern-interior-deck-1': {
+    slug: 'modern-interior-deck-feature-1',
+    title: 'Modern Interiör - DECK (Feature 1)',
+  },
+  'modern-interior-deck-2': {
+    slug: 'modern-interior-deck-feature-2',
+    title: 'Modern Interiör - DECK (Feature 2)',
+  },
+  'modern-interior-nr-3-2024': {
+    slug: 'modern-interior-no-3-2024',
+    title: 'Modern Interiör No. 3 (2024)',
+  },
+  'modern-interior-nr-4-2024': {
+    slug: 'modern-interior-no-4-2024',
+    title: 'Modern Interiör No. 4 (2024)',
+  },
+  'modern-interi-c3-b6r-public-o': {
+    slug: 'modern-interior-the-public-feature',
+    title: 'Modern Interiör - The Public (Feature)',
+  },
+  'nojes-guiden-biblioteket': {
+    slug: 'nojesguiden-biblioteket',
+    title: 'Nöjesguiden - Biblioteket',
+  },
+  'nojesguiden-2022-biblioteket': {
+    slug: 'nojesguiden-biblioteket-2022',
+    title: 'Nöjesguiden - Biblioteket (2022)',
+  },
+  'screenshot-20220414-182248-instagram': {
+    slug: 'instagram-feature-april-2022',
+    title: 'Instagram Feature (April 2022)',
+  },
+  'the-public-t-c3-a4by-o': {
+    slug: 'the-public-taby-feature',
+    title: 'The Public Täby (Feature)',
+  },
+  'white-guide-biblioteket': {
+    slug: 'white-guide-biblioteket',
+    title: 'White Guide - Biblioteket',
+  },
+};
+
+function normalizeLegacyPressValue(slug: string, title: string): NormalizedPressValue {
+  return LEGACY_PRESS_NORMALIZATION[slug] ?? { slug, title };
+}
+
 function toFallbackItems(): PressListItem[] {
   return PRESS_ITEMS.map((item, index) => ({
     slug: item.slug,
@@ -68,8 +200,7 @@ export async function getPressItems(): Promise<PressListItem[]> {
           row.image_url.length > 0,
       )
       .map((row, index) => ({
-        slug: row.slug as string,
-        title: row.title as string,
+        ...normalizeLegacyPressValue(row.slug as string, row.title as string),
         image: row.image_url as string,
         sortOrder:
           typeof row.sort_order === 'number' ? row.sort_order : (index + 1) * 10,

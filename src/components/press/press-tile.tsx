@@ -36,8 +36,8 @@ export function PressTile({
   const external = isExternalHref(destination);
 
   const ariaLabel = external
-    ? `${label}, articles and magazines — opens in a new tab`
-    : `${label} — articles and magazines`;
+    ? `${label}, articles and magazines - opens in a new tab`
+    : `${label} - articles and magazines`;
 
   return (
     <Link
