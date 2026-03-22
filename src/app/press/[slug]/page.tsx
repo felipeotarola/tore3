@@ -65,14 +65,17 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
   const publication = titleParts.publication;
   const year = titleParts.year ?? 'Not specified';
   const reference = titleParts.secondary ?? 'Feature';
+  const pressSummary = `Feature from ${publication}${
+    year !== 'Not specified' ? ` (${year})` : ''
+  }.`;
 
   return (
     <>
-      <section className="container relative z-20">
-        <DetailCloseButton fallbackHref="/press" className="mt-30 md:mt-34" />
-      </section>
+      <section className="space-y-12 pt-10 pb-12 md:space-y-14 md:pt-12 md:pb-14">
+        <div className="container space-y-4">
+          <DetailCloseButton fallbackHref="/press" />
+        </div>
 
-      <section className="hero-padding space-y-12 md:space-y-14">
         <div className="container space-y-4 text-center">
           <p className="nav-caps text-muted-foreground text-xs">
             Articles &amp; Magazines
@@ -103,18 +106,23 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
       </section>
 
       <section className="section-padding container">
-        <div className="grid gap-8 md:grid-cols-3">
-          <div className="space-y-2">
+        <div className="grid gap-10 md:grid-cols-2">
+          <h2 className="text-4xl">Press overview</h2>
+          <p className="text-muted-foreground text-lg">{pressSummary}</p>
+        </div>
+
+        <div className="mt-10 grid justify-between gap-6 sm:mt-20 sm:grid-cols-3 lg:mt-26 xl:mt-36">
+          <div className="flex flex-col gap-2">
             <p className="text-muted-foreground text-lg">Publication</p>
-            <p className="text-2xl">{publication}</p>
+            <p className="text-lg">{publication}</p>
           </div>
-          <div className="space-y-2">
+          <div className="flex flex-col gap-2">
             <p className="text-muted-foreground text-lg">Year</p>
-            <p className="text-2xl">{year}</p>
+            <p className="text-lg">{year}</p>
           </div>
-          <div className="space-y-2">
+          <div className="flex flex-col gap-2">
             <p className="text-muted-foreground text-lg">Reference</p>
-            <p className="text-2xl">{reference}</p>
+            <p className="text-lg">{reference}</p>
           </div>
         </div>
 

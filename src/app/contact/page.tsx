@@ -1,4 +1,4 @@
-import { MapPin, Phone } from 'lucide-react';
+﻿import { MapPin, Phone } from 'lucide-react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -17,11 +17,11 @@ function googleMapsUrl(address: string) {
 
 export default function ContactPage() {
   return (
-    <section className="hero-padding container">
-      <div className="space-y-14 lg:space-y-20">
+    <section className="hero-padding container pb-12 md:pb-14">
+      <div className="flex flex-col gap-10 lg:gap-12">
         <DetailCloseButton fallbackHref="/" />
 
-        {/* Row 1: headline + three-column info (Contact 20–style) */}
+        {/* Row 1: headline + three-column info (Contact 20â€“style) */}
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.6fr)] lg:items-start lg:gap-16 xl:gap-24">
           <div className="space-y-4">
             <p className="nav-caps text-xs text-muted-foreground">Contact</p>
@@ -97,14 +97,14 @@ export default function ContactPage() {
         </div>
 
         {/* Borderless grid form */}
-        <div className="border-border space-y-10 border-t pt-12 lg:pt-16">
+        <div className="border-border space-y-10 border-t pt-12 md:pt-14 lg:pt-16">
           <div className="space-y-2">
             <p className="nav-caps text-xs text-muted-foreground">Project inquiry</p>
             <h2 className="font-display font-weight-display text-2xl tracking-[0.02em] md:text-3xl">
               Share your vision
             </h2>
             <p className="text-muted-foreground max-w-xl text-sm leading-relaxed">
-              A few details help us respond with the right team and timeline—expect a personal
+              A few details help us respond with the right team and timelineâ€”expect a personal
               reply, not an automated ticket.
             </p>
           </div>
@@ -133,3 +133,4 @@ export default function ContactPage() {
     </section>
   );
 }
+

@@ -4,6 +4,7 @@ import { X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 const BACK_TRANSITION_CLASS = 'page-transition-back';
 
@@ -58,7 +59,7 @@ export function DetailCloseButton({
       size="icon"
       aria-label="Close and go back"
       onClick={handleClose}
-      className={className}
+      className={cn('relative z-[70] mt-14 md:mt-16', className)}
     >
       <X className="size-4" />
     </Button>

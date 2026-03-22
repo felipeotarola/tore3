@@ -82,11 +82,16 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <section className="container relative z-20">
-        <DetailCloseButton fallbackHref="/projects" className="mt-30 md:mt-34" />
+      <section className="container relative z-20 pt-10 md:pt-12">
+        <DetailCloseButton fallbackHref="/projects" />
       </section>
 
-      <ProjectHero title={frontmatter.name} image={heroImage} />
+      <ProjectHero
+        title={frontmatter.name}
+        image={heroImage}
+        eyebrow="Selected work"
+        className="!pt-8 md:!pt-10 lg:!pt-12"
+      />
 
       <ProjectOverview
         title="Project overview"

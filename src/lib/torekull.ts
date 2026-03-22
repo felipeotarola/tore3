@@ -24,8 +24,8 @@ export const TOREKULL = {
 
 /** Founder portrait (awards / press). Replace `src` with a dedicated headshot when available. */
 export const FOUNDER_PORTRAIT = {
-  src: `${BLOB_ORIGIN}/images/torekull/press/press-ipa-2022-p114.jpg`,
-  alt: 'Maja-Li Torekull at the International Property Awards',
+  src: `${BLOB_ORIGIN}/images/torekull/brand/founder-maja-li-torekull.jpg`,
+  alt: 'Portrait of Maja-Li Torekull',
   caption: 'Maja-Li Torekull · Founder & Lead Interior Architect',
 } as const;
 
