@@ -163,6 +163,14 @@
   body {
     @apply bg-background text-foreground font-text font-weight-text;
   }
+  html[data-splash='pending'] nav,
+  html[data-splash='pending'] main,
+  html[data-splash='pending'] footer {
+    opacity: 0;
+  }
+  html[data-splash='pending'] body {
+    background: #ffffff;
+  }
   h1,
   h2,
   h3,

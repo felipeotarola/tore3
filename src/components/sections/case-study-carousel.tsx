@@ -49,12 +49,27 @@ export function CaseStudyCarousel({
 }) {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
-  const [isMoving, setIsMoving] = React.useState(false);
+  const [canScrollPrev, setCanScrollPrev] = React.useState(false);
+  const [canScrollNext, setCanScrollNext] = React.useState(false);
 
   const ProjectLogo = logoMap[project.logo as keyof typeof logoMap] || Logo1;
+  const carouselImages = React.useMemo(() => {
+    // Prefer gallery frames over the cover frame for more variation on landing.
+    const baseImages = project.images.length > 1 ? project.images.slice(1) : project.images;
+    const unique = Array.from(
+      new Map(baseImages.map((image) => [image.src, image])).values(),
+    );
+    return unique.length > 0 ? unique : project.images;
+  }, [project.images]);
 
-  const scrollPrev = () => api?.scrollPrev();
-  const scrollNext = () => api?.scrollNext();
+  const scrollPrev = () => {
+    if (!canScrollPrev) return;
+    api?.scrollPrev();
+  };
+  const scrollNext = () => {
+    if (!canScrollNext) return;
+    api?.scrollNext();
+  };
   const scrollTo = (index: number) => api?.scrollTo(index);
 
   // Update current slide when carousel changes
@@ -63,25 +78,17 @@ export function CaseStudyCarousel({
 
     const onSelect = () => {
       setCurrent(api.selectedScrollSnap());
-    };
-
-    const onScroll = () => {
-      setIsMoving(true);
-    };
-
-    const onSettle = () => {
-      setIsMoving(false);
+      setCanScrollPrev(api.canScrollPrev());
+      setCanScrollNext(api.canScrollNext());
     };
 
     onSelect(); // Set initial state
     api.on('select', onSelect);
-    api.on('scroll', onScroll);
-    api.on('settle', onSettle);
+    api.on('reInit', onSelect);
 
     return () => {
       api.off('select', onSelect);
-      api.off('scroll', onScroll);
-      api.off('settle', onSettle);
+      api.off('reInit', onSelect);
     };
   }, [api]);
 
@@ -90,17 +97,15 @@ export function CaseStudyCarousel({
       setApi={setApi}
       opts={{
         align: 'center',
-        loop: true,
+        loop: false,
       }}
       className="section-padding w-full select-none"
     >
-      <CarouselContent
-        className={cn('relative ml-0! cursor-grab', isMoving ? 'z-10' : '')}
-      >
-        {project.images.map((image, index) => {
-          const nextIndex = (current + 1) % project.images.length;
+      <CarouselContent className="relative ml-0! cursor-grab">
+        {carouselImages.map((image, index) => {
+          const nextIndex = (current + 1) % carouselImages.length;
           const prevIndex =
-            (current - 1 + project.images.length) % project.images.length;
+            (current - 1 + carouselImages.length) % carouselImages.length;
           const isReversed = index === nextIndex;
 
           return (
@@ -152,14 +157,15 @@ export function CaseStudyCarousel({
           );
         })}
       </CarouselContent>
-      <div className="relative container flex translate-y-6 items-center gap-12 md:-translate-y-full">
+      <div className="relative z-20 container flex translate-y-6 items-center gap-12 md:-translate-y-full">
         {/* Navigation Buttons */}
         <div className="flex items-center gap-3">
           <Button
             variant="secondary"
             size="icon"
-            className="rounded-full"
+            className="rounded-full disabled:cursor-not-allowed disabled:bg-muted/70 disabled:text-muted-foreground disabled:opacity-100"
             onClick={scrollPrev}
+            disabled={!canScrollPrev}
             aria-label="Previous slide"
           >
             <ArrowLeft className="size-4" />
@@ -167,8 +173,9 @@ export function CaseStudyCarousel({
           <Button
             variant="secondary"
             size="icon"
-            className="rounded-full"
+            className="rounded-full disabled:cursor-not-allowed disabled:bg-muted/70 disabled:text-muted-foreground disabled:opacity-100"
             onClick={scrollNext}
+            disabled={!canScrollNext}
             aria-label="Next slide"
           >
             <ArrowRight className="size-4" />
@@ -177,7 +184,7 @@ export function CaseStudyCarousel({
 
         {/* Progress Indicators */}
         <div className="flex items-center gap-2">
-          {project.images.map((_, idx) => (
+          {carouselImages.map((_, idx) => (
             <button
               key={idx}
               onClick={() => scrollTo(idx)}

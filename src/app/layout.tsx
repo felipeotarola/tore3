@@ -107,6 +107,23 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function () {
+                try {
+                  if (sessionStorage.getItem('splash-shown') !== '1') {
+                    document.documentElement.setAttribute('data-splash', 'pending');
+                  }
+                } catch (_) {
+                  document.documentElement.setAttribute('data-splash', 'pending');
+                }
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={cn(
           'flex min-h-screen flex-col antialiased',
@@ -131,4 +148,3 @@ export default async function RootLayout({
     </html>
   );
 }
-

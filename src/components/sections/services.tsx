@@ -6,7 +6,6 @@ import {
   DropletIcon,
   LogoDesignIcon,
 } from '@/components/icons/service-icons';
-import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -37,28 +36,31 @@ export const Services = () => {
         const Icon = serviceIcons[index % serviceIcons.length];
 
         return (
-          <Card key={service.title} className="bg-card border-none">
-            <CardHeader>
-              <Icon className="size-9" />
-            </CardHeader>
+          <Link
+            key={service.title}
+            href="/what-we-do"
+            className="group block focus-visible:outline-none"
+          >
+            <Card className="bg-card h-full border-none transition-all duration-250 group-hover:-translate-y-0.5 group-hover:shadow-md group-focus-visible:ring-2 group-focus-visible:ring-black/50">
+              <CardHeader>
+                <Icon className="size-9" />
+              </CardHeader>
 
-            <CardContent className="space-y-6">
-              <CardTitle className="text-2xl">{service.title}</CardTitle>
-              <CardDescription className="max-w-lg">
-                {service.description}
-              </CardDescription>
-            </CardContent>
-            <CardFooter>
-              <Link href="/what-we-do">
-                <Button variant="outline" size="lg">
+              <CardContent className="space-y-6">
+                <CardTitle className="text-2xl">{service.title}</CardTitle>
+                <CardDescription className="max-w-lg">
+                  {service.description}
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <span className="inline-flex items-center rounded-md bg-black px-5 py-2.5 text-base font-semibold text-white transition-colors duration-200 group-hover:bg-black/85">
                   Learn more
-                </Button>
-              </Link>
-            </CardFooter>
-          </Card>
+                </span>
+              </CardFooter>
+            </Card>
+          </Link>
         );
       })}
     </section>
   );
 };
-

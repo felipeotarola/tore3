@@ -1,19 +1,19 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type Phase = 'draw' | 'fill' | 'text' | 'exit' | 'done';
 
 const SplashScreen = () => {
-  const [phase, setPhase] = useState<Phase | null>(null);
+  const [phase, setPhase] = useState<Phase>(() => {
+    if (typeof window === 'undefined') return 'draw';
+    return sessionStorage.getItem('splash-shown') ? 'done' : 'draw';
+  });
 
   useEffect(() => {
-    if (sessionStorage.getItem('splash-shown')) {
-      setPhase('done');
+    if (sessionStorage.getItem('splash-shown') === '1') {
       return;
     }
-
-    setPhase('draw');
 
     const timers = [
       setTimeout(() => setPhase('fill'), 900),
@@ -27,7 +27,13 @@ const SplashScreen = () => {
     return () => timers.forEach(clearTimeout);
   }, []);
 
-  if (phase === 'done' || phase === null) return null;
+  useEffect(() => {
+    if (phase === 'done') {
+      document.documentElement.removeAttribute('data-splash');
+    }
+  }, [phase]);
+
+  if (phase === 'done') return null;
 
   const logoVisible = phase === 'fill' || phase === 'text' || phase === 'exit';
 
