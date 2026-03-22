@@ -1,10 +1,13 @@
 import Image from 'next/image';
 
+import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { FOUNDER_PORTRAIT } from '@/lib/torekull';
 
 export function AboutFounderHero() {
   return (
     <section className="hero-padding container">
+      <DetailCloseButton fallbackHref="/" className="mb-6" />
+
       <div className="mx-auto max-w-3xl space-y-8 text-center">
         <p className="nav-caps text-xs text-muted-foreground">The practice</p>
         <h1 className="text-5xl md:text-6xl lg:text-7xl">About TOREKULL</h1>

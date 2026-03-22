@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { Cta } from '@/components/sections/cta';
 import { Process } from '@/components/sections/process';
 import { ProjectGallery } from '@/components/sections/project-gallery';
@@ -81,6 +82,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
+      <section className="container relative z-20">
+        <DetailCloseButton fallbackHref="/projects" className="mt-30 md:mt-34" />
+      </section>
+
       <ProjectHero title={frontmatter.name} image={heroImage} />
 
       <ProjectOverview

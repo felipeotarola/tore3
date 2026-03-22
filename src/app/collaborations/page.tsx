@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
+import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import {
   AWARDS,
   COLLABORATION_MARQUEE,
@@ -15,6 +16,8 @@ export default function CollaborationsPage() {
   return (
     <>
       <section className="hero-padding container space-y-8">
+        <DetailCloseButton fallbackHref="/" />
+
         <h1 className="text-5xl md:text-6xl">COLLABORATIONS</h1>
         <p className="text-muted-foreground max-w-3xl text-lg">
           TOREKULL works with trusted partners across lighting, technical

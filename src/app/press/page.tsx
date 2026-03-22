@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 
+import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { PressTile } from '@/components/press/press-tile';
 import { getPressItems } from '@/lib/press-items';
 
@@ -12,6 +13,8 @@ export default async function PressPage() {
 
   return (
     <section className="hero-padding container space-y-12">
+      <DetailCloseButton fallbackHref="/" />
+
       <div className="space-y-4">
         <h1 className="text-5xl md:text-6xl">Articles &amp; Magazines</h1>
         <p className="text-muted-foreground text-lg">How they write about us</p>

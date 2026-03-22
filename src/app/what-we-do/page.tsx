@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 
+import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { Process } from '@/components/sections/process';
 import { ServicesHoverTable } from '@/components/what-we-do/services-hover-table';
 import { WHAT_WE_DO_PROCESS } from '@/lib/torekull';
@@ -12,6 +13,8 @@ export default function WhatWeDoPage() {
   return (
     <>
       <section className="hero-padding container space-y-6">
+        <DetailCloseButton fallbackHref="/" />
+
         <p className="nav-caps text-xs text-muted-foreground">What we do</p>
         <h1 className="text-5xl md:text-6xl lg:text-7xl">Practice &amp; services</h1>
         <p className="text-muted-foreground max-w-3xl text-lg leading-relaxed">

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 
+import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { ProjectsShowcase } from '@/components/projects/projects-showcase';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -15,6 +16,8 @@ export default async function ProjectsPage() {
 
   return (
     <div className="hero-padding container flex flex-col gap-10 lg:gap-12">
+      <DetailCloseButton fallbackHref="/" />
+
       <header className="max-w-3xl space-y-3">
         <p className="nav-caps text-xs text-muted-foreground">Selected work</p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl">Projects</h1>

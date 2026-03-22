@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import { ContactForm } from '@/components/contact/contact-form';
 import { CopyEmailButton } from '@/components/contact/copy-email-button';
+import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { FOUNDER_PORTRAIT, TOREKULL } from '@/lib/torekull';
 
 export const metadata: Metadata = {
@@ -18,6 +19,8 @@ export default function ContactPage() {
   return (
     <section className="hero-padding container">
       <div className="space-y-14 lg:space-y-20">
+        <DetailCloseButton fallbackHref="/" />
+
         {/* Row 1: headline + three-column info (Contact 20–style) */}
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1.6fr)] lg:items-start lg:gap-16 xl:gap-24">
           <div className="space-y-4">

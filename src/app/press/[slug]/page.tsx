@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { Cta } from '@/components/sections/cta';
 import { Button } from '@/components/ui/button';
 import {
@@ -64,6 +65,10 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
 
   return (
     <>
+      <section className="container relative z-20">
+        <DetailCloseButton fallbackHref="/press" className="mt-30 md:mt-34" />
+      </section>
+
       <section className="hero-padding space-y-12 md:space-y-14">
         <div className="container space-y-4 text-center">
           <p className="nav-caps text-muted-foreground text-xs">
