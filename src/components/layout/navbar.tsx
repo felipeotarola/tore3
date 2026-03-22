@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Logo from '@/components/layout/logo';
 import { Button } from '@/components/ui/button';
@@ -22,11 +22,15 @@ export const Navbar = ({
   const [shouldRender, setShouldRender] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isNavbarHidden, setIsNavbarHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [isOpening, setIsOpening] = useState(false);
   const pathname = usePathname();
   const { isBannerVisible } = useBannerVisibility(initialBannerVisible);
-  const shouldInvertLogo = pathname === '/' || isMenuOpen;
+  const lastScrollYRef = useRef(0);
+  const isHomeRoute =
+    pathname === '/' ||
+    (!pathname &&
+      typeof window !== 'undefined' &&
+      window.location.pathname === '/');
 
   // Handle scroll to hide/show navbar
   useEffect(() => {
@@ -37,17 +41,22 @@ export const Navbar = ({
       if (currentScrollY < scrollThreshold) {
         // Always show navbar near the top
         setIsNavbarHidden(false);
-      } else if (currentScrollY > lastScrollY) {
+      } else if (currentScrollY > lastScrollYRef.current) {
         // Scrolling down - hide navbar
         setIsNavbarHidden(true);
+      } else {
+        // Scrolling up - show navbar
+        setIsNavbarHidden(false);
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollYRef.current = currentScrollY;
     };
 
+    lastScrollYRef.current = window.scrollY;
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   const handleToggle = () => {
     if (!isMenuOpen) {
@@ -86,8 +95,8 @@ export const Navbar = ({
       <header
         className={cn(
           'bigger-container inset-x-0 z-50 flex items-center py-5 transition-transform duration-700 ease-in-out md:py-6',
-          pathname === '/' && 'inset-x-5 pt-10.5 md:inset-x-6 md:py-12.5',
-          pathname === '/' && 'text-background',
+          isHomeRoute && 'inset-x-5 pt-10.5 md:inset-x-6 md:py-12.5',
+          isHomeRoute && 'text-background',
           pathname !== '/' && isMenuOpen && 'text-background',
           'fixed',
           isBannerVisible && 'mt-14', //banner height
@@ -251,7 +260,7 @@ export const Navbar = ({
                     asChild
                     className={cn(
                       'nav-caps',
-                      (pathname === '/' || isAnimating) &&
+                      (isHomeRoute || isAnimating) &&
                         'text-background border-background/30',
                     )}
                   >

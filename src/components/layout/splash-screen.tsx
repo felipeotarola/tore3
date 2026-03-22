@@ -3,32 +3,59 @@
 import { useEffect, useState } from 'react';
 
 type Phase = 'draw' | 'fill' | 'text' | 'exit' | 'done';
+const SPLASH_KEY = 'splash-shown';
+
+const hasShownSplash = () => {
+  try {
+    return sessionStorage.getItem(SPLASH_KEY) === '1';
+  } catch {
+    return false;
+  }
+};
+
+const markSplashShown = () => {
+  try {
+    sessionStorage.setItem(SPLASH_KEY, '1');
+  } catch {
+    // Ignore storage write failures (private mode, strict browser settings, etc.)
+  }
+};
 
 const SplashScreen = () => {
   const [phase, setPhase] = useState<Phase>(() => {
     if (typeof window === 'undefined') return 'draw';
-    return sessionStorage.getItem('splash-shown') ? 'done' : 'draw';
+    return hasShownSplash() ? 'done' : 'draw';
   });
 
   useEffect(() => {
-    if (sessionStorage.getItem('splash-shown') === '1') {
+    if (hasShownSplash()) {
+      document.documentElement.removeAttribute('data-splash');
       return;
     }
+
+    const finishSplash = () => {
+      setPhase('done');
+      markSplashShown();
+      document.documentElement.removeAttribute('data-splash');
+    };
 
     const timers = [
       setTimeout(() => setPhase('fill'), 900),
       setTimeout(() => setPhase('text'), 1600),
       setTimeout(() => setPhase('exit'), 2600),
-      setTimeout(() => {
-        setPhase('done');
-        sessionStorage.setItem('splash-shown', '1');
-      }, 3400),
+      setTimeout(finishSplash, 3400),
+      // Hard fail-safe: never allow overlay to stay mounted indefinitely.
+      setTimeout(finishSplash, 5000),
     ];
-    return () => timers.forEach(clearTimeout);
+    window.addEventListener('pageshow', finishSplash);
+    return () => {
+      timers.forEach(clearTimeout);
+      window.removeEventListener('pageshow', finishSplash);
+    };
   }, []);
 
   useEffect(() => {
-    if (phase === 'done') {
+    if (phase === 'exit' || phase === 'done') {
       document.documentElement.removeAttribute('data-splash');
     }
   }, [phase]);
