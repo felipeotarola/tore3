@@ -52,20 +52,22 @@ export default function CollaborationsPage() {
           {AWARDS.map((award) => (
             <article
               key={`${award.title}-${award.year}-${award.image}`}
-              className="bg-card border-border overflow-hidden border"
+              className="border-border overflow-hidden rounded-sm border bg-transparent"
             >
               <div className="relative aspect-[4/3] w-full">
-                <Image
-                  src={award.image}
-                  alt={`${award.title} ${award.year}`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
+                <div className="absolute inset-3 md:inset-5">
+                  <Image
+                    src={award.image}
+                    alt={`${award.title} ${award.year}`}
+                    fill
+                    className="object-contain object-center"
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                  />
+                </div>
               </div>
-              <div className="space-y-1 p-4">
-                <p>{award.title}</p>
-                <p className="text-muted-foreground text-sm">{award.year}</p>
+              <div className="space-y-0.5 border-t border-border px-3 pb-4 pt-3 md:px-4">
+                <p className="text-sm font-medium leading-snug">{award.title}</p>
+                <p className="text-muted-foreground text-xs">{award.year}</p>
               </div>
             </article>
           ))}

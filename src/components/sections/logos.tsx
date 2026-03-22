@@ -3,7 +3,7 @@ import { COLLABORATION_MARQUEE } from '@/lib/torekull';
 
 export const Logos = () => {
   return (
-    <section className="section-padding mask-r-from-40% mask-r-to-100% mask-l-from-40% mask-l-to-100% border-y">
+    <section className="section-padding-tight mask-r-from-40% mask-r-to-100% mask-l-from-40% mask-l-to-100% border-y">
       <Marquee pauseOnHover className="[--duration:24s] [--gap:5rem]">
         {COLLABORATION_MARQUEE.map((item) => (
           <span

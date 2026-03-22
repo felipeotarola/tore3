@@ -185,6 +185,11 @@
   .section-padding {
     @apply py-18.75 md:py-26 lg:py-31.25;
   }
+
+  /** Tighter rhythm for long landing pages (e.g. home) so sections feel connected */
+  .section-padding-tight {
+    @apply py-12 md:py-16 lg:py-20;
+  }
   .hero-padding {
     @apply pt-28.75 pb-18.75 md:pt-36 md:pb-26 lg:pt-41.25 lg:pb-31.25;
   }

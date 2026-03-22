@@ -13,11 +13,33 @@ export const TOREKULL = {
     'Stora Gråmunkegränd 5, SE 111 27 Stockholm, Sweden',
     'Hornsbergsvägen 18, SE 112 15 Stockholm, Sweden',
   ],
+  /** Compact lines for footer / tight layouts (full postal strings stay in `addresses`) */
+  addressesShort: [
+    'Stora Gråmunkegränd 5 · Stockholm',
+    'Hornsbergsvägen 18 · Stockholm',
+  ],
   quote: 'The function of design is letting design function',
   quoteAuthor: 'Micha Commeren',
 } as const;
 
-export const HERO_VIDEO_URL =
+/** Founder portrait (awards / press). Replace `src` with a dedicated headshot when available. */
+export const FOUNDER_PORTRAIT = {
+  src: `${BLOB_ORIGIN}/images/torekull/press/press-ipa-2022-p114.jpg`,
+  alt: 'Maja-Li Torekull at the International Property Awards',
+  caption: 'Maja-Li Torekull · Founder & Lead Interior Architect',
+} as const;
+
+/** @deprecated Use FOUNDER_PORTRAIT */
+export const CONTACT_PORTRAIT = FOUNDER_PORTRAIT;
+
+/** Web-optimized hero loop (1080p H.264, fast-start). Served from /public. */
+export const HERO_VIDEO_SRC = '/hero-loop-web.mp4';
+
+/** Poster frame (~1s) for instant hero paint while video buffers. */
+export const HERO_POSTER_SRC = '/hero-poster.jpg';
+
+/** Original 4K master on Blob (~400MB). Prefer `HERO_VIDEO_SRC` for page load. */
+export const HERO_VIDEO_BLOB_URL =
   'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/videos/loopdrone2-1774133795723.mp4';
 
 export const NAV_PRIMARY = [
@@ -109,25 +131,37 @@ export const SERVICES = [
     title: 'Interior Architecture',
     description:
       'Complete interior architecture for commercial spaces - restaurants, hotels, bars, boutiques, and offices. From concept to finished project.',
+    /** Placeholder art for interactive listings (e.g. what-we-do hover). */
+    hoverImage: `${BLOB_ORIGIN}/images/torekull/projects/imports/kasai-stockholm/03-20221007-173300.jpg`,
   },
   {
     title: 'Furniture Design',
     description:
       "Custom furniture design tailored to each project's unique identity and functional requirements.",
+    hoverImage: `${BLOB_ORIGIN}/images/torekull/projects/imports/la-botanica/09-botanica-002-final.jpg`,
   },
   {
     title: 'Product Design',
     description:
       'Innovative product design solutions that bridge aesthetics and everyday functionality.',
+    hoverImage: `${BLOB_ORIGIN}/images/torekull/projects/moyagi-1.jpg`,
   },
   {
     title: 'Concept Development',
     description:
       'Full creative concept development including material selection, lighting strategy, and spatial flow.',
+    hoverImage: `${BLOB_ORIGIN}/images/torekull/projects/3sixty-1.jpg`,
   },
 ] as const;
 
-export const PRESS_ITEMS = [
+/** Magazine / article tiles; optional `url` opens the publication in a new tab. */
+export type PressItem = {
+  title: string;
+  image: string;
+  url?: string;
+};
+
+export const PRESS_ITEMS: readonly PressItem[] = [
   {
     title: 'Modern Interior 2024 - Issue 4',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-modern-interior-2024-4.jpg`,
@@ -168,7 +202,7 @@ export const PRESS_ITEMS = [
     title: 'Nojesguiden',
     image: `${BLOB_ORIGIN}/images/torekull/press/press-nojesguiden.jpg`,
   },
-] as const;
+];
 
 export const AWARDS = [
   {

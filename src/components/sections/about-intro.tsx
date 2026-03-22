@@ -1,13 +1,14 @@
 import Image from 'next/image';
 
 import { HOME_STATS } from '@/lib/torekull';
+import { cn } from '@/lib/utils';
 
 const aboutDescription =
   'TOREKULL offers creative and innovative solutions within interior architecture, furniture and product design. We believe design must be functional and functionality must be translated into visual aesthetics.';
 
 export const AboutIntro = () => {
   return (
-    <section className="section-padding bigger-container space-y-16 md:space-y-18">
+    <section className="section-padding-tight bigger-container space-y-10 md:space-y-12">
       <div className="container grid items-center gap-10 md:grid-cols-2">
         <h2 className="text-4xl">About</h2>
 
@@ -37,13 +38,29 @@ export const AboutIntro = () => {
         </div>
       </div>
 
-      <div className="container grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {HOME_STATS.map((item) => (
-          <div key={item.title} className="space-y-2 text-lg">
-            <h3 className="text-muted-foreground">{item.title}</h3>
-            <p>{item.value}</p>
-          </div>
-        ))}
+      <div className="container border-y border-border py-6 md:py-7">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:gap-x-10 md:grid-cols-4 md:gap-x-8 md:gap-y-0">
+          {HOME_STATS.map((item) => {
+            const isShortMetric = item.value.length <= 8;
+            return (
+              <div key={item.title} className="min-w-0">
+                <p className="nav-caps mb-1 text-[10px] leading-snug text-muted-foreground sm:text-[11px]">
+                  {item.title}
+                </p>
+                <p
+                  className={cn(
+                    'font-display leading-[1.1] tracking-[0.02em]',
+                    isShortMetric
+                      ? 'text-2xl tabular-nums sm:text-3xl'
+                      : 'text-sm leading-snug sm:text-base',
+                  )}
+                >
+                  {item.value}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

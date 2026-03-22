@@ -99,7 +99,7 @@ export function CaseStudyCarousel({
         align: 'center',
         loop: false,
       }}
-      className="section-padding w-full select-none"
+      className="section-padding-tight w-full select-none"
     >
       <CarouselContent className="relative ml-0! cursor-grab">
         {carouselImages.map((image, index) => {

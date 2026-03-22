@@ -103,7 +103,7 @@ export const Navbar = ({
           <button
             onClick={handleToggle}
             className={cn(
-              'relative z-50 h-3.5 w-[18px] cursor-pointer md:hidden',
+              'relative z-[60] h-3.5 w-[18px] shrink-0 cursor-pointer md:hidden',
               'after:absolute after:-inset-2 after:content-[""]',
             )}
             aria-label="Toggle menu"
@@ -134,14 +134,19 @@ export const Navbar = ({
             </div>
           </button>
 
-          {/* Logo - centered on mobile, left-aligned on desktop */}
+          {/* Logo — centered on mobile; hidden while overlay is open so it doesn’t cover nav */}
           <div
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 mt-4 md:static md:translate-x-0 md:translate-y-0 md:mt-0"
+            className={cn(
+              'absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0',
+              'mt-2 max-w-[min(11rem,46vw)] md:mt-0 md:max-w-none',
+              isMenuOpen && 'max-md:hidden',
+            )}
             onClick={() => setIsMenuOpen(false)}
           >
             <Logo
               className={cn(
-                'h-20 md:h-20',
+                'h-16 w-auto md:h-20',
+                'max-md:mx-auto max-md:max-h-16',
               )}
             />
           </div>
@@ -268,8 +273,18 @@ export const Navbar = ({
         )}
         onAnimationEnd={handleAnimationEnd}
       >
-        <nav className="flex h-full flex-col items-center justify-between py-6">
-          <div className="flex flex-1 flex-col items-center justify-center gap-6">
+        <nav
+          className={cn(
+            'flex h-full min-h-0 flex-col items-center justify-between px-4 py-6',
+            'max-md:pt-[calc(5rem+env(safe-area-inset-top,0px))]',
+          )}
+        >
+          <div
+            className={cn(
+              'flex w-full max-w-md flex-1 flex-col items-center justify-center gap-6',
+              'max-md:flex-none max-md:justify-start max-md:pt-2',
+            )}
+          >
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}

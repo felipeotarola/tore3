@@ -10,7 +10,11 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { getAllProjectsWithLogos } from '@/lib/projects';
-import { HERO_VIDEO_URL, HOME_HERO_SLUGS } from '@/lib/torekull';
+import {
+  HERO_POSTER_SRC,
+  HERO_VIDEO_SRC,
+  HOME_HERO_SLUGS,
+} from '@/lib/torekull';
 import { cn } from '@/lib/utils';
 
 export async function Hero() {
@@ -20,7 +24,7 @@ export async function Hero() {
   );
 
   return (
-    <div className="section-padding pt-0!">
+    <div className="pt-0 pb-4 md:pb-6 lg:pb-8">
       <section
         className={cn(
           'relative m-5 mb-0! flex min-h-[min(100dvh,702px)] flex-col items-center justify-center overflow-hidden p-5 md:m-6 md:min-h-[min(100dvh,1032px)] md:p-6',
@@ -32,9 +36,11 @@ export async function Hero() {
           loop
           muted
           playsInline
+          preload="auto"
+          poster={HERO_POSTER_SRC}
           className="absolute inset-0 z-0 h-full w-full object-cover"
         >
-          <source src={HERO_VIDEO_URL} type="video/mp4" />
+          <source src={HERO_VIDEO_SRC} type="video/mp4" />
         </video>
         <div className="absolute inset-0 z-[1] bg-black/60" />
 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 
+import { AboutFounderHero } from '@/components/sections/about-founder-hero';
 import { Cta } from '@/components/sections/cta';
 import { ABOUT_LANGUAGES, TOREKULL } from '@/lib/torekull';
 
@@ -11,24 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="hero-padding space-y-18 md:space-y-20 lg:space-y-26">
-        <h1 className="container text-center text-5xl md:text-6xl lg:text-7xl">
-          About TOREKULL
-        </h1>
-
-        <div className="bigger-container">
-          <div className="relative h-[335px] w-full overflow-hidden md:h-[450px] lg:h-[900px]">
-            <Image
-              src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/walthon-1.jpg"
-              alt="TOREKULL studio"
-              fill
-              className="object-cover object-center"
-              sizes="100vw"
-              priority
-            />
-          </div>
-        </div>
-      </section>
+      <AboutFounderHero />
 
       <section className="section-padding container grid gap-10 md:grid-cols-2">
         <h2 className="text-4xl">Who We Are</h2>
@@ -68,27 +51,11 @@ export default function AboutPage() {
         </p>
       </section>
 
-      <section className="section-padding container space-y-10">
-        <h2 className="text-4xl">Languages</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {ABOUT_LANGUAGES.map((language) => (
-            <div key={language} className="bg-card border-border border px-5 py-4">
-              <p className="nav-caps text-sm">{language}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="section-padding container grid gap-10 md:grid-cols-2">
-        <h2 className="text-4xl">Founder</h2>
-        <div className="text-muted-foreground space-y-5 text-lg">
-          <p className="text-foreground">
-            Maja-Li Torekull - Founder &amp; Lead Interior Architect
-          </p>
-          <p>Educated at ESAG Penninghen and Academie Julian.</p>
-          <p>
-            Published internationally in ArchDaily, Enki Magazine, H.O.O.M,
-            Residence, and Plaza Interior.
+      <section className="section-padding-tight container">
+        <div className="border-border flex flex-col gap-3 border-y py-5 md:flex-row md:items-center md:justify-between md:gap-8 md:py-4">
+          <h2 className="text-2xl md:text-3xl">Languages</h2>
+          <p className="nav-caps max-w-xl text-xs leading-relaxed text-muted-foreground md:text-right md:text-sm">
+            {ABOUT_LANGUAGES.join(' · ')}
           </p>
         </div>
       </section>

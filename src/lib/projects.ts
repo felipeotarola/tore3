@@ -1,3 +1,9 @@
+/**
+ * Supabase-backed project records and loaders. Listing layout (Projects 1–style grid,
+ * alternating image + copy, badges, scroll-in motion): `ProjectsShowcase` +
+ * `src/app/projects/page.tsx`.
+ */
+
 import {
   Logo1,
   Logo2,

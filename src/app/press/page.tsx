@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 
+import { PressTile } from '@/components/press/press-tile';
 import { PRESS_ITEMS } from '@/lib/torekull';
 
 export const metadata: Metadata = {
@@ -17,26 +17,15 @@ export default function PressPage() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {PRESS_ITEMS.map((item) => (
-          <article
+          <PressTile
             key={item.title}
-            className="bg-card border-border overflow-hidden border"
-          >
-            <div className="relative aspect-[4/3] w-full overflow-hidden">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
-            </div>
-            <div className="p-4">
-              <h2 className="text-sm">{item.title}</h2>
-            </div>
-          </article>
+            title={item.title}
+            image={item.image}
+            href={item.url}
+            headingLevel="h2"
+          />
         ))}
       </div>
     </section>
   );
 }
-
