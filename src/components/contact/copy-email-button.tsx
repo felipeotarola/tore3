@@ -29,7 +29,10 @@ export function CopyEmailButton({ email, className }: CopyEmailButtonProps) {
       type="button"
       variant="ghost"
       size="icon-sm"
-      className={cn('shrink-0 text-muted-foreground hover:text-foreground', className)}
+      className={cn(
+        'shrink-0 text-muted-foreground hover:text-foreground transition-colors duration-200',
+        className,
+      )}
       onClick={handleCopy}
       aria-label={copied ? 'Email copied' : 'Copy email address'}
       title={copied ? 'Copied' : 'Copy email'}
@@ -39,6 +42,9 @@ export function CopyEmailButton({ email, className }: CopyEmailButtonProps) {
       ) : (
         <Copy className="size-4" aria-hidden />
       )}
+      <span className="sr-only" aria-live="polite">
+        {copied ? 'Email copied to clipboard' : ''}
+      </span>
     </Button>
   );
 }
