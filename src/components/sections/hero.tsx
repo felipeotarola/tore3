@@ -1,14 +1,8 @@
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
+import { EditableText } from '@/components/editing/editable-text';
 import { ProjectCard } from '@/components/project-card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 import { getAllProjectsWithLogos } from '@/lib/projects';
 import {
   HERO_POSTER_SRC,
@@ -45,15 +39,28 @@ export async function Hero() {
         <div className="absolute inset-0 z-[1] bg-black/60" />
 
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center py-10 text-center">
-          <p className="nav-caps mb-4 text-sm md:text-base">TOREKULL</p>
-          <h1 className="max-w-[12ch] text-4xl leading-[1.05] sm:max-w-none sm:text-6xl md:text-7xl lg:text-8xl">
-            INTERIOR ARCHITECTURE &amp; DESIGN
-          </h1>
+          <EditableText
+            as="p"
+            copyKey="home.hero.kicker"
+            fallback="TOREKULL"
+            className="nav-caps mb-4 text-sm md:text-base"
+          />
+          <EditableText
+            as="h1"
+            copyKey="home.hero.title"
+            fallback="INTERIOR ARCHITECTURE & DESIGN"
+            className="max-w-[12ch] text-4xl leading-[1.05] sm:max-w-none sm:text-6xl md:text-7xl lg:text-8xl"
+          />
           <Link
             href="/projects/3sixty-skybar"
             className="hero-video-cta group nav-caps mt-6 inline-flex items-center gap-2 px-4 py-2 text-[11px] sm:mt-8 sm:px-6 sm:py-3 sm:text-xs md:text-sm"
           >
-            <span className="relative z-10">Explore 3Sixty Skybar</span>
+            <EditableText
+              as="span"
+              copyKey="home.hero.cta"
+              fallback="Explore 3Sixty Skybar"
+              className="relative z-10"
+            />
             <ArrowUpRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>

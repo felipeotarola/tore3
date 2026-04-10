@@ -411,3 +411,13 @@ html.vertical-wipe-transition::view-transition-new(root) {
       0 18px 36px -18px rgb(0 0 0 / 0.75);
   }
 }
+
+.landing-inline-edit {
+  cursor: text;
+  outline: 1px dashed color-mix(in srgb, black 35%, transparent);
+  outline-offset: 4px;
+}
+
+.landing-inline-edit:hover {
+  outline-color: color-mix(in srgb, black 60%, transparent);
+}

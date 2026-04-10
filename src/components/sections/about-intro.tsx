@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+import { EditableText } from '@/components/editing/editable-text';
 import { HOME_STATS } from '@/lib/torekull';
 import { cn } from '@/lib/utils';
 
@@ -10,11 +11,20 @@ export const AboutIntro = () => {
   return (
     <section className="section-padding-tight bigger-container space-y-10 md:space-y-12">
       <div className="container grid items-center gap-10 md:grid-cols-2">
-        <h2 className="text-4xl">About</h2>
+        <EditableText
+          as="h2"
+          copyKey="home.about.heading"
+          fallback="About"
+          className="text-4xl"
+        />
 
-        <p className="text-muted-foreground md:text-lg lg:text-xl">
-          {aboutDescription}
-        </p>
+        <EditableText
+          as="p"
+          copyKey="home.about.description"
+          fallback={aboutDescription}
+          singleLine={false}
+          className="text-muted-foreground md:text-lg lg:text-xl"
+        />
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -40,12 +50,16 @@ export const AboutIntro = () => {
 
       <div className="container border-y border-border py-6 md:py-7">
         <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:gap-x-10 md:grid-cols-4 md:gap-x-8 md:gap-y-0">
-          {HOME_STATS.map((item) => {
+          {HOME_STATS.map((item, index) => {
             const isShortMetric = item.value.length <= 8;
             return (
               <div key={item.title} className="min-w-0">
                 <p className="nav-caps mb-1 text-[10px] leading-snug text-muted-foreground sm:text-[11px]">
-                  {item.title}
+                  <EditableText
+                    as="span"
+                    copyKey={`home.about.stats.${index}.label`}
+                    fallback={item.title}
+                  />
                 </p>
                 <p
                   className={cn(
@@ -55,7 +69,11 @@ export const AboutIntro = () => {
                       : 'text-sm leading-snug sm:text-base',
                   )}
                 >
-                  {item.value}
+                  <EditableText
+                    as="span"
+                    copyKey={`home.about.stats.${index}.value`}
+                    fallback={item.value}
+                  />
                 </p>
               </div>
             );

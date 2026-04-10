@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 
+import { LandingCopyEditorProvider } from '@/components/editing/landing-copy-editor-provider';
 import { AboutIntro } from '@/components/sections/about-intro';
 import { CaseStudies } from '@/components/sections/case-studies';
 import { Hero } from '@/components/sections/hero';
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <LandingCopyEditorProvider>
       <link
         rel="preload"
         href={HERO_POSTER_SRC}
@@ -33,6 +34,6 @@ export default function Home() {
       <Services />
       <Logos />
       <PressPreview />
-    </>
+    </LandingCopyEditorProvider>
   );
 }

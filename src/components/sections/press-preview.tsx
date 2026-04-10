@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { EditableText } from '@/components/editing/editable-text';
 import { PressTile } from '@/components/press/press-tile';
 import { Button } from '@/components/ui/button';
 import { getPressItems } from '@/lib/press-items';
@@ -11,11 +12,27 @@ export const PressPreview = async () => {
     <section className="section-padding-tight container space-y-10">
       <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
         <div className="space-y-3">
-          <h2 className="text-4xl">Articles &amp; Magazines</h2>
-          <p className="text-muted-foreground">How they write about us</p>
+          <EditableText
+            as="h2"
+            copyKey="home.press.heading"
+            fallback="Articles & Magazines"
+            className="text-4xl"
+          />
+          <EditableText
+            as="p"
+            copyKey="home.press.description"
+            fallback="How they write about us"
+            className="text-muted-foreground"
+          />
         </div>
         <Button variant="outline" asChild>
-          <Link href="/press">See all press</Link>
+          <Link href="/press">
+            <EditableText
+              as="span"
+              copyKey="home.press.cta"
+              fallback="See all press"
+            />
+          </Link>
         </Button>
       </div>
 
