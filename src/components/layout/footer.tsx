@@ -18,15 +18,15 @@ const footerLinks = [
 const Footer = () => {
   return (
     <div className="section-padding pb-0!">
-      <footer className="bg-foreground text-background relative m-5 mt-0! overflow-hidden py-10 md:m-6 md:py-11">
+      <footer className="bg-background text-muted-foreground relative m-5 mt-0! overflow-hidden border border-border py-10 md:m-6 md:py-11">
         <div className="bigger-container space-y-6 md:space-y-8">
           <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.55fr)] md:items-start md:gap-10 lg:gap-16">
             {/* Brand — narrow column so nav + contact keep room */}
             <div className="flex min-w-0 max-w-[17rem] flex-col gap-3 md:gap-4">
               <Logo className="h-16 w-auto md:h-[4.25rem]" />
-              <blockquote className="text-background/70 text-sm italic leading-snug">
+              <blockquote className="text-muted-foreground/70 text-sm italic leading-snug">
                 &quot;{TOREKULL.quote}&quot;{' '}
-                <cite className="not-italic text-background/60">— {TOREKULL.quoteAuthor}</cite>
+                <cite className="not-italic text-muted-foreground/50">— {TOREKULL.quoteAuthor}</cite>
               </blockquote>
             </div>
 
@@ -63,7 +63,7 @@ const Footer = () => {
                     {TOREKULL.phone}
                   </Link>
                 </div>
-                <div className="text-background/85 flex flex-col gap-2 leading-snug">
+                <div className="text-muted-foreground/85 flex flex-col gap-2 leading-snug">
                   {TOREKULL.addressesShort.map((address) => (
                     <p key={address} className="min-w-0">
                       {address}
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="border-background/25 space-y-6 border-t pt-6">
+          <div className="border-border space-y-6 border-t pt-6">
             <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm">
               <Link
                 href={TOREKULL.instagram}
@@ -96,9 +96,9 @@ const Footer = () => {
               </Link>
             </div>
 
-            <div className="border-background/25 flex flex-col gap-2 border-t pt-5 text-sm md:flex-row md:items-center md:justify-between">
+            <div className="border-border flex flex-col gap-2 border-t pt-5 text-sm md:flex-row md:items-center md:justify-between">
               <p>© 2025 TOREKULL. All Rights Reserved.</p>
-              <p className="text-background/80">Stockholm, Sweden</p>
+              <p className="text-muted-foreground/70">Stockholm, Sweden</p>
             </div>
           </div>
         </div>
