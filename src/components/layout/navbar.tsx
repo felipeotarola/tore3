@@ -4,9 +4,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-
 import Logo from '@/components/layout/logo';
-import { Button } from '@/components/ui/button';
 import { useBannerVisibility } from '@/hooks/use-banner-visibility';
 import { CONTACT_EMAIL, NAV_ITEMS, SOCIAL_LINKS } from '@/lib/constants';
 import { NAV_PRIMARY, TOREKULL } from '@/lib/torekull';
