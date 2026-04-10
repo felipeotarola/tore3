@@ -39,8 +39,15 @@ type CopyField = {
 };
 
 type EditorProject = {
+  id: string;
   slug: string;
   title: string | null;
+  location: string | null;
+  completion: string | null;
+  description: string | null;
+  website: string | null;
+  sort_order: number | null;
+  is_published: boolean | null;
   cover_image: string | null;
   gallery_images: string[] | null;
 };
@@ -173,7 +180,7 @@ const LandingCopyEditorContext =
   createContext<LandingCopyEditorContextValue | null>(null);
 
 function parseFeaturedSlugs(raw: string | undefined, availableSlugs: string[]) {
-  const fallback = HOME_FEATURED_SLUGS.filter((slug) => availableSlugs.includes(slug)).slice(0, 4);
+  const fallback = HOME_FEATURED_SLUGS.filter((slug) => availableSlugs.includes(slug));
   if (!raw) return fallback;
 
   try {
@@ -233,6 +240,7 @@ export function LandingCopyEditorProvider({
   const [projectToAdd, setProjectToAdd] = useState('');
   const [activeProjectSlug, setActiveProjectSlug] = useState('');
   const [isSavingCopyDraft, setIsSavingCopyDraft] = useState(false);
+  const [isSavingProject, setIsSavingProject] = useState(false);
   const [isUploadingImage, setIsUploadingImage] = useState(false);
 
   const canEdit = Boolean(session?.user);
@@ -350,7 +358,9 @@ export function LandingCopyEditorProvider({
 
     supabase
       .from('projects')
-      .select('slug,title,cover_image,gallery_images')
+      .select(
+        'id,slug,title,location,completion,description,website,sort_order,is_published,cover_image,gallery_images',
+      )
       .order('sort_order', { ascending: true })
       .then(({ data, error }) => {
         if (error) {
@@ -411,13 +421,124 @@ export function LandingCopyEditorProvider({
     copyDraftOverrides[field.key] ?? copy[field.key] ?? field.fallback;
 
   const updateSelectedProjects = async (nextSlugs: string[]) => {
-    const normalized = nextSlugs;
+    const normalized = nextSlugs.filter(
+      (slug, index) =>
+        availableProjectSlugs.includes(slug) && nextSlugs.indexOf(slug) === index,
+    );
     setSelectedSlugsDraft(normalized);
     setCopy((prev) => ({
       ...prev,
       [FEATURED_ORDER_KEY]: JSON.stringify(normalized),
     }));
     await saveCopy(FEATURED_ORDER_KEY, JSON.stringify(normalized));
+  };
+
+  const saveProjectPatch = async (
+    projectSlug: string,
+    patch: Partial<EditorProject>,
+    successMessage: string,
+  ) => {
+    if (!supabase || !session?.user) return false;
+    setIsSavingProject(true);
+
+    const { error } = await supabase.from('projects').update(patch).eq('slug', projectSlug);
+
+    setIsSavingProject(false);
+
+    if (error) {
+      setStatus(error.message, true);
+      return false;
+    }
+
+    setProjects((prev) =>
+      prev.map((project) =>
+        project.slug === projectSlug
+          ? {
+              ...project,
+              ...patch,
+            }
+          : project,
+      ),
+    );
+    setStatus(successMessage);
+    return true;
+  };
+
+  const reorderProjects = async (nextProjects: EditorProject[]) => {
+    if (!supabase || !session?.user) return false;
+
+    const updates = nextProjects.map((project, index) => ({
+      slug: project.slug,
+      sort_order: (index + 1) * 10,
+    }));
+
+    setIsSavingProject(true);
+    const results = await Promise.all(
+      updates.map(({ slug, sort_order }) =>
+        supabase.from('projects').update({ sort_order }).eq('slug', slug),
+      ),
+    );
+    setIsSavingProject(false);
+
+    const failed = results.find((result) => result.error);
+    if (failed?.error) {
+      setStatus(failed.error.message, true);
+      return false;
+    }
+
+    setProjects(
+      nextProjects.map((project, index) => ({
+        ...project,
+        sort_order: updates[index].sort_order,
+      })),
+    );
+    setStatus('Project order saved.');
+    return true;
+  };
+
+  const moveProject = async (index: number, direction: 'up' | 'down') => {
+    const targetIndex = direction === 'up' ? index - 1 : index + 1;
+    if (targetIndex < 0 || targetIndex >= projects.length) return;
+
+    const next = [...projects];
+    [next[index], next[targetIndex]] = [next[targetIndex], next[index]];
+    await reorderProjects(next);
+  };
+
+  const updateActiveProjectDraft = (patch: Partial<EditorProject>) => {
+    if (!activeProjectSlug) return;
+    setProjects((prev) =>
+      prev.map((project) =>
+        project.slug === activeProjectSlug
+          ? {
+              ...project,
+              ...patch,
+            }
+          : project,
+      ),
+    );
+  };
+
+  const handleSaveActiveProject = async () => {
+    if (!activeProject) return;
+
+    const normalize = (value: string | null | undefined) => {
+      const trimmed = value?.trim();
+      return trimmed ? trimmed : null;
+    };
+
+    await saveProjectPatch(
+      activeProject.slug,
+      {
+        title: normalize(activeProject.title),
+        location: normalize(activeProject.location),
+        completion: normalize(activeProject.completion),
+        website: normalize(activeProject.website),
+        description: normalize(activeProject.description),
+        is_published: activeProject.is_published ?? true,
+      },
+      `Saved project "${activeProject.title || activeProject.slug}".`,
+    );
   };
 
   const handleSaveCopyDraft = async () => {
@@ -723,6 +844,14 @@ export function LandingCopyEditorProvider({
                               type="button"
                               size="sm"
                               variant="outline"
+                              onClick={() => setActiveProjectSlug(slug)}
+                            >
+                              Edit
+                            </Button>
+                            <Button
+                              type="button"
+                              size="sm"
+                              variant="outline"
                               onClick={() => {
                                 const next = selectedSlugs.filter((entry) => entry !== slug);
                                 void updateSelectedProjects(next);
@@ -766,11 +895,11 @@ export function LandingCopyEditorProvider({
 
                 <details open className="rounded-sm border border-black/10 p-3">
                   <summary className="flex cursor-pointer list-none items-center justify-between">
-                    <span className="nav-caps text-xs">Project Images</span>
+                    <span className="nav-caps text-xs">Projects</span>
                     <ChevronDown className="h-4 w-4 opacity-70" />
                   </summary>
                   <p className="mt-2 text-xs text-muted-foreground">
-                    Pick any project and upload cover or gallery images.
+                    Edit metadata, upload images, and reorder all projects.
                   </p>
 
                   <div className="mt-3 space-y-3">
@@ -794,6 +923,73 @@ export function LandingCopyEditorProvider({
                         <p className="mt-1 text-xs text-muted-foreground">
                           Slug: {activeProject.slug}
                         </p>
+
+                        <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                          <label className="block space-y-1">
+                            <span className="nav-caps text-[10px] text-muted-foreground">Title</span>
+                            <Input
+                              value={activeProject.title ?? ''}
+                              onChange={(event) =>
+                                updateActiveProjectDraft({ title: event.target.value })
+                              }
+                            />
+                          </label>
+                          <label className="block space-y-1">
+                            <span className="nav-caps text-[10px] text-muted-foreground">Location</span>
+                            <Input
+                              value={activeProject.location ?? ''}
+                              onChange={(event) =>
+                                updateActiveProjectDraft({ location: event.target.value })
+                              }
+                            />
+                          </label>
+                          <label className="block space-y-1">
+                            <span className="nav-caps text-[10px] text-muted-foreground">
+                              Completion
+                            </span>
+                            <Input
+                              value={activeProject.completion ?? ''}
+                              onChange={(event) =>
+                                updateActiveProjectDraft({ completion: event.target.value })
+                              }
+                            />
+                          </label>
+                          <label className="block space-y-1">
+                            <span className="nav-caps text-[10px] text-muted-foreground">Website</span>
+                            <Input
+                              value={activeProject.website ?? ''}
+                              onChange={(event) =>
+                                updateActiveProjectDraft({ website: event.target.value })
+                              }
+                            />
+                          </label>
+                          <label className="block space-y-1 sm:col-span-2">
+                            <span className="nav-caps text-[10px] text-muted-foreground">
+                              Description
+                            </span>
+                            <Textarea
+                              value={activeProject.description ?? ''}
+                              onChange={(event) =>
+                                updateActiveProjectDraft({ description: event.target.value })
+                              }
+                              rows={3}
+                            />
+                          </label>
+                        </div>
+
+                        <div className="mt-3">
+                          <Button
+                            type="button"
+                            onClick={() => {
+                              void handleSaveActiveProject();
+                            }}
+                            disabled={isSavingProject}
+                          >
+                            <Save className="mr-2 h-4 w-4" />
+                            {isSavingProject ? 'Saving...' : 'Save Project'}
+                          </Button>
+                        </div>
+
                         {activeProject.cover_image ? (
                           <Image
                             src={activeProject.cover_image}
@@ -840,20 +1036,46 @@ export function LandingCopyEditorProvider({
                     ) : null}
 
                     <div className="max-h-64 overflow-auto rounded-sm border border-black/10">
-                      {projects.map((project) => (
+                      {projects.map((project, index) => (
                         <div
                           key={project.slug}
-                          className="flex items-center justify-between border-b border-black/10 px-3 py-2 text-sm last:border-b-0"
+                          className={`flex items-center justify-between border-b border-black/10 px-3 py-2 text-sm last:border-b-0 ${project.slug === activeProjectSlug ? 'bg-black/[0.03]' : ''}`}
                         >
-                          <span>{project.title || project.slug}</span>
-                          <Button
-                            type="button"
-                            size="sm"
-                            variant="ghost"
-                            onClick={() => setActiveProjectSlug(project.slug)}
-                          >
-                            Edit
-                          </Button>
+                          <span>
+                            {index + 1}. {project.title || project.slug}
+                          </span>
+                          <div className="flex gap-1">
+                            <Button
+                              type="button"
+                              size="sm"
+                              variant="outline"
+                              disabled={index === 0 || isSavingProject}
+                              onClick={() => {
+                                void moveProject(index, 'up');
+                              }}
+                            >
+                              <ChevronUp className="h-4 w-4" />
+                            </Button>
+                            <Button
+                              type="button"
+                              size="sm"
+                              variant="outline"
+                              disabled={index === projects.length - 1 || isSavingProject}
+                              onClick={() => {
+                                void moveProject(index, 'down');
+                              }}
+                            >
+                              <ChevronDown className="h-4 w-4" />
+                            </Button>
+                            <Button
+                              type="button"
+                              size="sm"
+                              variant="outline"
+                              onClick={() => setActiveProjectSlug(project.slug)}
+                            >
+                              Edit
+                            </Button>
+                          </div>
                         </div>
                       ))}
                     </div>

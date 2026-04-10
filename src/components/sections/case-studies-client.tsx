@@ -30,9 +30,7 @@ function resolveOrderedFeaturedSlugs(
   savedRaw: string | undefined,
 ) {
   const availableSlugs = new Set(availableProjects.map((project) => project.slug));
-  const fallbackSlugs: string[] = HOME_FEATURED_SLUGS.slice(0, 4).filter((slug) =>
-    availableSlugs.has(slug),
-  );
+  const fallbackSlugs: string[] = HOME_FEATURED_SLUGS.filter((slug) => availableSlugs.has(slug));
   const savedSlugs = parseFeaturedSlugs(savedRaw)?.filter((slug) =>
     availableSlugs.has(slug),
   );
