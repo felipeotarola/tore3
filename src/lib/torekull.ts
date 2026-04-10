@@ -92,8 +92,10 @@ export const HOME_HERO_SLUGS = [
 ] as const;
 
 export const HOME_FEATURED_SLUGS = [
-  'kasai-stockholm',
+ 'kasai-stockholm',
   'moyagi-london',
+  '3sixty-skybar',
+  'walthon-advokater-office',
 ] as const;
 
 export const PROJECT_FILTERS: Array<{
