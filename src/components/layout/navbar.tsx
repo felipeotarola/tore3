@@ -255,17 +255,7 @@ export const Navbar = ({
                     })}
                   </nav>
 
-                  <Button
-                    variant="outline"
-                    asChild
-                    className={cn(
-                      'nav-caps',
-                      (isHomeRoute || isAnimating) &&
-                        'text-background border-background/30',
-                    )}
-                  >
-                    <Link href="/contact">Work with TOREKULL</Link>
-                  </Button>
+
                 </>
               )}
             </motion.div>

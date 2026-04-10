@@ -3,11 +3,10 @@ import { fileURLToPath } from "url";
 import type { NextConfig } from "next";
 
 const configDir = path.dirname(fileURLToPath(import.meta.url));
-const projectRoot = "/Users/baltsar/Documents/Cursor/WHITERHINO-COLLAB/TORKEL";
 
 const nextConfig: NextConfig = {
   turbopack: {
-    root: configDir === projectRoot ? configDir : projectRoot,
+    root: configDir,
   },
   async rewrites() {
     return [
