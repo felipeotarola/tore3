@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { EditableText } from '@/components/editing/editable-text';
 import { PressTile } from '@/components/press/press-tile';
 import { Button } from '@/components/ui/button';
-import { getPressItems } from '@/lib/press-items';
+import { getPressItems, prioritizeFeaturedPressItem } from '@/lib/press-items';
 
 export const PressPreview = async () => {
-  const pressItems = await getPressItems();
+  const pressItems = prioritizeFeaturedPressItem(await getPressItems());
 
   return (
     <section className="section-padding-tight container space-y-10">
@@ -37,7 +37,7 @@ export const PressPreview = async () => {
       </div>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {pressItems.slice(0, 6).map((item) => (
+        {pressItems.slice(0, 3).map((item) => (
           <PressTile
             key={item.slug}
             slug={item.slug}

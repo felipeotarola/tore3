@@ -24,7 +24,7 @@ export const ServiceWhatYouGet = ({ items }: ServiceWhatYouGetProps) => {
         {items.map((item, index) => (
           <div key={index} className="flex flex-col items-start gap-5">
             {item.image && (
-              <div className="relative h-[392px] w-full shrink-0 overflow-hidden">
+              <div className="relative h-[392px] w-full shrink-0 overflow-hidden rounded-md">
                 <Image
                   alt={item.title}
                   className="size-full object-cover"

@@ -95,7 +95,7 @@ export function ServiceCard({
         View
       </motion.div>
 
-      <div className="relative h-[335px] w-full shrink-0 overflow-hidden lg:h-[450px]">
+      <div className="relative h-[335px] w-full shrink-0 overflow-hidden rounded-md lg:h-[450px]">
         <Image
           alt={title}
           className="size-full object-cover transition-all duration-500 ease-out group-hover:scale-110"

@@ -12,7 +12,7 @@ export const Logos = () => {
             as="span"
             copyKey={`home.logos.${index}`}
             fallback={item}
-            className="nav-caps text-muted-foreground whitespace-nowrap text-sm"
+            className="nav-caps text-foreground/90 whitespace-nowrap text-sm font-medium md:text-base"
           />
         ))}
       </Marquee>

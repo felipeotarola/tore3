@@ -2,14 +2,14 @@ import { Metadata } from 'next';
 
 import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { PressTile } from '@/components/press/press-tile';
-import { getPressItems } from '@/lib/press-items';
+import { getPressItems, prioritizeFeaturedPressItem } from '@/lib/press-items';
 
 export const metadata: Metadata = {
   title: 'Articles & Magazines',
 };
 
 export default async function PressPage() {
-  const pressItems = await getPressItems();
+  const pressItems = prioritizeFeaturedPressItem(await getPressItems());
 
   return (
     <div className="hero-padding container flex flex-col gap-10 lg:gap-12">

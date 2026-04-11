@@ -5,15 +5,17 @@ import { notFound } from 'next/navigation';
 import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { Cta } from '@/components/sections/cta';
 import { Process } from '@/components/sections/process';
+import { Project14Detail } from '@/components/sections/project-14-detail';
 import { ProjectGallery } from '@/components/sections/project-gallery';
-import { ProjectHero } from '@/components/sections/project-hero';
-import { ProjectOverview } from '@/components/sections/project-overview';
+import { ProjectLightboxProvider } from '@/components/sections/project-image-lightbox';
 import { Button } from '@/components/ui/button';
 import {
   getAllProjects,
   getProjectBySlug,
   getProjectSlugs,
 } from '@/lib/projects';
+import { CATEGORY_LABELS } from '@/lib/torekull';
+import type { ProjectCategory } from '@/lib/types';
 
 interface ProjectPageProps {
   params: Promise<{
@@ -74,11 +76,17 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     currentIndex >= 0 ? allProjects[(currentIndex + 1) % allProjects.length] : null;
 
   const images = frontmatter.images ?? [];
-  const heroImage = images[0] ?? {
+  const fallbackHero = {
     src: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/3sixty-1.jpg',
     alt: `${frontmatter.name} hero image`,
   };
-  const galleryImages = images.slice(1);
+  const detailImages = images.length > 0 ? images : [fallbackHero];
+  const galleryAfterTemplate =
+    detailImages.length > 5 ? detailImages.slice(5) : [];
+
+  const categoryLabel =
+    CATEGORY_LABELS[frontmatter.category as ProjectCategory] ??
+    frontmatter.category;
 
   return (
     <>
@@ -86,29 +94,29 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <DetailCloseButton fallbackHref="/projects" />
       </section>
 
-      <ProjectHero
-        title={frontmatter.name}
-        image={heroImage}
-        eyebrow="Selected work"
-        className="!pt-8 md:!pt-10 lg:!pt-12"
-      />
+      <ProjectLightboxProvider images={detailImages}>
+        <Project14Detail
+          eyebrow="Selected work"
+          title={frontmatter.name}
+          images={detailImages}
+          categoryLabel={categoryLabel}
+          yearLabel={frontmatter.date}
+          brandLabel={frontmatter.industry}
+          description={frontmatter.description}
+          project={frontmatter}
+          className="!pt-4 md:!pt-6 lg:!pt-8"
+        />
 
-      <ProjectOverview
-        title="Project overview"
-        description={frontmatter.description}
-        project={frontmatter}
-      />
-
-      {galleryImages.length >= 2 && (
-        <ProjectGallery images={galleryImages.slice(0, 2)} />
-      )}
+        {galleryAfterTemplate.length > 0 && (
+          <ProjectGallery
+            images={galleryAfterTemplate}
+            imageIndexOffset={5}
+          />
+        )}
+      </ProjectLightboxProvider>
 
       {frontmatter.process && frontmatter.process.length > 0 && (
         <Process title={`${frontmatter.name} process`} steps={frontmatter.process} />
-      )}
-
-      {galleryImages.length >= 4 && (
-        <ProjectGallery images={galleryImages.slice(2, 4)} />
       )}
 
       {nextProject && (

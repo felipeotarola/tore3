@@ -130,7 +130,7 @@ export function CaseStudyCarousel({
                   </div>
                 </div>
                 {/* Image Container */}
-                <div className="relative aspect-square h-[335px] flex-1 overflow-hidden md:h-[500px] 2xl:h-[608px]">
+                <div className="relative aspect-square h-[335px] flex-1 overflow-hidden rounded-md md:h-[500px] 2xl:h-[608px]">
                   <Image
                     src={image.src}
                     alt={image.alt}

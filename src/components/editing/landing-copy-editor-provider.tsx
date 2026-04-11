@@ -12,7 +12,14 @@ import {
   X,
 } from 'lucide-react';
 import Image from 'next/image';
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -59,6 +66,19 @@ type CopyEntry = {
 
 const FEATURED_ORDER_KEY = 'home.caseStudies.featuredSlugs';
 const LOCAL_COPY_STORAGE_KEY = 'landing_copy_local_cache_v1';
+
+function readLocalCopyCache(): LandingCopyMap {
+  if (typeof window === 'undefined') return {};
+  try {
+    const raw = window.localStorage.getItem(LOCAL_COPY_STORAGE_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+    return parsed as LandingCopyMap;
+  } catch {
+    return {};
+  }
+}
 
 const COPY_FIELDS: CopyField[] = [
   { key: 'home.hero.kicker', label: 'Hero Kicker', fallback: 'TOREKULL' },
@@ -214,18 +234,11 @@ export function LandingCopyEditorProvider({
 }) {
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
   const [session, setSession] = useState<Session | null>(null);
-  const [copy, setCopy] = useState<LandingCopyMap>(() => {
-    if (typeof window === 'undefined') return {};
-    try {
-      const raw = window.localStorage.getItem(LOCAL_COPY_STORAGE_KEY);
-      if (!raw) return {};
-      const parsed = JSON.parse(raw);
-      if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
-      return parsed as LandingCopyMap;
-    } catch {
-      return {};
-    }
-  });
+  // Empty on server and first client render so SSR + hydration match. localStorage and
+  // Supabase merge in an effect (after paint) — never read storage in useState.
+  const [copy, setCopy] = useState<LandingCopyMap>({});
+  /** Avoid writing `{}` to localStorage before the first remote/local merge runs. */
+  const [copySourceReady, setCopySourceReady] = useState(false);
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [email, setEmail] = useState('');
@@ -251,13 +264,13 @@ export function LandingCopyEditorProvider({
   }, []);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !copySourceReady) return;
     try {
       window.localStorage.setItem(LOCAL_COPY_STORAGE_KEY, JSON.stringify(copy));
     } catch {
       // Ignore localStorage failures silently.
     }
-  }, [copy]);
+  }, [copy, copySourceReady]);
 
   const saveCopyEntries = async (entries: CopyEntry[]) => {
     if (!supabase || !session?.user) return false;
@@ -324,33 +337,53 @@ export function LandingCopyEditorProvider({
   }, [supabase]);
 
   useEffect(() => {
-    if (!supabase) return;
-
-    supabase
-      .from('landing_copy')
-      .select('key,value')
-      .then(({ data, error }) => {
-        if (error) {
-          if (error.message.includes('landing_copy')) {
-            setStatus(
-              "Using local copy cache. Run the 'landing_copy' migration in Supabase.",
-              true,
-            );
-          } else {
-            setStatus('Could not load landing copy from Supabase.', true);
-          }
-          return;
-        }
-
-        const nextCopy: LandingCopyMap = {};
-        for (const row of data ?? []) {
-          if (typeof row.key === 'string' && typeof row.value === 'string') {
-            nextCopy[row.key] = row.value;
-          }
-        }
-
-        setCopy(nextCopy);
+    if (!supabase) {
+      queueMicrotask(() => {
+        setCopy(readLocalCopyCache());
+        setCopySourceReady(true);
       });
+      return;
+    }
+
+    void (async () => {
+      try {
+        const local = readLocalCopyCache();
+        const { data, error } = await supabase
+          .from('landing_copy')
+          .select('key,value');
+
+        try {
+          if (error) {
+            if (error.message.includes('landing_copy')) {
+              setStatus(
+                "Using local copy cache. Run the 'landing_copy' migration in Supabase.",
+                true,
+              );
+            } else {
+              setStatus('Could not load landing copy from Supabase.', true);
+            }
+            setCopy(local);
+            return;
+          }
+
+          const nextCopy: LandingCopyMap = {};
+          for (const row of data ?? []) {
+            if (typeof row.key === 'string' && typeof row.value === 'string') {
+              nextCopy[row.key] = row.value;
+            }
+          }
+
+          // Browser cache fills gaps; Supabase rows win on conflicts.
+          setCopy({ ...local, ...nextCopy });
+        } finally {
+          setCopySourceReady(true);
+        }
+      } catch {
+        setStatus('Could not load landing copy from Supabase.', true);
+        setCopy(readLocalCopyCache());
+        setCopySourceReady(true);
+      }
+    })();
   }, [setStatus, supabase]);
 
   useEffect(() => {

@@ -45,7 +45,7 @@ export function PressTile({
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
       className={cn(
-        'group border-border block overflow-hidden rounded-sm border',
+        'group border-border block overflow-hidden rounded-md border',
         'outline-none transition-shadow hover:shadow-md',
         'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
       )}

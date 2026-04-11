@@ -15,61 +15,76 @@ const footerLinks = [
   { label: 'Contact', href: '/contact' },
 ];
 
+const mid = Math.ceil(footerLinks.length / 2);
+const footerLinksCol1 = footerLinks.slice(0, mid);
+const footerLinksCol2 = footerLinks.slice(mid);
+
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <div className="section-padding pb-0!">
-      <footer className="bg-background text-muted-foreground relative m-5 mt-0! overflow-hidden border border-border py-10 md:m-6 md:py-11">
-        <div className="bigger-container space-y-6 md:space-y-8">
-          <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.55fr)] md:items-start md:gap-10 lg:gap-16">
-            {/* Brand — narrow column so nav + contact keep room */}
-            <div className="flex min-w-0 max-w-[17rem] flex-col gap-3 md:gap-4">
-              <Logo className="h-16 w-auto md:h-[4.25rem]" />
-              <blockquote className="text-muted-foreground/70 text-sm italic leading-snug">
-                &quot;{TOREKULL.quote}&quot;{' '}
-                <cite className="not-italic text-muted-foreground/50">— {TOREKULL.quoteAuthor}</cite>
-              </blockquote>
-            </div>
+      <footer className="bg-background text-muted-foreground relative border-t border-border/50 py-10 md:py-12">
+        <div className="bigger-container flex flex-col gap-12 md:gap-16">
+          {/* Centered statement mark — strong end-of-page anchor */}
+          <div className="flex flex-col items-center justify-center px-2 py-2 md:py-4">
+            <Logo className="h-40 w-auto sm:h-44 md:h-52 lg:h-60 xl:h-[16rem]" />
+          </div>
 
-            {/* Nav | Contact: two columns from md; addresses stack (no side-by-side lines) */}
-            <div className="grid min-w-0 grid-cols-1 gap-10 md:grid-cols-2 md:items-start md:gap-x-10 lg:gap-x-14 xl:gap-x-16">
-              <nav
-                aria-label="Footer"
-                className="flex min-w-0 flex-col gap-2 self-start"
-              >
-                {footerLinks.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="animated-underline w-fit text-sm"
-                  >
-                    {item.label}
-                  </Link>
+          {/* Three columns: two link groups + contact (shadcnblocks footer7 pattern) */}
+          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 xl:gap-16">
+            <nav aria-label="Footer">
+              <ul className="flex flex-col gap-2">
+                {footerLinksCol1.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="animated-underline inline-block text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
                 ))}
-              </nav>
+              </ul>
+            </nav>
 
-              <div className="min-w-0 space-y-3 text-sm">
-                <h3 className="nav-caps text-xs">Contact</h3>
-                <div className="flex flex-col gap-1">
-                  <Link
-                    className="animated-underline break-words"
-                    href={`mailto:${TOREKULL.email}`}
-                  >
-                    {TOREKULL.email}
-                  </Link>
-                  <Link
-                    className="animated-underline w-fit"
-                    href={`tel:${TOREKULL.phone.replace(/[^\d+]/g, '')}`}
-                  >
-                    {TOREKULL.phone}
-                  </Link>
-                </div>
-                <div className="text-muted-foreground/85 flex flex-col gap-2 leading-snug">
-                  {TOREKULL.addressesShort.map((address) => (
-                    <p key={address} className="min-w-0">
-                      {address}
-                    </p>
-                  ))}
-                </div>
+            <nav aria-label="More pages">
+              <ul className="flex flex-col gap-2">
+                {footerLinksCol2.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="animated-underline inline-block text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <div className="min-w-0 space-y-3 text-sm sm:col-span-2 lg:col-span-1">
+              <h3 className="nav-caps text-xs">Contact</h3>
+              <div className="flex flex-col gap-1">
+                <Link
+                  className="animated-underline break-words"
+                  href={`mailto:${TOREKULL.email}`}
+                >
+                  {TOREKULL.email}
+                </Link>
+                <Link
+                  className="animated-underline w-fit"
+                  href={`tel:${TOREKULL.phone.replace(/[^\d+]/g, '')}`}
+                >
+                  {TOREKULL.phone}
+                </Link>
+              </div>
+              <div className="text-muted-foreground/85 flex flex-col gap-2 leading-snug">
+                {TOREKULL.addressesShort.map((address) => (
+                  <p key={address} className="min-w-0">
+                    {address}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
@@ -97,7 +112,9 @@ const Footer = () => {
             </div>
 
             <div className="border-border flex flex-col gap-2 border-t pt-5 text-sm md:flex-row md:items-center md:justify-between">
-              <p>© 2025 TOREKULL. All Rights Reserved.</p>
+              <p>
+                © {year} TOREKULL. All Rights Reserved.
+              </p>
               <p className="text-muted-foreground/70">Stockholm, Sweden</p>
             </div>
           </div>

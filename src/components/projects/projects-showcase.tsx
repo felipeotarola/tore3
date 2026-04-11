@@ -59,7 +59,7 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
             >
               <div
                 className={cn(
-                  'relative aspect-[4/3] w-full overflow-hidden rounded-sm border border-border bg-muted',
+                  'relative aspect-[4/3] w-full overflow-hidden rounded-md border border-border bg-muted',
                   reversed && 'lg:order-2',
                 )}
               >
@@ -71,7 +71,15 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   quality={90}
                 />
-                <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/10" />
+                <div className="pointer-events-none absolute inset-0 bg-black/18 transition-colors duration-300 group-hover:bg-black/55" />
+                <div
+                  className="absolute inset-0 z-10 flex items-center justify-center p-4 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-focus-within:opacity-100"
+                  aria-hidden="true"
+                >
+                  <span className="text-center text-2xl font-semibold uppercase tracking-[0.2em] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-3xl md:text-4xl">
+                    View project
+                  </span>
+                </div>
               </div>
 
               <div

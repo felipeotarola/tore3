@@ -115,7 +115,7 @@ export function ServicesHoverTable() {
         </div>
 
         <motion.div
-          className="pointer-events-none absolute left-0 top-0 z-50 overflow-hidden rounded-sm border border-border bg-muted shadow-2xl"
+          className="pointer-events-none absolute left-0 top-0 z-50 overflow-hidden rounded-md border border-border bg-muted shadow-2xl"
           style={{
             width: IMAGE_WIDTH,
             height: IMAGE_HEIGHT,

@@ -28,7 +28,7 @@ export const AboutIntro = () => {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        <div className="relative h-[300px] md:h-[400px] lg:h-[500px]">
+        <div className="relative h-[300px] overflow-hidden rounded-md md:h-[400px] lg:h-[500px]">
           <Image
             fill
             src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/la-botanica/09-botanica-002-final.jpg"
@@ -37,7 +37,7 @@ export const AboutIntro = () => {
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
-        <div className="relative h-[300px] md:h-[400px] lg:h-[500px]">
+        <div className="relative h-[300px] overflow-hidden rounded-md md:h-[400px] lg:h-[500px]">
           <Image
             fill
             src="https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/imports/kasai-stockholm/03-20221007-173300.jpg"

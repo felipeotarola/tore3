@@ -17,7 +17,7 @@ export const ServiceHero = ({ title, image }: ServiceHeroProps) => {
       </h1>
 
       <div className="bigger-container">
-        <div className="relative h-[335px] w-full overflow-hidden md:h-[450px] lg:h-[900px]">
+        <div className="relative h-[335px] w-full overflow-hidden rounded-md md:h-[450px] lg:h-[900px]">
           <Image
             src={image}
             alt={title}

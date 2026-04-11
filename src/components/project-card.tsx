@@ -31,7 +31,12 @@ export function ProjectCard({
 
   return (
     <Link href={`/projects/${slug}`} className={cn('group flex flex-col items-start gap-4')}>
-      <div className={cn('relative h-full w-full overflow-hidden', className)}>
+      <div
+        className={cn(
+          'relative h-full w-full overflow-hidden rounded-md',
+          className,
+        )}
+      >
         <Image
           src={primaryImage.src}
           alt={primaryImage.alt}

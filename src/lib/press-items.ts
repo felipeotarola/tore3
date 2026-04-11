@@ -5,6 +5,35 @@ export type PressListItem = PressItem & {
   isPublished: boolean;
 };
 
+/** Featured on home + listed first on /press — International Property World's Best 2022–2023 */
+const FEATURED_PRESS_SLUG_PRIMARY =
+  'international-property-travel-worlds-best-2022-2023';
+/** Fallback data (`PRESS_ITEMS`) uses this slug when not loading from Supabase */
+const FEATURED_PRESS_SLUG_FALLBACK = 'worlds-best-interior-design-2022-2023';
+
+/**
+ * Moves the featured press tile to the front when present (does not duplicate).
+ */
+export function prioritizeFeaturedPressItem(
+  items: PressListItem[],
+): PressListItem[] {
+  const targetSlug = items.some((i) => i.slug === FEATURED_PRESS_SLUG_PRIMARY)
+    ? FEATURED_PRESS_SLUG_PRIMARY
+    : items.some((i) => i.slug === FEATURED_PRESS_SLUG_FALLBACK)
+      ? FEATURED_PRESS_SLUG_FALLBACK
+      : null;
+  if (!targetSlug) {
+    return items;
+  }
+  const index = items.findIndex((i) => i.slug === targetSlug);
+  if (index <= 0) {
+    return items;
+  }
+  const copy = [...items];
+  const [featured] = copy.splice(index, 1);
+  return [featured, ...copy];
+}
+
 type SupabasePressItemRow = {
   slug: string | null;
   title: string | null;

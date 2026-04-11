@@ -71,12 +71,12 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
 
   return (
     <>
-      <section className="space-y-12 pt-10 pb-12 md:space-y-14 md:pt-12 md:pb-14">
-        <div className="container space-y-4">
+      <section className="space-y-5 pt-6 pb-7 md:space-y-6 md:pt-8 md:pb-9">
+        <div className="container">
           <DetailCloseButton fallbackHref="/press" />
         </div>
 
-        <div className="container space-y-4 text-center">
+        <div className="container space-y-2 text-center md:space-y-2.5">
           <p className="nav-caps text-muted-foreground text-xs">
             Articles &amp; Magazines
           </p>
@@ -103,38 +103,44 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
             />
           </div>
         </div>
-      </section>
 
-      <section className="section-padding container">
-        <div className="grid gap-10 md:grid-cols-2">
-          <h2 className="text-4xl">Press overview</h2>
-          <p className="text-muted-foreground text-lg">{pressSummary}</p>
+        <div className="container max-w-4xl border-t border-border/70 pt-4 pb-6 md:pt-5 md:pb-7">
+          <p className="nav-caps text-muted-foreground mb-1 text-[0.65rem] tracking-[0.14em]">
+            Press overview
+          </p>
+          <p className="text-muted-foreground mb-3 text-sm leading-snug">
+            {pressSummary}
+          </p>
+          <dl className="grid gap-x-5 gap-y-2 sm:grid-cols-3">
+            <div>
+              <dt className="text-muted-foreground mb-0.5 text-[0.65rem] tracking-widest uppercase">
+                Publication
+              </dt>
+              <dd className="text-foreground text-sm leading-snug">{publication}</dd>
+            </div>
+            <div>
+              <dt className="text-muted-foreground mb-0.5 text-[0.65rem] tracking-widest uppercase">
+                Year
+              </dt>
+              <dd className="text-foreground text-sm leading-snug">{year}</dd>
+            </div>
+            <div>
+              <dt className="text-muted-foreground mb-0.5 text-[0.65rem] tracking-widest uppercase">
+                Reference
+              </dt>
+              <dd className="text-foreground text-sm leading-snug">{reference}</dd>
+            </div>
+          </dl>
+          {item.url ? (
+            <div className="mt-4">
+              <Button variant="outline" size="sm" asChild>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  Open publication
+                </a>
+              </Button>
+            </div>
+          ) : null}
         </div>
-
-        <div className="mt-10 grid justify-between gap-6 sm:mt-20 sm:grid-cols-3 lg:mt-26 xl:mt-36">
-          <div className="flex flex-col gap-2">
-            <p className="text-muted-foreground text-lg">Publication</p>
-            <p className="text-lg">{publication}</p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-muted-foreground text-lg">Year</p>
-            <p className="text-lg">{year}</p>
-          </div>
-          <div className="flex flex-col gap-2">
-            <p className="text-muted-foreground text-lg">Reference</p>
-            <p className="text-lg">{reference}</p>
-          </div>
-        </div>
-
-        {item.url && (
-          <div className="mt-10">
-            <Button variant="outline" asChild>
-              <a href={item.url} target="_blank" rel="noopener noreferrer">
-                Open publication
-              </a>
-            </Button>
-          </div>
-        )}
       </section>
 
       <section className="section-padding container flex flex-col gap-6 md:flex-row md:items-center md:justify-between">

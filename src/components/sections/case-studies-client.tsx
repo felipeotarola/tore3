@@ -115,7 +115,7 @@ export function CaseStudiesClient({ allProjects }: CaseStudiesClientProps) {
               href={`/projects/${project.slug}`}
               data-editor-lock-nav="true"
               className={cn(
-                'group border-border relative block overflow-hidden rounded-sm border',
+                'group border-border relative block overflow-hidden rounded-md border',
                 index >= 2 && 'hidden sm:block',
                 'outline-none transition-shadow hover:shadow-md',
                 'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
@@ -135,25 +135,27 @@ export function CaseStudiesClient({ allProjects }: CaseStudiesClientProps) {
                   <div className="bg-muted absolute inset-0" />
                 )}
 
-                <div className="absolute inset-0 bg-black/18 transition-colors duration-300 group-hover:bg-black/50" />
+                <div className="absolute inset-0 bg-black/18 transition-colors duration-300 group-hover:bg-black/55" />
 
-                <div className="absolute inset-0 flex flex-col justify-end p-5 text-white sm:p-6">
+                <div
+                  className="absolute inset-0 z-10 flex items-center justify-center p-4 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-focus-within:opacity-100"
+                  aria-hidden="true"
+                >
+                  <EditableText
+                    as="span"
+                    copyKey="home.caseStudies.cardCta"
+                    fallback="View project"
+                    className="text-center text-2xl font-semibold uppercase tracking-[0.2em] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-3xl md:text-4xl"
+                  />
+                </div>
+
+                <div className="absolute inset-0 z-[1] flex flex-col justify-end p-5 text-white transition-opacity duration-300 ease-out group-hover:opacity-0 group-focus-within:opacity-0 sm:p-6">
                   <p className="nav-caps text-xs text-white/85">
                     {category ?? 'Project'}
                   </p>
                   <h3 className="mt-2 text-xl leading-snug tracking-[0.02em] md:text-2xl">
                     {project.title ?? project.name}
                   </h3>
-                  <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-white/0 transition-colors duration-300 group-hover:text-white/88">
-                    {project.description ?? 'Open project details'}
-                  </p>
-                  <span className="mt-4 inline-block text-sm text-white/0 transition-colors duration-300 group-hover:text-white">
-                    <EditableText
-                      as="span"
-                      copyKey="home.caseStudies.cardCta"
-                      fallback="View project"
-                    />
-                  </span>
                 </div>
               </div>
             </Link>
