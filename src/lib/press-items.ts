@@ -236,7 +236,7 @@ export async function getPressItems(): Promise<PressListItem[]> {
         isPublished: row.is_published !== false,
       }));
 
-    return items.length > 0 ? items : toFallbackItems();
+    return items;
   } catch {
     return toFallbackItems();
   }

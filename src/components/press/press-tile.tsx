@@ -42,6 +42,7 @@ export function PressTile({
   return (
     <Link
       href={destination}
+      data-editor-lock-nav="true"
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
       className={cn(

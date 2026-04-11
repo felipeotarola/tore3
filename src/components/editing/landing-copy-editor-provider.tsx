@@ -12,6 +12,7 @@ import {
   X,
 } from 'lucide-react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import {
   createContext,
   useCallback,
@@ -62,6 +63,15 @@ type EditorProject = {
 type CopyEntry = {
   key: string;
   value: string;
+};
+
+type EditorPressItem = {
+  id: string;
+  slug: string | null;
+  title: string;
+  image_url: string;
+  sort_order: number | null;
+  is_published: boolean;
 };
 
 const FEATURED_ORDER_KEY = 'home.caseStudies.featuredSlugs';
@@ -194,6 +204,98 @@ const COPY_FIELDS: CopyField[] = [
   { key: 'home.logos.5', label: 'Logo Marquee 6', fallback: 'Deck Brasserie' },
   { key: 'home.logos.6', label: 'Logo Marquee 7', fallback: 'Chouchou' },
   { key: 'home.logos.7', label: 'Logo Marquee 8', fallback: 'Canta Lola' },
+  { key: 'about.hero.kicker', label: 'About Hero Kicker', fallback: 'The practice' },
+  { key: 'about.hero.title', label: 'About Hero Title', fallback: 'About TOREKULL' },
+  {
+    key: 'about.hero.description',
+    label: 'About Hero Description',
+    fallback:
+      'The studio is led by founder Maja-Li Torekull - an interior architect and designer working across commercial interiors, custom furniture, and product development for clients in Europe and the United States.',
+    multiline: true,
+  },
+  { key: 'about.who.heading', label: 'About Who Heading', fallback: 'Who We Are' },
+  {
+    key: 'about.who.body',
+    label: 'About Who Body',
+    fallback:
+      'As a Swedish and American company with a history of working in the USA, Italy, France, Tunisia, and Sweden, our projects are influenced by many different cultures, trends and styles - constantly changing, just like the world around us.',
+    multiline: true,
+  },
+  { key: 'about.founder.nameTitle', label: 'Founder Name/Title', fallback: 'Maja-Li Torekull - Founder & Lead Interior Architect' },
+  {
+    key: 'about.founder.bio',
+    label: 'Founder Bio',
+    fallback:
+      'Educated at ESAG Penninghen and Academie Julian. Published internationally in ArchDaily, Enki Magazine, H.O.O.M, Residence, and Plaza Interior.',
+    multiline: true,
+  },
+  {
+    key: 'about.philosophy.heading',
+    label: 'Philosophy Heading',
+    fallback: 'Our Philosophy',
+  },
+  {
+    key: 'about.philosophy.body',
+    label: 'Philosophy Body',
+    fallback:
+      'We believe that there should never be a compromise between design and function. Without function, great design will go to waste. Without great design, all the content and efforts will be for nothing. The two must go hand in hand.',
+    multiline: true,
+  },
+  {
+    key: 'about.philosophy.quote',
+    label: 'Philosophy Quote',
+    fallback: 'The function of design is letting design function',
+    multiline: true,
+  },
+  {
+    key: 'about.philosophy.quoteAuthor',
+    label: 'Philosophy Quote Author',
+    fallback: 'Micha Commeren',
+  },
+  {
+    key: 'about.approach.heading',
+    label: 'Design Approach Heading',
+    fallback: 'Design Approach',
+  },
+  {
+    key: 'about.approach.body',
+    label: 'Design Approach Body',
+    fallback:
+      'Design must be functional and functionality must be translated into visual aesthetics. This should be achieved without relying upon overused trends and gimmicks. If it has to be explained, either the design or functionality - or both - are lacking.',
+    multiline: true,
+  },
+  {
+    key: 'about.languages.heading',
+    label: 'Languages Heading',
+    fallback: 'Languages',
+  },
+  {
+    key: 'about.languages.list',
+    label: 'Languages List',
+    fallback: 'Swedish · English · Italian · French · Spanish',
+  },
+  {
+    key: 'about.images.founderPortrait.src',
+    label: 'About Founder Portrait Image URL',
+    fallback:
+      'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/founder-maja-li-torekull.jpg',
+  },
+  {
+    key: 'about.images.founderPortrait.alt',
+    label: 'About Founder Portrait Alt',
+    fallback: 'Portrait of Maja-Li Torekull',
+  },
+  { key: 'press.page.kicker', label: 'Press Page Kicker', fallback: 'In the press' },
+  {
+    key: 'press.page.title',
+    label: 'Press Page Title',
+    fallback: 'Articles & Magazines',
+  },
+  {
+    key: 'press.page.description',
+    label: 'Press Page Description',
+    fallback: 'How they write about us',
+  },
 ];
 
 const LandingCopyEditorContext =
@@ -217,6 +319,15 @@ function parseFeaturedSlugs(raw: string | undefined, availableSlugs: string[]) {
   }
 }
 
+function slugify(value: string) {
+  const normalized = value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+  return normalized || `press-${Date.now()}`;
+}
+
 export function useLandingCopyEditor() {
   const context = useContext(LandingCopyEditorContext);
   if (!context) {
@@ -232,6 +343,7 @@ export function LandingCopyEditorProvider({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
   const supabase = useMemo(() => getSupabaseBrowserClient(), []);
   const [session, setSession] = useState<Session | null>(null);
   // Empty on server and first client render so SSR + hydration match. localStorage and
@@ -249,14 +361,23 @@ export function LandingCopyEditorProvider({
 
   const [copyDraftOverrides, setCopyDraftOverrides] = useState<Record<string, string>>({});
   const [projects, setProjects] = useState<EditorProject[]>([]);
+  const [pressItems, setPressItems] = useState<EditorPressItem[]>([]);
   const [selectedSlugsDraft, setSelectedSlugsDraft] = useState<string[] | null>(null);
   const [projectToAdd, setProjectToAdd] = useState('');
   const [activeProjectSlug, setActiveProjectSlug] = useState('');
+  const [activePressItemId, setActivePressItemId] = useState('');
   const [isSavingCopyDraft, setIsSavingCopyDraft] = useState(false);
   const [isSavingProject, setIsSavingProject] = useState(false);
+  const [isSavingPressItem, setIsSavingPressItem] = useState(false);
   const [isUploadingImage, setIsUploadingImage] = useState(false);
 
   const canEdit = Boolean(session?.user);
+  const isHomePage = pathname === '/';
+  const isAboutPage = pathname?.startsWith('/about') ?? false;
+  const isPressPage = pathname?.startsWith('/press') ?? false;
+  const showHomeSections = isHomePage;
+  const showAboutSections = isAboutPage;
+  const showPressSections = isPressPage || isHomePage;
 
   const setStatus = useCallback((message: string, isError = false) => {
     setStatusMessage(message);
@@ -387,7 +508,7 @@ export function LandingCopyEditorProvider({
   }, [setStatus, supabase]);
 
   useEffect(() => {
-    if (!(canEdit && isSidebarOpen) || !supabase) return;
+    if (!(canEdit && isSidebarOpen && showHomeSections) || !supabase) return;
 
     supabase
       .from('projects')
@@ -407,7 +528,40 @@ export function LandingCopyEditorProvider({
           setActiveProjectSlug(nextProjects[0].slug);
         }
       });
-  }, [activeProjectSlug, canEdit, isSidebarOpen, setStatus, supabase]);
+  }, [activeProjectSlug, canEdit, isSidebarOpen, setStatus, showHomeSections, supabase]);
+
+  useEffect(() => {
+    if (!(canEdit && isSidebarOpen && showPressSections) || !supabase) return;
+
+    supabase
+      .from('press_items')
+      .select('id,slug,title,image_url,sort_order,is_published')
+      .order('sort_order', { ascending: true })
+      .then(({ data, error }) => {
+        if (error) {
+          setStatus(error.message, true);
+          return;
+        }
+
+        const nextItems = (data ?? []) as EditorPressItem[];
+        setPressItems(nextItems);
+        if (!activePressItemId && nextItems[0]?.id) {
+          setActivePressItemId(nextItems[0].id);
+        }
+      });
+  }, [activePressItemId, canEdit, isSidebarOpen, setStatus, showPressSections, supabase]);
+
+  useEffect(() => {
+    if (!showPressSections) return;
+    if (pressItems.length === 0) {
+      if (activePressItemId) setActivePressItemId('');
+      return;
+    }
+    const exists = pressItems.some((item) => item.id === activePressItemId);
+    if (!exists) {
+      setActivePressItemId(pressItems[0].id);
+    }
+  }, [activePressItemId, pressItems, showPressSections]);
 
   useEffect(() => {
     if (!(canEdit && isSidebarOpen)) return;
@@ -450,6 +604,18 @@ export function LandingCopyEditorProvider({
   )
     ? projectToAdd
     : (projectAddOptions[0]?.slug ?? '');
+  const visibleCopyFields = useMemo(() => {
+    if (showAboutSections) {
+      return COPY_FIELDS.filter((field) => field.key.startsWith('about.'));
+    }
+    if (isPressPage) {
+      return COPY_FIELDS.filter((field) => field.key.startsWith('press.'));
+    }
+    if (showHomeSections) {
+      return COPY_FIELDS.filter((field) => field.key.startsWith('home.'));
+    }
+    return [];
+  }, [isPressPage, showAboutSections, showHomeSections]);
   const getDraftValue = (field: CopyField) =>
     copyDraftOverrides[field.key] ?? copy[field.key] ?? field.fallback;
 
@@ -574,10 +740,210 @@ export function LandingCopyEditorProvider({
     );
   };
 
+  const updateActivePressItemDraft = (patch: Partial<EditorPressItem>) => {
+    if (!activePressItemId) return;
+    setPressItems((prev) =>
+      prev.map((item) =>
+        item.id === activePressItemId
+          ? {
+              ...item,
+              ...patch,
+            }
+          : item,
+      ),
+    );
+  };
+
+  const saveActivePressItem = async () => {
+    const item = pressItems.find((entry) => entry.id === activePressItemId);
+    if (!item || !supabase || !session?.user) return;
+
+    const normalizedTitle = item.title.trim();
+    const normalizedImageUrl = item.image_url.trim();
+    const normalizedSlug = slugify((item.slug ?? normalizedTitle).trim() || normalizedTitle);
+
+    if (!normalizedTitle) {
+      setStatus('Press title is required.', true);
+      return;
+    }
+    if (!normalizedImageUrl) {
+      setStatus('Press image URL is required.', true);
+      return;
+    }
+
+    setIsSavingPressItem(true);
+    const { error } = await supabase
+      .from('press_items')
+      .update({
+        title: normalizedTitle,
+        slug: normalizedSlug,
+        image_url: normalizedImageUrl,
+        is_published: item.is_published,
+      })
+      .eq('id', item.id);
+    setIsSavingPressItem(false);
+
+    if (error) {
+      setStatus(error.message, true);
+      return;
+    }
+
+    setPressItems((prev) =>
+      prev.map((entry) =>
+        entry.id === item.id
+          ? {
+              ...entry,
+              title: normalizedTitle,
+              slug: normalizedSlug,
+              image_url: normalizedImageUrl,
+            }
+          : entry,
+      ),
+    );
+    setStatus(`Saved press item "${normalizedTitle}".`);
+  };
+
+  const movePressItem = async (index: number, direction: 'up' | 'down') => {
+    const targetIndex = direction === 'up' ? index - 1 : index + 1;
+    if (targetIndex < 0 || targetIndex >= pressItems.length || !supabase || !session?.user) return;
+
+    const next = [...pressItems];
+    [next[index], next[targetIndex]] = [next[targetIndex], next[index]];
+    const updates = next.map((item, itemIndex) => ({
+      id: item.id,
+      sort_order: (itemIndex + 1) * 10,
+    }));
+
+    setIsSavingPressItem(true);
+    const results = await Promise.all(
+      updates.map(({ id, sort_order }) =>
+        supabase.from('press_items').update({ sort_order }).eq('id', id),
+      ),
+    );
+    setIsSavingPressItem(false);
+
+    const failed = results.find((result) => result.error);
+    if (failed?.error) {
+      setStatus(failed.error.message, true);
+      return;
+    }
+
+    setPressItems(
+      next.map((item, itemIndex) => ({
+        ...item,
+        sort_order: updates[itemIndex].sort_order,
+      })),
+    );
+    setStatus('Press order saved.');
+  };
+
+  const deletePressItem = async (itemId: string) => {
+    if (!supabase || !session?.user) return;
+    setIsSavingPressItem(true);
+    const { error } = await supabase.from('press_items').delete().eq('id', itemId);
+    setIsSavingPressItem(false);
+
+    if (error) {
+      setStatus(error.message, true);
+      return;
+    }
+
+    setPressItems((prev) => {
+      const filtered = prev.filter((item) => item.id !== itemId);
+      if (activePressItemId === itemId) {
+        setActivePressItemId(filtered[0]?.id ?? '');
+      }
+      return filtered;
+    });
+    setStatus('Press item removed.');
+  };
+
+  const addPressItem = async () => {
+    if (!supabase || !session?.user) return;
+
+    const nextSortOrder = (pressItems.length + 1) * 10;
+    const title = 'New press item';
+    const slug = `${slugify(title)}-${Date.now()}`;
+    const imageUrl = pressItems[0]?.image_url || '/placeholder.svg';
+
+    setIsSavingPressItem(true);
+    const { data, error } = await supabase
+      .from('press_items')
+      .insert({
+        title,
+        slug,
+        image_url: imageUrl,
+        sort_order: nextSortOrder,
+        is_published: true,
+      })
+      .select('id,slug,title,image_url,sort_order,is_published')
+      .single();
+    setIsSavingPressItem(false);
+
+    if (error) {
+      setStatus(error.message, true);
+      return;
+    }
+
+    const created = data as EditorPressItem;
+    setPressItems((prev) => [...prev, created]);
+    setActivePressItemId(created.id);
+    setStatus('Press item added.');
+  };
+
+  const uploadPressImage = async (itemId: string, file: File) => {
+    if (!supabase || !session?.user) return;
+    if (!file) return;
+
+    setIsUploadingImage(true);
+    const extension = file.name.split('.').pop()?.toLowerCase() || 'jpg';
+    const item = pressItems.find((entry) => entry.id === itemId);
+    const safeSlug = slugify(item?.slug || item?.title || 'press-item');
+    const filePath = `press/${safeSlug}-${Date.now()}.${extension}`;
+    const bucket = getSupabaseStorageBucket();
+
+    const { error: uploadError } = await supabase.storage
+      .from(bucket)
+      .upload(filePath, file, { upsert: true });
+
+    if (uploadError) {
+      setIsUploadingImage(false);
+      setStatus(uploadError.message, true);
+      return;
+    }
+
+    const { data } = supabase.storage.from(bucket).getPublicUrl(filePath);
+    const imageUrl = data.publicUrl;
+
+    const { error: updateError } = await supabase
+      .from('press_items')
+      .update({ image_url: imageUrl })
+      .eq('id', itemId);
+
+    setIsUploadingImage(false);
+
+    if (updateError) {
+      setStatus(updateError.message, true);
+      return;
+    }
+
+    setPressItems((prev) =>
+      prev.map((entry) =>
+        entry.id === itemId
+          ? {
+              ...entry,
+              image_url: imageUrl,
+            }
+          : entry,
+      ),
+    );
+    setStatus('Press image updated.');
+  };
+
   const handleSaveCopyDraft = async () => {
     if (!canEdit) return;
 
-    const changedEntries: CopyEntry[] = COPY_FIELDS.map((field) => ({
+    const changedEntries: CopyEntry[] = visibleCopyFields.map((field) => ({
       key: field.key,
       value: getDraftValue(field).trim(),
     })).filter((entry) => (copy[entry.key] ?? '') !== entry.value);
@@ -721,6 +1087,8 @@ export function LandingCopyEditorProvider({
 
   const activeProject =
     projects.find((project) => project.slug === activeProjectSlug) ?? null;
+  const activePressItem =
+    pressItems.find((item) => item.id === activePressItemId) ?? null;
 
   return (
     <LandingCopyEditorContext.Provider value={{ copy, canEdit, saveCopy }}>
@@ -776,58 +1144,61 @@ export function LandingCopyEditorProvider({
                   </div>
                 </div>
 
-                <details open className="rounded-sm border border-black/10 p-3">
-                  <summary className="flex cursor-pointer list-none items-center justify-between">
-                    <span className="nav-caps text-xs">Section Copy</span>
-                    <ChevronDown className="h-4 w-4 opacity-70" />
-                  </summary>
-                  <p className="mt-2 text-xs text-muted-foreground">
-                    Update all landing copy from one place.
-                  </p>
-                  <div className="mt-3 space-y-3">
-                    {COPY_FIELDS.map((field) => (
-                      <label key={field.key} className="block space-y-1">
-                        <span className="nav-caps text-[10px] text-muted-foreground">
-                          {field.label}
-                        </span>
-                        {field.multiline ? (
-                          <Textarea
-                            value={getDraftValue(field)}
-                            onChange={(event) =>
-                              setCopyDraftOverrides((prev) => ({
-                                ...prev,
-                                [field.key]: event.target.value,
-                              }))
-                            }
-                            rows={3}
-                          />
-                        ) : (
-                          <Input
-                            value={getDraftValue(field)}
-                            onChange={(event) =>
-                              setCopyDraftOverrides((prev) => ({
-                                ...prev,
-                                [field.key]: event.target.value,
-                              }))
-                            }
-                          />
-                        )}
-                      </label>
-                    ))}
-                    <Button
-                      type="button"
-                      onClick={() => {
-                        void handleSaveCopyDraft();
-                      }}
-                      disabled={isSavingCopyDraft}
-                    >
-                      <Save className="mr-2 h-4 w-4" />
-                      {isSavingCopyDraft ? 'Saving...' : 'Save Copy'}
-                    </Button>
-                  </div>
-                </details>
+                {visibleCopyFields.length > 0 ? (
+                  <details open className="rounded-sm border border-black/10 p-3">
+                    <summary className="flex cursor-pointer list-none items-center justify-between">
+                      <span className="nav-caps text-xs">Section Copy</span>
+                      <ChevronDown className="h-4 w-4 opacity-70" />
+                    </summary>
+                    <p className="mt-2 text-xs text-muted-foreground">
+                      Update copy for this page.
+                    </p>
+                    <div className="mt-3 space-y-3">
+                      {visibleCopyFields.map((field) => (
+                        <label key={field.key} className="block space-y-1">
+                          <span className="nav-caps text-[10px] text-muted-foreground">
+                            {field.label}
+                          </span>
+                          {field.multiline ? (
+                            <Textarea
+                              value={getDraftValue(field)}
+                              onChange={(event) =>
+                                setCopyDraftOverrides((prev) => ({
+                                  ...prev,
+                                  [field.key]: event.target.value,
+                                }))
+                              }
+                              rows={3}
+                            />
+                          ) : (
+                            <Input
+                              value={getDraftValue(field)}
+                              onChange={(event) =>
+                                setCopyDraftOverrides((prev) => ({
+                                  ...prev,
+                                  [field.key]: event.target.value,
+                                }))
+                              }
+                            />
+                          )}
+                        </label>
+                      ))}
+                      <Button
+                        type="button"
+                        onClick={() => {
+                          void handleSaveCopyDraft();
+                        }}
+                        disabled={isSavingCopyDraft}
+                      >
+                        <Save className="mr-2 h-4 w-4" />
+                        {isSavingCopyDraft ? 'Saving...' : 'Save Copy'}
+                      </Button>
+                    </div>
+                  </details>
+                ) : null}
 
-                <details open className="rounded-sm border border-black/10 p-3">
+                {showHomeSections ? (
+                  <details open className="rounded-sm border border-black/10 p-3">
                   <summary className="flex cursor-pointer list-none items-center justify-between">
                     <span className="nav-caps text-xs">Selected Projects</span>
                     <ChevronDown className="h-4 w-4 opacity-70" />
@@ -924,9 +1295,11 @@ export function LandingCopyEditorProvider({
                       </Button>
                     </div>
                   </div>
-                </details>
+                  </details>
+                ) : null}
 
-                <details open className="rounded-sm border border-black/10 p-3">
+                {showHomeSections ? (
+                  <details open className="rounded-sm border border-black/10 p-3">
                   <summary className="flex cursor-pointer list-none items-center justify-between">
                     <span className="nav-caps text-xs">Projects</span>
                     <ChevronDown className="h-4 w-4 opacity-70" />
@@ -1113,7 +1486,179 @@ export function LandingCopyEditorProvider({
                       ))}
                     </div>
                   </div>
-                </details>
+                  </details>
+                ) : null}
+
+                {showPressSections ? (
+                  <details open className="rounded-sm border border-black/10 p-3">
+                    <summary className="flex cursor-pointer list-none items-center justify-between">
+                      <span className="nav-caps text-xs">Articles &amp; Magazines</span>
+                      <ChevronDown className="h-4 w-4 opacity-70" />
+                    </summary>
+                    <p className="mt-2 text-xs text-muted-foreground">
+                      Add, edit, reorder and remove press items for both landing page and /press.
+                    </p>
+                    <div className="mt-3 space-y-3">
+                      <Button
+                        type="button"
+                        variant="outline"
+                        onClick={() => {
+                          void addPressItem();
+                        }}
+                        disabled={isSavingPressItem}
+                      >
+                        Add Press Item
+                      </Button>
+
+                      <select
+                        className="border-input bg-background w-full rounded-sm border px-3 py-2 text-sm"
+                        value={activePressItemId}
+                        onChange={(event) => setActivePressItemId(event.target.value)}
+                      >
+                        {pressItems.map((item) => (
+                          <option key={item.id} value={item.id}>
+                            {item.title || item.slug || item.id}
+                          </option>
+                        ))}
+                      </select>
+
+                      {activePressItem ? (
+                        <div className="rounded-sm border border-black/10 p-3">
+                          <p className="text-sm font-medium">
+                            {activePressItem.title || activePressItem.slug || 'Press item'}
+                          </p>
+                          <p className="mt-1 text-xs text-muted-foreground">
+                            ID: {activePressItem.id}
+                          </p>
+                          <div className="mt-3 grid gap-3">
+                            <label className="block space-y-1">
+                              <span className="nav-caps text-[10px] text-muted-foreground">Title</span>
+                              <Input
+                                value={activePressItem.title}
+                                onChange={(event) =>
+                                  updateActivePressItemDraft({ title: event.target.value })
+                                }
+                              />
+                            </label>
+                            <label className="block space-y-1">
+                              <span className="nav-caps text-[10px] text-muted-foreground">Slug</span>
+                              <Input
+                                value={activePressItem.slug ?? ''}
+                                onChange={(event) =>
+                                  updateActivePressItemDraft({ slug: event.target.value })
+                                }
+                              />
+                            </label>
+                            <label className="block space-y-1">
+                              <span className="nav-caps text-[10px] text-muted-foreground">
+                                Image URL
+                              </span>
+                              <Input
+                                value={activePressItem.image_url}
+                                onChange={(event) =>
+                                  updateActivePressItemDraft({ image_url: event.target.value })
+                                }
+                              />
+                            </label>
+                          </div>
+
+                          {activePressItem.image_url ? (
+                            <Image
+                              src={activePressItem.image_url}
+                              alt={activePressItem.title || 'Press image'}
+                              width={480}
+                              height={270}
+                              className="mt-3 h-32 w-full rounded-sm object-cover"
+                            />
+                          ) : null}
+
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            <label className="inline-flex cursor-pointer items-center justify-center rounded-sm border border-black/20 px-3 py-2 text-sm">
+                              <ImagePlus className="mr-2 h-4 w-4" />
+                              Upload Image
+                              <input
+                                type="file"
+                                accept="image/*"
+                                className="hidden"
+                                onChange={(event) => {
+                                  const file = event.target.files?.[0];
+                                  if (!file) return;
+                                  void uploadPressImage(activePressItem.id, file);
+                                  event.currentTarget.value = '';
+                                }}
+                              />
+                            </label>
+                            <Button
+                              type="button"
+                              onClick={() => {
+                                void saveActivePressItem();
+                              }}
+                              disabled={isSavingPressItem}
+                            >
+                              <Save className="mr-2 h-4 w-4" />
+                              {isSavingPressItem ? 'Saving...' : 'Save Press Item'}
+                            </Button>
+                            <Button
+                              type="button"
+                              variant="outline"
+                              onClick={() => {
+                                void deletePressItem(activePressItem.id);
+                              }}
+                              disabled={isSavingPressItem}
+                            >
+                              Remove
+                            </Button>
+                          </div>
+                        </div>
+                      ) : null}
+
+                      <div className="max-h-64 overflow-auto rounded-sm border border-black/10">
+                        {pressItems.map((item, index) => (
+                          <div
+                            key={item.id}
+                            className={`flex items-center justify-between border-b border-black/10 px-3 py-2 text-sm last:border-b-0 ${item.id === activePressItemId ? 'bg-black/[0.03]' : ''}`}
+                          >
+                            <span>
+                              {index + 1}. {item.title || item.slug || item.id}
+                            </span>
+                            <div className="flex gap-1">
+                              <Button
+                                type="button"
+                                size="sm"
+                                variant="outline"
+                                disabled={index === 0 || isSavingPressItem}
+                                onClick={() => {
+                                  void movePressItem(index, 'up');
+                                }}
+                              >
+                                <ChevronUp className="h-4 w-4" />
+                              </Button>
+                              <Button
+                                type="button"
+                                size="sm"
+                                variant="outline"
+                                disabled={index === pressItems.length - 1 || isSavingPressItem}
+                                onClick={() => {
+                                  void movePressItem(index, 'down');
+                                }}
+                              >
+                                <ChevronDown className="h-4 w-4" />
+                              </Button>
+                              <Button
+                                type="button"
+                                size="sm"
+                                variant="outline"
+                                onClick={() => setActivePressItemId(item.id)}
+                              >
+                                Edit
+                              </Button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </details>
+                ) : null}
 
                 {statusMessage ? (
                   <p
