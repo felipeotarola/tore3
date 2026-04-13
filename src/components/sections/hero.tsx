@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { EditableText } from '@/components/editing/editable-text';
@@ -10,6 +11,12 @@ import {
   HOME_HERO_SLUGS,
 } from '@/lib/torekull';
 import { cn } from '@/lib/utils';
+
+/** Bump when replacing award PNGs so browsers skip stale cache (`2022` refreshed here). */
+const HERO_AWARD_ASSET_VERSIONS: Record<string, string> = {
+  '/EUawards2021_Torkel.png': '4',
+  '/EUawards2022_Torkel.png': '5',
+};
 
 export async function Hero() {
   const allProjects = await getAllProjectsWithLogos();
@@ -38,7 +45,7 @@ export async function Hero() {
         </video>
         <div className="absolute inset-0 z-[1] bg-black/60" />
 
-        <div className="relative z-10 flex flex-1 flex-col items-center justify-center py-10 text-center">
+        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center px-2 py-10 pb-[11rem] text-center sm:pb-[12.5rem] md:pb-[14.5rem] lg:pb-[17rem]">
           <EditableText
             as="p"
             copyKey="home.hero.kicker"
@@ -105,6 +112,43 @@ export async function Hero() {
             aria-label="Next featured project"
           />
         </Carousel> */}
+
+        <nav
+          aria-label="European Property Awards"
+          className="pointer-events-auto absolute inset-x-0 bottom-0 z-10 flex items-end justify-center gap-6 px-4 pb-2 sm:gap-10 sm:pb-3 md:gap-14 md:pb-4"
+        >
+          {(
+            [
+              {
+                src: '/EUawards2021_Torkel.png',
+                label: 'European Property Awards 2021–2022',
+              },
+              {
+                src: '/EUawards2022_Torkel.png',
+                label: 'European Property Awards 2022–2023',
+              },
+            ] as const
+          ).map((award) => (
+            <Link
+              key={award.src}
+              href="/about"
+              data-editor-lock-nav="true"
+              aria-label={`About TOREKULL — ${award.label}`}
+              className="border-0 outline-none ring-0 transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black/40"
+            >
+              <div className="relative h-36 w-[6.75rem] overflow-hidden bg-transparent sm:h-40 sm:w-[7.75rem] md:h-48 md:w-[9rem] lg:h-52 lg:w-[9.75rem]">
+                <Image
+                                   src={`${award.src}?v=${HERO_AWARD_ASSET_VERSIONS[award.src] ?? '1'}`}
+                  alt=""
+                  fill
+                  unoptimized
+                  sizes="(max-width: 640px) 120px, (max-width: 1024px) 144px, 168px"
+                  className="object-cover object-top [image-rendering:auto]"
+                />
+              </div>
+            </Link>
+          ))}
+        </nav>
       </section>
     </div>
   );

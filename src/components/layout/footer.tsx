@@ -27,7 +27,7 @@ const Footer = () => {
       <footer className="bg-background text-muted-foreground relative border-t border-border/50 py-10 md:py-12">
         <div className="bigger-container flex flex-col gap-12 md:gap-16">
           {/* Centered statement mark — strong end-of-page anchor */}
-          <div className="flex flex-col items-center justify-center px-2 py-2 md:py-4">
+          <div className="text-foreground flex flex-col items-center justify-center px-2 py-2 md:py-4">
             <Logo className="h-40 w-auto sm:h-44 md:h-52 lg:h-60 xl:h-[16rem]" />
           </div>
 

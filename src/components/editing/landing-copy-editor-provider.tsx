@@ -285,6 +285,33 @@ const COPY_FIELDS: CopyField[] = [
     label: 'About Founder Portrait Alt',
     fallback: 'Portrait of Maja-Li Torekull',
   },
+  {
+    key: 'about.awards.kicker',
+    label: 'About Awards Kicker',
+    fallback: 'European Property Awards',
+  },
+  {
+    key: 'about.awards.heading',
+    label: 'About Awards Heading',
+    fallback: 'Recognition',
+  },
+  {
+    key: 'about.awards.description',
+    label: 'About Awards Description',
+    fallback:
+      'Selected honours from the International Property Awards programme — interior architecture and leisure categories across recent years.',
+    multiline: true,
+  },
+  {
+    key: 'about.images.awards21to23.src',
+    label: 'About Awards strip image URL',
+    fallback: '/awards_21-23.png',
+  },
+  {
+    key: 'about.images.awards21to23.alt',
+    label: 'About Awards strip alt text',
+    fallback: 'TOREKULL — European Property Awards and related recognition, 2021–2023',
+  },
   { key: 'press.page.kicker', label: 'Press Page Kicker', fallback: 'In the press' },
   {
     key: 'press.page.title',
