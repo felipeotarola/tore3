@@ -299,7 +299,7 @@ const COPY_FIELDS: CopyField[] = [
     key: 'about.awards.description',
     label: 'About Awards Description',
     fallback:
-      'Selected honours from the International Property Awards programme — interior architecture and leisure categories across recent years.',
+      'Official European Property Awards (Interior Design) results for TOREKULL leisure interiors in Sweden — spelled out below so the same facts appear in text and in structured data.',
     multiline: true,
   },
   {
@@ -310,7 +310,8 @@ const COPY_FIELDS: CopyField[] = [
   {
     key: 'about.images.awards21to23.alt',
     label: 'About Awards strip alt text',
-    fallback: 'TOREKULL — European Property Awards and related recognition, 2021–2023',
+    fallback:
+      'European Property Awards Interior Design award ribbons for TOREKULL Interior Architecture & Design: DECK Brasserie & Bar (2021–2022); Canta Lola (2021–2022); Biblioteket Live (2022–2023); ChouChou (2022–2023).',
   },
   { key: 'press.page.kicker', label: 'Press Page Kicker', fallback: 'In the press' },
   {

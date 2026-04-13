@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
+
 import Logo from '@/components/layout/logo';
 import { useBannerVisibility } from '@/hooks/use-banner-visibility';
 import { CONTACT_EMAIL, NAV_ITEMS, SOCIAL_LINKS } from '@/lib/constants';
@@ -18,7 +19,6 @@ export const Navbar = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutMenuOpen, setIsAboutMenuOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
   const [isNavbarHidden, setIsNavbarHidden] = useState(false);
   const [isOpening, setIsOpening] = useState(false);
   const pathname = usePathname();
@@ -60,25 +60,18 @@ export const Navbar = ({
     if (!isMenuOpen) {
       setIsOpening(true);
       setShouldRender(true);
-      setIsAnimating(true);
       requestAnimationFrame(() => {
         setIsMenuOpen(true);
       });
     } else {
       setIsOpening(false);
       setIsMenuOpen(false);
-      setIsAnimating(true);
     }
   };
 
   const handleAnimationEnd = (e: React.AnimationEvent) => {
-    // When opening animation completes (column-five-open is last to finish)
-    if (isMenuOpen && e.animationName === 'column-five-open') {
-      setIsAnimating(false);
-    }
     // When closing animation completes (column-five-close is last to finish)
-    else if (!isMenuOpen && e.animationName === 'column-five-close') {
-      setIsAnimating(false);
+    if (!isMenuOpen && e.animationName === 'column-five-close') {
       setShouldRender(false);
     }
   };
@@ -295,6 +288,17 @@ export const Navbar = ({
                 {item.label}
               </Link>
             ))}
+            {/* TEMPORÄR: snabb blogg (Supabase) — ta bort när permanent navigering finns */}
+            <Link
+              href="/blog"
+              onClick={() => setIsMenuOpen(false)}
+              className={cn(
+                'animated-underline text-4xl uppercase tracking-[0.1em] after:-bottom-1 after:h-0.5',
+                pathname === '/blog' && 'active-underline',
+              )}
+            >
+              Blogg
+            </Link>
           </div>
           <div className="flex flex-col items-center gap-2 text-sm">
             <Link className="animated-underline" href={`mailto:${CONTACT_EMAIL}`}>

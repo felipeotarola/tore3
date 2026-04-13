@@ -9,6 +9,7 @@ type EditableTextProps = {
   copyKey: string;
   fallback: string;
   className?: string;
+  id?: string;
   singleLine?: boolean;
 };
 
@@ -17,10 +18,15 @@ export function EditableText({
   copyKey,
   fallback,
   className,
+  id,
 }: EditableTextProps) {
   const Tag = as;
   const { copy } = useLandingCopyEditor();
   const text = copy[copyKey] ?? fallback;
 
-  return <Tag className={className}>{text}</Tag>;
+  return (
+    <Tag className={className} id={id}>
+      {text}
+    </Tag>
+  );
 }
