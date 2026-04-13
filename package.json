@@ -13,6 +13,7 @@
     "migrate:projects:supabase-urls-to-blob": "node scripts/migrate-supabase-project-images-to-blob.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.88.0",
     "@hookform/resolvers": "^5.2.2",
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-scroll-area": "^1.2.10",
