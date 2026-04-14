@@ -1,19 +1,18 @@
 import Anthropic from '@anthropic-ai/sdk';
+import { readFileSync } from 'fs';
 import { NextRequest } from 'next/server';
+import { join } from 'path';
 
 import { insertDraft } from '@/lib/blog-posts';
 
 export const maxDuration = 300;
 
-const AGENT_CONFIG_PATH = '.agent-config.json';
-
 function loadAgentConfig(): { AGENT_ID: string; ENVIRONMENT_ID: string } | null {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const fs = require('fs');
-    const raw = fs.readFileSync(AGENT_CONFIG_PATH, 'utf-8');
-    return JSON.parse(raw);
-  } catch {
+    const configPath = join(process.cwd(), '.agent-config.json');
+    return JSON.parse(readFileSync(configPath, 'utf-8'));
+  } catch (e) {
+    console.error('[admin/chat] Failed to load .agent-config.json:', e);
     return null;
   }
 }
