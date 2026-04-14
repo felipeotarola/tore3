@@ -95,7 +95,12 @@ export default function AdminChatPage() {
       });
 
       if (!res.ok || !res.body) {
-        throw new Error(`HTTP ${res.status}`);
+        let detail = `HTTP ${res.status}`;
+        try {
+          const body = await res.json();
+          if (body?.error) detail = body.error;
+        } catch { /* ignore */ }
+        throw new Error(detail);
       }
 
       const reader = res.body.getReader();
