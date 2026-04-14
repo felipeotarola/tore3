@@ -2,6 +2,8 @@
  * Supabase `blog_posts` — data fetching for public site + review workflow.
  */
 
+import { FOUNDER_PORTRAIT } from '@/lib/torekull';
+
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, '') ?? '';
 const ANON_KEY =
   process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
@@ -81,6 +83,35 @@ function normalizeDraft(row: RawRow): BlogDraftRow | null {
   };
 }
 
+/** Synlig när DB saknar publicerade inlägg — samma slug som valfri SQL-seed. */
+export const PLACEHOLDER_BLOG_SLUG = 'preview-hello-torekull';
+
+const PLACEHOLDER_PUBLISHED_AT = '2026-04-01T12:00:00.000Z';
+
+/** Exempelinlägg för lokal förhandsvisning (och om `NEXT_PUBLIC_SHOW_BLOG_PLACEHOLDER=1`). */
+export const PLACEHOLDER_BLOG_POST: BlogPostRow = {
+  id: '00000000-0000-4000-8000-000000000001',
+  slug: PLACEHOLDER_BLOG_SLUG,
+  title: 'Välkommen till TOREKULL-bloggen',
+  excerpt:
+    'Ett exempelinlägg så du kan se kort, ingress, detaljsida och tabell. Ersätt gärna med riktiga poster i Supabase.',
+  body: [
+    'Det här inlägget visas när inga publicerade rader finns i `blog_posts`, eller när API:et ännu returnerar tomt (t.ex. innan migrering är körd).',
+    '',
+    'När du publicerat riktiga inlägg försvinner denna förhandsvisning automatiskt (först när minst ett inlägg finns i databasen).',
+  ].join('\n'),
+  cover_image_url: FOUNDER_PORTRAIT.src,
+  published_at: PLACEHOLDER_PUBLISHED_AT,
+  tags: ['preview', 'studio'],
+  sources_used: [],
+};
+
+function showPlaceholderWhenNoPosts(): boolean {
+  if (process.env.NEXT_PUBLIC_SHOW_BLOG_PLACEHOLDER === '0') return false;
+  if (process.env.NEXT_PUBLIC_SHOW_BLOG_PLACEHOLDER === '1') return true;
+  return process.env.NODE_ENV === 'development';
+}
+
 // ─── Public readers ───────────────────────────────────────────────────────────
 
 const PUBLIC_SELECT =
@@ -98,6 +129,15 @@ async function supabaseFetch(
       headers: { apikey: key, Authorization: `Bearer ${key}` },
     });
     if (!res.ok) {
+      // 404 = relation missing in PostgREST (table not created / migration not applied yet).
+      if (res.status === 404) {
+        if (process.env.NODE_ENV === 'development') {
+          console.warn(
+            '[blog] blog_posts returned 404 — create the table in Supabase (run migrations for blog_posts).',
+          );
+        }
+        return [];
+      }
       console.error(`blog_posts fetch failed: ${res.status} ${res.statusText}`);
       return [];
     }
@@ -116,7 +156,11 @@ export async function getPublishedBlogPosts(): Promise<BlogPostRow[]> {
     order: 'published_at.desc.nullslast,created_at.desc',
   });
   const rows = await supabaseFetch(params, ANON_KEY);
-  return rows.map(normalizeRow).filter((r): r is BlogPostRow => r !== null);
+  const posts = rows.map(normalizeRow).filter((r): r is BlogPostRow => r !== null);
+  if (posts.length === 0 && showPlaceholderWhenNoPosts()) {
+    return [PLACEHOLDER_BLOG_POST];
+  }
+  return posts;
 }
 
 export async function getPublishedBlogPostBySlug(slug: string): Promise<BlogPostRow | null> {
@@ -128,8 +172,17 @@ export async function getPublishedBlogPostBySlug(slug: string): Promise<BlogPost
     limit: '1',
   });
   const rows = await supabaseFetch(params, ANON_KEY);
-  if (!rows.length) return null;
-  return normalizeRow(rows[0]);
+  if (rows.length) {
+    const normalized = normalizeRow(rows[0]);
+    if (normalized) return normalized;
+  }
+  if (
+    showPlaceholderWhenNoPosts() &&
+    slug.trim() === PLACEHOLDER_BLOG_SLUG
+  ) {
+    return PLACEHOLDER_BLOG_POST;
+  }
+  return null;
 }
 
 export async function getPublishedBlogSlugs(): Promise<string[]> {

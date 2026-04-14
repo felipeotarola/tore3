@@ -49,7 +49,10 @@ export default async function BlogPage() {
         </div>
       </section>
 
-      <section id="inlagg" className="section-padding container scroll-mt-24">
+      <section
+        id="inlagg"
+        className="container scroll-mt-24 pt-4 pb-18.75 md:pt-6 md:pb-26 lg:pt-8 lg:pb-31.25"
+      >
         {posts.length === 0 ? (
           <p className="text-muted-foreground max-w-xl text-base">
             Inga publicerade inlägg än. Applicera migrationen{' '}
