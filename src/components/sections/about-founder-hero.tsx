@@ -4,7 +4,7 @@ import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 /** Hero — two-column scan on large screens (shadcnblocks-style split headline). */
 export function AboutFounderHero() {
   return (
-    <section className="container flex flex-col gap-6 pt-20 pb-10 md:gap-8 md:pt-24 md:pb-12 lg:pt-28 lg:pb-14">
+    <section className="container flex flex-col gap-6 pt-10 pb-12 md:gap-8 md:pt-14 md:pb-14 lg:pt-16 lg:pb-16">
       <DetailCloseButton fallbackHref="/" />
 
       <div className="grid gap-6 lg:grid-cols-12 lg:gap-10 lg:items-start">
