@@ -1,13 +1,12 @@
 import Image, { type StaticImageData } from 'next/image';
 
-import { EditableText } from '@/components/editing/editable-text';
-import { HOME_STATS } from '@/lib/torekull';
-import { cn } from '@/lib/utils';
-
 import award2021RollsRoyceFiveStar from '@/assets/award-eu-2021-1-BEKUfOFA.png';
 import award2021RollsRoyceWinner from '@/assets/award-eu-2021-2-B3LTT-g_.jpg';
 import award2022LaufenFiveStar from '@/assets/award-eu-2022-1-DfHIgPbY.jpg';
 import award2022LaufenWinner from '@/assets/award-eu-2022-2-MqLdy2AQ.jpg';
+import { EditableText } from '@/components/editing/editable-text';
+import { HOME_STATS } from '@/lib/torekull';
+import { cn } from '@/lib/utils';
 
 type HomeAward = {
   src: StaticImageData;
@@ -41,7 +40,7 @@ const HOME_AWARDS: HomeAward[] = [
 export function HomeProofBlock() {
   return (
     <section
-      className="container py-10 md:py-12 lg:py-14"
+      className="container py-8 md:py-10 lg:py-12"
       aria-labelledby="home-proof-heading"
     >
       <div className="mx-auto max-w-5xl">
@@ -72,7 +71,7 @@ export function HomeProofBlock() {
           ))}
         </div>
 
-        <div className="mt-8 border-y border-border/80 py-5 md:mt-9">
+        <div className="mt-7 border-y border-border/80 py-5 md:mt-8">
           <div className="grid grid-cols-2 gap-y-5 md:grid-cols-4 md:divide-x md:divide-border/80">
             {HOME_STATS.map((item, index) => {
               const isShortMetric = item.value.length <= 8;

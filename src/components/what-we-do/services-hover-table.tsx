@@ -71,12 +71,16 @@ export function ServicesHoverTable() {
   };
 
   return (
-    <section className="section-padding overflow-x-clip">
+    <section className="overflow-x-clip py-10 md:py-12 lg:py-14">
       <div ref={containerRef} className="relative container">
-        <div className="mb-10 max-w-2xl space-y-2 md:mb-14">
-          <p className="nav-caps text-xs text-muted-foreground">Capabilities</p>
-          <h2 className="text-3xl md:text-4xl">How we work with you</h2>
-          <p className="text-muted-foreground text-lg leading-relaxed">
+        <div className="mb-7 max-w-2xl space-y-2 md:mb-8">
+          <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
+            Capabilities
+          </p>
+          <h2 className="text-3xl leading-tight tracking-[-0.025em] md:text-4xl">
+            How we work with you
+          </h2>
+          <p className="text-muted-foreground max-w-xl text-sm leading-relaxed md:text-base">
             Hover a row to preview a project reference—each line is a core discipline in
             our studio.
           </p>
@@ -91,7 +95,7 @@ export function ServicesHoverTable() {
             <div
               key={service.title}
               className={cn(
-                'border-border group grid cursor-default grid-cols-1 gap-4 border-b py-10 transition-opacity duration-300 md:grid-cols-12 md:gap-8 md:py-12 lg:gap-10',
+                'border-border group grid cursor-default grid-cols-1 gap-3 border-b py-5 transition-opacity duration-300 md:grid-cols-12 md:gap-6 md:py-6 lg:gap-8',
                 activeIndex !== null &&
                   activeIndex !== index &&
                   'opacity-[0.38]',
@@ -103,11 +107,11 @@ export function ServicesHoverTable() {
                 {String(index + 1).padStart(2, '0')}
               </div>
               <div className="md:col-span-4 lg:col-span-3">
-                <h3 className="text-xl font-medium tracking-[0.02em] md:text-2xl">
+                <h3 className="text-lg font-medium tracking-[0.02em] md:text-xl">
                   {service.title}
                 </h3>
               </div>
-              <p className="text-muted-foreground md:col-span-6 text-base leading-relaxed lg:col-span-8">
+              <p className="text-muted-foreground text-sm leading-relaxed md:col-span-6 md:text-base lg:col-span-8">
                 {service.description}
               </p>
             </div>
@@ -115,7 +119,7 @@ export function ServicesHoverTable() {
         </div>
 
         <motion.div
-          className="pointer-events-none absolute left-0 top-0 z-50 overflow-hidden rounded-md border border-border bg-muted shadow-2xl"
+          className="pointer-events-none absolute left-0 top-0 z-50 overflow-hidden rounded-md border border-border bg-muted shadow-lg"
           style={{
             width: IMAGE_WIDTH,
             height: IMAGE_HEIGHT,

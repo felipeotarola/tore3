@@ -10,14 +10,15 @@ export const Cta = ({ padding = 'default' }: CtaProps) => {
     <section
       className={cn(
         'container',
-        padding === 'tight' ? 'section-padding-tight' : 'section-padding',
+        padding === 'tight'
+          ? 'py-8 md:py-10 lg:py-12'
+          : 'py-10 md:py-12 lg:py-14',
       )}
     >
-      <div className="flex flex-col items-center gap-8 text-center">
-        <h2 className="mx-auto w-full max-w-2xl text-center text-4xl">
+      <div className="border-y border-border/70 py-7 text-center md:py-8">
+        <h2 className="mx-auto max-w-2xl text-3xl leading-tight tracking-[-0.025em] md:text-4xl">
           Let&apos;s create something extraordinary.
         </h2>
-
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
-import { Metadata } from 'next';
 import { ArrowUpRight } from 'lucide-react';
+import { Metadata } from 'next';
 
 import { DetailCloseButton } from '@/components/navigation/detail-close-button';
 import { Process } from '@/components/sections/process';
@@ -37,11 +37,13 @@ export default function WhatWeDoPage() {
 
       <ServicesHoverTable />
 
-      <section className="container py-12 md:py-14 lg:py-16">
-        <Process title="Process" steps={[...WHAT_WE_DO_PROCESS]} />
-      </section>
+      <Process
+        className="py-10 md:py-12 lg:py-14"
+        title="Process"
+        steps={[...WHAT_WE_DO_PROCESS]}
+      />
 
-      <section className="container pb-14 md:pb-16 lg:pb-20">
+      <section className="container pb-10 md:pb-12 lg:pb-14">
         <div className="group flex items-start justify-between gap-8 bg-primary p-6 text-primary-foreground md:p-8 lg:p-10">
           <div>
             <p className="nav-caps text-[11px] tracking-[0.2em] opacity-70">

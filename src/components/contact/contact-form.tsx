@@ -70,7 +70,7 @@ export function ContactForm() {
 
   function onSubmit(values: ContactFormValues) {
     if (typeof window === 'undefined') return;
-    window.location.href = buildMailto(values);
+    window.location.assign(buildMailto(values));
   }
 
   return (

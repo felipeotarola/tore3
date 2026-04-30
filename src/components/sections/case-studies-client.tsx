@@ -74,7 +74,7 @@ export function CaseStudiesClient({ allProjects }: CaseStudiesClientProps) {
   );
 
 return (
-  <section className="container overflow-hidden py-10 md:py-12 lg:py-14">
+  <section className="container overflow-hidden py-8 md:py-10 lg:py-12">
     <div className="mb-7 grid gap-5 md:mb-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
       <div className="max-w-2xl space-y-2">
         <EditableText

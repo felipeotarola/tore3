@@ -15,13 +15,20 @@ export interface ProcessStep {
 interface ProcessProps {
   title: string;
   steps: ProcessStep[];
+  className?: string;
+  containerClassName?: string;
 }
 
 const IMAGE_WIDTH = 320;
 const IMAGE_HEIGHT = 200;
 const IMAGE_GAP = 60;
 
-export const Process = ({ title, steps }: ProcessProps) => {
+export const Process = ({
+  title,
+  steps,
+  className,
+  containerClassName,
+}: ProcessProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const stepsContainerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -95,19 +102,24 @@ export const Process = ({ title, steps }: ProcessProps) => {
   };
 
   return (
-    <section className={cn('overflow-x-clip')}>
+    <section className={cn('overflow-x-clip', className)}>
       <div
         ref={containerRef}
-        className="section-padding relative container grid gap-16 md:grid-cols-2"
+        className={cn(
+          'relative container grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:gap-10 lg:gap-12',
+          containerClassName,
+        )}
       >
-        <h2 className="top-6 self-start text-4xl md:sticky">{title}</h2>
+        <h2 className="self-start text-3xl leading-tight tracking-[-0.025em] md:sticky md:top-6 md:text-4xl">
+          {title}
+        </h2>
 
         <div ref={stepsContainerRef} className="divide-y">
           {steps.map((step, index) => (
             <div
               key={index}
               className={cn(
-                'group flex flex-col gap-3.5 py-6 transition-opacity duration-300',
+                'group flex flex-col gap-2.5 py-4 transition-opacity duration-300 md:py-5',
                 index === 0 && 'pt-0',
                 index === steps.length - 1 && 'pb-0',
                 step.image && 'cursor-pointer',
@@ -120,8 +132,8 @@ export const Process = ({ title, steps }: ProcessProps) => {
               onMouseLeave={handleMouseLeave}
               onMouseMove={(e) => handleMouseMove(e, index)}
             >
-              <h3 className="text-lg">{step.title}</h3>
-              <p className="text-muted-foreground text-lg">
+              <h3 className="text-base md:text-lg">{step.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed md:text-base">
                 {step.description}
               </p>
             </div>
@@ -131,7 +143,7 @@ export const Process = ({ title, steps }: ProcessProps) => {
         {/* Floating image that follows cursor - only render if any steps have images */}
         {hasAnyImages && (
           <motion.div
-            className="pointer-events-none absolute z-50 overflow-hidden rounded-lg shadow-2xl"
+            className="pointer-events-none absolute z-50 overflow-hidden rounded-md shadow-lg"
             style={{
               width: IMAGE_WIDTH,
               height: IMAGE_HEIGHT,

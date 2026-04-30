@@ -95,9 +95,9 @@ function ProjectCredits({
   return (
     <div
       className={cn(
-        'space-y-8',
+        'space-y-6',
         afterDescription
-          ? 'border-border/60 mt-10 border-t pt-10'
+          ? 'border-border/60 mt-7 border-t pt-7'
           : 'mt-8',
       )}
     >
@@ -200,7 +200,7 @@ function GridImage({
   imageIndex,
   priority,
   reduceMotion,
-  heightClass = 'h-[400px]',
+  heightClass = 'h-[340px] md:h-[380px]',
 }: {
   image: ProjectImage;
   imageIndex: number;
@@ -251,11 +251,11 @@ function LargeImage({
       initial="initial"
       animate="animate"
       transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
-      className="relative mb-6 overflow-hidden rounded-lg"
+      className="relative mb-4 overflow-hidden rounded-md"
     >
       <ProjectImageClickable imageIndex={imageIndex} className="block w-full">
         <motion.div
-          className="relative h-[min(600px,70vh)] w-full md:h-[600px]"
+          className="relative h-[min(520px,65vh)] w-full md:h-[520px]"
           whileHover={reduceMotion ? undefined : { scale: 1.02 }}
           transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
         >
@@ -302,25 +302,25 @@ export function Project14Detail({
   const transition = { duration: 0.7, ease: [0.4, 0, 0.2, 1] as const };
 
   return (
-    <section className={cn('py-16 md:py-24 lg:py-32', className)}>
+    <section className={cn('py-10 md:py-12 lg:py-14', className)}>
       <div className="container">
         <motion.div
-          className="mb-12 text-center md:mb-16"
+          className="mb-8 text-center md:mb-10"
           initial={reduceMotion ? false : { opacity: 0, y: 40 }}
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={transition}
         >
-          <p className="text-muted-foreground mb-4 text-sm tracking-widest uppercase">
+          <p className="nav-caps text-muted-foreground mb-3 text-[11px] tracking-[0.2em]">
             {eyebrow}
           </p>
-          <h1 className="text-2xl font-semibold tracking-wider uppercase md:text-5xl lg:text-7xl">
+          <h1 className="text-4xl leading-[0.95] tracking-[-0.04em] md:text-5xl lg:text-6xl">
             {title}
           </h1>
         </motion.div>
 
         {i0 && i1 ? (
           <motion.div
-            className="mb-16 grid gap-6 md:mb-24 md:grid-cols-2"
+            className="mb-10 grid gap-4 md:mb-12 md:grid-cols-2 md:gap-5"
             variants={staggerContainer}
             initial="initial"
             animate="animate"
@@ -335,7 +335,7 @@ export function Project14Detail({
           </motion.div>
         ) : i0 ? (
           <motion.div
-            className="mb-16 md:mb-24"
+            className="mb-10 md:mb-12"
             initial={reduceMotion ? false : { opacity: 0, y: 24 }}
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={transition}
@@ -358,14 +358,14 @@ export function Project14Detail({
         ) : null}
 
         <motion.div
-          className="mb-8 text-center md:mb-12"
+          className="mb-6 text-center md:mb-8"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
           <motion.div
             className={cn(
-              'mb-6 grid justify-items-center gap-x-3 gap-y-1 sm:mb-8 sm:gap-x-6 md:mb-10',
+              'mb-6 grid justify-items-center gap-x-3 gap-y-1 sm:gap-x-6 md:mb-8',
               metaGridClass,
             )}
             variants={staggerContainer}
@@ -381,7 +381,7 @@ export function Project14Detail({
               <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
                 Category
               </p>
-              <p className="font-medium tracking-wide uppercase md:text-lg">
+              <p className="text-sm font-medium tracking-wide uppercase md:text-base">
                 {categoryLabel}
               </p>
             </motion.div>
@@ -395,7 +395,7 @@ export function Project14Detail({
                 <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
                   Year
                 </p>
-                <p className="font-medium tracking-wide uppercase md:text-lg">
+                <p className="text-sm font-medium tracking-wide uppercase md:text-base">
                   {yearLabel}
                 </p>
               </motion.div>
@@ -410,7 +410,7 @@ export function Project14Detail({
                 <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
                   Brand
                 </p>
-                <p className="font-medium tracking-wide uppercase md:text-lg">
+                <p className="text-sm font-medium tracking-wide uppercase md:text-base">
                   {brandLabel}
                 </p>
               </motion.div>
@@ -419,14 +419,14 @@ export function Project14Detail({
           {description ||
           (project && projectHasSupplementFields(project)) ? (
             <motion.div
-              className="mx-auto max-w-4xl text-left"
+              className="mx-auto max-w-3xl text-left"
               variants={fadeInUp}
               initial="initial"
               animate="animate"
               transition={transition}
             >
               {description ? (
-                <p className="text-muted-foreground leading-relaxed">{description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed md:text-base">{description}</p>
               ) : null}
               {project && projectHasSupplementFields(project) ? (
                 <ProjectCredits
@@ -444,7 +444,7 @@ export function Project14Detail({
 
         {i3 && i4 ? (
           <motion.div
-            className="grid gap-6 md:grid-cols-2"
+            className="grid gap-4 md:grid-cols-2 md:gap-5"
             variants={staggerContainer}
             initial="initial"
             animate="animate"
@@ -460,7 +460,7 @@ export function Project14Detail({
           >
             <div className="relative overflow-hidden rounded-md">
               <ProjectImageClickable imageIndex={3} className="block w-full">
-                <div className="relative h-[400px] w-full">
+                <div className="relative h-[340px] w-full md:h-[380px]">
                   <Image
                     src={i3.src}
                     alt={i3.alt}

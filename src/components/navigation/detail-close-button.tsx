@@ -2,6 +2,7 @@
 
 import { X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { useRef } from 'react';
 
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -18,23 +19,14 @@ export function DetailCloseButton({
   className,
 }: DetailCloseButtonProps) {
   const router = useRouter();
+  const isClosingRef = useRef(false);
 
   const handleClose = () => {
-    const hasInternalReferrer = (() => {
-      if (!document.referrer) return false;
-      try {
-        return new URL(document.referrer).origin === window.location.origin;
-      } catch {
-        return false;
-      }
-    })();
+    if (isClosingRef.current) return;
+    isClosingRef.current = true;
 
     const navigate = () => {
-      if (hasInternalReferrer) {
-        router.back();
-      } else {
-        router.push(fallbackHref, { scroll: false });
-      }
+      router.push(fallbackHref, { scroll: false });
     };
 
     if (!document.startViewTransition) {
@@ -49,6 +41,7 @@ export function DetailCloseButton({
 
     transition.finished.finally(() => {
       document.documentElement.classList.remove(BACK_TRANSITION_CLASS);
+      isClosingRef.current = false;
     });
   };
 
@@ -59,7 +52,7 @@ export function DetailCloseButton({
       size="icon"
       aria-label="Close and go back"
       onClick={handleClose}
-      className={cn('relative z-[70] mt-14 md:mt-16', className)}
+      className={cn('relative z-[70]', className)}
     >
       <X className="size-4" />
     </Button>

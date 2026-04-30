@@ -35,7 +35,7 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
   }
 
   return (
-    <div className="flex flex-col gap-16 pt-10 lg:gap-24 lg:pt-14">
+    <div className="flex flex-col gap-10 pt-6 md:gap-12 md:pt-7 lg:gap-14">
       {projects.map((project, index) => {
         const primary = project.images[0] ?? {
           src: FALLBACK_IMG,
@@ -55,7 +55,7 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
           >
             <Link
               href={`/projects/${project.slug}`}
-              className="group grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12 xl:gap-16"
+              className="group grid gap-5 lg:grid-cols-2 lg:items-center lg:gap-8 xl:gap-10"
             >
               <div
                 className={cn(
@@ -84,7 +84,7 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
 
               <div
                 className={cn(
-                  'flex min-w-0 flex-col gap-4 lg:max-w-xl',
+                  'flex min-w-0 flex-col gap-3 lg:max-w-xl',
                   reversed && 'lg:order-1',
                 )}
               >
@@ -92,20 +92,20 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
                   {categoryLabel}
                 </Badge>
                 <div className="space-y-2">
-                  <h2 className="text-3xl tracking-[0.02em] md:text-4xl">{project.name}</h2>
+                  <h2 className="text-2xl tracking-[-0.02em] md:text-3xl">{project.name}</h2>
                   {project.location ? (
                     <p className="text-muted-foreground text-sm">{project.location}</p>
                   ) : null}
                 </div>
                 {project.description ? (
-                  <p className="text-muted-foreground line-clamp-4 text-base leading-relaxed">
+                  <p className="text-muted-foreground line-clamp-4 text-sm leading-relaxed md:text-base">
                     {excerpt(project.description)}
                   </p>
                 ) : null}
-                <span className="inline-flex items-center gap-2 pt-1 text-sm font-medium">
+                <span className="nav-caps inline-flex items-center gap-1 pt-1 text-[10px] tracking-[0.18em] text-foreground/75 transition-colors group-hover:text-foreground">
                   View project
                   <ArrowUpRight
-                    className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                     aria-hidden
                   />
                 </span>

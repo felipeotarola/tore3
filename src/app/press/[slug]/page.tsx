@@ -177,7 +177,7 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
       </section>
 
       <div className="pb-10 md:pb-12 lg:pb-14">
-        <Cta />
+        <Cta padding="tight" />
       </div>
     </>
   );

@@ -9,20 +9,20 @@ export const PressPreview = async () => {
   const pressItems = prioritizeFeaturedPressItem(await getPressItems());
 
   return (
-    <section className="section-padding-tight container space-y-10">
-      <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
-        <div className="space-y-3">
+    <section className="container space-y-7 py-8 md:space-y-8 md:py-10 lg:py-12">
+      <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-end">
+        <div className="space-y-2">
           <EditableText
             as="h2"
             copyKey="home.press.heading"
             fallback="Articles & Magazines"
-            className="text-4xl"
+            className="text-3xl leading-tight tracking-[-0.03em] md:text-4xl"
           />
           <EditableText
             as="p"
             copyKey="home.press.description"
             fallback="How they write about us"
-            className="text-muted-foreground"
+            className="text-muted-foreground text-sm leading-relaxed md:text-base"
           />
         </div>
         <Button variant="outline" asChild>
@@ -36,7 +36,7 @@ export const PressPreview = async () => {
         </Button>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-3">
         {pressItems.slice(0, 3).map((item) => (
           <PressTile
             key={item.slug}

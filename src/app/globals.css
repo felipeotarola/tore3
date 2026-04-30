@@ -175,15 +175,15 @@
 
 @layer utilities {
   .section-padding {
-    @apply py-18.75 md:py-26 lg:py-31.25;
+    @apply py-10 md:py-12 lg:py-14;
   }
 
   /** Tighter rhythm for long landing pages (e.g. home) so sections feel connected */
   .section-padding-tight {
-    @apply py-12 md:py-16 lg:py-20;
+    @apply py-8 md:py-10 lg:py-12;
   }
   .hero-padding {
-    @apply pt-28.75 pb-18.75 md:pt-36 md:pb-26 lg:pt-41.25 lg:pb-31.25;
+    @apply pt-10 pb-12 md:pt-14 md:pb-14 lg:pt-16 lg:pb-16;
   }
 }
 
@@ -205,7 +205,7 @@
   }
 
   .nav-caps {
-    @apply uppercase tracking-[0.1em];
+    @apply uppercase tracking-[0.16em];
   }
 
   .hero-video-cta {

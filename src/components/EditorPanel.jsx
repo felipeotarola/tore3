@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+
 import {
-  LIMITS,
   creditsToText,
   galleryToText,
+  LIMITS,
   parseCreditsFromText,
   parseGalleryFromText,
 } from '../lib/contentGuards'

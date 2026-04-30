@@ -114,12 +114,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </ProjectLightboxProvider>
 
       {frontmatter.process && frontmatter.process.length > 0 && (
-        <section className="container py-10 md:py-12 lg:py-14">
-          <Process
-            title={`${frontmatter.name} process`}
-            steps={frontmatter.process}
-          />
-        </section>
+        <Process
+          className="py-10 md:py-12 lg:py-14"
+          title={`${frontmatter.name} process`}
+          steps={frontmatter.process}
+        />
       )}
 
       {nextProject && (
@@ -143,7 +142,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       )}
 
       <div className="pb-10 md:pb-12 lg:pb-14">
-        <Cta />
+        <Cta padding="tight" />
       </div>
     </>
   );

@@ -34,5 +34,11 @@ const processSteps = [
 ];
 
 export const OurProcess = () => {
-  return <Process title="Our process" steps={processSteps} />;
+  return (
+    <Process
+      className="py-10 md:py-12 lg:py-14"
+      title="Our process"
+      steps={processSteps}
+    />
+  );
 };

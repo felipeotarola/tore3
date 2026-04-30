@@ -3,11 +3,11 @@ import { Metadata } from 'next';
 import { LandingCopyEditorProvider } from '@/components/editing/landing-copy-editor-provider';
 import { CaseStudies } from '@/components/sections/case-studies';
 import { Hero } from '@/components/sections/hero';
+import { HomeProofBlock } from '@/components/sections/home-awards';
 import { Logos } from '@/components/sections/logos';
 import { PressPreview } from '@/components/sections/press-preview';
 import { Services } from '@/components/sections/services';
 import { HERO_POSTER_SRC, HERO_VIDEO_SRC } from '@/lib/torekull';
-import { HomeProofBlock } from '@/components/sections/home-awards';
 
 export const metadata: Metadata = {
   title: 'TOREKULL - Interior Architecture and Design',
