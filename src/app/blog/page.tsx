@@ -4,8 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { BlogQuickComposer } from '@/components/blog/blog-quick-composer';
-import { DetailCloseButton } from '@/components/navigation/detail-close-button';
-import { Badge } from '@/components/ui/badge';
+import { DetailPageHeader } from '@/components/navigation/detail-page-header';
 import { Button } from '@/components/ui/button';
 import { getPublishedBlogPosts } from '@/lib/blog-posts';
 
@@ -23,31 +22,31 @@ export default async function BlogPage() {
 
   return (
     <main className="bg-background text-foreground min-h-screen">
-      <section className="hero-padding container">
-        <DetailCloseButton fallbackHref="/" />
-
-        <div className="mt-8 flex max-w-3xl flex-col gap-4 md:mt-10">
-          <Badge variant="outline" className="w-fit">
-            Blogg
-          </Badge>
-          <h1 className="text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
-            Senaste inläggen
-          </h1>
-          <p className="text-muted-foreground max-w-2xl text-base leading-relaxed md:text-lg">
+      <DetailPageHeader
+        fallbackHref="/"
+        eyebrow="Blogg"
+        title="Senaste inläggen"
+        description={
+          <>
             Temporär bloggvy med kort i rutnät. Inlägg hämtas från tabellen{' '}
-            <code className="text-foreground text-sm">blog_posts</code> i Supabase. Logga in på
-            sajten som redaktör för att få fram formuläret längst ner.
-          </p>
-          <div className="flex flex-wrap gap-3 pt-2">
-            <Button asChild variant="default">
-              <Link href="#inlagg">Visa inlägg</Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link href="/contact">Kontakt</Link>
-            </Button>
-          </div>
+            <code className="text-foreground text-sm">blog_posts</code> i Supabase.
+            Logga in på sajten som redaktör för att få fram formuläret längst ner.
+          </>
+        }
+        titleClassName="font-semibold tracking-tight"
+        descriptionClassName="max-w-2xl text-base md:text-lg"
+      />
+
+      <div className="container -mt-4 pb-8 md:-mt-5 md:pb-10">
+        <div className="flex flex-wrap gap-3">
+          <Button asChild variant="default">
+            <Link href="#inlagg">Visa inlägg</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/contact">Kontakt</Link>
+          </Button>
         </div>
-      </section>
+      </div>
 
       <section id="inlagg" className="section-padding container scroll-mt-24">
         {posts.length === 0 ? (

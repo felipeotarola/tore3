@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { DetailCloseButton } from '@/components/navigation/detail-close-button';
+import { DetailPageHeader } from '@/components/navigation/detail-page-header';
 import { Cta } from '@/components/sections/cta';
 import { Button } from '@/components/ui/button';
 import {
@@ -72,28 +72,23 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
 
   return (
     <>
-      {/* HERO */}
-      <section className="container pt-10 pb-10 md:pt-14 md:pb-12 lg:pt-16 lg:pb-14">
-        <div className="space-y-6">
-          <DetailCloseButton fallbackHref="/press" />
-
-          <div className="mx-auto max-w-3xl space-y-3 text-center">
-            <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
-              Articles &amp; Magazines
-            </p>
-
-            <h1 className="text-4xl leading-[0.95] tracking-[-0.04em] md:text-5xl lg:text-6xl">
-              {line1}
-              {line2 && (
-                <>
-                  <br />
-                  {line2}
-                </>
-              )}
-            </h1>
-          </div>
-        </div>
-      </section>
+      <DetailPageHeader
+        fallbackHref="/press"
+        centered
+        eyebrow="Articles & Magazines"
+        title={
+          <>
+            {line1}
+            {line2 && (
+              <>
+                <br />
+                {line2}
+              </>
+            )}
+          </>
+        }
+        titleClassName="leading-[0.95] tracking-[-0.04em]"
+      />
 
       {/* IMAGE */}
       <section className="container pb-10 md:pb-12 lg:pb-14">

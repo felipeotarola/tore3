@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { DetailCloseButton } from '@/components/navigation/detail-close-button';
+import { DetailPageHeader } from '@/components/navigation/detail-page-header';
 import { ProjectsShowcase } from '@/components/projects/projects-showcase';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -15,25 +15,14 @@ export default async function ProjectsPage() {
   const allProjects = await getAllProjects();
 
   return (
-    <div className="container pt-10 pb-12 md:pt-14 md:pb-14 lg:pt-16 lg:pb-16">
-      <div className="flex flex-col gap-8 md:gap-10">
-        <DetailCloseButton fallbackHref="/" />
-
-        <header className="max-w-2xl space-y-2">
-          <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
-            Selected work
-          </p>
-
-          <h1 className="text-4xl leading-tight tracking-[-0.035em] md:text-5xl lg:text-6xl">
-            Projects
-          </h1>
-
-          <p className="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
-            Interior architecture and design across hospitality, bars, and
-            workplace—each engagement shaped by place, brief, and craft.
-          </p>
-        </header>
-
+    <>
+      <DetailPageHeader
+        fallbackHref="/"
+        eyebrow="Selected work"
+        title="Projects"
+        description="Interior architecture and design across hospitality, bars, and workplace—each engagement shaped by place, brief, and craft."
+      />
+      <section className="container pb-12 md:pb-14 lg:pb-16">
         <Tabs defaultValue="all" className="w-full">
           <ScrollArea className="pb-2" orientation="horizontal">
             <TabsList className="gap-2">
@@ -68,7 +57,7 @@ export default async function ProjectsPage() {
             );
           })}
         </Tabs>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }

@@ -1,7 +1,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import { Metadata } from 'next';
 
-import { DetailCloseButton } from '@/components/navigation/detail-close-button';
+import { DetailPageHeader } from '@/components/navigation/detail-page-header';
 import { Process } from '@/components/sections/process';
 import { ServicesHoverTable } from '@/components/what-we-do/services-hover-table';
 import { WHAT_WE_DO_PROCESS } from '@/lib/torekull';
@@ -13,27 +13,15 @@ export const metadata: Metadata = {
 export default function WhatWeDoPage() {
   return (
     <>
-      <section className="container pt-10 pb-12 md:pt-14 md:pb-14 lg:pt-16 lg:pb-16">
-        <div className="max-w-3xl space-y-5">
-          <DetailCloseButton fallbackHref="/" />
-
-          <div className="space-y-3">
-            <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
-              What we do
-            </p>
-
-            <h1 className="max-w-4xl text-5xl leading-[0.95] tracking-[-0.045em] md:text-6xl lg:text-7xl">
-              Practice &amp; services
-            </h1>
-
-            <p className="max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              TOREKULL delivers interior architecture, furniture, and product work
-              for hospitality and commercial spaces—from first sketch through site
-              delivery.
-            </p>
-          </div>
-        </div>
-      </section>
+      <DetailPageHeader
+        fallbackHref="/"
+        eyebrow="What we do"
+        title="Practice & services"
+        description="TOREKULL delivers interior architecture, furniture, and product work for hospitality and commercial spaces—from first sketch through site delivery."
+        contentClassName="max-w-4xl"
+        titleClassName="max-w-4xl text-5xl leading-[0.95] tracking-[-0.045em] md:text-6xl lg:text-7xl"
+        descriptionClassName="max-w-2xl text-base md:text-lg"
+      />
 
       <ServicesHoverTable />
 

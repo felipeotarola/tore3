@@ -2,9 +2,8 @@ import { CalendarDays, Info } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { DetailCloseButton } from '@/components/navigation/detail-close-button';
+import { DetailPageHeader } from '@/components/navigation/detail-page-header';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Badge } from '@/components/ui/badge';
 import type { BlogPostRow } from '@/lib/blog-posts';
 import { FOUNDER_PORTRAIT, TOREKULL } from '@/lib/torekull';
 import { cn } from '@/lib/utils';
@@ -52,24 +51,18 @@ export function BlogPostDetail({ post }: Props) {
 
   return (
     <main className="bg-background text-foreground min-h-screen">
-      <article className="section-padding container max-w-3xl">
-        <DetailCloseButton fallbackHref="/blog" />
+      <DetailPageHeader
+        fallbackHref="/blog"
+        eyebrow="Blogg"
+        title={post.title}
+        description={post.excerpt}
+        contentClassName="max-w-3xl"
+        titleClassName="font-semibold tracking-tight lg:text-[3.25rem] lg:leading-[1.1]"
+        descriptionClassName="text-lg md:text-xl md:leading-relaxed"
+      />
 
-        <header className="mt-8 space-y-6">
-          <Badge variant="outline" className="w-fit">
-            Blogg
-          </Badge>
-          <div className="space-y-4">
-            <h1 className="text-4xl font-semibold tracking-tight md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
-              {post.title}
-            </h1>
-            {post.excerpt ? (
-              <p className="text-muted-foreground text-lg leading-relaxed md:text-xl md:leading-relaxed">
-                {post.excerpt}
-              </p>
-            ) : null}
-          </div>
-
+      <article className="container max-w-3xl pb-10 md:pb-12 lg:pb-14">
+        <header className="space-y-6">
           <div className="border-border flex flex-wrap items-center gap-4 border-y py-6 md:gap-6">
             <div className="border-border bg-muted relative size-12 shrink-0 overflow-hidden rounded-full border md:size-14">
               <Image

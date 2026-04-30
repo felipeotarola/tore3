@@ -92,7 +92,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   return (
     <>
       <section className="container relative z-20 pt-8 md:pt-10 lg:pt-12">
-        <DetailCloseButton fallbackHref="/projects" />
+        <div className="flex justify-end">
+          <DetailCloseButton fallbackHref="/projects" />
+        </div>
       </section>
 
       <ProjectLightboxProvider images={detailImages}>

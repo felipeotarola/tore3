@@ -52,7 +52,10 @@ export function DetailCloseButton({
       size="icon"
       aria-label="Close and go back"
       onClick={handleClose}
-      className={cn('relative z-[70]', className)}
+      className={cn(
+        'relative z-[70] size-9 rounded-full border-border/80 bg-background/80 text-muted-foreground shadow-none backdrop-blur-sm transition-colors hover:border-foreground/30 hover:text-foreground md:size-10',
+        className,
+      )}
     >
       <X className="size-4" />
     </Button>

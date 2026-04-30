@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-import { DetailCloseButton } from '@/components/navigation/detail-close-button';
+import { DetailPageHeader } from '@/components/navigation/detail-page-header';
 import {
   AWARDS,
   COLLABORATION_MARQUEE,
@@ -15,16 +15,12 @@ export const metadata: Metadata = {
 export default function CollaborationsPage() {
   return (
     <>
-      <section className="hero-padding container space-y-8">
-        <DetailCloseButton fallbackHref="/" />
-
-        <h1 className="text-5xl md:text-6xl">COLLABORATIONS</h1>
-        <p className="text-muted-foreground max-w-3xl text-lg">
-          TOREKULL works with trusted partners across lighting, technical
-          integration, styling, branding, and delivery to bring ambitious
-          interior concepts to life.
-        </p>
-      </section>
+      <DetailPageHeader
+        fallbackHref="/"
+        eyebrow="Studio network"
+        title="Collaborations"
+        description="TOREKULL works with trusted partners across lighting, technical integration, styling, branding, and delivery to bring ambitious interior concepts to life."
+      />
 
       <section className="section-padding container space-y-8">
         <h2 className="text-4xl">Core Partners</h2>
@@ -79,4 +75,3 @@ export default function CollaborationsPage() {
     </>
   );
 }
-
