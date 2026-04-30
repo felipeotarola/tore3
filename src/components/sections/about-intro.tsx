@@ -1,16 +1,11 @@
-import Image from 'next/image';
-
 import { EditableText } from '@/components/editing/editable-text';
 import { HOME_STATS } from '@/lib/torekull';
 import { cn } from '@/lib/utils';
 
-const aboutDescription =
-  'TOREKULL offers creative and innovative solutions within interior architecture, furniture and product design. We believe design must be functional and functionality must be translated into visual aesthetics.';
-
 export const AboutIntro = () => {
   return (
-    <section className="section-padding-tight bigger-container space-y-10 md:space-y-12">
-      <div className="container grid items-center gap-10 md:grid-cols-2">
+    <section className="container py-6 md:py-8">
+      {/* <div className="container grid items-center gap-10 md:grid-cols-2">
         <EditableText
           as="h2"
           copyKey="home.about.heading"
@@ -25,9 +20,9 @@ export const AboutIntro = () => {
           singleLine={false}
           className="text-muted-foreground md:text-lg lg:text-xl"
         />
-      </div>
+      </div> */}
 
-      <div className="grid gap-6 md:grid-cols-2">
+      {/* <div className="grid gap-6 md:grid-cols-2">
         <div className="relative h-[300px] overflow-hidden rounded-md md:h-[400px] lg:h-[500px]">
           <Image
             fill
@@ -46,9 +41,9 @@ export const AboutIntro = () => {
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
-      </div>
+      </div> */}
 
-      <div className="container border-y border-border py-6 md:py-7">
+      <div className="border-y border-border py-5 md:py-6">
         <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:gap-x-10 md:grid-cols-4 md:gap-x-8 md:gap-y-0">
           {HOME_STATS.map((item, index) => {
             const isShortMetric = item.value.length <= 8;

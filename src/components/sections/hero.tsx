@@ -1,5 +1,4 @@
 import { ArrowUpRight } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { EditableText } from '@/components/editing/editable-text';
@@ -12,12 +11,6 @@ import {
 } from '@/lib/torekull';
 import { cn } from '@/lib/utils';
 
-/** Bump when replacing award PNGs so browsers skip stale cache (`2022` refreshed here). */
-const HERO_AWARD_ASSET_VERSIONS: Record<string, string> = {
-  '/EUawards2021_Torkel.png': '4',
-  '/EUawards2022_Torkel.png': '5',
-};
-
 export async function Hero() {
   const allProjects = await getAllProjectsWithLogos();
   const heroProjects = allProjects.filter((project) =>
@@ -28,7 +21,7 @@ export async function Hero() {
     <div className="pt-0 pb-4 md:pb-6 lg:pb-8">
       <section
         className={cn(
-          'relative m-5 mb-0! flex min-h-[min(100dvh,702px)] flex-col items-center justify-center overflow-hidden p-5 md:m-6 md:min-h-[min(100dvh,1032px)] md:p-6',
+          'container relative mt-5 flex min-h-[min(100dvh,702px)] flex-col items-center justify-center overflow-hidden p-5 md:mt-6 md:min-h-[min(100dvh,1032px)] md:p-6',
           'bg-foreground text-background',
         )}
       >
@@ -45,19 +38,21 @@ export async function Hero() {
         </video>
         <div className="absolute inset-0 z-[1] bg-black/60" />
 
-        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center px-2 py-10 pb-[11rem] text-center sm:pb-[12.5rem] md:pb-[14.5rem] lg:pb-[17rem]">
-          <EditableText
-            as="p"
-            copyKey="home.hero.kicker"
-            fallback="TOREKULL"
-            className="nav-caps mb-4 text-sm md:text-base"
-          />
-          <EditableText
-            as="h1"
-            copyKey="home.hero.title"
-            fallback="INTERIOR ARCHITECTURE & DESIGN"
-            className="max-w-[12ch] text-4xl leading-[1.05] sm:max-w-none sm:text-6xl md:text-7xl lg:text-8xl"
-          />
+        <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center px-2 py-10 text-center">
+          <h1 className="flex max-w-[min(94vw,1500px)] flex-wrap items-baseline justify-center gap-x-4 gap-y-2 text-center sm:gap-x-6 md:gap-x-8">
+            <EditableText
+              as="span"
+              copyKey="home.hero.kicker"
+              fallback="TOREKULL"
+              className="nav-caps text-[clamp(3.75rem,14vw,12.5rem)] leading-[0.85]"
+            />
+            <EditableText
+              as="span"
+              copyKey="home.hero.title"
+              fallback="INTERIOR ARCHITECTURE & DESIGN"
+              className="nav-caps text-[clamp(0.82rem,1.8vw,1.8rem)] leading-none"
+            />
+          </h1>
           <Link
             href="/projects/3sixty-skybar"
             className="hero-video-cta group nav-caps mt-6 inline-flex items-center gap-2 px-4 py-2 text-[11px] sm:mt-8 sm:px-6 sm:py-3 sm:text-xs md:text-sm"
@@ -113,42 +108,6 @@ export async function Hero() {
           />
         </Carousel> */}
 
-        <nav
-          aria-label="European Property Awards"
-          className="pointer-events-auto absolute inset-x-0 bottom-0 z-10 flex items-end justify-center gap-6 px-4 pb-2 sm:gap-10 sm:pb-3 md:gap-14 md:pb-4"
-        >
-          {(
-            [
-              {
-                src: '/EUawards2021_Torkel.png',
-                label: 'European Property Awards 2021–2022',
-              },
-              {
-                src: '/EUawards2022_Torkel.png',
-                label: 'European Property Awards 2022–2023',
-              },
-            ] as const
-          ).map((award) => (
-            <Link
-              key={award.src}
-              href="/about"
-              data-editor-lock-nav="true"
-              aria-label={`About TOREKULL — ${award.label}`}
-              className="border-0 outline-none ring-0 transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black/40"
-            >
-              <div className="relative h-36 w-[6.75rem] overflow-hidden bg-transparent sm:h-40 sm:w-[7.75rem] md:h-48 md:w-[9rem] lg:h-52 lg:w-[9.75rem]">
-                <Image
-                                   src={`${award.src}?v=${HERO_AWARD_ASSET_VERSIONS[award.src] ?? '1'}`}
-                  alt=""
-                  fill
-                  unoptimized
-                  sizes="(max-width: 640px) 120px, (max-width: 1024px) 144px, 168px"
-                  className="object-cover object-top [image-rendering:auto]"
-                />
-              </div>
-            </Link>
-          ))}
-        </nav>
       </section>
     </div>
   );

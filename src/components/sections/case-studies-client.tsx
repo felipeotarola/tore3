@@ -73,95 +73,101 @@ export function CaseStudiesClient({ allProjects }: CaseStudiesClientProps) {
     [featuredSlugs, projectBySlug],
   );
 
-  return (
-    <section className="section-padding-tight container space-y-10 overflow-hidden md:space-y-12">
-      <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
-        <div className="max-w-3xl space-y-3">
-          <EditableText
-            as="h2"
-            copyKey="home.caseStudies.heading"
-            fallback="Selected projects"
-            className="text-4xl md:text-5xl"
-          />
-          <EditableText
-            as="p"
-            copyKey="home.caseStudies.description"
-            fallback="Explore recent work across restaurants, bars, and hospitality spaces. Hover each panel for quick context and open the full case."
-            singleLine={false}
-            className="text-muted-foreground text-lg leading-relaxed"
-          />
-        </div>
-        <Link
-          href="/projects"
-          data-editor-lock-nav="true"
-          className={buttonVariants({ variant: 'outline', size: 'lg' })}
-        >
-          <EditableText
-            as="span"
-            copyKey="home.caseStudies.cta"
-            fallback="View all projects"
-          />
-        </Link>
+return (
+  <section className="container overflow-hidden py-10 md:py-12 lg:py-14">
+    <div className="mb-7 grid gap-5 md:mb-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+      <div className="max-w-2xl space-y-2">
+        <EditableText
+          as="h2"
+          copyKey="home.caseStudies.heading"
+          fallback="Selected projects"
+          className="text-3xl leading-tight tracking-[-0.03em] md:text-4xl"
+        />
+
+        <EditableText
+          as="p"
+          copyKey="home.caseStudies.description"
+          fallback="Explore recent work across restaurants, bars, and hospitality spaces. Hover each panel for quick context and open the full case."
+          singleLine={false}
+          className="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base"
+        />
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {featuredProjects.map((project, index) => {
-          const image = project.images[0];
-          const category = CATEGORY_LABELS[project.category] ?? project.industry;
+      <Link
+        href="/projects"
+        data-editor-lock-nav="true"
+        className={cn(
+          buttonVariants({ variant: 'outline', size: 'sm' }),
+          'w-fit rounded-md px-4 text-xs',
+        )}
+      >
+        <EditableText
+          as="span"
+          copyKey="home.caseStudies.cta"
+          fallback="View all projects"
+        />
+      </Link>
+    </div>
 
-          return (
-            <Link
-              key={project.slug}
-              href={`/projects/${project.slug}`}
-              data-editor-lock-nav="true"
-              className={cn(
-                'group border-border relative block overflow-hidden rounded-md border',
-                index >= 2 && 'hidden sm:block',
-                'outline-none transition-shadow hover:shadow-md',
-                'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+    <div className="grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-3">
+      {featuredProjects.map((project, index) => {
+        const image = project.images[0];
+        const category = CATEGORY_LABELS[project.category] ?? project.industry;
+
+        return (
+          <Link
+            key={project.slug}
+            href={`/projects/${project.slug}`}
+            data-editor-lock-nav="true"
+            className={cn(
+              'group relative block overflow-hidden rounded-md border border-border bg-muted',
+              index >= 2 && 'hidden sm:block',
+              'outline-none transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md',
+              'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
+            )}
+          >
+            <div className="relative aspect-[4/4.6] w-full overflow-hidden">
+              {image ? (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  quality={90}
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              ) : (
+                <div className="absolute inset-0 bg-muted" />
               )}
-            >
-              <div className="relative aspect-[4/5] w-full overflow-hidden">
-                {image ? (
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    quality={90}
-                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                ) : (
-                  <div className="bg-muted absolute inset-0" />
-                )}
 
-                <div className="absolute inset-0 bg-black/18 transition-colors duration-300 group-hover:bg-black/55" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
 
-                <div
-                  className="absolute inset-0 z-10 flex items-center justify-center p-4 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-focus-within:opacity-100"
-                  aria-hidden="true"
-                >
-                  <EditableText
-                    as="span"
-                    copyKey="home.caseStudies.cardCta"
-                    fallback="View project"
-                    className="text-center text-2xl font-semibold uppercase tracking-[0.2em] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.45)] sm:text-3xl md:text-4xl"
-                  />
-                </div>
-
-                <div className="absolute inset-0 z-[1] flex flex-col justify-end p-5 text-white transition-opacity duration-300 ease-out group-hover:opacity-0 group-focus-within:opacity-0 sm:p-6">
-                  <p className="nav-caps text-xs text-white/85">
-                    {category ?? 'Project'}
-                  </p>
-                  <h3 className="mt-2 text-xl leading-snug tracking-[0.02em] md:text-2xl">
-                    {project.title ?? project.name}
-                  </h3>
-                </div>
+              <div
+                className="absolute right-4 bottom-4 z-10 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100 group-focus-within:opacity-100"
+                aria-hidden="true"
+              >
+                <EditableText
+                  as="span"
+                  copyKey="home.caseStudies.cardCta"
+                  fallback="View project"
+                  className="nav-caps inline-flex rounded-full border border-white/30 bg-black/25 px-3 py-1.5 text-[10px] font-medium text-white/90 backdrop-blur-sm"
+                />
               </div>
-            </Link>
-          );
-        })}
-      </div>
-    </section>
-  );
+
+              <div className="absolute inset-x-0 bottom-0 z-[1] p-4 text-white md:p-5">
+                <p className="nav-caps text-[10px] tracking-[0.18em] text-white/75 md:text-xs">
+                  {category ?? 'Project'}
+                </p>
+
+                <h3 className="mt-1.5 max-w-[16rem] text-lg leading-snug tracking-[-0.01em] md:text-xl">
+                  {project.title ?? project.name}
+                </h3>
+              </div>
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  </section>
+);
 }

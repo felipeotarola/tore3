@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Logo from '@/components/layout/logo';
 import { useBannerVisibility } from '@/hooks/use-banner-visibility';
@@ -19,42 +19,14 @@ export const Navbar = ({
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAboutMenuOpen, setIsAboutMenuOpen] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
-  const [isNavbarHidden, setIsNavbarHidden] = useState(false);
   const [isOpening, setIsOpening] = useState(false);
   const pathname = usePathname();
   const { isBannerVisible } = useBannerVisibility(initialBannerVisible);
-  const lastScrollYRef = useRef(0);
   const isHomeRoute =
     pathname === '/' ||
     (!pathname &&
       typeof window !== 'undefined' &&
       window.location.pathname === '/');
-
-  // Handle scroll to hide/show navbar
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      const scrollThreshold = 50; // Minimum scroll before hiding
-
-      if (currentScrollY < scrollThreshold) {
-        // Always show navbar near the top
-        setIsNavbarHidden(false);
-      } else if (currentScrollY > lastScrollYRef.current) {
-        // Scrolling down - hide navbar
-        setIsNavbarHidden(true);
-      } else {
-        // Scrolling up - show navbar
-        setIsNavbarHidden(false);
-      }
-
-      lastScrollYRef.current = currentScrollY;
-    };
-
-    lastScrollYRef.current = window.scrollY;
-    handleScroll();
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleToggle = () => {
     if (!isMenuOpen) {
@@ -89,13 +61,8 @@ export const Navbar = ({
           isHomeRoute && 'inset-x-5 pt-10.5 md:inset-x-6 md:py-12.5',
           isHomeRoute && 'text-background',
           pathname !== '/' && isMenuOpen && 'text-background',
-          'fixed',
+          'absolute',
           isBannerVisible && 'mt-14', //banner height
-          isNavbarHidden &&
-            !isMenuOpen &&
-            (isBannerVisible
-              ? '-translate-y-[calc(100%+3.5rem)]'
-              : '-translate-y-full'),
         )}
       >
         <div className="relative flex w-full items-center justify-between gap-6">
