@@ -33,15 +33,15 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="grid min-w-0 gap-y-8 md:grid-cols-2 md:gap-x-10 md:gap-y-10 lg:grid-cols-3 lg:gap-x-8 xl:gap-x-10">
+          <div className="grid min-w-0 gap-y-8 md:grid-cols-2 md:gap-x-10 md:gap-y-10">
             <div className="space-y-4">
-              <p className="nav-caps text-xs text-muted-foreground">Studio 1</p>
+              <p className="nav-caps text-xs text-muted-foreground">Studio</p>
               <Link
                 href={googleMapsUrl(TOREKULL.addresses[0])}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex min-h-11 items-start gap-2.5 rounded-sm py-1 text-sm leading-snug outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
-                aria-label={`Open Studio 1 in Google Maps: ${TOREKULL.addresses[0]}`}
+                aria-label={`Open Studio in Google Maps: ${TOREKULL.addresses[0]}`}
               >
                 <MapPin
                   className="text-muted-foreground group-hover:text-foreground mt-0.5 size-4 shrink-0 transition-colors"
@@ -54,25 +54,6 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-4">
-              <p className="nav-caps text-xs text-muted-foreground">Studio 2</p>
-              <Link
-                href={googleMapsUrl(TOREKULL.addresses[1])}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex min-h-11 items-start gap-2.5 rounded-sm py-1 text-sm leading-snug outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
-                aria-label={`Open Studio 2 in Google Maps: ${TOREKULL.addresses[1]}`}
-              >
-                <MapPin
-                  className="text-muted-foreground group-hover:text-foreground mt-0.5 size-4 shrink-0 transition-colors"
-                  aria-hidden
-                />
-                <span className="animated-underline text-muted-foreground group-hover:text-foreground">
-                  {TOREKULL.addresses[1]}
-                </span>
-              </Link>
-            </div>
-
-            <div className="space-y-4 md:col-span-2 lg:col-span-1">
               <p className="nav-caps text-xs text-muted-foreground">Direct</p>
               <div className="space-y-4">
                 <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -135,4 +116,3 @@ export default function ContactPage() {
     </section>
   );
 }
-

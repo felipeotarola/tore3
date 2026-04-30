@@ -25,6 +25,7 @@ interface ProjectPageProps {
 
 export async function generateStaticParams() {
   const slugs = await getProjectSlugs();
+
   return slugs.map((slug) => ({
     slug,
   }));
@@ -36,9 +37,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
 
-  if (!project) {
-    return {};
-  }
+  if (!project) return {};
 
   const { frontmatter } = project;
 
@@ -64,25 +63,27 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const { slug } = await params;
   const project = await getProjectBySlug(slug);
 
-  if (!project) {
-    return notFound();
-  }
+  if (!project) notFound();
 
   const { frontmatter } = project;
 
   const allProjects = await getAllProjects();
   const currentIndex = allProjects.findIndex((item) => item.slug === slug);
+
   const nextProject =
-    currentIndex >= 0 ? allProjects[(currentIndex + 1) % allProjects.length] : null;
+    currentIndex >= 0
+      ? allProjects[(currentIndex + 1) % allProjects.length]
+      : null;
 
   const images = frontmatter.images ?? [];
+
   const fallbackHero = {
     src: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/projects/3sixty-1.jpg',
     alt: `${frontmatter.name} hero image`,
   };
+
   const detailImages = images.length > 0 ? images : [fallbackHero];
-  const galleryAfterTemplate =
-    detailImages.length > 5 ? detailImages.slice(5) : [];
+  const galleryAfterTemplate = detailImages.length > 5 ? detailImages.slice(5) : [];
 
   const categoryLabel =
     CATEGORY_LABELS[frontmatter.category as ProjectCategory] ??
@@ -90,7 +91,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <section className="container relative z-20 pt-10 md:pt-12">
+      <section className="container relative z-20 pt-8 md:pt-10 lg:pt-12">
         <DetailCloseButton fallbackHref="/projects" />
       </section>
 
@@ -104,34 +105,46 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           brandLabel={frontmatter.industry}
           description={frontmatter.description}
           project={frontmatter}
-          className="!pt-4 md:!pt-6 lg:!pt-8"
+          className="!pt-3 md:!pt-4 lg:!pt-5"
         />
 
         {galleryAfterTemplate.length > 0 && (
-          <ProjectGallery
-            images={galleryAfterTemplate}
-            imageIndexOffset={5}
-          />
+          <ProjectGallery images={galleryAfterTemplate} imageIndexOffset={5} />
         )}
       </ProjectLightboxProvider>
 
       {frontmatter.process && frontmatter.process.length > 0 && (
-        <Process title={`${frontmatter.name} process`} steps={frontmatter.process} />
-      )}
-
-      {nextProject && (
-        <section className="section-padding container flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="nav-caps text-muted-foreground text-xs">Next project</p>
-            <h2 className="text-3xl">{nextProject.name}</h2>
-          </div>
-          <Button variant="outline" asChild>
-            <Link href={`/projects/${nextProject.slug}`}>View next project</Link>
-          </Button>
+        <section className="container py-10 md:py-12 lg:py-14">
+          <Process
+            title={`${frontmatter.name} process`}
+            steps={frontmatter.process}
+          />
         </section>
       )}
 
-      <Cta />
+      {nextProject && (
+        <section className="container py-10 md:py-12 lg:py-14">
+          <div className="flex flex-col gap-5 border-y border-border py-6 md:flex-row md:items-center md:justify-between md:py-7">
+            <div className="space-y-1">
+              <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
+                Next project
+              </p>
+
+              <h2 className="text-2xl leading-tight tracking-[-0.025em] md:text-3xl">
+                {nextProject.name}
+              </h2>
+            </div>
+
+            <Button variant="outline" size="sm" asChild>
+              <Link href={`/projects/${nextProject.slug}`}>View next project</Link>
+            </Button>
+          </div>
+        </section>
+      )}
+
+      <div className="pb-10 md:pb-12 lg:pb-14">
+        <Cta />
+      </div>
     </>
   );
 }

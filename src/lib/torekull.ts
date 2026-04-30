@@ -9,15 +9,9 @@ export const TOREKULL = {
   phone: '+46 (0) 706 306 809',
   instagram: 'https://instagram.com/torekullinteriorarchitecture',
   facebook: 'https://www.facebook.com/torekullinteriorarchitecture',
-  addresses: [
-    'Stora Gråmunkegränd 5, SE 111 27 Stockholm, Sweden',
-    'Hornsbergsvägen 18, SE 112 15 Stockholm, Sweden',
-  ],
+  addresses: ['Stora Gråmunkegränd 5, SE 111 27 Stockholm, Sweden'],
   /** Compact lines for footer / tight layouts (full postal strings stay in `addresses`) */
-  addressesShort: [
-    'Stora Gråmunkegränd 5 · Stockholm',
-    'Hornsbergsvägen 18 · Stockholm',
-  ],
+  addressesShort: ['Stora Gråmunkegränd 5 · Stockholm'],
   quote: 'The function of design is letting design function',
   quoteAuthor: 'Micha Commeren',
 } as const;
@@ -281,4 +275,3 @@ export const WHAT_WE_DO_PROCESS = [
 ] as const;
 
 export const BLOB_IMAGE_BASE = `${BLOB_ORIGIN}/images/torekull`;
-

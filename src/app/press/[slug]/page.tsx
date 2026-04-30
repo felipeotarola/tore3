@@ -53,109 +53,132 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
   const pressItems = await getPressItems();
   const index = pressItems.findIndex((entry) => entry.slug === slug);
 
-  if (index < 0) {
-    return notFound();
-  }
+  if (index < 0) return notFound();
 
   const item = pressItems[index];
   const nextItem = pressItems[(index + 1) % pressItems.length];
+
   const titleParts = getPressTitleParts(item.title);
   const label = titleParts.fullTitle;
   const [line1, line2] = splitPressTitleForLines(label);
+
   const publication = titleParts.publication;
   const year = titleParts.year ?? 'Not specified';
   const reference = titleParts.secondary ?? 'Feature';
+
   const pressSummary = `Feature from ${publication}${
     year !== 'Not specified' ? ` (${year})` : ''
   }.`;
 
   return (
     <>
-      <section className="space-y-5 pt-6 pb-7 md:space-y-6 md:pt-8 md:pb-9">
-        <div className="container">
+      {/* HERO */}
+      <section className="container pt-10 pb-10 md:pt-14 md:pb-12 lg:pt-16 lg:pb-14">
+        <div className="space-y-6">
           <DetailCloseButton fallbackHref="/press" />
-        </div>
 
-        <div className="container space-y-2 text-center md:space-y-2.5">
-          <p className="nav-caps text-muted-foreground text-xs">
-            Articles &amp; Magazines
-          </p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl">
-            {line1}
-            {line2 && (
-              <>
-                <br />
-                {line2}
-              </>
-            )}
-          </h1>
-        </div>
+          <div className="mx-auto max-w-3xl space-y-3 text-center">
+            <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
+              Articles &amp; Magazines
+            </p>
 
-        <div className="bigger-container">
-          <div className="border-border bg-card relative mx-auto aspect-[4/3] w-full max-w-[1400px] overflow-hidden rounded-sm border md:aspect-[3/2]">
+            <h1 className="text-4xl leading-[0.95] tracking-[-0.04em] md:text-5xl lg:text-6xl">
+              {line1}
+              {line2 && (
+                <>
+                  <br />
+                  {line2}
+                </>
+              )}
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* IMAGE */}
+      <section className="container pb-10 md:pb-12 lg:pb-14">
+        <div className="mx-auto max-w-[1200px] overflow-hidden border border-border/70">
+          <div className="relative aspect-[4/3] w-full md:aspect-[3/2]">
             <Image
               src={item.image}
               alt={label}
               fill
               className="object-contain"
-              sizes="(max-width: 768px) 100vw, (max-width: 1536px) 90vw, 1400px"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
               priority
             />
           </div>
         </div>
+      </section>
 
-        <div className="container max-w-4xl border-t border-border/70 pt-4 pb-6 md:pt-5 md:pb-7">
-          <p className="nav-caps text-muted-foreground mb-1 text-[0.65rem] tracking-[0.14em]">
+      {/* META / DETAILS */}
+      <section className="container pb-10 md:pb-12 lg:pb-14">
+        <div className="mx-auto max-w-3xl border-t border-border/70 pt-5">
+          <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
             Press overview
           </p>
-          <p className="text-muted-foreground mb-3 text-sm leading-snug">
+
+          <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
             {pressSummary}
           </p>
-          <dl className="grid gap-x-5 gap-y-2 sm:grid-cols-3">
+
+          <dl className="mt-5 grid gap-x-6 gap-y-3 sm:grid-cols-3">
             <div>
-              <dt className="text-muted-foreground mb-0.5 text-[0.65rem] tracking-widest uppercase">
+              <dt className="nav-caps text-[10px] tracking-[0.18em] text-muted-foreground">
                 Publication
               </dt>
-              <dd className="text-foreground text-sm leading-snug">{publication}</dd>
+              <dd className="mt-1 text-sm">{publication}</dd>
             </div>
+
             <div>
-              <dt className="text-muted-foreground mb-0.5 text-[0.65rem] tracking-widest uppercase">
+              <dt className="nav-caps text-[10px] tracking-[0.18em] text-muted-foreground">
                 Year
               </dt>
-              <dd className="text-foreground text-sm leading-snug">{year}</dd>
+              <dd className="mt-1 text-sm">{year}</dd>
             </div>
+
             <div>
-              <dt className="text-muted-foreground mb-0.5 text-[0.65rem] tracking-widest uppercase">
+              <dt className="nav-caps text-[10px] tracking-[0.18em] text-muted-foreground">
                 Reference
               </dt>
-              <dd className="text-foreground text-sm leading-snug">{reference}</dd>
+              <dd className="mt-1 text-sm">{reference}</dd>
             </div>
           </dl>
-          {item.url ? (
-            <div className="mt-4">
+
+          {item.url && (
+            <div className="mt-6">
               <Button variant="outline" size="sm" asChild>
                 <a href={item.url} target="_blank" rel="noopener noreferrer">
                   Open publication
                 </a>
               </Button>
             </div>
-          ) : null}
+          )}
         </div>
       </section>
 
-      <section className="section-padding container flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p className="nav-caps text-muted-foreground text-xs">Next press</p>
-          <h2 className="text-3xl">
-            {formatPressDisplayTitle(nextItem.title)}
-          </h2>
+      {/* NEXT */}
+      <section className="container pb-10 md:pb-12 lg:pb-14">
+        <div className="flex flex-col gap-5 border-y border-border py-6 md:flex-row md:items-center md:justify-between">
+          <div className="space-y-1">
+            <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
+              Next press
+            </p>
+
+            <h2 className="text-2xl leading-tight tracking-[-0.02em] md:text-3xl">
+              {formatPressDisplayTitle(nextItem.title)}
+            </h2>
+          </div>
+
+          <Button variant="outline" size="sm" asChild>
+            <Link href={`/press/${nextItem.slug}`}>View next press</Link>
+          </Button>
         </div>
-        <Button variant="outline" asChild>
-          <Link href={`/press/${nextItem.slug}`}>View next press</Link>
-        </Button>
       </section>
 
-      <Cta />
+      <div className="pb-10 md:pb-12 lg:pb-14">
+        <Cta />
+      </div>
     </>
   );
 }

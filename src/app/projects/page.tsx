@@ -15,44 +15,60 @@ export default async function ProjectsPage() {
   const allProjects = await getAllProjects();
 
   return (
-    <div className="hero-padding container flex flex-col gap-10 lg:gap-12">
-      <DetailCloseButton fallbackHref="/" />
+    <div className="container pt-10 pb-12 md:pt-14 md:pb-14 lg:pt-16 lg:pb-16">
+      <div className="flex flex-col gap-8 md:gap-10">
+        <DetailCloseButton fallbackHref="/" />
 
-      <header className="max-w-3xl space-y-3">
-        <p className="nav-caps text-xs text-muted-foreground">Selected work</p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl">Projects</h1>
-        <p className="text-muted-foreground text-base leading-relaxed md:text-lg">
-          Interior architecture and design across hospitality, bars, and workplace—each
-          engagement shaped by place, brief, and craft.
-        </p>
-      </header>
+        <header className="max-w-2xl space-y-2">
+          <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
+            Selected work
+          </p>
 
-      <Tabs defaultValue="all" className="w-full">
-        <ScrollArea className="pb-2" orientation="horizontal">
-          <TabsList>
-            {PROJECT_FILTERS.map((category) => (
-              <TabsTrigger key={category.value} value={category.value}>
-                {category.label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </ScrollArea>
+          <h1 className="text-4xl leading-tight tracking-[-0.035em] md:text-5xl lg:text-6xl">
+            Projects
+          </h1>
 
-        {PROJECT_FILTERS.map((category) => {
-          const filteredProjects =
-            category.value === 'all'
-              ? allProjects
-              : allProjects.filter(
-                  (project) => project.category === category.value,
-                );
+          <p className="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">
+            Interior architecture and design across hospitality, bars, and
+            workplace—each engagement shaped by place, brief, and craft.
+          </p>
+        </header>
 
-          return (
-            <TabsContent key={category.value} value={category.value} className="outline-none">
-              <ProjectsShowcase projects={filteredProjects} />
-            </TabsContent>
-          );
-        })}
-      </Tabs>
+        <Tabs defaultValue="all" className="w-full">
+          <ScrollArea className="pb-2" orientation="horizontal">
+            <TabsList className="gap-2">
+              {PROJECT_FILTERS.map((category) => (
+                <TabsTrigger
+                  key={category.value}
+                  value={category.value}
+                  className="text-xs tracking-[0.14em]"
+                >
+                  {category.label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </ScrollArea>
+
+          {PROJECT_FILTERS.map((category) => {
+            const filteredProjects =
+              category.value === 'all'
+                ? allProjects
+                : allProjects.filter(
+                    (project) => project.category === category.value,
+                  );
+
+            return (
+              <TabsContent
+                key={category.value}
+                value={category.value}
+                className="mt-6 outline-none md:mt-7"
+              >
+                <ProjectsShowcase projects={filteredProjects} />
+              </TabsContent>
+            );
+          })}
+        </Tabs>
+      </div>
     </div>
   );
 }
