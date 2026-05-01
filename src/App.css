@@ -52,6 +52,15 @@
   transition: padding 0.35s ease;
 }
 
+
+.site-header.is-home {
+  position: fixed;
+  inset: 0 0 auto 0;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 .site-header.is-compact {
   padding: calc(var(--header-y) - 0.1rem) var(--page-x);
 }
@@ -1218,6 +1227,10 @@ div[id] {
   .site-header {
     padding: 0.4rem 1rem;
     min-height: 52px;
+  }
+
+  .site-header.is-home {
+    background: transparent;
   }
 
   .site-header.is-compact {
