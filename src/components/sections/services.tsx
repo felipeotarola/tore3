@@ -47,7 +47,7 @@ export const Services = () => {
           return (
             <Link
               key={service.title}
-              href={`/what-we-do?service=${service.slug}#${service.slug}`}
+              href={`/what-we-do?service=${service.slug}`}
               data-editor-lock-nav="true"
               className="group block rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >

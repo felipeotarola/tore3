@@ -1,0 +1,464 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "TOREKULL" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "TOREKULL" [ref=e6]
+      - navigation [ref=e8]:
+        - link "PROJECTS" [ref=e9] [cursor=pointer]:
+          - /url: /projects
+        - link "ABOUT" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "PRESS" [ref=e12] [cursor=pointer]:
+          - /url: /press
+        - link "CONTACT" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - button "Close and go back" [ref=e16] [cursor=pointer]:
+        - img
+      - generic [ref=e18]:
+        - generic [ref=e19]: Selected work
+        - heading "Projects" [level=1] [ref=e20]
+        - generic [ref=e21]: Interior architecture and design across hospitality, bars, and workplace—each engagement shaped by place, brief, and craft.
+    - generic [ref=e23]:
+      - tablist [ref=e27]:
+        - tab "All" [selected] [ref=e28] [cursor=pointer]
+        - tab "Restaurants" [ref=e29] [cursor=pointer]
+        - tab "Bars" [ref=e30] [cursor=pointer]
+        - tab "Cafes" [ref=e31] [cursor=pointer]
+        - tab "Office" [ref=e32] [cursor=pointer]
+        - tab "Other" [ref=e33] [cursor=pointer]
+      - tabpanel "All" [ref=e34]:
+        - generic [ref=e35]:
+          - article [ref=e36]:
+            - 'link "3Sixty Skybar image 1 Bars 3Sixty Skybar Sjovikskajen 48, 117 57 Stockholm, Sweden An international restaurant, skybar and living room located on the 25th floor with a 360 degree panoramic view in an elegant 20s feel. Interior design concept: TOREKULL Head interior architect: Maja-L… View project" [ref=e37] [cursor=pointer]':
+              - /url: /projects/3sixty-skybar
+              - generic [ref=e38]:
+                - img "3Sixty Skybar image 1" [ref=e39]
+                - generic [ref=e41]: View project
+              - generic [ref=e42]:
+                - generic [ref=e43]: Bars
+                - generic [ref=e44]:
+                  - heading "3Sixty Skybar" [level=2] [ref=e45]
+                  - paragraph [ref=e46]: Sjovikskajen 48, 117 57 Stockholm, Sweden
+                - paragraph [ref=e47]: "An international restaurant, skybar and living room located on the 25th floor with a 360 degree panoramic view in an elegant 20s feel. Interior design concept: TOREKULL Head interior architect: Maja-L…"
+                - generic [ref=e48]:
+                  - text: View project
+                  - img [ref=e49]
+          - article [ref=e52]:
+            - link "MOYAGI - London image 1 Restaurants MOYAGI - London 5 Cavendish Place, London, UK Moyagi's Hidden Bar blends the elegance of a traditional cocktail bar with the energy of a Tokyo-inspired boutique nightclub. Moyagi also offers private karaoke rooms that bring Tokyo's late-night kar… View project" [ref=e53] [cursor=pointer]:
+              - /url: /projects/moyagi-london
+              - generic [ref=e54]:
+                - img "MOYAGI - London image 1" [ref=e55]
+                - generic [ref=e57]: View project
+              - generic [ref=e58]:
+                - generic [ref=e59]: Restaurants
+                - generic [ref=e60]:
+                  - heading "MOYAGI - London" [level=2] [ref=e61]
+                  - paragraph [ref=e62]: 5 Cavendish Place, London, UK
+                - paragraph [ref=e63]: Moyagi's Hidden Bar blends the elegance of a traditional cocktail bar with the energy of a Tokyo-inspired boutique nightclub. Moyagi also offers private karaoke rooms that bring Tokyo's late-night kar…
+                - generic [ref=e64]:
+                  - text: View project
+                  - img [ref=e65]
+          - article [ref=e68]:
+            - link "Hallwylska Bar image 1 Bars Hallwylska Bar Stockholm, Sweden Millimeter Arkitekter project led by head interior architect and designer Maja-Li Torekull. New bar, restaurant, and garden in the Hallwylska Museum's inner courtyard. View project" [ref=e69] [cursor=pointer]:
+              - /url: /projects/hallwylska-bar
+              - generic [ref=e70]:
+                - img "Hallwylska Bar image 1" [ref=e71]
+                - generic [ref=e73]: View project
+              - generic [ref=e74]:
+                - generic [ref=e75]: Bars
+                - generic [ref=e76]:
+                  - heading "Hallwylska Bar" [level=2] [ref=e77]
+                  - paragraph [ref=e78]: Stockholm, Sweden
+                - paragraph [ref=e79]: Millimeter Arkitekter project led by head interior architect and designer Maja-Li Torekull. New bar, restaurant, and garden in the Hallwylska Museum's inner courtyard.
+                - generic [ref=e80]:
+                  - text: View project
+                  - img [ref=e81]
+          - article [ref=e84]:
+            - link "Rose Club image 1 Bars Rose Club Stockholm, Sweden Millimeter Arkitekter project led by head interior architect and designer Maja-Li Torekull. Complete makeover and renovation of Rose Club and the new Bar Rose. View project" [ref=e85] [cursor=pointer]:
+              - /url: /projects/rose-club
+              - generic [ref=e86]:
+                - img "Rose Club image 1" [ref=e87]
+                - generic [ref=e89]: View project
+              - generic [ref=e90]:
+                - generic [ref=e91]: Bars
+                - generic [ref=e92]:
+                  - heading "Rose Club" [level=2] [ref=e93]
+                  - paragraph [ref=e94]: Stockholm, Sweden
+                - paragraph [ref=e95]: Millimeter Arkitekter project led by head interior architect and designer Maja-Li Torekull. Complete makeover and renovation of Rose Club and the new Bar Rose.
+                - generic [ref=e96]:
+                  - text: View project
+                  - img [ref=e97]
+          - article [ref=e100]:
+            - 'link "Walthon Advokater Office image 1 Office Walthon Advokater Office Nybrogatan 6, 114 34, Stockholm, Sweden New office for the law firm Walthon Advokater, located at the top of a Jugend property in the heart of Ostermalm. Interior design concept: TOREKULL House architect: Ahrbom & Partner Graphic design and… View project" [ref=e101] [cursor=pointer]':
+              - /url: /projects/walthon-advokater-office
+              - generic [ref=e102]:
+                - img "Walthon Advokater Office image 1" [ref=e103]
+                - generic [ref=e105]: View project
+              - generic [ref=e106]:
+                - generic [ref=e107]: Office
+                - generic [ref=e108]:
+                  - heading "Walthon Advokater Office" [level=2] [ref=e109]
+                  - paragraph [ref=e110]: Nybrogatan 6, 114 34, Stockholm, Sweden
+                - paragraph [ref=e111]: "New office for the law firm Walthon Advokater, located at the top of a Jugend property in the heart of Ostermalm. Interior design concept: TOREKULL House architect: Ahrbom & Partner Graphic design and…"
+                - generic [ref=e112]:
+                  - text: View project
+                  - img [ref=e113]
+          - article [ref=e116]:
+            - link "Biblioteket Live - The Bar image 1 Bars Biblioteket Live - The Bar Medborgarplatsen 2, 118 26 Stockholm, Sweden A former library was turned into a restaurant, several bars, and a live stage for events and performances. The Bar is situated at street level and dedicated to Sodermalm's love of beer. Biblioteket Li… View project" [ref=e117] [cursor=pointer]:
+              - /url: /projects/biblioteket-live-bar
+              - generic [ref=e118]:
+                - img "Biblioteket Live - The Bar image 1" [ref=e119]
+                - generic [ref=e121]: View project
+              - generic [ref=e122]:
+                - generic [ref=e123]: Bars
+                - generic [ref=e124]:
+                  - heading "Biblioteket Live - The Bar" [level=2] [ref=e125]
+                  - paragraph [ref=e126]: Medborgarplatsen 2, 118 26 Stockholm, Sweden
+                - paragraph [ref=e127]: A former library was turned into a restaurant, several bars, and a live stage for events and performances. The Bar is situated at street level and dedicated to Sodermalm's love of beer. Biblioteket Li…
+                - generic [ref=e128]:
+                  - text: View project
+                  - img [ref=e129]
+          - article [ref=e132]:
+            - 'link "La Botanica image 1 Restaurants La Botanica Westfield Mall of Scandinavia, 2nd floor, Stockholm, Sweden Restaurant and bar inspired by flowers, greenery, and a botanical theme. Sweden''s largest buffet and food experience with an extensive dessert and sweets section. Interior design: TOREKULL Props and s… View project" [ref=e133] [cursor=pointer]':
+              - /url: /projects/la-botanica
+              - generic [ref=e134]:
+                - img "La Botanica image 1" [ref=e135]
+                - generic [ref=e137]: View project
+              - generic [ref=e138]:
+                - generic [ref=e139]: Restaurants
+                - generic [ref=e140]:
+                  - heading "La Botanica" [level=2] [ref=e141]
+                  - paragraph [ref=e142]: Westfield Mall of Scandinavia, 2nd floor, Stockholm, Sweden
+                - paragraph [ref=e143]: "Restaurant and bar inspired by flowers, greenery, and a botanical theme. Sweden's largest buffet and food experience with an extensive dessert and sweets section. Interior design: TOREKULL Props and s…"
+                - generic [ref=e144]:
+                  - text: View project
+                  - img [ref=e145]
+          - article [ref=e148]:
+            - 'link "KASAI - Stockholm image 1 Restaurants KASAI - Stockholm Linnegatan 18, Stockholm, Sweden Japanese restaurant and diner club in central Stockholm. Complete renovation and interior design concept: TOREKULL Lighting design: Abreu Design Studio Technical integration: Integration Design Props… View project" [ref=e149] [cursor=pointer]':
+              - /url: /projects/kasai-stockholm
+              - generic [ref=e150]:
+                - img "KASAI - Stockholm image 1" [ref=e151]
+                - generic [ref=e153]: View project
+              - generic [ref=e154]:
+                - generic [ref=e155]: Restaurants
+                - generic [ref=e156]:
+                  - heading "KASAI - Stockholm" [level=2] [ref=e157]
+                  - paragraph [ref=e158]: Linnegatan 18, Stockholm, Sweden
+                - paragraph [ref=e159]: "Japanese restaurant and diner club in central Stockholm. Complete renovation and interior design concept: TOREKULL Lighting design: Abreu Design Studio Technical integration: Integration Design Props…"
+                - generic [ref=e160]:
+                  - text: View project
+                  - img [ref=e161]
+          - article [ref=e164]:
+            - 'link "MOYAGI - Malmo image 1 Restaurants MOYAGI - Malmo Sodra Tullgatan 3, 211 40 Malmo, Sweden An exclusive private-room karaoke concept that combines a seductive aesthetic with the high-energy vibe of an intimate Japanese boutique club. Interior design concept: TOREKULL Lighting design: Abreu… View project" [ref=e165] [cursor=pointer]':
+              - /url: /projects/moyagi-malmo
+              - generic [ref=e166]:
+                - img "MOYAGI - Malmo image 1" [ref=e167]
+                - generic [ref=e169]: View project
+              - generic [ref=e170]:
+                - generic [ref=e171]: Restaurants
+                - generic [ref=e172]:
+                  - heading "MOYAGI - Malmo" [level=2] [ref=e173]
+                  - paragraph [ref=e174]: Sodra Tullgatan 3, 211 40 Malmo, Sweden
+                - paragraph [ref=e175]: "An exclusive private-room karaoke concept that combines a seductive aesthetic with the high-energy vibe of an intimate Japanese boutique club. Interior design concept: TOREKULL Lighting design: Abreu…"
+                - generic [ref=e176]:
+                  - text: View project
+                  - img [ref=e177]
+          - article [ref=e180]:
+            - link "Adlon Hotel image 1 Other Adlon Hotel Adlon Hotel is a featured TOREKULL project. Detailed case study text will be added soon. View project" [ref=e181] [cursor=pointer]:
+              - /url: /projects/adlon-hotel
+              - generic [ref=e182]:
+                - img "Adlon Hotel image 1" [ref=e183]
+                - generic [ref=e185]: View project
+              - generic [ref=e186]:
+                - generic [ref=e187]: Other
+                - heading "Adlon Hotel" [level=2] [ref=e189]
+                - paragraph [ref=e190]: Adlon Hotel is a featured TOREKULL project. Detailed case study text will be added soon.
+                - generic [ref=e191]:
+                  - text: View project
+                  - img [ref=e192]
+          - article [ref=e195]:
+            - link "Alcron Luxury Hotel image 1 Other Alcron Luxury Hotel Alcron Luxury Hotel is a featured TOREKULL project. Detailed case study text will be added soon. View project" [ref=e196] [cursor=pointer]:
+              - /url: /projects/alcron-luxury-hotel
+              - generic [ref=e197]:
+                - img "Alcron Luxury Hotel image 1" [ref=e198]
+                - generic [ref=e200]: View project
+              - generic [ref=e201]:
+                - generic [ref=e202]: Other
+                - heading "Alcron Luxury Hotel" [level=2] [ref=e204]
+                - paragraph [ref=e205]: Alcron Luxury Hotel is a featured TOREKULL project. Detailed case study text will be added soon.
+                - generic [ref=e206]:
+                  - text: View project
+                  - img [ref=e207]
+          - article [ref=e210]:
+            - link "Beer Café image 1 Cafes Beer Café Beer Café is a featured TOREKULL project. Detailed case study text will be added soon. View project" [ref=e211] [cursor=pointer]:
+              - /url: /projects/beer-cafe
+              - generic [ref=e212]:
+                - img "Beer Café image 1" [ref=e213]
+                - generic [ref=e215]: View project
+              - generic [ref=e216]:
+                - generic [ref=e217]: Cafes
+                - heading "Beer Café" [level=2] [ref=e219]
+                - paragraph [ref=e220]: Beer Café is a featured TOREKULL project. Detailed case study text will be added soon.
+                - generic [ref=e221]:
+                  - text: View project
+                  - img [ref=e222]
+          - article [ref=e225]:
+            - link "Biblioteket Live - Arkivet image 1 Other Biblioteket Live - Arkivet Medborgarplatsen 2, 118 26 Stockholm, Sweden A former library was turned into a restaurant, several bars, and a live stage for events and performances. Arkivet (The Archive), situated on the third floor (level 5), is dedicated to private and bus… View project" [ref=e226] [cursor=pointer]:
+              - /url: /projects/biblioteket-live-arkivet
+              - generic [ref=e227]:
+                - img "Biblioteket Live - Arkivet image 1" [ref=e228]
+                - generic [ref=e230]: View project
+              - generic [ref=e231]:
+                - generic [ref=e232]: Other
+                - generic [ref=e233]:
+                  - heading "Biblioteket Live - Arkivet" [level=2] [ref=e234]
+                  - paragraph [ref=e235]: Medborgarplatsen 2, 118 26 Stockholm, Sweden
+                - paragraph [ref=e236]: A former library was turned into a restaurant, several bars, and a live stage for events and performances. Arkivet (The Archive), situated on the third floor (level 5), is dedicated to private and bus…
+                - generic [ref=e237]:
+                  - text: View project
+                  - img [ref=e238]
+          - article [ref=e241]:
+            - link "Biblioteket Live - The Cocktail Bar image 1 Bars Biblioteket Live - The Cocktail Bar Medborgarplatsen 2, 118 26 Stockholm, Sweden 5-star award winner in European Property Awards 2022-2023 (International Property Awards), Leisure Interior Category Sweden. Honorable mention for Soundset / Acoustic Environment of the Year 2023 and… View project" [ref=e242] [cursor=pointer]:
+              - /url: /projects/biblioteket-live-cocktail-bar
+              - generic [ref=e243]:
+                - img "Biblioteket Live - The Cocktail Bar image 1" [ref=e244]
+                - generic [ref=e246]: View project
+              - generic [ref=e247]:
+                - generic [ref=e248]: Bars
+                - generic [ref=e249]:
+                  - heading "Biblioteket Live - The Cocktail Bar" [level=2] [ref=e250]
+                  - paragraph [ref=e251]: Medborgarplatsen 2, 118 26 Stockholm, Sweden
+                - paragraph [ref=e252]: 5-star award winner in European Property Awards 2022-2023 (International Property Awards), Leisure Interior Category Sweden. Honorable mention for Soundset / Acoustic Environment of the Year 2023 and…
+                - generic [ref=e253]:
+                  - text: View project
+                  - img [ref=e254]
+          - article [ref=e257]:
+            - link "Biblioteket Live - The Court-Yard image 1 Other Biblioteket Live - The Court-Yard Medborgarplatsen 2, 118 26 Stockholm, Sweden A former library was turned into a restaurant, several bars, and a live stage for events and performances. Ljusgarden (The Court-Yard), situated on the second floor (level 4), is where the live stage… View project" [ref=e258] [cursor=pointer]:
+              - /url: /projects/biblioteket-live-ljusgarden
+              - generic [ref=e259]:
+                - img "Biblioteket Live - The Court-Yard image 1" [ref=e260]
+                - generic [ref=e262]: View project
+              - generic [ref=e263]:
+                - generic [ref=e264]: Other
+                - generic [ref=e265]:
+                  - heading "Biblioteket Live - The Court-Yard" [level=2] [ref=e266]
+                  - paragraph [ref=e267]: Medborgarplatsen 2, 118 26 Stockholm, Sweden
+                - paragraph [ref=e268]: A former library was turned into a restaurant, several bars, and a live stage for events and performances. Ljusgarden (The Court-Yard), situated on the second floor (level 4), is where the live stage…
+                - generic [ref=e269]:
+                  - text: View project
+                  - img [ref=e270]
+          - article [ref=e273]:
+            - link "Canta Lola image 1 Other Canta Lola Grev Turegatan 6, Stockholm, Sweden 5-star award winner in European Property Awards 2021-2022 (International Property Awards), Leisure Interior Category Sweden. Canta Lola is a Restaurante y Bar Social with Peruvian flavors. Interior de… View project" [ref=e274] [cursor=pointer]:
+              - /url: /projects/canta-lola
+              - generic [ref=e275]:
+                - img "Canta Lola image 1" [ref=e276]
+                - generic [ref=e278]: View project
+              - generic [ref=e279]:
+                - generic [ref=e280]: Other
+                - generic [ref=e281]:
+                  - heading "Canta Lola" [level=2] [ref=e282]
+                  - paragraph [ref=e283]: Grev Turegatan 6, Stockholm, Sweden
+                - paragraph [ref=e284]: 5-star award winner in European Property Awards 2021-2022 (International Property Awards), Leisure Interior Category Sweden. Canta Lola is a Restaurante y Bar Social with Peruvian flavors. Interior de…
+                - generic [ref=e285]:
+                  - text: View project
+                  - img [ref=e286]
+          - article [ref=e289]:
+            - link "Cava Bar Signalfabriken image 1 Bars Cava Bar Signalfabriken Signalfabriken, Sundbyberg, Sweden Millimeter Arkitekter project led by head interior architect and designer Maja-Li Torekull. A former telegraph station and printing house was transformed into a cava and tapas bar. View project" [ref=e290] [cursor=pointer]:
+              - /url: /projects/cava-bar-signalfabriken
+              - generic [ref=e291]:
+                - img "Cava Bar Signalfabriken image 1" [ref=e292]
+                - generic [ref=e294]: View project
+              - generic [ref=e295]:
+                - generic [ref=e296]: Bars
+                - generic [ref=e297]:
+                  - heading "Cava Bar Signalfabriken" [level=2] [ref=e298]
+                  - paragraph [ref=e299]: Signalfabriken, Sundbyberg, Sweden
+                - paragraph [ref=e300]: Millimeter Arkitekter project led by head interior architect and designer Maja-Li Torekull. A former telegraph station and printing house was transformed into a cava and tapas bar.
+                - generic [ref=e301]:
+                  - text: View project
+                  - img [ref=e302]
+          - article [ref=e305]:
+            - link "Cava Bar Centralstation image 1 Bars Cava Bar Centralstation Stockholm, Sweden Millimeter Arkitekter project led by head interior architect and designer Maja-Li Torekull. Cava and tapas bar and restaurant in Stockholm Central Station, originally opened in 1871. View project" [ref=e306] [cursor=pointer]:
+              - /url: /projects/cava-bar-centralstation
+              - generic [ref=e307]:
+                - img "Cava Bar Centralstation image 1" [ref=e308]
+                - generic [ref=e310]: View project
+              - generic [ref=e311]:
+                - generic [ref=e312]: Bars
+                - generic [ref=e313]:
+                  - heading "Cava Bar Centralstation" [level=2] [ref=e314]
+                  - paragraph [ref=e315]: Stockholm, Sweden
+                - paragraph [ref=e316]: Millimeter Arkitekter project led by head interior architect and designer Maja-Li Torekull. Cava and tapas bar and restaurant in Stockholm Central Station, originally opened in 1871.
+                - generic [ref=e317]:
+                  - text: View project
+                  - img [ref=e318]
+          - article [ref=e321]:
+            - link "ChouChou image 1 Other ChouChou Mood Gallerian, Master Samuelsgatan 18, 111 44 Stockholm, Sweden Award winner in European Property Awards 2022-2023 (International Property Awards), Leisure Interior Category Sweden. ChouChou is an all plant-based restaurant and bar. The interior is inspired by nat… View project" [ref=e322] [cursor=pointer]:
+              - /url: /projects/chouchou
+              - generic [ref=e323]:
+                - img "ChouChou image 1" [ref=e324]
+                - generic [ref=e326]: View project
+              - generic [ref=e327]:
+                - generic [ref=e328]: Other
+                - generic [ref=e329]:
+                  - heading "ChouChou" [level=2] [ref=e330]
+                  - paragraph [ref=e331]: Mood Gallerian, Master Samuelsgatan 18, 111 44 Stockholm, Sweden
+                - paragraph [ref=e332]: Award winner in European Property Awards 2022-2023 (International Property Awards), Leisure Interior Category Sweden. ChouChou is an all plant-based restaurant and bar. The interior is inspired by nat…
+                - generic [ref=e333]:
+                  - text: View project
+                  - img [ref=e334]
+          - article [ref=e337]:
+            - link "Delish Bakehouse image 1 Cafes Delish Bakehouse Frejgatan 46, Stockholm, Sweden The first of three existing bakeries was selected for a complete makeover with a new concept and interior design. View project" [ref=e338] [cursor=pointer]:
+              - /url: /projects/delish
+              - generic [ref=e339]:
+                - img "Delish Bakehouse image 1" [ref=e340]
+                - generic [ref=e342]: View project
+              - generic [ref=e343]:
+                - generic [ref=e344]: Cafes
+                - generic [ref=e345]:
+                  - heading "Delish Bakehouse" [level=2] [ref=e346]
+                  - paragraph [ref=e347]: Frejgatan 46, Stockholm, Sweden
+                - paragraph [ref=e348]: The first of three existing bakeries was selected for a complete makeover with a new concept and interior design.
+                - generic [ref=e349]:
+                  - text: View project
+                  - img [ref=e350]
+          - article [ref=e353]:
+            - link "E.A.T image 1 Other E.A.T Stockholm E.A.T is a featured TOREKULL project. Detailed case study text will be added soon. View project" [ref=e354] [cursor=pointer]:
+              - /url: /projects/eat
+              - generic [ref=e355]:
+                - img "E.A.T image 1" [ref=e356]
+                - generic [ref=e358]: View project
+              - generic [ref=e359]:
+                - generic [ref=e360]: Other
+                - generic [ref=e361]:
+                  - heading "E.A.T" [level=2] [ref=e362]
+                  - paragraph [ref=e363]: Stockholm
+                - paragraph [ref=e364]: E.A.T is a featured TOREKULL project. Detailed case study text will be added soon.
+                - generic [ref=e365]:
+                  - text: View project
+                  - img [ref=e366]
+          - article [ref=e369]:
+            - link "Hestra Glove Store – Helsinki, Finland image 1 Other Hestra Glove Store – Helsinki, Finland Finland Hestra Glove Store – Helsinki, Finland is a featured TOREKULL project. Detailed case study text will be added soon. View project" [ref=e370] [cursor=pointer]:
+              - /url: /projects/hestra-glove-store-helsinki-finland
+              - generic [ref=e371]:
+                - img "Hestra Glove Store – Helsinki, Finland image 1" [ref=e372]
+                - generic [ref=e374]: View project
+              - generic [ref=e375]:
+                - generic [ref=e376]: Other
+                - generic [ref=e377]:
+                  - heading "Hestra Glove Store – Helsinki, Finland" [level=2] [ref=e378]
+                  - paragraph [ref=e379]: Finland
+                - paragraph [ref=e380]: Hestra Glove Store – Helsinki, Finland is a featured TOREKULL project. Detailed case study text will be added soon.
+                - generic [ref=e381]:
+                  - text: View project
+                  - img [ref=e382]
+          - article [ref=e385]:
+            - link "Hestra Glove Store – Oslo, Norway image 1 Other Hestra Glove Store – Oslo, Norway Norway Hestra Glove Store – Oslo, Norway is a featured TOREKULL project. Detailed case study text will be added soon. View project" [ref=e386] [cursor=pointer]:
+              - /url: /projects/hestra-glove-store-oslo-norway
+              - generic [ref=e387]:
+                - img "Hestra Glove Store – Oslo, Norway image 1" [ref=e388]
+                - generic [ref=e390]: View project
+              - generic [ref=e391]:
+                - generic [ref=e392]: Other
+                - generic [ref=e393]:
+                  - heading "Hestra Glove Store – Oslo, Norway" [level=2] [ref=e394]
+                  - paragraph [ref=e395]: Norway
+                - paragraph [ref=e396]: Hestra Glove Store – Oslo, Norway is a featured TOREKULL project. Detailed case study text will be added soon.
+                - generic [ref=e397]:
+                  - text: View project
+                  - img [ref=e398]
+          - article [ref=e401]:
+            - link "J’s Place Gym image 1 Other J’s Place Gym J’s Place Gym is a featured TOREKULL project. Detailed case study text will be added soon. View project" [ref=e402] [cursor=pointer]:
+              - /url: /projects/j-s-place-gym
+              - generic [ref=e403]:
+                - img "J’s Place Gym image 1" [ref=e404]
+                - generic [ref=e406]: View project
+              - generic [ref=e407]:
+                - generic [ref=e408]: Other
+                - heading "J’s Place Gym" [level=2] [ref=e410]
+                - paragraph [ref=e411]: J’s Place Gym is a featured TOREKULL project. Detailed case study text will be added soon.
+                - generic [ref=e412]:
+                  - text: View project
+                  - img [ref=e413]
+          - article [ref=e416]:
+            - link "The Public Sundbyberg image 1 Other The Public Sundbyberg Stockholm The Public Sundbyberg is a featured TOREKULL project. Detailed case study text will be added soon. View project" [ref=e417] [cursor=pointer]:
+              - /url: /projects/the-public-sundbyberg
+              - generic [ref=e418]:
+                - img "The Public Sundbyberg image 1" [ref=e419]
+                - generic [ref=e421]: View project
+              - generic [ref=e422]:
+                - generic [ref=e423]: Other
+                - generic [ref=e424]:
+                  - heading "The Public Sundbyberg" [level=2] [ref=e425]
+                  - paragraph [ref=e426]: Stockholm
+                - paragraph [ref=e427]: The Public Sundbyberg is a featured TOREKULL project. Detailed case study text will be added soon.
+                - generic [ref=e428]:
+                  - text: View project
+                  - img [ref=e429]
+          - article [ref=e432]:
+            - link "Wiener Caféet image 1 Cafes Wiener Caféet Wiener Caféet is a featured TOREKULL project. Detailed case study text will be added soon. View project" [ref=e433] [cursor=pointer]:
+              - /url: /projects/wiener-cafeet
+              - generic [ref=e434]:
+                - img "Wiener Caféet image 1" [ref=e435]
+                - generic [ref=e437]: View project
+              - generic [ref=e438]:
+                - generic [ref=e439]: Cafes
+                - heading "Wiener Caféet" [level=2] [ref=e441]
+                - paragraph [ref=e442]: Wiener Caféet is a featured TOREKULL project. Detailed case study text will be added soon.
+                - generic [ref=e443]:
+                  - text: View project
+                  - img [ref=e444]
+  - contentinfo [ref=e448]:
+    - generic [ref=e449]:
+      - link "TOREKULL" [ref=e451] [cursor=pointer]:
+        - /url: /
+        - img "TOREKULL" [ref=e452]
+      - generic [ref=e453]:
+        - navigation "Footer" [ref=e454]:
+          - list [ref=e455]:
+            - listitem [ref=e456]:
+              - link "Home" [ref=e457] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e458]:
+              - link "Projects" [ref=e459] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e460]:
+              - link "About" [ref=e461] [cursor=pointer]:
+                - /url: /about
+        - navigation "More pages" [ref=e462]:
+          - list [ref=e463]:
+            - listitem [ref=e464]:
+              - link "What We Do" [ref=e465] [cursor=pointer]:
+                - /url: /what-we-do
+            - listitem [ref=e466]:
+              - link "Collaborations" [ref=e467] [cursor=pointer]:
+                - /url: /collaborations
+            - listitem [ref=e468]:
+              - link "Contact" [ref=e469] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e470]:
+          - heading "Contact" [level=3] [ref=e471]
+          - generic [ref=e472]:
+            - link "Info@torekull.se" [ref=e473] [cursor=pointer]:
+              - /url: mailto:Info@torekull.se
+            - link "+46 (0) 706 306 809" [ref=e474] [cursor=pointer]:
+              - /url: tel:+460706306809
+          - paragraph [ref=e476]: Stora Gråmunkegränd 5 · Stockholm
+      - generic [ref=e477]:
+        - generic [ref=e478]:
+          - link "Instagram" [ref=e479] [cursor=pointer]:
+            - /url: https://instagram.com/torekullinteriorarchitecture
+            - img [ref=e480]
+            - text: Instagram
+          - link "Facebook" [ref=e483] [cursor=pointer]:
+            - /url: https://www.facebook.com/torekullinteriorarchitecture
+            - img [ref=e484]
+            - text: Facebook
+        - generic [ref=e486]:
+          - paragraph [ref=e487]: © 2026 TOREKULL. All Rights Reserved.
+          - paragraph [ref=e488]: Stockholm, Sweden
+  - button "Open Next.js Dev Tools" [ref=e494] [cursor=pointer]:
+    - img [ref=e495]

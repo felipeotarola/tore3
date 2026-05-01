@@ -26,7 +26,7 @@ export default async function WhatWeDoPage({ searchParams }: WhatWeDoPageProps) 
   return (
     <>
       <DetailPageHeader
-        fallbackHref="/"
+        fallbackHref={selectedService ? '/what-we-do' : '/'}
         eyebrow="What we do"
         title={selectedService?.title ?? 'Practice & services'}
         description={

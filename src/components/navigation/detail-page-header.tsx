@@ -29,23 +29,24 @@ export function DetailPageHeader({
   return (
     <section
       className={cn(
-        'container pt-32 pb-10 md:pt-36 md:pb-12 lg:pt-40 lg:pb-14',
+        'container relative pt-32 pb-10 md:pt-36 md:pb-12 lg:pt-40 lg:pb-14',
         className,
       )}
     >
+      <DetailCloseButton
+        fallbackHref={fallbackHref}
+        className="absolute top-4 right-4 md:top-8 md:right-8"
+      />
+
       <div
         className={cn(
-          centered
-            ? 'relative mx-auto max-w-4xl text-center'
-            : 'grid gap-5 md:grid-cols-[minmax(0,1fr)_auto] md:items-start',
+          'w-full',
+          centered ? 'text-center' : '',
           contentClassName,
         )}
       >
         {centered ? (
           <>
-            <div className="mb-5 flex justify-end md:absolute md:top-0 md:right-0 md:mb-0">
-              <DetailCloseButton fallbackHref={fallbackHref} />
-            </div>
             <div>
               {eyebrow ? (
                 <div className="nav-caps mb-3 text-[11px] tracking-[0.2em] text-muted-foreground">
@@ -73,37 +74,31 @@ export function DetailPageHeader({
             </div>
           </>
         ) : (
-          <>
-            <div>
-              {eyebrow ? (
-                <div className="nav-caps mb-3 text-[11px] tracking-[0.2em] text-muted-foreground">
-                  {eyebrow}
-                </div>
-              ) : null}
-              <h1
+          <div>
+            {eyebrow ? (
+              <div className="nav-caps mb-3 text-[11px] tracking-[0.2em] text-muted-foreground">
+                {eyebrow}
+              </div>
+            ) : null}
+            <h1
+              className={cn(
+                'text-4xl leading-tight tracking-[-0.035em] md:text-5xl lg:text-6xl',
+                titleClassName,
+              )}
+            >
+              {title}
+            </h1>
+            {description ? (
+              <div
                 className={cn(
-                  'text-4xl leading-tight tracking-[-0.035em] md:text-5xl lg:text-6xl',
-                  titleClassName,
+                  'mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base',
+                  descriptionClassName,
                 )}
               >
-                {title}
-              </h1>
-              {description ? (
-                <div
-                  className={cn(
-                    'mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base',
-                    descriptionClassName,
-                  )}
-                >
-                  {description}
-                </div>
-              ) : null}
-            </div>
-            <DetailCloseButton
-              fallbackHref={fallbackHref}
-              className="justify-self-end self-center md:self-start"
-            />
-          </>
+                {description}
+              </div>
+            ) : null}
+          </div>
         )}
       </div>
     </section>
