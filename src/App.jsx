@@ -7,6 +7,7 @@ import { createPortal } from 'react-dom'
 import {
   BrowserRouter,
   Link,
+  NavLink,
   Route,
   Routes,
   useLocation,
@@ -102,7 +103,7 @@ const Reveal = memo(function Reveal({ as = 'section', className = '', children, 
 
 const Header = ({ menu, compact, links, isHome }) => (
   <header
-    className={`site-header${compact ? ' is-compact' : ''}`}
+    className={`site-header${isHome ? ' is-home' : ''}${compact ? ' is-compact' : ''}`}
     style={{ zIndex: menu.open ? 40 : 10 }}
   >
     <button
@@ -133,9 +134,15 @@ const Header = ({ menu, compact, links, isHome }) => (
 
     <nav className="nav-links" aria-label="Main navigation">
       {links.map((link) => (
-        <Link key={link.href} to={isHome ? link.href : `/${link.href}`}>
+        <NavLink
+          key={link.href}
+          to={isHome ? link.href : `/${link.href}`}
+          className={({ isActive }) =>
+            `nav-link${isActive ? ' is-active' : ''}`
+          }
+        >
           {link.label}
-        </Link>
+        </NavLink>
       ))}
     </nav>
   </header>

@@ -32,19 +32,19 @@ export default function WhatWeDoPage() {
       />
 
       <section className="container pb-10 md:pb-12 lg:pb-14">
-        <div className="group flex items-start justify-between gap-8 bg-primary p-6 text-primary-foreground md:p-8 lg:p-10">
+        <div className="group flex items-start justify-between gap-8 rounded-lg border border-border bg-card/20 p-6 shadow-sm md:p-8 lg:p-10">
           <div>
-            <p className="nav-caps text-[11px] tracking-[0.2em] opacity-70">
+            <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
               Specialties
             </p>
 
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed md:text-xl">
+            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-foreground md:text-xl">
               TOREKULL specializes in commercial properties: hotels, restaurants,
               bars, cafes and boutiques.
             </p>
           </div>
 
-          <ArrowUpRight className="mt-1 size-5 shrink-0 opacity-70 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+          <ArrowUpRight className="text-muted-foreground mt-1 size-5 shrink-0 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
         </div>
       </section>
     </>
