@@ -1,0 +1,155 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "TOREKULL" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "TOREKULL" [ref=e6]
+      - navigation [ref=e8]:
+        - link "PROJECTS" [ref=e9] [cursor=pointer]:
+          - /url: /projects
+        - link "ABOUT" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "PRESS" [ref=e12] [cursor=pointer]:
+          - /url: /press
+        - link "CONTACT" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e14]:
+    - button "Close and go back" [ref=e16] [cursor=pointer]:
+      - img
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - paragraph [ref=e20]: Selected work
+        - heading "ChouChou" [level=1] [ref=e21]
+      - generic [ref=e22]:
+        - button "View image 1 full screen" [ref=e24]:
+          - img "ChouChou image 1" [ref=e26]
+        - button "View image 2 full screen" [ref=e28]:
+          - img "ChouChou image 2" [ref=e30]
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - paragraph [ref=e34]: Category
+            - paragraph [ref=e35]: Other
+          - generic [ref=e36]:
+            - paragraph [ref=e37]: Year
+            - paragraph [ref=e38]: "2021"
+          - generic [ref=e39]:
+            - paragraph [ref=e40]: Brand
+            - paragraph [ref=e41]: Hospitality
+        - generic [ref=e42]:
+          - paragraph [ref=e43]: "Award winner in European Property Awards 2022-2023 (International Property Awards), Leisure Interior Category Sweden. ChouChou is an all plant-based restaurant and bar. The interior is inspired by nature's shapes and joyful colors, with hints of Art Deco and 1920s Los Angeles. A playful style with elegance and warmth creates a vibrant social atmosphere centered around food and life. Renovation and interior design concept: TOREKULL Graphic design and brand identity: APT Studio Head interior architect: Maja-Li Torekull Assistant interior architect: Lisa Hallfors"
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e48]:
+                - img [ref=e50]
+                - generic [ref=e53]:
+                  - paragraph [ref=e54]: Location
+                  - generic [ref=e55]: Mood Gallerian, Master Samuelsgatan 18, 111 44 Stockholm, Sweden
+              - generic [ref=e57]:
+                - img [ref=e59]
+                - generic [ref=e62]:
+                  - paragraph [ref=e63]: Website
+                  - link "chouchou.se" [ref=e65] [cursor=pointer]:
+                    - /url: https://chouchou.se/
+                    - generic [ref=e66]: chouchou.se
+                    - img [ref=e67]
+              - generic [ref=e72]:
+                - img [ref=e74]
+                - generic [ref=e77]:
+                  - paragraph [ref=e78]: Photography
+                  - generic [ref=e79]: Lasse Olsson
+            - generic [ref=e80]:
+              - img [ref=e82]
+              - generic [ref=e87]:
+                - paragraph [ref=e88]: Collaborators
+                - list [ref=e89]:
+                  - listitem [ref=e90]: "Renovation and interior design concept: TOREKULL"
+                  - listitem [ref=e91]: "Graphic design and brand identity: APT Studio"
+                  - listitem [ref=e92]: "Head interior architect: Maja-Li Torekull"
+                  - listitem [ref=e93]: "Assistant interior architect: Lisa Hallfors"
+            - generic [ref=e94]:
+              - img [ref=e96]
+              - generic [ref=e99]:
+                - paragraph [ref=e100]: Awards
+                - list [ref=e101]:
+                  - listitem [ref=e102]: European Property Awards (2022-2023) — Leisure Interior Category Sweden
+      - button "View image 3 full screen" [ref=e104]:
+        - img "ChouChou image 3" [ref=e106]
+      - generic [ref=e107]:
+        - button "View image 4 full screen" [ref=e109]:
+          - img "ChouChou image 4" [ref=e111]
+        - button "View image 5 full screen" [ref=e113]:
+          - img "ChouChou image 5" [ref=e115]
+    - generic [ref=e117]:
+      - button "View image 6 full screen" [ref=e119]:
+        - img "ChouChou image 6" [ref=e120]
+      - button "View image 7 full screen" [ref=e122]:
+        - img "ChouChou image 7" [ref=e123]
+      - button "View image 8 full screen" [ref=e125]:
+        - img "ChouChou image 8" [ref=e126]
+      - button "View image 9 full screen" [ref=e128]:
+        - img "ChouChou image 9" [ref=e129]
+      - button "View image 10 full screen" [ref=e131]:
+        - img "ChouChou image 10" [ref=e132]
+      - button "View image 11 full screen" [ref=e134]:
+        - img "ChouChou image 11" [ref=e135]
+      - button "View image 12 full screen" [ref=e137]:
+        - img "ChouChou image 12" [ref=e138]
+    - generic [ref=e140]:
+      - generic [ref=e141]:
+        - paragraph [ref=e142]: Next project
+        - heading "Delish Bakehouse" [level=2] [ref=e143]
+      - link "View next project" [ref=e144] [cursor=pointer]:
+        - /url: /projects/delish
+    - heading "Let's create something extraordinary." [level=2] [ref=e148]
+  - contentinfo [ref=e150]:
+    - generic [ref=e151]:
+      - link "TOREKULL" [ref=e153] [cursor=pointer]:
+        - /url: /
+        - img "TOREKULL" [ref=e154]
+      - generic [ref=e155]:
+        - navigation "Footer" [ref=e156]:
+          - list [ref=e157]:
+            - listitem [ref=e158]:
+              - link "Home" [ref=e159] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e160]:
+              - link "Projects" [ref=e161] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e162]:
+              - link "About" [ref=e163] [cursor=pointer]:
+                - /url: /about
+        - navigation "More pages" [ref=e164]:
+          - list [ref=e165]:
+            - listitem [ref=e166]:
+              - link "What We Do" [ref=e167] [cursor=pointer]:
+                - /url: /what-we-do
+            - listitem [ref=e168]:
+              - link "Collaborations" [ref=e169] [cursor=pointer]:
+                - /url: /collaborations
+            - listitem [ref=e170]:
+              - link "Contact" [ref=e171] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e172]:
+          - heading "Contact" [level=3] [ref=e173]
+          - generic [ref=e174]:
+            - link "Info@torekull.se" [ref=e175] [cursor=pointer]:
+              - /url: mailto:Info@torekull.se
+            - link "+46 (0) 706 306 809" [ref=e176] [cursor=pointer]:
+              - /url: tel:+460706306809
+          - paragraph [ref=e178]: Stora Gråmunkegränd 5 · Stockholm
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - link "Instagram" [ref=e181] [cursor=pointer]:
+            - /url: https://instagram.com/torekullinteriorarchitecture
+            - img [ref=e182]
+            - text: Instagram
+          - link "Facebook" [ref=e185] [cursor=pointer]:
+            - /url: https://www.facebook.com/torekullinteriorarchitecture
+            - img [ref=e186]
+            - text: Facebook
+        - generic [ref=e188]:
+          - paragraph [ref=e189]: © 2026 TOREKULL. All Rights Reserved.
+          - paragraph [ref=e190]: Stockholm, Sweden
+  - button "Open Next.js Dev Tools" [ref=e196] [cursor=pointer]:
+    - img [ref=e197]

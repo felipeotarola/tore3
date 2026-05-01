@@ -92,53 +92,103 @@ function ProjectCredits({
     return null;
   }
 
+  const factRows: Array<{
+    key: string;
+    icon: ComponentType<{ className?: string }>;
+    label: string;
+    content: ReactNode;
+  }> = [
+    location
+      ? {
+          key: 'location',
+          icon: MapPin,
+          label: 'Location',
+          content: location,
+        }
+      : null,
+    website
+      ? {
+          key: 'website',
+          icon: Globe,
+          label: 'Website',
+          content: (
+            <Link
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animated-underline inline-flex max-w-full items-center gap-1.5 font-medium break-all"
+            >
+              <span className="min-w-0">{websiteHostLabel(website)}</span>
+              <ExternalLink
+                className="text-muted-foreground size-3.5 shrink-0 opacity-60"
+                aria-hidden
+              />
+            </Link>
+          ),
+        }
+      : null,
+    photo
+      ? {
+          key: 'photo',
+          icon: Camera,
+          label: 'Photography',
+          content: photo,
+        }
+      : null,
+    via
+      ? {
+          key: 'via',
+          icon: Link2,
+          label: 'Via',
+          content: via,
+        }
+      : null,
+  ].filter(Boolean) as Array<{
+    key: string;
+    icon: ComponentType<{ className?: string }>;
+    label: string;
+    content: ReactNode;
+  }>;
+
   return (
     <div
       className={cn(
-        'space-y-6',
+        'space-y-0',
         afterDescription
           ? 'border-border/60 mt-7 border-t pt-7'
-          : 'mt-8',
+          : 'mt-0',
       )}
     >
       {hasFacts ? (
-        <div className="grid gap-6 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-6">
-          {location ? (
-            <CreditRow icon={MapPin} label="Location">
-              {location}
-            </CreditRow>
-          ) : null}
-          {website ? (
-            <CreditRow icon={Globe} label="Website">
-              <Link
-                href={website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="animated-underline inline-flex max-w-full items-center gap-1.5 font-medium break-all"
-              >
-                <span className="min-w-0">{websiteHostLabel(website)}</span>
-                <ExternalLink
-                  className="text-muted-foreground size-3.5 shrink-0 opacity-60"
-                  aria-hidden
-                />
-              </Link>
-            </CreditRow>
-          ) : null}
-          {photo ? (
-            <CreditRow icon={Camera} label="Photography">
-              {photo}
-            </CreditRow>
-          ) : null}
-          {via ? (
-            <CreditRow icon={Link2} label="Via">
-              {via}
-            </CreditRow>
-          ) : null}
+        <div className="grid grid-cols-2">
+          {factRows.map((fact) => (
+            <div
+              key={fact.key}
+              className={cn(
+                'min-w-0',
+                fact.key === 'location' &&
+                  website &&
+                  'border-border/60 border-r pr-4 md:pr-6',
+                fact.key === 'website' && location && 'pl-4 md:pl-6',
+                (fact.key === 'photo' || fact.key === 'via') &&
+                  'border-border/60 col-span-2 mt-5 border-t pt-5',
+              )}
+            >
+              <CreditRow icon={fact.icon} label={fact.label}>
+                {fact.content}
+              </CreditRow>
+            </div>
+          ))}
         </div>
       ) : null}
 
       {hasCollab ? (
-        <div className="flex gap-3">
+        <div
+          className={cn(
+            'border-border/60 flex gap-3 border-t pt-6',
+            hasFacts ? 'mt-6' : '',
+          )}
+        >
           <span className="bg-muted/80 text-muted-foreground flex size-9 shrink-0 items-center justify-center self-start rounded-md border border-border/50">
             <Users className="size-4" aria-hidden />
           </span>
@@ -156,7 +206,12 @@ function ProjectCredits({
       ) : null}
 
       {hasAwards ? (
-        <div className="flex gap-3">
+        <div
+          className={cn(
+            'border-border/60 flex gap-3 border-t pt-6',
+            hasFacts || hasCollab ? 'mt-6' : '',
+          )}
+        >
           <span className="bg-muted/80 text-muted-foreground flex size-9 shrink-0 items-center justify-center self-start rounded-md border border-border/50">
             <Award className="size-4" aria-hidden />
           </span>
@@ -365,7 +420,7 @@ export function Project14Detail({
         >
           <motion.div
             className={cn(
-              'mb-6 grid justify-items-center gap-x-3 gap-y-1 sm:gap-x-6 md:mb-8',
+              'divide-border/60 mb-6 grid justify-items-stretch divide-x md:mb-8',
               metaGridClass,
             )}
             variants={staggerContainer}
@@ -376,7 +431,7 @@ export function Project14Detail({
               variants={fadeInUp}
               initial="initial"
               animate="animate"
-              className="min-w-0 px-1"
+              className="min-w-0 px-4 first:pl-0 last:pr-0 md:px-6"
             >
               <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
                 Category
@@ -390,7 +445,7 @@ export function Project14Detail({
                 variants={fadeInUp}
                 initial="initial"
                 animate="animate"
-                className="min-w-0 px-1"
+                className="min-w-0 px-4 first:pl-0 last:pr-0 md:px-6"
               >
                 <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
                   Year
@@ -405,7 +460,7 @@ export function Project14Detail({
                 variants={fadeInUp}
                 initial="initial"
                 animate="animate"
-                className="min-w-0 px-1"
+                className="min-w-0 px-4 first:pl-0 last:pr-0 md:px-6"
               >
                 <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
                   Brand
@@ -419,7 +474,12 @@ export function Project14Detail({
           {description ||
           (project && projectHasSupplementFields(project)) ? (
             <motion.div
-              className="mx-auto max-w-3xl text-left"
+              className={cn(
+                'mx-auto text-left',
+                description && project && projectHasSupplementFields(project)
+                  ? 'grid max-w-7xl gap-8 md:grid-cols-[minmax(0,1fr)_minmax(320px,0.85fr)] md:gap-10 lg:gap-12'
+                  : 'max-w-3xl',
+              )}
               variants={fadeInUp}
               initial="initial"
               animate="animate"
@@ -429,10 +489,17 @@ export function Project14Detail({
                 <p className="text-muted-foreground text-sm leading-relaxed md:text-base">{description}</p>
               ) : null}
               {project && projectHasSupplementFields(project) ? (
-                <ProjectCredits
-                  project={project}
-                  afterDescription={Boolean(description)}
-                />
+                <div
+                  className={cn(
+                    description &&
+                      'border-border/60 md:border-l md:pl-8 lg:pl-10',
+                  )}
+                >
+                  <ProjectCredits
+                    project={project}
+                    afterDescription={!description}
+                  />
+                </div>
               ) : null}
             </motion.div>
           ) : null}

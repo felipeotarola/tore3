@@ -117,7 +117,6 @@ export default async function RootLayout({
         >
           <NavigationProvider>
             <StyleGlideProvider />
-            <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
           </NavigationProvider>
