@@ -4,20 +4,35 @@ import { Metadata } from 'next';
 import { DetailPageHeader } from '@/components/navigation/detail-page-header';
 import { Process } from '@/components/sections/process';
 import { ServicesHoverTable } from '@/components/what-we-do/services-hover-table';
-import { WHAT_WE_DO_PROCESS } from '@/lib/torekull';
+import { SERVICES, WHAT_WE_DO_PROCESS } from '@/lib/torekull';
 
 export const metadata: Metadata = {
   title: 'What We Do',
 };
 
-export default function WhatWeDoPage() {
+type WhatWeDoPageProps = {
+  searchParams?: Promise<{
+    service?: string | string[];
+  }>;
+};
+
+export default async function WhatWeDoPage({ searchParams }: WhatWeDoPageProps) {
+  const params = await searchParams;
+  const serviceSlug = Array.isArray(params?.service)
+    ? params.service[0]
+    : params?.service;
+  const selectedService = SERVICES.find((service) => service.slug === serviceSlug);
+
   return (
     <>
       <DetailPageHeader
         fallbackHref="/"
         eyebrow="What we do"
-        title="Practice & services"
-        description="TOREKULL delivers interior architecture, furniture, and product work for hospitality and commercial spaces—from first sketch through site delivery."
+        title={selectedService?.title ?? 'Practice & services'}
+        description={
+          selectedService?.description ??
+          'TOREKULL delivers interior architecture, furniture, and product work for hospitality and commercial spaces—from first sketch through site delivery.'
+        }
         contentClassName="max-w-4xl"
         titleClassName="max-w-4xl text-5xl leading-[0.95] tracking-[-0.045em] md:text-6xl lg:text-7xl"
         descriptionClassName="max-w-2xl text-base md:text-lg"

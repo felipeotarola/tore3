@@ -1,0 +1,117 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "TOREKULL" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "TOREKULL" [ref=e6]
+      - navigation [ref=e8]:
+        - link "PROJECTS" [ref=e9] [cursor=pointer]:
+          - /url: /projects
+        - link "ABOUT" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "PRESS" [ref=e12] [cursor=pointer]:
+          - /url: /press
+        - link "CONTACT" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e14]:
+    - generic [ref=e16]:
+      - generic [ref=e17]:
+        - generic [ref=e18]: What we do
+        - heading "Furniture Design" [level=1] [ref=e19]
+        - generic [ref=e20]: Custom furniture design tailored to each project's unique identity and functional requirements.
+      - button "Close and go back" [ref=e21] [cursor=pointer]:
+        - img
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - paragraph [ref=e25]: Capabilities
+        - heading "How we work with you" [level=2] [ref=e26]
+        - paragraph [ref=e27]: Hover a row to preview a project reference—each line is a core discipline in our studio.
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]: "01"
+          - heading "Interior Architecture" [level=3] [ref=e32]
+          - paragraph [ref=e33]: Complete interior architecture for commercial spaces - restaurants, hotels, bars, boutiques, and offices. From concept to finished project.
+        - generic [ref=e34]:
+          - generic [ref=e35]: "02"
+          - heading "Furniture Design" [level=3] [ref=e37]
+          - paragraph [ref=e38]: Custom furniture design tailored to each project's unique identity and functional requirements.
+        - generic [ref=e39]:
+          - generic [ref=e40]: "03"
+          - heading "Product Design" [level=3] [ref=e42]
+          - paragraph [ref=e43]: Innovative product design solutions that bridge aesthetics and everyday functionality.
+        - generic [ref=e44]:
+          - generic [ref=e45]: "04"
+          - heading "Concept Development" [level=3] [ref=e47]
+          - paragraph [ref=e48]: Full creative concept development including material selection, lighting strategy, and spatial flow.
+    - generic [ref=e50]:
+      - heading "Process" [level=2] [ref=e51]
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - heading "Assess" [level=3] [ref=e54]
+          - paragraph [ref=e55]: Understand what the client needs and wants. The client is always at the center.
+        - generic [ref=e56]:
+          - heading "Concept" [level=3] [ref=e57]
+          - paragraph [ref=e58]: Custom design each project for the benefit of the client's unique story.
+        - generic [ref=e59]:
+          - heading "Detail" [level=3] [ref=e60]
+          - paragraph [ref=e61]: Focus on quality, detail, and functionality - design must function to serve its purpose.
+        - generic [ref=e62]:
+          - heading "Deliver" [level=3] [ref=e63]
+          - paragraph [ref=e64]: Hands-on involvement from idea to finished project, on time and within budget.
+    - generic [ref=e66]:
+      - generic [ref=e67]:
+        - paragraph [ref=e68]: Specialties
+        - paragraph [ref=e69]: "TOREKULL specializes in commercial properties: hotels, restaurants, bars, cafes and boutiques."
+      - img [ref=e70]
+  - contentinfo [ref=e74]:
+    - generic [ref=e75]:
+      - link "TOREKULL" [ref=e77] [cursor=pointer]:
+        - /url: /
+        - img "TOREKULL" [ref=e78]
+      - generic [ref=e79]:
+        - navigation "Footer" [ref=e80]:
+          - list [ref=e81]:
+            - listitem [ref=e82]:
+              - link "Home" [ref=e83] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e84]:
+              - link "Projects" [ref=e85] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e86]:
+              - link "About" [ref=e87] [cursor=pointer]:
+                - /url: /about
+        - navigation "More pages" [ref=e88]:
+          - list [ref=e89]:
+            - listitem [ref=e90]:
+              - link "What We Do" [ref=e91] [cursor=pointer]:
+                - /url: /what-we-do
+            - listitem [ref=e92]:
+              - link "Collaborations" [ref=e93] [cursor=pointer]:
+                - /url: /collaborations
+            - listitem [ref=e94]:
+              - link "Contact" [ref=e95] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e96]:
+          - heading "Contact" [level=3] [ref=e97]
+          - generic [ref=e98]:
+            - link "Info@torekull.se" [ref=e99] [cursor=pointer]:
+              - /url: mailto:Info@torekull.se
+            - link "+46 (0) 706 306 809" [ref=e100] [cursor=pointer]:
+              - /url: tel:+460706306809
+          - paragraph [ref=e102]: Stora Gråmunkegränd 5 · Stockholm
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - link "Instagram" [ref=e105] [cursor=pointer]:
+            - /url: https://instagram.com/torekullinteriorarchitecture
+            - img [ref=e106]
+            - text: Instagram
+          - link "Facebook" [ref=e109] [cursor=pointer]:
+            - /url: https://www.facebook.com/torekullinteriorarchitecture
+            - img [ref=e110]
+            - text: Facebook
+        - generic [ref=e112]:
+          - paragraph [ref=e113]: © 2026 TOREKULL. All Rights Reserved.
+          - paragraph [ref=e114]: Stockholm, Sweden
+  - button "Open Next.js Dev Tools" [ref=e120] [cursor=pointer]:
+    - img [ref=e121]
+  - alert [ref=e124]

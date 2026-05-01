@@ -1,0 +1,332 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "TOREKULL" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "TOREKULL" [ref=e6]
+      - navigation [ref=e8]:
+        - link "PROJECTS" [ref=e9] [cursor=pointer]:
+          - /url: /projects
+        - link "ABOUT" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "PRESS" [ref=e12] [cursor=pointer]:
+          - /url: /press
+        - link "CONTACT" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e14]:
+    - generic [ref=e19]:
+      - heading "TOREKULL INTERIOR ARCHITECTURE & DESIGN" [level=1] [ref=e20]:
+        - generic [ref=e21]: TOREKULL
+        - generic [ref=e22]: INTERIOR ARCHITECTURE & DESIGN
+      - link "Explore 3Sixty Skybar" [ref=e23] [cursor=pointer]:
+        - /url: /projects/3sixty-skybar
+        - generic [ref=e24]: Explore 3Sixty Skybar
+        - img [ref=e25]
+    - region "Europe's best interior design studio · European Property Awards" [ref=e28]:
+      - generic [ref=e29]:
+        - paragraph [ref=e30]: Europe's best interior design studio · European Property Awards
+        - generic [ref=e31]:
+          - figure "2021-2022" [ref=e32]:
+            - img "European Property Awards 2021-2022 five star interior design award" [ref=e33]
+            - generic [ref=e34]: 2021-2022
+          - figure "2021-2022" [ref=e35]:
+            - img "European Property Awards 2021-2022 interior design award winner" [ref=e36]
+            - generic [ref=e37]: 2021-2022
+          - figure "2022-2023" [ref=e38]:
+            - img "European Property Awards 2022-2023 five star interior design award" [ref=e39]
+            - generic [ref=e40]: 2022-2023
+          - figure "2022-2023" [ref=e41]:
+            - img "European Property Awards 2022-2023 interior design award winner" [ref=e42]
+            - generic [ref=e43]: 2022-2023
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - paragraph [ref=e47]: Projects completed
+            - paragraph [ref=e48]: 20+
+          - generic [ref=e49]:
+            - paragraph [ref=e50]: Countries worked in
+            - paragraph [ref=e51]: "5"
+          - generic [ref=e52]:
+            - paragraph [ref=e53]: Award wins
+            - paragraph [ref=e54]: International Property Awards
+          - generic [ref=e55]:
+            - paragraph [ref=e56]: Languages
+            - paragraph [ref=e57]: "5"
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - heading "Selected projects" [level=2] [ref=e61]
+          - paragraph [ref=e62]: Explore recent work across restaurants, bars, and hospitality spaces. Hover each panel for quick context and open the full case.
+        - link "View all projects" [ref=e63] [cursor=pointer]:
+          - /url: /projects
+          - generic [ref=e64]: View all projects
+      - generic [ref=e65]:
+        - link "KASAI - Stockholm image 1 Restaurants KASAI - Stockholm" [ref=e66] [cursor=pointer]:
+          - /url: /projects/kasai-stockholm
+          - generic [ref=e67]:
+            - img "KASAI - Stockholm image 1" [ref=e68]
+            - generic [ref=e71]: View project
+            - generic [ref=e72]:
+              - paragraph [ref=e73]: Restaurants
+              - heading "KASAI - Stockholm" [level=3] [ref=e74]
+        - link "MOYAGI - London image 1 Restaurants MOYAGI - London" [ref=e75] [cursor=pointer]:
+          - /url: /projects/moyagi-london
+          - generic [ref=e76]:
+            - img "MOYAGI - London image 1" [ref=e77]
+            - generic [ref=e80]: View project
+            - generic [ref=e81]:
+              - paragraph [ref=e82]: Restaurants
+              - heading "MOYAGI - London" [level=3] [ref=e83]
+        - link "3Sixty Skybar image 1 Bars 3Sixty Skybar" [ref=e84] [cursor=pointer]:
+          - /url: /projects/3sixty-skybar
+          - generic [ref=e85]:
+            - img "3Sixty Skybar image 1" [ref=e86]
+            - generic [ref=e89]: View project
+            - generic [ref=e90]:
+              - paragraph [ref=e91]: Bars
+              - heading "3Sixty Skybar" [level=3] [ref=e92]
+        - link "Walthon Advokater Office image 1 Office Walthon Advokater Office" [ref=e93] [cursor=pointer]:
+          - /url: /projects/walthon-advokater-office
+          - generic [ref=e94]:
+            - img "Walthon Advokater Office image 1" [ref=e95]
+            - generic [ref=e98]: View project
+            - generic [ref=e99]:
+              - paragraph [ref=e100]: Office
+              - heading "Walthon Advokater Office" [level=3] [ref=e101]
+    - generic [ref=e102]:
+      - generic [ref=e103]:
+        - heading "What we do" [level=2] [ref=e104]
+        - paragraph [ref=e105]: TOREKULL works across interior architecture, furniture, and product design - shaping hotels, restaurants, bars, and workspaces from early concept through to delivery.
+      - generic [ref=e106]:
+        - link "Interior Architecture Complete interior architecture for commercial spaces - restaurants, hotels, bars, boutiques, and offices. From concept to finished project. Learn more" [ref=e107] [cursor=pointer]:
+          - /url: /what-we-do?service=interior-architecture#interior-architecture
+          - generic [ref=e108]:
+            - img [ref=e111]
+            - generic [ref=e115]:
+              - generic [ref=e116]: Interior Architecture
+              - generic [ref=e117]: Complete interior architecture for commercial spaces - restaurants, hotels, bars, boutiques, and offices. From concept to finished project.
+            - generic [ref=e119]:
+              - generic [ref=e120]: Learn more
+              - img [ref=e121]
+        - link "Furniture Design Custom furniture design tailored to each project's unique identity and functional requirements. Learn more" [ref=e124] [cursor=pointer]:
+          - /url: /what-we-do?service=furniture-design#furniture-design
+          - generic [ref=e125]:
+            - img [ref=e128]
+            - generic [ref=e131]:
+              - generic [ref=e132]: Furniture Design
+              - generic [ref=e133]: Custom furniture design tailored to each project's unique identity and functional requirements.
+            - generic [ref=e135]:
+              - generic [ref=e136]: Learn more
+              - img [ref=e137]
+        - link "Product Design Innovative product design solutions that bridge aesthetics and everyday functionality. Learn more" [ref=e140] [cursor=pointer]:
+          - /url: /what-we-do?service=product-design#product-design
+          - generic [ref=e141]:
+            - img [ref=e144]
+            - generic [ref=e149]:
+              - generic [ref=e150]: Product Design
+              - generic [ref=e151]: Innovative product design solutions that bridge aesthetics and everyday functionality.
+            - generic [ref=e153]:
+              - generic [ref=e154]: Learn more
+              - img [ref=e155]
+        - link "Concept Development Full creative concept development including material selection, lighting strategy, and spatial flow. Learn more" [ref=e158] [cursor=pointer]:
+          - /url: /what-we-do?service=concept-development#concept-development
+          - generic [ref=e159]:
+            - img [ref=e162]
+            - generic [ref=e165]:
+              - generic [ref=e166]: Concept Development
+              - generic [ref=e167]: Full creative concept development including material selection, lighting strategy, and spatial flow.
+            - generic [ref=e169]:
+              - generic [ref=e170]: Learn more
+              - img [ref=e171]
+    - generic [ref=e175]:
+      - generic [ref=e176]:
+        - link "Kasai" [ref=e177] [cursor=pointer]:
+          - /url: /projects/kasai-stockholm
+        - link "Moyagi" [ref=e178] [cursor=pointer]:
+          - /url: /projects/moyagi-london
+        - link "La Botanica" [ref=e179] [cursor=pointer]:
+          - /url: /projects/la-botanica
+        - link "3Sixty Skybar" [ref=e180] [cursor=pointer]:
+          - /url: /projects/3sixty-skybar
+        - link "Biblioteket Live" [ref=e181] [cursor=pointer]:
+          - /url: /projects/biblioteket-live-cocktail-bar
+        - link "Deck Brasserie" [ref=e182] [cursor=pointer]:
+          - /url: /projects/deck-brasserie-bar
+        - link "Chouchou" [ref=e183] [cursor=pointer]:
+          - /url: /projects/chouchou
+        - link "Canta Lola" [ref=e184] [cursor=pointer]:
+          - /url: /projects/canta-lola
+        - link "Hallwylska" [ref=e185] [cursor=pointer]:
+          - /url: /projects/hallwylska-bar
+        - link "Rose Club" [ref=e186] [cursor=pointer]:
+          - /url: /projects/rose-club
+        - link "Walthon Advokater" [ref=e187] [cursor=pointer]:
+          - /url: /projects/walthon-advokater-office
+        - link "Delish Bakehouse" [ref=e188] [cursor=pointer]:
+          - /url: /projects/delish-bakehouse
+        - link "Cava Bar" [ref=e189] [cursor=pointer]:
+          - /url: /projects/cava-bar-centralstation
+      - generic [ref=e190]:
+        - link "Kasai" [ref=e191] [cursor=pointer]:
+          - /url: /projects/kasai-stockholm
+        - link "Moyagi" [ref=e192] [cursor=pointer]:
+          - /url: /projects/moyagi-london
+        - link "La Botanica" [ref=e193] [cursor=pointer]:
+          - /url: /projects/la-botanica
+        - link "3Sixty Skybar" [ref=e194] [cursor=pointer]:
+          - /url: /projects/3sixty-skybar
+        - link "Biblioteket Live" [ref=e195] [cursor=pointer]:
+          - /url: /projects/biblioteket-live-cocktail-bar
+        - link "Deck Brasserie" [ref=e196] [cursor=pointer]:
+          - /url: /projects/deck-brasserie-bar
+        - link "Chouchou" [ref=e197] [cursor=pointer]:
+          - /url: /projects/chouchou
+        - link "Canta Lola" [ref=e198] [cursor=pointer]:
+          - /url: /projects/canta-lola
+        - link "Hallwylska" [ref=e199] [cursor=pointer]:
+          - /url: /projects/hallwylska-bar
+        - link "Rose Club" [ref=e200] [cursor=pointer]:
+          - /url: /projects/rose-club
+        - link "Walthon Advokater" [ref=e201] [cursor=pointer]:
+          - /url: /projects/walthon-advokater-office
+        - link "Delish Bakehouse" [ref=e202] [cursor=pointer]:
+          - /url: /projects/delish-bakehouse
+        - link "Cava Bar" [ref=e203] [cursor=pointer]:
+          - /url: /projects/cava-bar-centralstation
+      - generic [ref=e204]:
+        - link "Kasai" [ref=e205] [cursor=pointer]:
+          - /url: /projects/kasai-stockholm
+        - link "Moyagi" [ref=e206] [cursor=pointer]:
+          - /url: /projects/moyagi-london
+        - link "La Botanica" [ref=e207] [cursor=pointer]:
+          - /url: /projects/la-botanica
+        - link "3Sixty Skybar" [ref=e208] [cursor=pointer]:
+          - /url: /projects/3sixty-skybar
+        - link "Biblioteket Live" [ref=e209] [cursor=pointer]:
+          - /url: /projects/biblioteket-live-cocktail-bar
+        - link "Deck Brasserie" [ref=e210] [cursor=pointer]:
+          - /url: /projects/deck-brasserie-bar
+        - link "Chouchou" [ref=e211] [cursor=pointer]:
+          - /url: /projects/chouchou
+        - link "Canta Lola" [ref=e212] [cursor=pointer]:
+          - /url: /projects/canta-lola
+        - link "Hallwylska" [ref=e213] [cursor=pointer]:
+          - /url: /projects/hallwylska-bar
+        - link "Rose Club" [ref=e214] [cursor=pointer]:
+          - /url: /projects/rose-club
+        - link "Walthon Advokater" [ref=e215] [cursor=pointer]:
+          - /url: /projects/walthon-advokater-office
+        - link "Delish Bakehouse" [ref=e216] [cursor=pointer]:
+          - /url: /projects/delish-bakehouse
+        - link "Cava Bar" [ref=e217] [cursor=pointer]:
+          - /url: /projects/cava-bar-centralstation
+      - generic [ref=e218]:
+        - link "Kasai" [ref=e219] [cursor=pointer]:
+          - /url: /projects/kasai-stockholm
+        - link "Moyagi" [ref=e220] [cursor=pointer]:
+          - /url: /projects/moyagi-london
+        - link "La Botanica" [ref=e221] [cursor=pointer]:
+          - /url: /projects/la-botanica
+        - link "3Sixty Skybar" [ref=e222] [cursor=pointer]:
+          - /url: /projects/3sixty-skybar
+        - link "Biblioteket Live" [ref=e223] [cursor=pointer]:
+          - /url: /projects/biblioteket-live-cocktail-bar
+        - link "Deck Brasserie" [ref=e224] [cursor=pointer]:
+          - /url: /projects/deck-brasserie-bar
+        - link "Chouchou" [ref=e225] [cursor=pointer]:
+          - /url: /projects/chouchou
+        - link "Canta Lola" [ref=e226] [cursor=pointer]:
+          - /url: /projects/canta-lola
+        - link "Hallwylska" [ref=e227] [cursor=pointer]:
+          - /url: /projects/hallwylska-bar
+        - link "Rose Club" [ref=e228] [cursor=pointer]:
+          - /url: /projects/rose-club
+        - link "Walthon Advokater" [ref=e229] [cursor=pointer]:
+          - /url: /projects/walthon-advokater-office
+        - link "Delish Bakehouse" [ref=e230] [cursor=pointer]:
+          - /url: /projects/delish-bakehouse
+        - link "Cava Bar" [ref=e231] [cursor=pointer]:
+          - /url: /projects/cava-bar-centralstation
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - generic [ref=e234]:
+          - heading "Articles & Magazines" [level=2] [ref=e235]
+          - paragraph [ref=e236]: How they write about us
+        - link "See all press" [ref=e237] [cursor=pointer]:
+          - /url: /press
+          - generic [ref=e238]: See all press
+      - generic [ref=e239]:
+        - link "International Property & Travel - World's Best (2022-2023) - articles and magazines" [ref=e240] [cursor=pointer]:
+          - /url: /press/international-property-travel-worlds-best-2022-2023
+          - generic [ref=e244]:
+            - heading "International Property & Travel - World's Best 2022-2023" [level=3] [ref=e245]:
+              - text: International Property & Travel - World's Best
+              - text: 2022-2023
+            - img [ref=e247]
+        - link "Aftonbladet Söndag No. 12 (2022) - articles and magazines" [ref=e251] [cursor=pointer]:
+          - /url: /press/aftonbladet-sondag-no-12-2022
+          - generic [ref=e255]:
+            - heading "Aftonbladet Söndag No. 12 2022" [level=3] [ref=e256]:
+              - text: Aftonbladet Söndag No. 12
+              - text: "2022"
+            - img [ref=e258]
+        - link "EAT by White Guide (Feature) - articles and magazines" [ref=e262] [cursor=pointer]:
+          - /url: /press/eat-white-guide-feature
+          - generic [ref=e266]:
+            - heading "EAT by White Guide Feature" [level=3] [ref=e267]:
+              - text: EAT by White Guide
+              - text: Feature
+            - img [ref=e269]
+    - button "Content Editor" [ref=e273] [cursor=pointer]:
+      - img
+      - text: Content Editor
+  - contentinfo [ref=e275]:
+    - generic [ref=e276]:
+      - link "TOREKULL" [ref=e278] [cursor=pointer]:
+        - /url: /
+        - img "TOREKULL" [ref=e279]
+      - generic [ref=e280]:
+        - navigation "Footer" [ref=e281]:
+          - list [ref=e282]:
+            - listitem [ref=e283]:
+              - link "Home" [ref=e284] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e285]:
+              - link "Projects" [ref=e286] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e287]:
+              - link "About" [ref=e288] [cursor=pointer]:
+                - /url: /about
+        - navigation "More pages" [ref=e289]:
+          - list [ref=e290]:
+            - listitem [ref=e291]:
+              - link "What We Do" [ref=e292] [cursor=pointer]:
+                - /url: /what-we-do
+            - listitem [ref=e293]:
+              - link "Collaborations" [ref=e294] [cursor=pointer]:
+                - /url: /collaborations
+            - listitem [ref=e295]:
+              - link "Contact" [ref=e296] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e297]:
+          - heading "Contact" [level=3] [ref=e298]
+          - generic [ref=e299]:
+            - link "Info@torekull.se" [ref=e300] [cursor=pointer]:
+              - /url: mailto:Info@torekull.se
+            - link "+46 (0) 706 306 809" [ref=e301] [cursor=pointer]:
+              - /url: tel:+460706306809
+          - paragraph [ref=e303]: Stora Gråmunkegränd 5 · Stockholm
+      - generic [ref=e304]:
+        - generic [ref=e305]:
+          - link "Instagram" [ref=e306] [cursor=pointer]:
+            - /url: https://instagram.com/torekullinteriorarchitecture
+            - img [ref=e307]
+            - text: Instagram
+          - link "Facebook" [ref=e310] [cursor=pointer]:
+            - /url: https://www.facebook.com/torekullinteriorarchitecture
+            - img [ref=e311]
+            - text: Facebook
+        - generic [ref=e313]:
+          - paragraph [ref=e314]: © 2026 TOREKULL. All Rights Reserved.
+          - paragraph [ref=e315]: Stockholm, Sweden
+  - button "Open Next.js Dev Tools" [ref=e321] [cursor=pointer]:
+    - img [ref=e322]

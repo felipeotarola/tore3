@@ -125,6 +125,7 @@ export const HOME_STATS = [
 
 export const SERVICES = [
   {
+    slug: 'interior-architecture',
     title: 'Interior Architecture',
     description:
       'Complete interior architecture for commercial spaces - restaurants, hotels, bars, boutiques, and offices. From concept to finished project.',
@@ -132,18 +133,21 @@ export const SERVICES = [
     hoverImage: `${BLOB_ORIGIN}/images/torekull/projects/imports/kasai-stockholm/03-20221007-173300.jpg`,
   },
   {
+    slug: 'furniture-design',
     title: 'Furniture Design',
     description:
       "Custom furniture design tailored to each project's unique identity and functional requirements.",
     hoverImage: `${BLOB_ORIGIN}/images/torekull/projects/imports/la-botanica/09-botanica-002-final.jpg`,
   },
   {
+    slug: 'product-design',
     title: 'Product Design',
     description:
       'Innovative product design solutions that bridge aesthetics and everyday functionality.',
     hoverImage: `${BLOB_ORIGIN}/images/torekull/projects/moyagi-1.jpg`,
   },
   {
+    slug: 'concept-development',
     title: 'Concept Development',
     description:
       'Full creative concept development including material selection, lighting strategy, and spatial flow.',

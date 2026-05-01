@@ -94,8 +94,9 @@ export function ServicesHoverTable() {
           {SERVICES.map((service, index) => (
             <div
               key={service.title}
+              id={service.slug}
               className={cn(
-                'border-border group grid cursor-default grid-cols-1 gap-3 border-b py-5 transition-opacity duration-300 md:grid-cols-12 md:gap-6 md:py-6 lg:gap-8',
+                'border-border group grid scroll-mt-32 cursor-default grid-cols-1 gap-3 border-b py-5 transition-opacity duration-300 md:grid-cols-12 md:gap-6 md:py-6 lg:gap-8',
                 activeIndex !== null &&
                   activeIndex !== index &&
                   'opacity-[0.38]',
