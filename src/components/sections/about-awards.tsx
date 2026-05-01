@@ -23,7 +23,7 @@ export function AboutAwards() {
 
   return (
     <section
-      className="section-padding-tight container"
+      className="container border-t border-border/60 py-14 md:py-16"
       aria-labelledby="about-awards-heading"
     >
       <script
@@ -31,19 +31,19 @@ export function AboutAwards() {
         dangerouslySetInnerHTML={{ __html: jsonLd }}
       />
 
-      <div className="mb-4 max-w-2xl space-y-2 md:mb-5">
+      <div className="mb-5 max-w-2xl space-y-2 md:mb-6">
         <EditableText
           as="p"
           copyKey="about.awards.kicker"
           fallback="European Property Awards"
-          className="nav-caps text-xs text-muted-foreground"
+          className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground"
         />
         <EditableText
           as="h2"
           id="about-awards-heading"
           copyKey="about.awards.heading"
           fallback="Recognition"
-          className="text-2xl font-semibold tracking-tight md:text-3xl"
+          className="text-2xl font-semibold tracking-[-0.02em] md:text-3xl"
         />
         <EditableText
           as="p"
@@ -54,13 +54,13 @@ export function AboutAwards() {
         />
       </div>
 
-      <div className="border-border bg-card/25 mb-4 rounded-lg border px-4 py-4 md:px-5 md:py-5">
+      <div className="mb-4 rounded-md border border-border/70 bg-card/10 px-4 py-4 md:px-5 md:py-5">
         <h3 className="text-foreground mb-3 text-sm font-semibold tracking-tight md:text-base">
           European Property Awards — Interior Design (Sweden)
         </h3>
         <ul
           id={AWARDS_LIST_ID}
-          className="text-muted-foreground divide-border divide-y border-b border-t text-sm leading-snug md:text-base md:leading-relaxed"
+          className="divide-y divide-border/60 border-b border-t border-border/60 text-sm leading-snug text-muted-foreground md:leading-relaxed"
         >
           {EUROPEAN_PROPERTY_AWARDS_INTERIOR_DESIGN_21_23.map((row) => (
             <li key={`${row.project}-${row.programmeYears}`} className="py-3 first:pt-0 last:pb-0">
@@ -70,9 +70,9 @@ export function AboutAwards() {
         </ul>
       </div>
 
-      <div className="rounded-lg border border-border bg-card/40 p-3 shadow-sm md:p-4">
+      <div className="rounded-md border border-border/70 bg-card/10 p-3 md:p-4">
         <div
-          className="relative aspect-[21/9] w-full max-h-[min(32vh,320px)] min-h-[120px] overflow-hidden rounded-md border border-border/60 bg-muted/30 md:max-h-[min(38vh,380px)]"
+          className="relative aspect-[21/9] w-full max-h-[min(32vh,320px)] min-h-[120px] overflow-hidden rounded-sm border border-border/60 bg-muted/20 md:max-h-[min(38vh,380px)]"
           aria-describedby={AWARDS_LIST_ID}
         >
           <EditableImage

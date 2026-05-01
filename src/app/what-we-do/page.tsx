@@ -33,7 +33,6 @@ export default async function WhatWeDoPage({ searchParams }: WhatWeDoPageProps) 
           selectedService?.description ??
           'TOREKULL delivers interior architecture, furniture, and product work for hospitality and commercial spaces—from first sketch through site delivery.'
         }
-        contentClassName="max-w-4xl"
         titleClassName="max-w-4xl text-5xl leading-[0.95] tracking-[-0.045em] md:text-6xl lg:text-7xl"
         descriptionClassName="max-w-2xl text-base md:text-lg"
       />

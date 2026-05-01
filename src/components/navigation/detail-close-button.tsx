@@ -12,11 +12,13 @@ const BACK_TRANSITION_CLASS = 'page-transition-back';
 type DetailCloseButtonProps = {
   fallbackHref: string;
   className?: string;
+  compact?: boolean;
 };
 
 export function DetailCloseButton({
   fallbackHref,
   className,
+  compact = false,
 }: DetailCloseButtonProps) {
   const router = useRouter();
   const isClosingRef = useRef(false);
@@ -56,10 +58,11 @@ export function DetailCloseButton({
       onClick={handleClose}
       className={cn(
         'relative z-[70] size-10 rounded-full border-border/80 bg-background/80 text-muted-foreground shadow-none backdrop-blur-sm transition-colors hover:border-foreground/30 hover:text-foreground',
+        compact && 'size-6',
         className,
       )}
     >
-      <X className="size-4" />
+      <X className={cn('size-4', compact && 'size-3')} />
     </Button>
   );
 }

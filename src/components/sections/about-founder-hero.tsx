@@ -5,6 +5,7 @@ export function AboutFounderHero() {
   return (
     <DetailPageHeader
       fallbackHref="/"
+      className="pb-8 md:pb-10 lg:pb-12"
       eyebrow={
         <EditableText
           as="span"

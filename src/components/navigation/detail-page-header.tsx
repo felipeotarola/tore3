@@ -29,15 +29,10 @@ export function DetailPageHeader({
   return (
     <section
       className={cn(
-        'container relative pt-32 pb-10 md:pt-36 md:pb-12 lg:pt-40 lg:pb-14',
+        'container relative pt-8 pb-10 md:pt-8 md:pb-12 lg:pt-8 lg:pb-14',
         className,
       )}
     >
-      <DetailCloseButton
-        fallbackHref={fallbackHref}
-        className="absolute top-4 right-4 md:top-8 md:right-8"
-      />
-
       <div
         className={cn(
           'w-full',
@@ -48,11 +43,10 @@ export function DetailPageHeader({
         {centered ? (
           <>
             <div>
-              {eyebrow ? (
-                <div className="nav-caps mb-3 text-[11px] tracking-[0.2em] text-muted-foreground">
-                  {eyebrow}
-                </div>
-              ) : null}
+              <div className="nav-caps mb-3 flex items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-muted-foreground">
+                {eyebrow ? <span>{eyebrow}</span> : <span aria-hidden />}
+                <DetailCloseButton fallbackHref={fallbackHref} compact />
+              </div>
               <h1
                 className={cn(
                   'text-4xl leading-tight tracking-[-0.035em] md:text-5xl lg:text-6xl',
@@ -75,11 +69,10 @@ export function DetailPageHeader({
           </>
         ) : (
           <div>
-            {eyebrow ? (
-              <div className="nav-caps mb-3 text-[11px] tracking-[0.2em] text-muted-foreground">
-                {eyebrow}
-              </div>
-            ) : null}
+            <div className="nav-caps mb-3 flex items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-muted-foreground">
+              {eyebrow ? <span>{eyebrow}</span> : <span aria-hidden />}
+              <DetailCloseButton fallbackHref={fallbackHref} compact />
+            </div>
             <h1
               className={cn(
                 'text-4xl leading-tight tracking-[-0.035em] md:text-5xl lg:text-6xl',
