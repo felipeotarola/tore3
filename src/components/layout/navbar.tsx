@@ -57,8 +57,8 @@ export const Navbar = ({
     <>
       <header
         className={cn(
-          'bigger-container inset-x-0 z-50 flex items-center py-5 transition-transform duration-700 ease-in-out md:py-6',
-          isHomeRoute && 'inset-x-5 pt-10.5 md:inset-x-6 md:py-12.5',
+          'bigger-container inset-x-0 z-50 flex items-center py-5 transition-transform duration-700 ease-in-out max-md:px-3 md:py-6',
+          isHomeRoute && 'inset-x-4 pt-5 md:inset-x-6 md:py-12.5',
           isHomeRoute && 'text-background',
           pathname !== '/' && isMenuOpen && 'text-background',
           'absolute',
