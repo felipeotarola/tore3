@@ -9,7 +9,7 @@ export const PressPreview = async () => {
   const pressItems = prioritizeFeaturedPressItem(await getPressItems());
 
   return (
-    <section className="container space-y-7 py-8 md:space-y-8 md:py-10 lg:py-12">
+    <section className="container space-y-9 py-16 md:space-y-12 md:py-24">
       <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-end">
         <div className="space-y-2">
           <EditableText

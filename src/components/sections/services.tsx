@@ -22,7 +22,7 @@ const serviceIcons = [Building2, Armchair, PenTool, Gem];
 
 export const Services = () => {
   return (
-    <section className="container space-y-7 py-8 md:space-y-8 md:py-10 lg:py-12">
+    <section className="container space-y-9 py-16 md:space-y-12 md:py-24">
       <div className="max-w-2xl space-y-2">
         <EditableText
           as="h2"

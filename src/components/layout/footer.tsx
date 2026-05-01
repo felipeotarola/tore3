@@ -25,14 +25,14 @@ const Footer = () => {
   return (
     <div className="section-padding pb-0!">
       <footer className="container bg-background text-muted-foreground relative border-t border-border/50 py-10 md:py-12">
-        <div className="flex flex-col gap-12 md:gap-16">
+        <div className="flex flex-col gap-10 md:gap-14">
           {/* Centered statement mark — strong end-of-page anchor */}
           <div className="text-foreground flex flex-col items-center justify-center px-2 py-2 md:py-4">
-            <Logo className="h-40 w-auto sm:h-44 md:h-52 lg:h-60 xl:h-[16rem]" />
+            <Logo className="h-32 w-auto sm:h-36 md:h-40 lg:h-44" />
           </div>
 
           {/* Three columns: two link groups + contact (shadcnblocks footer7 pattern) */}
-          <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 xl:gap-16">
+          <div className="grid items-start gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 xl:gap-16">
             <nav aria-label="Footer">
               <ul className="flex flex-col gap-2">
                 {footerLinksCol1.map((item) => (
@@ -64,7 +64,7 @@ const Footer = () => {
             </nav>
 
             <div className="min-w-0 space-y-3 text-sm sm:col-span-2 lg:col-span-1">
-              <h3 className="nav-caps text-xs">Contact</h3>
+              <h3 className="nav-caps text-xs leading-none text-foreground/70">Contact</h3>
               <div className="flex flex-col gap-1">
                 <Link
                   className="animated-underline break-words"

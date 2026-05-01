@@ -40,7 +40,7 @@ const HOME_AWARDS: HomeAward[] = [
 export function HomeProofBlock() {
   return (
     <section
-      className="container py-8 md:py-10 lg:py-12"
+      className="container py-10 md:py-14 lg:py-16"
       aria-labelledby="home-proof-heading"
     >
       <div className="mx-auto max-w-5xl">
@@ -61,7 +61,7 @@ export function HomeProofBlock() {
                 src={award.src}
                 alt={award.label}
                 className="h-32 w-auto object-contain sm:h-40 md:h-48"
-                sizes="(max-width: 640px) 72px, 92px"
+                sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 192px"
                 placeholder="blur"
               />
               <figcaption className="text-xs text-muted-foreground sm:text-sm">
@@ -79,9 +79,9 @@ export function HomeProofBlock() {
               return (
                 <div
                   key={item.title}
-                  className="min-w-0 px-0 md:px-7 first:md:pl-0 last:md:pr-0"
+                  className="min-w-0 px-0 text-center md:px-7 first:md:pl-0 last:md:pr-0"
                 >
-                  <p className="nav-caps mb-1 text-[10px] leading-snug tracking-[0.18em] text-muted-foreground">
+                  <p className="nav-caps mb-1 text-xs leading-snug tracking-[0.18em] text-foreground/70">
                     <EditableText
                       as="span"
                       copyKey={`home.about.stats.${index}.label`}
@@ -94,7 +94,7 @@ export function HomeProofBlock() {
                       'font-display leading-[1.1] tracking-[0.01em] text-foreground',
                       isShortMetric
                         ? 'text-2xl tabular-nums sm:text-3xl'
-                        : 'max-w-[14rem] text-sm leading-snug sm:text-[15px]',
+                        : 'mx-auto max-w-[14rem] text-sm leading-snug sm:text-[15px]',
                     )}
                   >
                     <EditableText
