@@ -1,0 +1,281 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "TOREKULL" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img [ref=e6]
+      - navigation [ref=e22]:
+        - link "PROJECTS" [ref=e23] [cursor=pointer]:
+          - /url: /projects
+        - link "ABOUT" [ref=e25] [cursor=pointer]:
+          - /url: /about
+        - link "PRESS" [ref=e26] [cursor=pointer]:
+          - /url: /press
+        - link "CONTACT" [ref=e27] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e28]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]: In the press
+        - heading "Articles & Magazines" [level=1] [ref=e33]
+        - generic [ref=e34]: How they write about us
+      - button "Close and go back" [ref=e35] [cursor=pointer]:
+        - img
+    - generic [ref=e37]:
+      - link "International Property & Travel - World's Best (2022-2023) - articles and magazines" [ref=e38] [cursor=pointer]:
+        - /url: /press/international-property-travel-worlds-best-2022-2023
+        - generic [ref=e42]:
+          - heading "International Property & Travel - World's Best 2022-2023" [level=2] [ref=e43]:
+            - text: International Property & Travel - World's Best
+            - text: 2022-2023
+          - img [ref=e45]
+      - link "Aftonbladet Söndag No. 12 (2022) - articles and magazines" [ref=e49] [cursor=pointer]:
+        - /url: /press/aftonbladet-sondag-no-12-2022
+        - generic [ref=e53]:
+          - heading "Aftonbladet Söndag No. 12 2022" [level=2] [ref=e54]:
+            - text: Aftonbladet Söndag No. 12
+            - text: "2022"
+          - img [ref=e56]
+      - link "EAT by White Guide (Feature) - articles and magazines" [ref=e60] [cursor=pointer]:
+        - /url: /press/eat-white-guide-feature
+        - generic [ref=e64]:
+          - heading "EAT by White Guide Feature" [level=2] [ref=e65]:
+            - text: EAT by White Guide
+            - text: Feature
+          - img [ref=e67]
+      - link "The New Generation (Feature) - articles and magazines" [ref=e71] [cursor=pointer]:
+        - /url: /press/the-new-generation-feature
+        - generic [ref=e75]:
+          - heading "The New Generation Feature" [level=2] [ref=e76]:
+            - text: The New Generation
+            - text: Feature
+          - img [ref=e78]
+      - link "Krog & Mat (August 2021) - articles and magazines" [ref=e82] [cursor=pointer]:
+        - /url: /press/krog-och-mat-august-2021
+        - generic [ref=e86]:
+          - heading "Krog & Mat August 2021" [level=2] [ref=e87]:
+            - text: Krog & Mat
+            - text: August 2021
+          - img [ref=e89]
+      - link "H.O.M.E Dekor Magazine (2017) - articles and magazines" [ref=e93] [cursor=pointer]:
+        - /url: /press/home-dekor-magazine-2017
+        - generic [ref=e97]:
+          - heading "H.O.M.E Dekor Magazine 2017" [level=2] [ref=e98]:
+            - text: H.O.M.E Dekor Magazine
+            - text: "2017"
+          - img [ref=e100]
+      - 'link "HL Articles: Torekull Interior Design Stockholm - articles and magazines" [ref=e104] [cursor=pointer]':
+        - /url: /press/hl-articles-torekull-interior-design-stockholm
+        - generic [ref=e108]:
+          - 'heading "HL Articles: Torekull Interior Design Stockholm" [level=2] [ref=e109]'
+          - img [ref=e111]
+      - link "The World of Hospitality (2024 · Page 1) - articles and magazines" [ref=e115] [cursor=pointer]:
+        - /url: /press/world-of-hospitality-2024-page-1
+        - generic [ref=e119]:
+          - heading "The World of Hospitality 2024 · Page 1" [level=2] [ref=e120]:
+            - text: The World of Hospitality
+            - text: 2024 · Page 1
+          - img [ref=e122]
+      - link "The World of Hospitality (2024 · Page 2) - articles and magazines" [ref=e126] [cursor=pointer]:
+        - /url: /press/world-of-hospitality-2024-page-2
+        - generic [ref=e130]:
+          - heading "The World of Hospitality 2024 · Page 2" [level=2] [ref=e131]:
+            - text: The World of Hospitality
+            - text: 2024 · Page 2
+          - img [ref=e133]
+      - link "Editorial Feature (December 2020) - articles and magazines" [ref=e137] [cursor=pointer]:
+        - /url: /press/editorial-feature-dec-2020
+        - generic [ref=e141]:
+          - heading "Editorial Feature December 2020" [level=2] [ref=e142]:
+            - text: Editorial Feature
+            - text: December 2020
+          - img [ref=e144]
+      - link "Editorial Feature (January 2021 · Part 1) - articles and magazines" [ref=e148] [cursor=pointer]:
+        - /url: /press/editorial-feature-jan-2021-1
+        - generic [ref=e152]:
+          - heading "Editorial Feature January 2021 · Part 1" [level=2] [ref=e153]:
+            - text: Editorial Feature
+            - text: January 2021 · Part 1
+          - img [ref=e155]
+      - link "Editorial Feature (January 2021 · Part 2) - articles and magazines" [ref=e159] [cursor=pointer]:
+        - /url: /press/editorial-feature-jan-2021-2
+        - generic [ref=e163]:
+          - heading "Editorial Feature January 2021 · Part 2" [level=2] [ref=e164]:
+            - text: Editorial Feature
+            - text: January 2021 · Part 2
+          - img [ref=e166]
+      - link "Editorial Feature (February 2021) - articles and magazines" [ref=e170] [cursor=pointer]:
+        - /url: /press/editorial-feature-feb-2021
+        - generic [ref=e174]:
+          - heading "Editorial Feature February 2021" [level=2] [ref=e175]:
+            - text: Editorial Feature
+            - text: February 2021
+          - img [ref=e177]
+      - 'link "Innovation: Torekull Interior Design - articles and magazines" [ref=e181] [cursor=pointer]':
+        - /url: /press/innovation-torekull-interior-design
+        - generic [ref=e185]:
+          - 'heading "Innovation: Torekull Interior Design" [level=2] [ref=e186]'
+          - img [ref=e188]
+      - link "International Property & Travel - World's Best (2021-2022) - articles and magazines" [ref=e192] [cursor=pointer]:
+        - /url: /press/international-property-travel-worlds-best-2021-2022
+        - generic [ref=e196]:
+          - heading "International Property & Travel - World's Best 2021-2022" [level=2] [ref=e197]:
+            - text: International Property & Travel - World's Best
+            - text: 2021-2022
+          - img [ref=e199]
+      - link "International Property & Travel - World's Best (2022-2023 · Page 114) - articles and magazines" [ref=e203] [cursor=pointer]:
+        - /url: /press/international-property-travel-worlds-best-2022-2023-page-114
+        - generic [ref=e207]:
+          - heading "International Property & Travel - World's Best 2022-2023 · Page 114" [level=2] [ref=e208]:
+            - text: International Property & Travel - World's Best
+            - text: 2022-2023 · Page 114
+          - img [ref=e210]
+      - link "International Property & Travel - Homes, Travel & Lifestyle (Issue 1) - articles and magazines" [ref=e214] [cursor=pointer]:
+        - /url: /press/international-property-travel-lifestyle-issue-1
+        - generic [ref=e218]:
+          - heading "International Property & Travel - Homes, Travel & Lifestyle Issue 1" [level=2] [ref=e219]:
+            - text: International Property & Travel - Homes, Travel & Lifestyle
+            - text: Issue 1
+          - img [ref=e221]
+      - link "International Property & Travel - Homes, Travel & Lifestyle (Issue 3 Cover) - articles and magazines" [ref=e225] [cursor=pointer]:
+        - /url: /press/international-property-travel-lifestyle-issue-3-cover
+        - generic [ref=e229]:
+          - heading "International Property & Travel - Homes, Travel & Lifestyle Issue 3 Cover" [level=2] [ref=e230]:
+            - text: International Property & Travel - Homes, Travel & Lifestyle
+            - text: Issue 3 Cover
+          - img [ref=e232]
+      - link "International Property & Travel - Homes, Travel & Lifestyle (Issue 3 Spread) - articles and magazines" [ref=e236] [cursor=pointer]:
+        - /url: /press/international-property-travel-lifestyle-issue-3-spread
+        - generic [ref=e240]:
+          - heading "International Property & Travel - Homes, Travel & Lifestyle Issue 3 Spread" [level=2] [ref=e241]:
+            - text: International Property & Travel - Homes, Travel & Lifestyle
+            - text: Issue 3 Spread
+          - img [ref=e243]
+      - link "International Property & Travel - Homes, Travel & Lifestyle (Special Edition) - articles and magazines" [ref=e247] [cursor=pointer]:
+        - /url: /press/international-property-travel-lifestyle-special
+        - generic [ref=e251]:
+          - heading "International Property & Travel - Homes, Travel & Lifestyle Special Edition" [level=2] [ref=e252]:
+            - text: International Property & Travel - Homes, Travel & Lifestyle
+            - text: Special Edition
+          - img [ref=e254]
+      - link "Modern Interiör - DECK (Feature 1) - articles and magazines" [ref=e258] [cursor=pointer]:
+        - /url: /press/modern-interior-deck-feature-1
+        - generic [ref=e262]:
+          - heading "Modern Interiör - DECK Feature 1" [level=2] [ref=e263]:
+            - text: Modern Interiör - DECK
+            - text: Feature 1
+          - img [ref=e265]
+      - link "Modern Interiör - DECK (Feature 2) - articles and magazines" [ref=e269] [cursor=pointer]:
+        - /url: /press/modern-interior-deck-feature-2
+        - generic [ref=e273]:
+          - heading "Modern Interiör - DECK Feature 2" [level=2] [ref=e274]:
+            - text: Modern Interiör - DECK
+            - text: Feature 2
+          - img [ref=e276]
+      - link "Modern Interiör No. 3 (2024) - articles and magazines" [ref=e280] [cursor=pointer]:
+        - /url: /press/modern-interior-no-3-2024
+        - generic [ref=e284]:
+          - heading "Modern Interiör No. 3 2024" [level=2] [ref=e285]:
+            - text: Modern Interiör No. 3
+            - text: "2024"
+          - img [ref=e287]
+      - link "Modern Interiör No. 4 (2024) - articles and magazines" [ref=e291] [cursor=pointer]:
+        - /url: /press/modern-interior-no-4-2024
+        - generic [ref=e295]:
+          - heading "Modern Interiör No. 4 2024" [level=2] [ref=e296]:
+            - text: Modern Interiör No. 4
+            - text: "2024"
+          - img [ref=e298]
+      - link "Modern Interiör - The Public (Feature) - articles and magazines" [ref=e302] [cursor=pointer]:
+        - /url: /press/modern-interior-the-public-feature
+        - generic [ref=e306]:
+          - heading "Modern Interiör - The Public Feature" [level=2] [ref=e307]:
+            - text: Modern Interiör - The Public
+            - text: Feature
+          - img [ref=e309]
+      - link "Nöjesguiden - Biblioteket - articles and magazines" [ref=e313] [cursor=pointer]:
+        - /url: /press/nojesguiden-biblioteket
+        - generic [ref=e317]:
+          - heading "Nöjesguiden - Biblioteket" [level=2] [ref=e318]
+          - img [ref=e320]
+      - link "Nöjesguiden - Biblioteket (2022) - articles and magazines" [ref=e324] [cursor=pointer]:
+        - /url: /press/nojesguiden-biblioteket-2022
+        - generic [ref=e328]:
+          - heading "Nöjesguiden - Biblioteket 2022" [level=2] [ref=e329]:
+            - text: Nöjesguiden - Biblioteket
+            - text: "2022"
+          - img [ref=e331]
+      - link "Instagram Feature (April 2022) - articles and magazines" [ref=e335] [cursor=pointer]:
+        - /url: /press/instagram-feature-april-2022
+        - generic [ref=e339]:
+          - heading "Instagram Feature April 2022" [level=2] [ref=e340]:
+            - text: Instagram Feature
+            - text: April 2022
+          - img [ref=e342]
+      - link "The Public Täby (Feature) - articles and magazines" [ref=e346] [cursor=pointer]:
+        - /url: /press/the-public-taby-feature
+        - generic [ref=e350]:
+          - heading "The Public Täby Feature" [level=2] [ref=e351]:
+            - text: The Public Täby
+            - text: Feature
+          - img [ref=e353]
+      - link "White Guide - Biblioteket - articles and magazines" [ref=e357] [cursor=pointer]:
+        - /url: /press/white-guide-biblioteket
+        - generic [ref=e361]:
+          - heading "White Guide - Biblioteket" [level=2] [ref=e362]
+          - img [ref=e364]
+    - button "Content Editor" [ref=e368] [cursor=pointer]:
+      - img
+      - text: Content Editor
+  - contentinfo [ref=e370]:
+    - generic [ref=e371]:
+      - link "TOREKULL" [ref=e373] [cursor=pointer]:
+        - /url: /
+        - img [ref=e374]
+      - generic [ref=e389]:
+        - navigation "Footer" [ref=e390]:
+          - list [ref=e391]:
+            - listitem [ref=e392]:
+              - link "Home" [ref=e393] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e394]:
+              - link "Projects" [ref=e395] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e396]:
+              - link "About" [ref=e397] [cursor=pointer]:
+                - /url: /about
+        - navigation "More pages" [ref=e398]:
+          - list [ref=e399]:
+            - listitem [ref=e400]:
+              - link "What We Do" [ref=e401] [cursor=pointer]:
+                - /url: /what-we-do
+            - listitem [ref=e402]:
+              - link "Collaborations" [ref=e403] [cursor=pointer]:
+                - /url: /collaborations
+            - listitem [ref=e404]:
+              - link "Contact" [ref=e405] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e406]:
+          - heading "Contact" [level=3] [ref=e407]
+          - generic [ref=e408]:
+            - link "Info@torekull.se" [ref=e409] [cursor=pointer]:
+              - /url: mailto:Info@torekull.se
+            - link "+46 (0) 706 306 809" [ref=e410] [cursor=pointer]:
+              - /url: tel:+460706306809
+          - paragraph [ref=e412]: Stora Gråmunkegränd 5 · Stockholm
+      - generic [ref=e413]:
+        - generic [ref=e414]:
+          - link "Instagram" [ref=e415] [cursor=pointer]:
+            - /url: https://instagram.com/torekullinteriorarchitecture
+            - img [ref=e416]
+            - text: Instagram
+          - link "Facebook" [ref=e419] [cursor=pointer]:
+            - /url: https://www.facebook.com/torekullinteriorarchitecture
+            - img [ref=e420]
+            - text: Facebook
+        - generic [ref=e422]:
+          - paragraph [ref=e423]: © 2026 TOREKULL. All Rights Reserved.
+          - paragraph [ref=e424]: Stockholm, Sweden
+  - button "Open Next.js Dev Tools" [ref=e430] [cursor=pointer]:
+    - img [ref=e431]
+  - alert [ref=e434]

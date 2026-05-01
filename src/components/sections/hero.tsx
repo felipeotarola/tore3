@@ -21,7 +21,7 @@ export async function Hero() {
     <div className="pt-0 pb-4 md:pb-6 lg:pb-8">
       <section
         className={cn(
-          'container relative mt-5 flex min-h-[min(100dvh,702px)] flex-col items-center justify-center overflow-hidden p-5 md:mt-6 md:min-h-[min(100dvh,1032px)] md:p-6',
+          'container relative flex min-h-[min(100dvh,702px)] flex-col items-center justify-center overflow-hidden p-5 md:min-h-[min(100dvh,1032px)] md:p-6',
           'bg-foreground text-background',
         )}
       >

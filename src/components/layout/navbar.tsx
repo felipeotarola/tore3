@@ -125,7 +125,7 @@ export const Navbar = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3 }}
-              className={cn('hidden items-center gap-8 md:flex')}
+              className={cn('hidden items-center gap-12 md:flex')}
             >
               {isMenuOpen ? (
                 <>
@@ -144,7 +144,7 @@ export const Navbar = ({
                 </>
               ) : (
                 <>
-                  <nav className="flex items-center gap-8">
+                  <nav className="flex items-center gap-12">
                     {NAV_PRIMARY.map((item) => {
                       if (!('children' in item)) {
                         return (

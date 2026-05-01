@@ -29,7 +29,7 @@ export function DetailPageHeader({
   return (
     <section
       className={cn(
-        'container pt-10 pb-10 md:pt-14 md:pb-12 lg:pt-16 lg:pb-14',
+        'container pt-32 pb-10 md:pt-36 md:pb-12 lg:pt-40 lg:pb-14',
         className,
       )}
     >
@@ -101,7 +101,7 @@ export function DetailPageHeader({
             </div>
             <DetailCloseButton
               fallbackHref={fallbackHref}
-              className="mt-1 justify-self-end"
+              className="justify-self-end self-center md:self-start"
             />
           </>
         )}

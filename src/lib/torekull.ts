@@ -42,6 +42,7 @@ export const NAV_PRIMARY = [
     label: 'ABOUT',
     href: '/about',
     children: [
+      { label: 'ABOUT', href: '/about' },
       { label: 'WHAT WE DO', href: '/what-we-do' },
       { label: 'COLLABORATIONS', href: '/collaborations' },
     ],
