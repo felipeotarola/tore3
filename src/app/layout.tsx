@@ -51,23 +51,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/Torekull_logo_new1.png',
+        url: '/Torekull_logo_new2.png',
         type: 'image/png',
-      },
-      {
-        url: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/logo_svg.svg',
-        type: 'image/svg+xml',
       },
     ],
     apple: [
       {
-        url: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/Torekull_logo_new1.png',
+        url: '/Torekull_logo_new2.png',
         sizes: '180x180',
       },
     ],
     shortcut: [
       {
-        url: 'https://c1hxfnulg8jbz3wb.public.blob.vercel-storage.com/images/torekull/brand/Torekull_logo_new1.png',
+        url: '/Torekull_logo_new2.png',
       },
     ],
   },
