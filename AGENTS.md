@@ -1,249 +1,349 @@
-# AGENTS.md - Torekull Project Guide for LLM Agents
+# AGENTS.md — Torekull Website Agent Instructions
 
-This file explains how the project works and where to edit when implementing features.
+## Mission
 
-## 1. Project Snapshot
+You are working on the Torekull website.
 
-- Framework: Next.js App Router (TypeScript) in `src/app`.
-- UI: React + Tailwind + shadcn/ui components.
-- Data source for projects: Supabase `public.projects` (read on server, edit in client sidebar).
-- Landing-page copy CMS: Supabase `public.landing_copy` + localStorage fallback.
-- Main landing page route: `src/app/page.tsx`.
+The goal is to make the site feel premium, calm, editorial, architectural, and easy to scan.
 
-Important: There is also a legacy React SPA in `src/main.jsx`, `src/App.jsx`, `src/components/EditorPanel.jsx`, `src/hooks/useCmsContent.js`. The current Next.js website uses `src/app/*` and `src/components/*` under the App Router.
+Do not randomly redesign the site. Preserve the existing brand feeling, content, routes, imagery, and overall identity.
 
-## 2. Runtime Architecture
+Improve the system behind the design so every page feels consistent.
 
-### 2.1 Home Page Composition
+---
 
-`src/app/page.tsx` wraps the landing sections with:
+## Product Context
 
-- `LandingCopyEditorProvider`
+Torekull is an interior architecture and design studio.
 
-and renders:
+The website should feel:
 
-- `Hero`
-- `AboutIntro`
-- `CaseStudies`
-- `Services`
-- `Logos`
-- `PressPreview`
+- premium
+- editorial
+- Scandinavian
+- calm
+- confident
+- visual
+- architectural
+- hospitality-focused
+- high-end but not flashy
 
-This means the CMS sidebar context is available to all home-page sections.
+Avoid making the site feel like:
 
-### 2.2 Copy Rendering
+- a SaaS dashboard
+- a generic template
+- a startup landing page
+- overly colorful
+- overly animated
+- too playful
+- too minimal to the point of being hard to use
 
-Editable copy is rendered through:
+---
 
-- `src/components/editing/editable-text.tsx`
+## Required Workflow
 
-`EditableText` currently only reads from context:
+Before making changes:
 
-- `const text = copy[copyKey] ?? fallback`
+1. Inspect the app structure.
+2. Find all routes.
+3. Find shared components.
+4. Run the local dev server.
+5. Visit the main pages.
+6. Take screenshots at multiple viewport sizes.
+7. Identify repeated layout problems.
+8. Write a short audit.
+9. Refactor shared components first.
+10. Update pages after the shared system is improved.
+11. Run lint/build.
+12. Re-test the changed pages.
 
-There is no inline `contentEditable` editing now. Editing happens in the sidebar panel.
+Do not only fix one visible page. This is a full-site design-system pass.
 
-### 2.3 Server/Client Split for Projects
+---
 
-- `src/components/sections/case-studies.tsx` (server component) loads all projects via `getAllProjects()`.
-- `src/components/sections/case-studies-client.tsx` (client component) applies selected-project ordering from landing copy state and renders cards.
+## Pages To Test
 
-Project data source:
+Test at minimum:
 
-- `src/lib/projects.ts`
-- Fetches Supabase REST endpoint with `is_published=eq.true` and `order=sort_order.asc.nullslast,created_at.asc`.
+- Home
+- Projects
+- At least 2 project detail pages
+- About
+- Press
+- Contact
 
-## 3. CMS Sidebar (Landing Copy Editor)
+Test at these widths:
 
-Core file:
+- 390px mobile
+- 768px tablet
+- 1024px small laptop
+- 1440px desktop
 
-- `src/components/editing/landing-copy-editor-provider.tsx`
+---
 
-What it owns:
+## Main Problems To Fix
 
-- Supabase auth session (email/password login).
-- Home copy map (`copy`) and persistence to `landing_copy`.
-- Selected-project list for homepage (`home.caseStudies.featuredSlugs`).
-- Full project editor (metadata + image uploads + project reorder).
-- Global sidebar UI and status messages.
-
-### 3.1 Authentication
-
-Uses browser Supabase client from:
-
-- `src/lib/supabase-browser.ts`
-
-Login method:
-
-- `supabase.auth.signInWithPassword({ email, password })`
-
-Logout method:
-
-- `supabase.auth.signOut()`
-
-### 3.2 Copy Persistence
-
-Table:
-
-- `public.landing_copy`
-- Migration: `supabase/migrations/20260410_create_landing_copy.sql`
-
-Data format:
-
-- `key` (primary key)
-- `value` (text)
-
-Save behavior:
-
-- Upsert rows (`onConflict: 'key'`).
-- If table is missing, UI continues with local fallback and shows warning.
-
-Local fallback cache:
-
-- localStorage key: `landing_copy_local_cache_v1`
-
-### 3.3 Selected Projects Persistence
-
-Key used inside `landing_copy`:
-
-- `home.caseStudies.featuredSlugs`
-
-Value format:
-
-- JSON stringified string array, example:
-  - `"[\"kasai-stockholm\",\"moyagi-london\"]"`
-
-Used by:
-
-- Sidebar selected-project controls.
-- `case-studies-client.tsx` to determine homepage featured order.
-
-### 3.4 Project Editing in Sidebar
-
-Current project editor can:
-
-- Edit metadata: `title`, `location`, `completion`, `website`, `description`.
-- Save metadata back to `public.projects` by `slug`.
-- Reorder all projects and persist `sort_order`.
-- Upload `cover` or `gallery` images to Supabase Storage, then write URLs into `projects`.
-
-Expected `projects` columns used by editor:
-
-- `id`
-- `slug`
-- `title`
-- `location`
-- `completion`
-- `description`
-- `website`
-- `sort_order`
-- `is_published`
-- `cover_image`
-- `gallery_images`
-
-### 3.5 Navigation Lock While Editing
-
-When logged in and sidebar is open, provider blocks navigation for links marked with:
-
-- `data-editor-lock-nav="true"`
-
-If you add new clickable links/cards that should not navigate during editing, add that attribute.
-
-## 4. Environment Variables
-
-Defined/used in browser and server fetches:
-
-- `NEXT_PUBLIC_SUPABASE_URL`
-- One of:
-  - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
-  - `NEXT_PUBLIC_ANON_KEY`
-  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-- Optional storage bucket override:
-  - `NEXT_PUBLIC_SUPABASE_STORAGE_BUCKET`
-  - defaults to `site-media`
-
-If Supabase vars are missing, CMS login/edit will not work and project loader returns empty list.
-
-## 5. How to Add New Editable Copy
-
-1. Render text with `EditableText` in a section.
-   - Provide `copyKey` and `fallback`.
-2. Add that same `copyKey` to `COPY_FIELDS` in `landing-copy-editor-provider.tsx`.
-3. Choose single-line `Input` or multiline `Textarea` via `multiline`.
-4. Save in sidebar and verify row appears in `landing_copy`.
-
-If step 2 is skipped, the text can display from copy map but will not be editable in the sidebar form.
-
-## 6. Featured Projects Behavior
-
-Logic lives in:
-
-- `src/components/sections/case-studies-client.tsx`
-- `src/components/editing/landing-copy-editor-provider.tsx`
-
-Fallback source:
-
-- `HOME_FEATURED_SLUGS` from `src/lib/torekull.ts`
-
-Current behavior:
-
-- If saved featured slugs exist in `landing_copy`, use them.
-- If not, use fallback slugs filtered by available projects.
-- Mobile rendering in cards currently shows first 2 cards (`index >= 2` hidden below `sm`).
-
-## 7. Common Operations for Agents
-
-### 7.1 Validate Changes
-
-Run:
-
-- `npm run lint -- <files>` for targeted lint
-- `npm run build` for full app/type/static generation check
-
-### 7.2 If `landing_copy` Errors Appear
-
-Symptom:
-
-- `Could not find the table 'public.landing_copy' in the schema cache`
+The site currently has strong imagery but weaker scanability.
 
 Fix:
 
-- Apply `supabase/migrations/20260410_create_landing_copy.sql` to the target project.
+- oversized hero typography
+- inconsistent H1/H2/body sizing
+- weak label/value hierarchy
+- inconsistent spacing between sections
+- inconsistent image ratios
+- project cards that feel uneven
+- metadata blocks that are hard to scan
+- weak CTA visibility
+- subtle navigation contrast over images
+- confusing close/back pattern
+- contact form layout that feels too spread out
+- footer hierarchy
+- inconsistent container widths
+- lack of predictable section rhythm
 
-### 7.3 If Reorder Does Not Persist
+---
 
-Check:
+## Scanability Rules
 
-- `reorderProjects` is writing `sort_order` to `public.projects`.
-- User has authenticated session.
-- RLS/policies on `projects` permit update for authenticated user.
+A user should understand each page in 2–3 seconds.
 
-## 8. Guardrails and Pitfalls
+For every page, ask:
 
-- Do not implement copy edits in random components; keep copy source centralized via `EditableText` + `COPY_FIELDS`.
-- Keep selected-project persistence in `home.caseStudies.featuredSlugs` unless intentionally migrating schema.
-- Do not break slug stability; many routes and references depend on `slug`.
-- Image upload writes public URLs; ensure bucket permissions and URL policy match expected public access.
-- Be careful with legacy SPA files (`src/App.jsx` path). They are not the current Next.js runtime path.
+- What is this page?
+- What is the main action?
+- What content matters first?
+- Can the user skim headings quickly?
+- Can the user compare projects quickly?
+- Is the layout predictable?
+- Is the text readable?
+- Are clickable elements obvious?
 
-## 9. Useful File Map
+If the answer is unclear, improve hierarchy.
 
-- Home composition: `src/app/page.tsx`
-- CMS provider/sidebar: `src/components/editing/landing-copy-editor-provider.tsx`
-- Copy renderer: `src/components/editing/editable-text.tsx`
-- Featured cards logic: `src/components/sections/case-studies-client.tsx`
-- Projects data loader: `src/lib/projects.ts`
-- Supabase browser client helper: `src/lib/supabase-browser.ts`
-- Landing copy migration: `supabase/migrations/20260410_create_landing_copy.sql`
+---
 
-## 10. Recommended Change Pattern
+## Typography Rules
 
-When implementing CMS-related changes:
+Use one clear type system.
 
-1. Update rendering component (where text/data appears).
-2. Update sidebar/provider state and save logic.
-3. Update persistence schema/query if needed.
-4. Validate with lint/build.
-5. Confirm behavior logged-in and logged-out.
+Each page should have:
 
-This keeps UI, editor controls, and persistence in sync.
+- one H1
+- consistent H2s
+- consistent body text
+- consistent eyebrow labels
+- consistent metadata labels
+- readable line lengths
+
+Avoid:
+
+- huge headings with long text
+- tiny body text
+- all-caps labels that are too subtle
+- paragraphs that stretch too wide
+- inconsistent heading sizes across pages
+
+---
+
+## Layout Rules
+
+Use shared layout primitives.
+
+Prefer:
+
+- shared page shell
+- shared container
+- shared section wrapper
+- shared section header
+- shared split layout
+- shared card grid
+- shared metadata grid
+
+Avoid:
+
+- random max-widths
+- random padding
+- random section gaps
+- one-off card styles
+- one-off hero layouts unless necessary
+
+---
+
+## Component Strategy
+
+Create or consolidate shared components where useful.
+
+Recommended components:
+
+- PageShell
+- Container
+- Section
+- PageHero
+- SectionHeader
+- Eyebrow
+- Heading
+- Lead
+- TextBlock
+- ProjectCard
+- PressCard
+- MetadataGrid
+- MetadataItem
+- ImageFrame
+- Button
+- TextLink
+- Chip
+- Footer
+- Header
+
+Do not over-engineer. Keep the component system practical.
+
+---
+
+## Visual Direction
+
+Keep the aesthetic restrained.
+
+Use:
+
+- warm off-white backgrounds
+- deep charcoal text
+- soft warm gray muted text
+- subtle borders
+- quiet shadows only when useful
+- architectural image crops
+- controlled whitespace
+- clear editorial rhythm
+
+Avoid:
+
+- bright colors
+- heavy gradients
+- strong shadows
+- too many borders
+- random animations
+- decorative effects that hurt readability
+
+---
+
+## Images
+
+Images are the strongest part of the site.
+
+Improve consistency by using standard ratios:
+
+- Hero images: 16:9 or 16:10
+- Project cards: 4:3 or 3:2
+- Press cards: 4:3
+- Gallery images: consistent rows with controlled cropping
+
+Rules:
+
+- Use object-fit carefully.
+- Avoid awkward crops of important details.
+- Do not mix many random image heights.
+- Use consistent radius.
+- Use consistent overlay darkness when text is on images.
+- Ensure text over images passes visual contrast.
+
+---
+
+## Navigation
+
+Navigation must be readable on image backgrounds.
+
+Improve:
+
+- contrast
+- active state
+- hover state
+- spacing
+- mobile usability
+- accessibility labels
+
+The nav should feel premium but not hidden.
+
+---
+
+## Project Pages
+
+Project pages need clearer structure.
+
+Improve:
+
+- title hierarchy
+- hero image placement
+- project metadata readability
+- collaborator list formatting
+- gallery rhythm
+- back/close navigation clarity
+
+Metadata should be easy to scan.
+
+Use clear label/value pairs.
+
+---
+
+## Contact Page
+
+The contact page should be easier to complete.
+
+Improve:
+
+- field grouping
+- label readability
+- spacing between inputs
+- button position
+- mobile layout
+- clear success/error states if present
+
+The send button should feel connected to the form.
+
+---
+
+## Accessibility
+
+Keep accessibility in mind.
+
+Use:
+
+- semantic HTML
+- visible focus states
+- proper button/link labels
+- readable contrast
+- sensible heading order
+- alt text for important images
+
+The close/back icon must have an accessible label.
+
+---
+
+## Implementation Rules
+
+- Preserve existing content.
+- Preserve existing routes.
+- Do not delete functionality.
+- Prefer shared refactors over one-off patches.
+- Do not introduce new dependencies unless necessary.
+- Do not break the CMS/content editor.
+- Do not remove the content editor button.
+- Keep code simple and maintainable.
+- Run lint/build before finishing.
+
+---
+
+## Definition Of Done
+
+The work is complete when:
+
+- all main pages use consistent typography
+- all main pages use consistent spacing
+- image/card ratios feel intentional
+- project pages are easier to scan
+- press cards are easier to compare
+- contact form is easier to use
+- navigation is readable
+- mobile/tablet/desktop are tested
+- no horizontal overflow exists
+- lint/build passes
+- screenshots show clear improvement
