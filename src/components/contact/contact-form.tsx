@@ -23,7 +23,7 @@ const contactSchema = z.object({
 export type ContactFormValues = z.infer<typeof contactSchema>;
 
 const underlineInput =
-  'border-0 border-b border-border bg-transparent shadow-none rounded-none px-0 py-2.5 h-auto min-h-0 text-base md:text-sm w-full outline-none transition-[border-color,box-shadow,color] duration-200 focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/20 focus-visible:ring-offset-0 placeholder:uppercase placeholder:text-muted-foreground/60 placeholder:text-xs placeholder:tracking-[0.08em]';
+  'border-0 border-b border-border bg-transparent shadow-none rounded-none px-0 py-2.5 h-auto min-h-0 text-base md:text-sm w-full outline-none transition-[border-color,box-shadow,color] duration-200 focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/20 focus-visible:ring-offset-0 placeholder:uppercase placeholder:text-muted-foreground/55 placeholder:text-xs placeholder:tracking-[0.08em]';
 
 const underlineSelectWrap = 'relative';
 
@@ -76,11 +76,11 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid grid-cols-1 gap-x-8 gap-y-9 md:grid-cols-6 md:gap-y-10"
+      className="tk-surface grid grid-cols-1 gap-x-6 gap-y-6 p-4 md:grid-cols-6 md:gap-y-7 md:p-6"
       noValidate
     >
       <div className="space-y-2 md:col-span-2">
-        <Label htmlFor={fieldIds.name} className="nav-caps text-xs font-medium text-muted-foreground">
+        <Label htmlFor={fieldIds.name} className="tk-meta-label">
           Name
           <span className="text-muted-foreground/70" aria-hidden>
             *
@@ -106,7 +106,7 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2 md:col-span-2">
-        <Label htmlFor={fieldIds.email} className="nav-caps text-xs font-medium text-muted-foreground">
+        <Label htmlFor={fieldIds.email} className="tk-meta-label">
           Email
           <span className="text-muted-foreground/70" aria-hidden>
             *
@@ -132,7 +132,7 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2 md:col-span-2">
-        <Label htmlFor={fieldIds.phone} className="nav-caps text-xs font-medium text-muted-foreground">
+        <Label htmlFor={fieldIds.phone} className="tk-meta-label">
           Phone
         </Label>
         <input
@@ -147,7 +147,7 @@ export function ContactForm() {
       </div>
 
       <div className={cn('space-y-2 md:col-span-2', underlineSelectWrap)}>
-        <Label htmlFor={fieldIds.service} className="nav-caps text-xs font-medium text-muted-foreground">
+        <Label htmlFor={fieldIds.service} className="tk-meta-label">
           Focus
           <span className="text-muted-foreground/70" aria-hidden>
             *
@@ -190,7 +190,7 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2 md:col-span-6">
-        <Label htmlFor={fieldIds.message} className="nav-caps text-xs font-medium text-muted-foreground">
+        <Label htmlFor={fieldIds.message} className="tk-meta-label">
           Message
           <span className="text-muted-foreground/70" aria-hidden>
             *
@@ -200,7 +200,7 @@ export function ContactForm() {
           id={fieldIds.message}
           rows={5}
           className={cn(
-            'border-0 border-b border-border bg-transparent shadow-none rounded-none px-0 py-2 min-h-28 resize-y w-full outline-none transition-colors focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/20 focus-visible:ring-offset-0 placeholder:uppercase placeholder:text-muted-foreground/60 placeholder:text-xs placeholder:tracking-[0.08em] text-base md:text-sm',
+            'border-0 border-b border-border bg-transparent shadow-none rounded-none px-0 py-2 min-h-28 resize-y w-full outline-none transition-colors focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-ring/20 focus-visible:ring-offset-0 placeholder:uppercase placeholder:text-muted-foreground/55 placeholder:text-xs placeholder:tracking-[0.08em] text-base md:text-sm',
             errors.message && 'border-destructive',
           )}
           placeholder="DESCRIBE YOUR PROJECT, TIMELINE, AND LOCATION"
@@ -217,8 +217,8 @@ export function ContactForm() {
         )}
       </div>
 
-      <div className="md:col-span-6 flex justify-start pt-2">
-        <Button type="submit" variant="ghost" size="lg" className="group -ml-3 gap-2 px-3 font-medium">
+      <div className="md:col-span-6 flex justify-start pt-1">
+        <Button type="submit" variant="default" size="lg" className="group gap-2">
           Send inquiry
           <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
         </Button>

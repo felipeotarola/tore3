@@ -40,13 +40,13 @@ const HOME_AWARDS: HomeAward[] = [
 export function HomeProofBlock() {
   return (
     <section
-      className="container py-10 md:py-14 lg:py-16"
+      className="container tk-section-tight"
       aria-labelledby="home-proof-heading"
     >
       <div className="mx-auto max-w-5xl">
         <p
           id="home-proof-heading"
-          className="nav-caps text-center text-[11px] leading-relaxed tracking-[0.22em] text-muted-foreground sm:text-xs"
+          className="tk-eyebrow text-center leading-relaxed"
         >
           Europe&apos;s best interior design studio · European Property Awards
         </p>
@@ -81,7 +81,7 @@ export function HomeProofBlock() {
                   key={item.title}
                   className="min-w-0 px-0 text-center md:px-7 first:md:pl-0 last:md:pr-0"
                 >
-                  <p className="nav-caps mb-1 text-xs leading-snug tracking-[0.18em] text-foreground/70">
+                  <p className="tk-meta-label mb-1 leading-snug text-foreground/70">
                     <EditableText
                       as="span"
                       copyKey={`home.about.stats.${index}.label`}

@@ -21,7 +21,7 @@ export async function Hero() {
     <div className="pt-0 pb-4 md:pb-6 lg:pb-8">
       <section
         className={cn(
-          'relative flex min-h-[min(100dvh,702px)] w-full max-w-[100vw] flex-col items-center justify-center overflow-hidden px-8 py-5 md:min-h-[min(100dvh,1032px)] md:px-8 md:py-6',
+          'relative flex min-h-[min(92dvh,702px)] w-full max-w-[100vw] flex-col items-center justify-center overflow-hidden px-8 py-5 md:min-h-[min(92dvh,900px)] md:px-8 md:py-6',
           'bg-foreground text-background',
         )}
       >
@@ -44,13 +44,13 @@ export async function Hero() {
               as="span"
               copyKey="home.hero.kicker"
               fallback="TOREKULL"
-              className="nav-caps text-[clamp(3.75rem,14vw,12.5rem)] leading-[0.85]"
+              className="nav-caps text-[clamp(3.25rem,10vw,10rem)] leading-[0.9]"
             />
             <EditableText
               as="span"
               copyKey="home.hero.title"
               fallback="INTERIOR ARCHITECTURE & DESIGN"
-              className="nav-caps text-[clamp(0.82rem,1.8vw,1.8rem)] leading-none"
+              className="nav-caps text-[clamp(0.8rem,1.3vw,1.4rem)] leading-none"
             />
           </h1>
           <Link

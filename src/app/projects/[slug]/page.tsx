@@ -91,10 +91,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <section className="container relative z-20 h-20 md:h-24">
+      <section className="container relative z-20 h-16 md:h-20">
         <DetailCloseButton
           fallbackHref="/projects"
-          className="absolute top-4 right-4 md:top-8 md:right-8"
+          className="absolute top-4 right-0 md:top-6"
         />
       </section>
 
@@ -125,14 +125,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       )}
 
       {nextProject && (
-        <section className="container py-10 md:py-12 lg:py-14">
-          <div className="flex flex-col gap-5 border-y border-border py-6 md:flex-row md:items-center md:justify-between md:py-7">
+        <section className="container tk-section-tight">
+          <div className="flex flex-col gap-5 border-y border-border/70 py-6 md:flex-row md:items-center md:justify-between md:py-7">
             <div className="space-y-1">
-              <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
+              <p className="tk-meta-label">
                 Next project
               </p>
 
-              <h2 className="text-2xl leading-tight tracking-[-0.025em] md:text-3xl">
+              <h2 className="tk-section-title">
                 {nextProject.name}
               </h2>
             </div>

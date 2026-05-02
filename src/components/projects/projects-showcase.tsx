@@ -1,7 +1,6 @@
 'use client';
 
 import { ArrowUpRight } from 'lucide-react';
-import { motion, useReducedMotion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -24,8 +23,6 @@ type ProjectsShowcaseProps = {
 };
 
 export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
-  const reduceMotion = Boolean(useReducedMotion());
-
   if (projects.length === 0) {
     return (
       <p className="text-muted-foreground border-border border-t pt-12 text-center text-sm">
@@ -35,7 +32,7 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
   }
 
   return (
-    <div className="flex flex-col gap-10 pt-6 md:gap-12 md:pt-7 lg:gap-14">
+    <div className="grid gap-x-5 gap-y-9 pt-6 sm:grid-cols-2 md:pt-7 lg:grid-cols-3 lg:gap-y-11">
       {projects.map((project, index) => {
         const primary = project.images[0] ?? {
           src: FALLBACK_IMG,
@@ -43,25 +40,18 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
         };
         const categoryLabel =
           CATEGORY_LABELS[project.category] ?? project.industry ?? 'Project';
-        const reversed = index % 2 === 1;
 
         return (
-          <motion.article
+          <article
             key={project.id}
-            initial={reduceMotion ? false : { opacity: 0, y: 32 }}
-            whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-12% 0px' }}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            className={cn(index >= 9 && 'hidden xl:block')}
           >
             <Link
               href={`/projects/${project.slug}`}
-              className="group grid gap-5 lg:grid-cols-2 lg:items-center lg:gap-8 xl:gap-10"
+              className="group flex h-full flex-col gap-4 outline-none"
             >
               <div
-                className={cn(
-                  'relative aspect-[4/3] w-full overflow-hidden rounded-md border border-border bg-muted',
-                  reversed && 'lg:order-2',
-                )}
+                className="tk-image-frame relative aspect-[4/3] w-full"
               >
                 <Image
                   src={primary.src}
@@ -70,39 +60,37 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
                   sizes="(max-width: 1023px) 100vw, 50vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   quality={90}
+                  priority={index < 9}
                 />
-                <div className="pointer-events-none absolute inset-0 bg-black/18 transition-colors duration-300 group-hover:bg-black/32" />
+                <div className="pointer-events-none absolute inset-0 bg-black/8 transition-colors duration-300 group-hover:bg-black/18" />
                 <div
-                  className="absolute right-4 bottom-4 z-10 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-focus-within:opacity-100"
+                  className="absolute right-3 bottom-3 z-10 opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 group-focus-within:opacity-100"
                   aria-hidden="true"
                 >
-                  <span className="nav-caps inline-flex rounded-full border border-white/35 bg-black/20 px-3 py-1.5 text-[10px] font-medium text-white/90 backdrop-blur-sm">
+                  <span className="nav-caps inline-flex rounded-full border border-white/35 bg-black/30 px-3 py-1.5 text-[10px] font-medium text-white/90 backdrop-blur-sm">
                     View project
                   </span>
                 </div>
               </div>
 
-              <div
-                className={cn(
-                  'flex min-w-0 flex-col gap-3 lg:max-w-xl',
-                  reversed && 'lg:order-1',
-                )}
-              >
+              <div className="flex min-w-0 flex-1 flex-col gap-3">
                 <Badge variant="outline" className="nav-caps w-fit text-[0.65rem] tracking-[0.12em]">
                   {categoryLabel}
                 </Badge>
                 <div className="space-y-2">
-                  <h2 className="text-2xl tracking-[-0.02em] md:text-3xl">{project.name}</h2>
+                  <h2 className="tk-card-title transition-colors group-hover:text-foreground">
+                    {project.name}
+                  </h2>
                   {project.location ? (
                     <p className="text-muted-foreground text-sm">{project.location}</p>
                   ) : null}
                 </div>
                 {project.description ? (
-                  <p className="text-muted-foreground line-clamp-4 text-sm leading-relaxed md:text-base">
-                    {excerpt(project.description)}
+                  <p className="tk-body line-clamp-3">
+                    {excerpt(project.description, 160)}
                   </p>
                 ) : null}
-                <span className="nav-caps inline-flex items-center gap-1 pt-1 text-[10px] tracking-[0.18em] text-foreground/75 transition-colors group-hover:text-foreground">
+                <span className="nav-caps mt-auto inline-flex items-center gap-1 pt-1 text-[10px] font-medium tracking-[0.16em] text-foreground/80 transition-colors group-hover:text-foreground">
                   View project
                   <ArrowUpRight
                     className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -111,7 +99,7 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
                 </span>
               </div>
             </Link>
-          </motion.article>
+          </article>
         );
       })}
     </div>

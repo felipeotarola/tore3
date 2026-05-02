@@ -74,14 +74,14 @@ export function CaseStudiesClient({ allProjects }: CaseStudiesClientProps) {
   );
 
 return (
-  <section className="container overflow-hidden py-16 md:py-24">
-    <div className="mb-9 grid gap-5 md:mb-12 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
+  <section className="container overflow-hidden tk-section">
+    <div className="mb-8 grid gap-5 md:mb-10 md:grid-cols-[minmax(0,1fr)_auto] md:items-end">
       <div className="max-w-2xl space-y-2">
         <EditableText
           as="h2"
           copyKey="home.caseStudies.heading"
           fallback="Selected projects"
-          className="text-3xl leading-tight tracking-[-0.03em] md:text-4xl"
+          className="tk-section-title"
         />
 
         <EditableText
@@ -89,7 +89,7 @@ return (
           copyKey="home.caseStudies.description"
           fallback="Explore recent work across restaurants, bars, and hospitality spaces. Hover each panel for quick context and open the full case."
           singleLine={false}
-          className="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base"
+          className="tk-lead"
         />
       </div>
 
@@ -126,7 +126,7 @@ return (
               'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
             )}
           >
-            <div className="relative aspect-[4/4.6] w-full overflow-hidden">
+            <div className="relative aspect-[4/3] w-full overflow-hidden">
               {image ? (
                 <Image
                   src={image.src}
@@ -135,6 +135,7 @@ return (
                   quality={90}
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={index < 6}
                 />
               ) : (
                 <div className="absolute inset-0 bg-muted" />

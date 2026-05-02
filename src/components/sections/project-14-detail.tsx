@@ -52,11 +52,11 @@ function CreditRow({
 }) {
   return (
     <div className="flex gap-3">
-      <span className="bg-muted/80 text-muted-foreground flex size-9 shrink-0 items-center justify-center rounded-md border border-border/50">
+      <span className="bg-background text-muted-foreground flex size-9 shrink-0 items-center justify-center rounded-md border border-border/70">
         <Icon className="size-4" aria-hidden />
       </span>
       <div className="min-w-0 pt-0.5">
-        <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
+        <p className="tk-meta-label mb-1">
           {label}
         </p>
         <div className="text-foreground text-sm leading-snug">{children}</div>
@@ -160,7 +160,7 @@ function ProjectCredits({
       )}
     >
       {hasFacts ? (
-        <div className="grid grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           {factRows.map((fact) => (
             <div
               key={fact.key}
@@ -168,10 +168,10 @@ function ProjectCredits({
                 'min-w-0',
                 fact.key === 'location' &&
                   website &&
-                  'border-border/60 border-r pr-4 md:pr-6',
-                fact.key === 'website' && location && 'pl-4 md:pl-6',
+                  'sm:border-border/60 sm:border-r sm:pr-4 md:pr-6',
+                fact.key === 'website' && location && 'sm:pl-4 md:pl-6',
                 (fact.key === 'photo' || fact.key === 'via') &&
-                  'border-border/60 col-span-2 mt-5 border-t pt-5',
+                  'border-border/60 sm:col-span-2 sm:mt-2 sm:border-t sm:pt-5',
               )}
             >
               <CreditRow icon={fact.icon} label={fact.label}>
@@ -189,11 +189,11 @@ function ProjectCredits({
             hasFacts ? 'mt-6' : '',
           )}
         >
-          <span className="bg-muted/80 text-muted-foreground flex size-9 shrink-0 items-center justify-center self-start rounded-md border border-border/50">
+          <span className="bg-background text-muted-foreground flex size-9 shrink-0 items-center justify-center self-start rounded-md border border-border/70">
             <Users className="size-4" aria-hidden />
           </span>
           <div className="min-w-0">
-            <p className="text-muted-foreground mb-2 text-[0.65rem] tracking-widest uppercase">
+            <p className="tk-meta-label mb-2">
               Collaborators
             </p>
             <ul className="text-foreground space-y-1.5 text-sm leading-relaxed">
@@ -212,11 +212,11 @@ function ProjectCredits({
             hasFacts || hasCollab ? 'mt-6' : '',
           )}
         >
-          <span className="bg-muted/80 text-muted-foreground flex size-9 shrink-0 items-center justify-center self-start rounded-md border border-border/50">
+          <span className="bg-background text-muted-foreground flex size-9 shrink-0 items-center justify-center self-start rounded-md border border-border/70">
             <Award className="size-4" aria-hidden />
           </span>
           <div className="min-w-0">
-            <p className="text-muted-foreground mb-2 text-[0.65rem] tracking-widest uppercase">
+            <p className="tk-meta-label mb-2">
               Awards
             </p>
             <ul className="text-foreground space-y-1.5 text-sm leading-relaxed">
@@ -255,7 +255,7 @@ function GridImage({
   imageIndex,
   priority,
   reduceMotion,
-  heightClass = 'h-[340px] md:h-[380px]',
+  heightClass = 'aspect-[4/3]',
 }: {
   image: ProjectImage;
   imageIndex: number;
@@ -265,7 +265,7 @@ function GridImage({
 }) {
   return (
     <motion.div
-      className="relative overflow-hidden rounded-md"
+      className="tk-image-frame relative"
       variants={fadeInUp}
       initial="initial"
       animate="animate"
@@ -306,11 +306,11 @@ function LargeImage({
       initial="initial"
       animate="animate"
       transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
-      className="relative mb-4 overflow-hidden rounded-md"
+      className="tk-image-frame relative mb-4"
     >
       <ProjectImageClickable imageIndex={imageIndex} className="block w-full">
         <motion.div
-          className="relative h-[min(520px,65vh)] w-full md:h-[520px]"
+          className="relative aspect-[16/10] w-full"
           whileHover={reduceMotion ? undefined : { scale: 1.02 }}
           transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
         >
@@ -349,15 +349,15 @@ export function Project14Detail({
     1 + (yearLabel ? 1 : 0) + (brandLabel ? 1 : 0);
   const metaGridClass =
     metaColumnCount >= 3
-      ? 'grid-cols-3'
+      ? 'grid-cols-1 sm:grid-cols-3'
       : metaColumnCount === 2
-        ? 'grid-cols-2 max-w-md mx-auto'
-        : 'grid-cols-1 max-w-xs mx-auto';
+        ? 'grid-cols-1 sm:grid-cols-2 sm:max-w-md sm:mx-auto'
+        : 'grid-cols-1 sm:max-w-xs sm:mx-auto';
 
   const transition = { duration: 0.7, ease: [0.4, 0, 0.2, 1] as const };
 
   return (
-    <section className={cn('py-10 md:py-12 lg:py-14', className)}>
+    <section className={cn('tk-section-tight', className)}>
       <div className="container">
         <motion.div
           className="mb-8 text-center md:mb-10"
@@ -365,10 +365,10 @@ export function Project14Detail({
           animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
           transition={transition}
         >
-          <p className="nav-caps text-muted-foreground mb-3 text-[11px] tracking-[0.2em]">
+          <p className="tk-eyebrow mb-3">
             {eyebrow}
           </p>
-          <h1 className="text-4xl leading-[0.95] tracking-[-0.04em] md:text-5xl lg:text-6xl">
+          <h1 className="tk-page-title mx-auto max-w-5xl">
             {title}
           </h1>
         </motion.div>
@@ -395,7 +395,7 @@ export function Project14Detail({
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={transition}
           >
-            <div className="relative mx-auto max-w-5xl overflow-hidden rounded-md">
+            <div className="tk-image-frame relative mx-auto max-w-5xl">
               <ProjectImageClickable imageIndex={0} className="block w-full">
                 <div className="relative aspect-[4/3] w-full md:aspect-[21/9]">
                   <Image
@@ -413,14 +413,14 @@ export function Project14Detail({
         ) : null}
 
         <motion.div
-          className="mb-6 text-center md:mb-8"
+          className="mb-8 text-center md:mb-10"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
           <motion.div
             className={cn(
-              'divide-border/60 mb-6 grid justify-items-stretch divide-x md:mb-8',
+              'tk-surface mb-6 grid justify-items-stretch gap-y-5 p-4 text-left sm:divide-x md:mb-8 md:p-5',
               metaGridClass,
             )}
             variants={staggerContainer}
@@ -431,12 +431,12 @@ export function Project14Detail({
               variants={fadeInUp}
               initial="initial"
               animate="animate"
-              className="min-w-0 px-4 first:pl-0 last:pr-0 md:px-6"
+              className="min-w-0 px-0 sm:px-4 sm:first:pl-0 sm:last:pr-0 md:px-6"
             >
-              <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
+              <p className="tk-meta-label mb-1">
                 Category
               </p>
-              <p className="text-sm font-medium tracking-wide uppercase md:text-base">
+              <p className="text-sm font-medium leading-snug md:text-base">
                 {categoryLabel}
               </p>
             </motion.div>
@@ -445,12 +445,12 @@ export function Project14Detail({
                 variants={fadeInUp}
                 initial="initial"
                 animate="animate"
-                className="min-w-0 px-4 first:pl-0 last:pr-0 md:px-6"
+                className="min-w-0 px-0 sm:px-4 sm:first:pl-0 sm:last:pr-0 md:px-6"
               >
-                <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
+                <p className="tk-meta-label mb-1">
                   Year
                 </p>
-                <p className="text-sm font-medium tracking-wide uppercase md:text-base">
+                <p className="text-sm font-medium leading-snug md:text-base">
                   {yearLabel}
                 </p>
               </motion.div>
@@ -460,12 +460,12 @@ export function Project14Detail({
                 variants={fadeInUp}
                 initial="initial"
                 animate="animate"
-                className="min-w-0 px-4 first:pl-0 last:pr-0 md:px-6"
+                className="min-w-0 px-0 sm:px-4 sm:first:pl-0 sm:last:pr-0 md:px-6"
               >
-                <p className="text-muted-foreground mb-1 text-[0.65rem] tracking-widest uppercase">
+                <p className="tk-meta-label mb-1">
                   Brand
                 </p>
-                <p className="text-sm font-medium tracking-wide uppercase md:text-base">
+                <p className="text-sm font-medium leading-snug md:text-base">
                   {brandLabel}
                 </p>
               </motion.div>
@@ -477,7 +477,7 @@ export function Project14Detail({
               className={cn(
                 'mx-auto text-left',
                 description && project && projectHasSupplementFields(project)
-                  ? 'grid max-w-7xl gap-8 md:grid-cols-[minmax(0,1fr)_minmax(320px,0.85fr)] md:gap-10 lg:gap-12'
+                  ? 'grid max-w-7xl gap-7 md:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)] md:gap-10 lg:gap-12'
                   : 'max-w-3xl',
               )}
               variants={fadeInUp}
@@ -486,7 +486,7 @@ export function Project14Detail({
               transition={transition}
             >
               {description ? (
-                <p className="text-muted-foreground text-sm leading-relaxed md:text-base">{description}</p>
+                <p className="tk-body">{description}</p>
               ) : null}
               {project && projectHasSupplementFields(project) ? (
                 <div
@@ -525,9 +525,9 @@ export function Project14Detail({
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={transition}
           >
-            <div className="relative overflow-hidden rounded-md">
+            <div className="tk-image-frame relative">
               <ProjectImageClickable imageIndex={3} className="block w-full">
-                <div className="relative h-[340px] w-full md:h-[380px]">
+                <div className="relative aspect-[4/3] w-full">
                   <Image
                     src={i3.src}
                     alt={i3.alt}

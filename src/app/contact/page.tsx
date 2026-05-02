@@ -23,89 +23,86 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Let's create something extraordinary."
         description={FOUNDER_PORTRAIT.caption}
-        titleClassName="lg:text-[2.75rem] lg:leading-[1.08] xl:text-6xl"
+        titleClassName="max-w-3xl"
         descriptionClassName="max-w-md"
       />
 
-      <section className="container pb-12 md:pb-14">
-        <div className="flex flex-col gap-12 lg:gap-16">
-          <div className="grid min-w-0 gap-y-8 border-t border-border pt-8 md:grid-cols-2 md:gap-x-10 md:gap-y-10 md:pt-10">
-            <div className="space-y-4">
-              <p className="nav-caps text-xs text-muted-foreground">Studio</p>
-              <Link
-                href={googleMapsUrl(TOREKULL.addresses[0])}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex min-h-11 items-start gap-2.5 rounded-sm py-1 text-sm leading-snug outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
-                aria-label={`Open Studio in Google Maps: ${TOREKULL.addresses[0]}`}
-              >
-                <MapPin
-                  className="text-muted-foreground group-hover:text-foreground mt-0.5 size-4 shrink-0 transition-colors"
-                  aria-hidden
-                />
-                <span className="animated-underline text-muted-foreground group-hover:text-foreground">
-                  {TOREKULL.addresses[0]}
-                </span>
-              </Link>
-            </div>
-
-            <div className="space-y-4">
-              <p className="nav-caps text-xs text-muted-foreground">Direct</p>
-              <div className="space-y-4">
-                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-                  <Link
-                    href={`mailto:${TOREKULL.email}`}
-                    className="animated-underline font-display font-weight-display text-foreground text-2xl tracking-[0.02em] md:text-3xl"
-                  >
-                    {TOREKULL.email}
-                  </Link>
-                  <CopyEmailButton email={TOREKULL.email} />
-                </div>
-                <Link
-                  className="animated-underline text-muted-foreground hover:text-foreground inline-flex min-h-11 items-center gap-2 rounded-sm py-1 text-base transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
-                  href={`tel:${TOREKULL.phone.replace(/[^\d+]/g, '')}`}
-                >
-                  <Phone className="size-4 shrink-0" aria-hidden />
-                  {TOREKULL.phone}
-                </Link>
-              </div>
-            </div>
+      <section className="container tk-section-tight tk-section-border">
+        <div className="grid min-w-0 gap-y-7 md:grid-cols-2 md:gap-x-10 md:gap-y-10">
+          <div className="space-y-3">
+            <p className="tk-meta-label">Studio</p>
+            <Link
+              href={googleMapsUrl(TOREKULL.addresses[0])}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex min-h-11 items-start gap-2.5 rounded-sm py-1 text-sm leading-snug outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
+              aria-label={`Open Studio in Google Maps: ${TOREKULL.addresses[0]}`}
+            >
+              <MapPin
+                className="text-muted-foreground group-hover:text-foreground mt-0.5 size-4 shrink-0 transition-colors"
+                aria-hidden
+              />
+              <span className="animated-underline text-muted-foreground group-hover:text-foreground">
+                {TOREKULL.addresses[0]}
+              </span>
+            </Link>
           </div>
 
-          {/* Borderless grid form */}
-          <div className="border-border space-y-10 border-t pt-12 md:pt-14 lg:pt-16">
-            <div className="grid gap-8 md:gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.35fr)] lg:gap-14 xl:gap-20">
-              <div className="space-y-3 lg:pt-1">
-                <p className="nav-caps text-xs text-muted-foreground">Project inquiry</p>
-                <h2 className="font-display font-weight-display text-2xl tracking-[0.02em] md:text-3xl">
-                  Share your vision
-                </h2>
-                <p className="text-muted-foreground max-w-xl text-sm leading-relaxed">
-                  A few details help us respond with the right team and timeline - expect a
-                  personal reply, not an automated ticket.
-                </p>
+          <div className="space-y-3">
+            <p className="tk-meta-label">Direct</p>
+            <div className="space-y-3">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                <Link
+                  href={`mailto:${TOREKULL.email}`}
+                  className="animated-underline font-display font-weight-display text-foreground text-2xl tracking-[0.01em] md:text-[1.7rem]"
+                >
+                  {TOREKULL.email}
+                </Link>
+                <CopyEmailButton email={TOREKULL.email} />
               </div>
-              <ContactForm />
+              <Link
+                className="animated-underline text-muted-foreground hover:text-foreground inline-flex min-h-11 items-center gap-2 rounded-sm py-1 text-base transition-colors duration-200 outline-none focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
+                href={`tel:${TOREKULL.phone.replace(/[^\d+]/g, '')}`}
+              >
+                <Phone className="size-4 shrink-0" aria-hidden />
+                {TOREKULL.phone}
+              </Link>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="border-border flex flex-wrap items-center gap-x-8 gap-y-2 border-t pt-10">
-              <Link
-                href={TOREKULL.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="animated-underline nav-caps text-xs text-muted-foreground hover:text-foreground inline-flex min-h-11 items-center rounded-sm py-2 outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
-              >
-                Instagram
-              </Link>
-              <Link
-                href={TOREKULL.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="animated-underline nav-caps text-xs text-muted-foreground hover:text-foreground inline-flex min-h-11 items-center rounded-sm py-2 outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
-              >
-                Facebook
-              </Link>
+      <section className="container tk-section-tight tk-section-border pb-12 md:pb-16 lg:pb-20">
+        <div className="space-y-8">
+          <div className="grid gap-7 md:gap-10 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:gap-12 xl:gap-16">
+            <div className="space-y-3 lg:pt-1">
+              <p className="tk-meta-label">Project inquiry</p>
+              <h2 className="tk-section-title">Share your vision</h2>
+              <p className="tk-lead">
+                A few details help us respond with the right team and timeline -
+                expect a personal reply, not an automated ticket.
+              </p>
             </div>
+            <ContactForm />
+          </div>
+
+          <div className="border-border/70 flex flex-wrap items-center gap-x-8 gap-y-2 border-t pt-8">
+            <Link
+              href={TOREKULL.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animated-underline nav-caps text-xs text-muted-foreground hover:text-foreground inline-flex min-h-11 items-center rounded-sm py-2 outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
+            >
+              Instagram
+            </Link>
+            <Link
+              href={TOREKULL.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animated-underline nav-caps text-xs text-muted-foreground hover:text-foreground inline-flex min-h-11 items-center rounded-sm py-2 outline-none transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-ring/40 focus-visible:ring-offset-2"
+            >
+              Facebook
+            </Link>
           </div>
         </div>
       </section>

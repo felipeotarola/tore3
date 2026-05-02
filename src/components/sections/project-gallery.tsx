@@ -18,14 +18,14 @@ export function ProjectGallery({
   if (!images || images.length === 0) return null;
 
   return (
-    <section className="section-padding bigger-container">
-      <div className="grid gap-6 md:grid-cols-2">
+    <section className="tk-section bigger-container">
+      <div className="grid gap-4 md:grid-cols-2 md:gap-5">
         {images.map((image, index) => {
           const globalIndex = imageIndexOffset + index;
           return (
             <div
               key={`${image.src}-${globalIndex}`}
-              className="relative h-[335px] w-full overflow-hidden rounded-md md:h-[450px] lg:h-[900px]"
+              className="tk-image-frame relative aspect-[4/3] w-full md:aspect-[3/2]"
             >
               <ProjectImageClickable
                 imageIndex={globalIndex}
@@ -37,7 +37,7 @@ export function ProjectGallery({
                   fill
                   className="object-cover"
                   sizes="100vw"
-                  priority={index === 0}
+                  priority={index < 4}
                 />
               </ProjectImageClickable>
             </div>

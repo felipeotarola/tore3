@@ -1,6 +1,6 @@
 'use client';
 
-import { X } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
 
@@ -53,16 +53,17 @@ export function DetailCloseButton({
     <Button
       type="button"
       variant="outline"
-      size="icon"
-      aria-label="Close and go back"
+      size="sm"
+      aria-label="Go back"
       onClick={handleClose}
       className={cn(
-        'relative z-[70] size-10 rounded-full border-border/80 bg-background/80 text-muted-foreground shadow-none backdrop-blur-sm transition-colors hover:border-foreground/30 hover:text-foreground',
-        compact && 'size-6',
+        'relative z-[70] rounded-full px-3 text-muted-foreground shadow-none transition-colors hover:text-foreground',
+        compact && 'h-8 px-2.5 text-xs',
         className,
       )}
     >
-      <X className={cn('size-4', compact && 'size-3')} />
+      <ArrowLeft className={cn('size-4', compact && 'size-3.5')} />
+      <span>{compact ? 'Back' : 'Back to overview'}</span>
     </Button>
   );
 }

@@ -41,15 +41,16 @@ export default async function PressPage() {
         }
       />
 
-      <section className="container pb-12 md:pb-14 lg:pb-16">
-        <div className="grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-3">
-          {pressItems.map((item) => (
+      <section className="container pb-12 md:pb-16 lg:pb-20">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {pressItems.map((item, index) => (
             <PressTile
               key={item.slug}
               slug={item.slug}
               title={item.title}
               image={item.image}
               headingLevel="h2"
+              priority={index < 6}
             />
           ))}
         </div>

@@ -18,9 +18,9 @@ export default function AboutPage() {
     <LandingCopyEditorProvider>
       <AboutFounderHero />
 
-      <section className="container pb-14 md:pb-16">
-        <div className="overflow-hidden rounded-md border border-border/70 bg-card/10">
-          <div className="relative h-[min(42vh,360px)] w-full md:h-[min(52vh,520px)]">
+      <section className="container pb-12 md:pb-14">
+        <div className="tk-image-frame">
+          <div className="relative aspect-[16/10] w-full">
             <EditableImage
               srcKey="about.images.founderPortrait.src"
               altKey="about.images.founderPortrait.alt"
@@ -35,18 +35,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="container grid gap-8 border-t border-border/60 py-14 md:grid-cols-2 md:items-start md:gap-12 md:py-16">
+      <section className="container tk-section-tight tk-section-border grid gap-6 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:items-start md:gap-12">
         <EditableText
           as="h2"
           copyKey="about.who.heading"
           fallback="Who We Are"
-          className="text-2xl font-semibold tracking-[-0.02em] md:text-3xl"
+          className="tk-section-title"
         />
         <EditableText
           as="p"
           copyKey="about.who.body"
           fallback="As a Swedish and American company with a history of working in the USA, Italy, France, Tunisia, and Sweden, our projects are influenced by many different cultures, trends and styles - constantly changing, just like the world around us."
-          className="max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
+          className="tk-lead"
           singleLine={false}
         />
       </section>
@@ -55,23 +55,23 @@ export default function AboutPage() {
 
       <AboutAwards />
 
-      <section className="container grid gap-8 border-t border-border/60 py-14 md:grid-cols-2 md:items-start md:gap-12 md:py-16">
+      <section className="container tk-section-tight tk-section-border grid gap-6 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:items-start md:gap-12">
         <EditableText
           as="h2"
           copyKey="about.philosophy.heading"
           fallback="Our Philosophy"
-          className="text-2xl font-semibold tracking-[-0.02em] md:text-3xl"
+          className="tk-section-title"
         />
-        <div className="max-w-2xl space-y-5 text-base md:text-lg">
+        <div className="max-w-2xl space-y-5">
           <EditableText
             as="p"
             copyKey="about.philosophy.body"
             fallback="We believe that there should never be a compromise between design and function. Without function, great design will go to waste. Without great design, all the content and efforts will be for nothing. The two must go hand in hand."
-            className="leading-relaxed text-muted-foreground"
+            className="tk-body"
             singleLine={false}
           />
-          <div className="rounded-md border border-border/70 bg-card/10 p-4 md:p-5">
-            <blockquote className="border-l-2 border-border pl-4 font-instrument-serif text-xl italic md:pl-5 md:text-2xl">
+          <div className="tk-surface p-4 md:p-5">
+            <blockquote className="border-l-2 border-border pl-4 font-instrument-serif text-xl italic leading-snug md:pl-5 md:text-2xl">
               &quot;
               <EditableText
                 as="span"
@@ -94,29 +94,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="container grid gap-8 border-t border-border/60 py-14 md:grid-cols-2 md:items-start md:gap-12 md:py-16">
+      <section className="container tk-section-tight tk-section-border grid gap-6 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] md:items-start md:gap-12">
         <EditableText
           as="h2"
           copyKey="about.approach.heading"
           fallback="Design Approach"
-          className="text-2xl font-semibold tracking-[-0.02em] md:text-3xl"
+          className="tk-section-title"
         />
         <EditableText
           as="p"
           copyKey="about.approach.body"
           fallback="Design must be functional and functionality must be translated into visual aesthetics. This should be achieved without relying upon overused trends and gimmicks. If it has to be explained, either the design or functionality - or both - are lacking."
-          className="max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg"
+          className="tk-lead"
           singleLine={false}
         />
       </section>
 
-      <section className="container pb-14 md:pb-16">
-        <div className="flex flex-col gap-2 rounded-md border border-border/70 bg-card/10 px-4 py-4 md:flex-row md:items-center md:justify-between md:gap-6 md:px-5">
+      <section className="container pb-12 md:pb-14">
+        <div className="tk-surface flex flex-col gap-2 px-4 py-4 md:flex-row md:items-center md:justify-between md:gap-6 md:px-5">
           <EditableText
             as="h2"
             copyKey="about.languages.heading"
             fallback="Languages"
-            className="text-lg font-semibold tracking-[-0.01em] md:text-xl"
+            className="tk-card-title"
           />
           <EditableText
             as="p"

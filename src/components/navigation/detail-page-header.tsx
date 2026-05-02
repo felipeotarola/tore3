@@ -29,7 +29,7 @@ export function DetailPageHeader({
   return (
     <section
       className={cn(
-        'container relative pt-8 pb-10 md:pt-8 md:pb-12 lg:pt-8 lg:pb-14',
+        'container relative pt-7 pb-10 md:pt-8 md:pb-12 lg:pb-14',
         className,
       )}
     >
@@ -43,13 +43,13 @@ export function DetailPageHeader({
         {centered ? (
           <>
             <div>
-              <div className="nav-caps mb-3 flex items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-muted-foreground">
+              <div className="tk-eyebrow mb-4 flex items-center justify-between gap-4">
                 {eyebrow ? <span>{eyebrow}</span> : <span aria-hidden />}
                 <DetailCloseButton fallbackHref={fallbackHref} compact />
               </div>
               <h1
                 className={cn(
-                  'text-4xl leading-tight tracking-[-0.035em] md:text-5xl lg:text-6xl',
+                  'tk-page-title mx-auto max-w-5xl',
                   titleClassName,
                 )}
               >
@@ -58,7 +58,7 @@ export function DetailPageHeader({
               {description ? (
                 <div
                   className={cn(
-                    'mx-auto mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base',
+                    'tk-lead mx-auto mt-4',
                     descriptionClassName,
                   )}
                 >
@@ -69,13 +69,13 @@ export function DetailPageHeader({
           </>
         ) : (
           <div>
-            <div className="nav-caps mb-3 flex items-center justify-between gap-4 text-[11px] tracking-[0.2em] text-muted-foreground">
+            <div className="tk-eyebrow mb-4 flex items-center justify-between gap-4">
               {eyebrow ? <span>{eyebrow}</span> : <span aria-hidden />}
               <DetailCloseButton fallbackHref={fallbackHref} compact />
             </div>
             <h1
               className={cn(
-                'text-4xl leading-tight tracking-[-0.035em] md:text-5xl lg:text-6xl',
+                'tk-page-title max-w-5xl',
                 titleClassName,
               )}
             >
@@ -84,7 +84,7 @@ export function DetailPageHeader({
             {description ? (
               <div
                 className={cn(
-                  'mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base',
+                  'tk-lead mt-4',
                   descriptionClassName,
                 )}
               >

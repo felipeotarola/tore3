@@ -23,7 +23,7 @@ export function AboutAwards() {
 
   return (
     <section
-      className="container border-t border-border/60 py-14 md:py-16"
+      className="container tk-section-tight tk-section-border"
       aria-labelledby="about-awards-heading"
     >
       <script
@@ -36,25 +36,25 @@ export function AboutAwards() {
           as="p"
           copyKey="about.awards.kicker"
           fallback="European Property Awards"
-          className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground"
+          className="tk-eyebrow"
         />
         <EditableText
           as="h2"
           id="about-awards-heading"
           copyKey="about.awards.heading"
           fallback="Recognition"
-          className="text-2xl font-semibold tracking-[-0.02em] md:text-3xl"
+          className="tk-section-title"
         />
         <EditableText
           as="p"
           copyKey="about.awards.description"
           fallback="Official European Property Awards (Interior Design) results for TOREKULL leisure interiors in Sweden — spelled out below so the same facts appear in text and in structured data."
-          className="text-muted-foreground text-sm leading-snug md:text-base md:leading-relaxed"
+          className="tk-lead"
           singleLine={false}
         />
       </div>
 
-      <div className="mb-4 rounded-md border border-border/70 bg-card/10 px-4 py-4 md:px-5 md:py-5">
+      <div className="tk-surface mb-4 px-4 py-4 md:px-5 md:py-5">
         <h3 className="text-foreground mb-3 text-sm font-semibold tracking-tight md:text-base">
           European Property Awards — Interior Design (Sweden)
         </h3>
@@ -70,7 +70,7 @@ export function AboutAwards() {
         </ul>
       </div>
 
-      <div className="rounded-md border border-border/70 bg-card/10 p-3 md:p-4">
+      <div className="tk-surface p-3 md:p-4">
         <div
           className="relative aspect-[21/9] w-full max-h-[min(32vh,320px)] min-h-[120px] overflow-hidden rounded-sm border border-border/60 bg-muted/20 md:max-h-[min(38vh,380px)]"
           aria-describedby={AWARDS_LIST_ID}

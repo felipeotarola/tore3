@@ -59,7 +59,7 @@ export const Navbar = ({
         className={cn(
           'bigger-container inset-x-0 z-50 flex items-center py-5 transition-transform duration-700 ease-in-out md:py-6',
           isHomeRoute && 'inset-x-5 pt-10.5 md:inset-x-6 md:py-12.5',
-          isHomeRoute && 'text-background',
+          isHomeRoute && 'text-background drop-shadow-[0_1px_10px_rgba(0,0,0,0.55)]',
           pathname !== '/' && isMenuOpen && 'text-background',
           'absolute',
           isBannerVisible && 'mt-14', //banner height
@@ -152,7 +152,7 @@ export const Navbar = ({
                             key={item.href}
                             href={item.href}
                             className={cn(
-                              'nav-caps animated-underline text-sm',
+                              'nav-caps animated-underline rounded-sm px-1 py-1 text-xs font-medium tracking-[0.16em] outline-none focus-visible:ring-2 focus-visible:ring-white/45 lg:text-sm',
                               pathname === item.href && 'active-underline',
                             )}
                           >
@@ -175,7 +175,7 @@ export const Navbar = ({
                           <Link
                             href={item.href}
                             className={cn(
-                              'nav-caps animated-underline text-sm',
+                              'nav-caps animated-underline rounded-sm px-1 py-1 text-xs font-medium tracking-[0.16em] outline-none focus-visible:ring-2 focus-visible:ring-white/45 lg:text-sm',
                               isAboutActive && 'active-underline',
                             )}
                           >

@@ -22,13 +22,13 @@ const serviceIcons = [Building2, Armchair, PenTool, Gem];
 
 export const Services = () => {
   return (
-    <section className="container space-y-9 py-16 md:space-y-12 md:py-24">
+    <section className="container tk-section space-y-8 md:space-y-10">
       <div className="max-w-2xl space-y-2">
         <EditableText
           as="h2"
           copyKey="home.services.heading"
           fallback="What we do"
-          className="text-3xl leading-tight tracking-[-0.03em] md:text-4xl"
+          className="tk-section-title"
         />
 
         <EditableText
@@ -36,7 +36,7 @@ export const Services = () => {
           copyKey="home.services.description"
           fallback="TOREKULL works across interior architecture, furniture, and product design - shaping hotels, restaurants, bars, and workspaces from early concept through to delivery."
           singleLine={false}
-          className="max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base"
+          className="tk-lead"
         />
       </div>
 
@@ -51,7 +51,7 @@ export const Services = () => {
               data-editor-lock-nav="true"
               className="group block rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
             >
-              <Card className="h-full border border-border/70 bg-card shadow-none transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-foreground/20 group-hover:shadow-sm">
+              <Card className="h-full border border-border/70 bg-card/55 shadow-none transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-foreground/20 group-hover:shadow-sm">
                 <CardHeader className="p-5 pb-3">
                   <div className="flex size-12 items-center justify-center rounded-full border border-border/80 bg-background md:size-14">
                     <Icon
@@ -62,7 +62,7 @@ export const Services = () => {
                 </CardHeader>
 
                 <CardContent className="space-y-3 p-5 pt-1">
-                  <CardTitle className="text-xl leading-tight tracking-[-0.015em] md:text-[22px]">
+                  <CardTitle className="tk-card-title">
                     <EditableText
                       as="span"
                       copyKey={`home.services.cards.${index}.title`}

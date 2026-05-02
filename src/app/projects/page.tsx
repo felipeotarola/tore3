@@ -22,7 +22,7 @@ export default async function ProjectsPage() {
         title="Projects"
         description="Interior architecture and design across hospitality, bars, and workplace—each engagement shaped by place, brief, and craft."
       />
-      <section className="container pb-12 md:pb-14 lg:pb-16">
+      <section className="container pb-12 md:pb-16 lg:pb-20">
         <Tabs defaultValue="all" className="w-full">
           <ScrollArea className="pb-2" orientation="horizontal">
             <TabsList className="gap-2">
