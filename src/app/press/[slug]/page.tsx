@@ -3,6 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import {
+  MetadataGrid,
+  MetadataItem,
+} from '@/components/layout/primitives';
 import { DetailPageHeader } from '@/components/navigation/detail-page-header';
 import { Cta } from '@/components/sections/cta';
 import { Button } from '@/components/ui/button';
@@ -76,91 +80,52 @@ export default async function PressDetailPage({ params }: PressDetailPageProps) 
         fallbackHref="/press"
         centered
         eyebrow="Articles & Magazines"
-        title={
-          <>
-            {line1}
-            {line2 && (
-              <>
-                <br />
-                {line2}
-              </>
-            )}
-          </>
-        }
-        titleClassName="leading-[0.95] tracking-[-0.04em]"
+        title={line2 ? `${line1} ${line2}` : line1}
+        description={pressSummary}
+        titleClassName="max-w-4xl"
       />
 
-      {/* IMAGE */}
-      <section className="container pb-10 md:pb-12 lg:pb-14">
-        <div className="mx-auto max-w-[1200px] overflow-hidden border border-border/70">
-          <div className="relative aspect-[4/3] w-full md:aspect-[3/2]">
-            <Image
-              src={item.image}
-              alt={label}
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 90vw, 1200px"
-              priority
-            />
+      <section className="container tk-section-tight">
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,0.64fr)_minmax(320px,0.36fr)] lg:items-start lg:gap-8 xl:gap-10">
+          <div className="tk-image-frame bg-card/20">
+            <div className="relative aspect-[4/3] w-full md:aspect-[3/2]">
+              <Image
+                src={item.image}
+                alt={label}
+                fill
+                className="object-contain"
+                sizes="(max-width: 1024px) 100vw, 62vw"
+                priority
+              />
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* META / DETAILS */}
-      <section className="container pb-10 md:pb-12 lg:pb-14">
-        <div className="mx-auto max-w-3xl border-t border-border/70 pt-5">
-          <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
-            Press overview
-          </p>
+          <aside className="space-y-5 lg:sticky lg:top-6">
+            <MetadataGrid className="grid-cols-1">
+              <MetadataItem label="Publication">{publication}</MetadataItem>
+              <MetadataItem label="Year">{year}</MetadataItem>
+              <MetadataItem label="Reference">{reference}</MetadataItem>
+            </MetadataGrid>
 
-          <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
-            {pressSummary}
-          </p>
-
-          <dl className="mt-5 grid gap-x-6 gap-y-3 sm:grid-cols-3">
-            <div>
-              <dt className="nav-caps text-[10px] tracking-[0.18em] text-muted-foreground">
-                Publication
-              </dt>
-              <dd className="mt-1 text-sm">{publication}</dd>
-            </div>
-
-            <div>
-              <dt className="nav-caps text-[10px] tracking-[0.18em] text-muted-foreground">
-                Year
-              </dt>
-              <dd className="mt-1 text-sm">{year}</dd>
-            </div>
-
-            <div>
-              <dt className="nav-caps text-[10px] tracking-[0.18em] text-muted-foreground">
-                Reference
-              </dt>
-              <dd className="mt-1 text-sm">{reference}</dd>
-            </div>
-          </dl>
-
-          {item.url && (
-            <div className="mt-6">
+            {item.url && (
               <Button variant="outline" size="sm" asChild>
                 <a href={item.url} target="_blank" rel="noopener noreferrer">
                   Open publication
                 </a>
               </Button>
-            </div>
-          )}
+            )}
+          </aside>
         </div>
       </section>
 
-      {/* NEXT */}
-      <section className="container pb-10 md:pb-12 lg:pb-14">
-        <div className="flex flex-col gap-5 border-y border-border py-6 md:flex-row md:items-center md:justify-between">
+      <section className="container tk-section-tight">
+        <div className="flex flex-col gap-5 border-y border-border/70 py-6 md:flex-row md:items-center md:justify-between md:py-7">
           <div className="space-y-1">
-            <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
+            <p className="tk-meta-label">
               Next press
             </p>
 
-            <h2 className="text-2xl leading-tight tracking-[-0.02em] md:text-3xl">
+            <h2 className="tk-section-title max-w-3xl">
               {formatPressDisplayTitle(nextItem.title)}
             </h2>
           </div>

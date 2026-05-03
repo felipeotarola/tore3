@@ -13,12 +13,14 @@ type DetailCloseButtonProps = {
   fallbackHref: string;
   className?: string;
   compact?: boolean;
+  label?: string;
 };
 
 export function DetailCloseButton({
   fallbackHref,
   className,
   compact = false,
+  label,
 }: DetailCloseButtonProps) {
   const router = useRouter();
   const isClosingRef = useRef(false);
@@ -49,12 +51,20 @@ export function DetailCloseButton({
     });
   };
 
+  const buttonLabel =
+    label ??
+    (fallbackHref === '/projects'
+      ? 'Back to projects'
+      : fallbackHref === '/press'
+        ? 'Back to press'
+        : 'Back');
+
   return (
     <Button
       type="button"
       variant="outline"
       size="sm"
-      aria-label="Go back"
+      aria-label={buttonLabel}
       onClick={handleClose}
       className={cn(
         'relative z-[70] rounded-full px-3 text-muted-foreground shadow-none transition-colors hover:text-foreground',
@@ -63,7 +73,7 @@ export function DetailCloseButton({
       )}
     >
       <ArrowLeft className={cn('size-4', compact && 'size-3.5')} />
-      <span>{compact ? 'Back' : 'Back to overview'}</span>
+      <span>{compact && fallbackHref === '/' ? 'Back' : buttonLabel}</span>
     </Button>
   );
 }

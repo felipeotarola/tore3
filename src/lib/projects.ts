@@ -96,6 +96,29 @@ function buildMockDescription(name: string): string {
   return `${name} is a featured TOREKULL project. Detailed case study text will be added soon.`;
 }
 
+function cleanProjectDescriptionForDisplay(
+  description: string,
+  row: SupabaseProjectRow,
+): string {
+  if (!Array.isArray(row.credits) || row.credits.length === 0) {
+    return description;
+  }
+
+  const labels = row.credits
+    .map((entry) => normalizeText(entry?.label))
+    .filter(Boolean);
+
+  for (const label of labels) {
+    const marker = `${label}:`;
+    const index = description.toLowerCase().indexOf(marker.toLowerCase());
+    if (index > 40) {
+      return description.slice(0, index).trim();
+    }
+  }
+
+  return description;
+}
+
 function buildProjectImages(
   row: SupabaseProjectRow,
   projectName: string,
@@ -173,7 +196,7 @@ function toProjectFrontmatter(
   const name = normalizeText(row.title) || humanizeSlug(row.slug);
   const description = shouldUseMockDescription(row.description)
     ? buildMockDescription(name)
-    : normalizeText(row.description);
+    : cleanProjectDescriptionForDisplay(normalizeText(row.description), row);
   const category = inferCategory(row);
 
   return {

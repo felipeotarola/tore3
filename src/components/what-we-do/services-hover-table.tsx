@@ -71,16 +71,16 @@ export function ServicesHoverTable() {
   };
 
   return (
-    <section className="overflow-x-clip py-10 md:py-12 lg:py-14">
+    <section className="overflow-x-clip tk-section-tight">
       <div ref={containerRef} className="relative container">
         <div className="mb-7 max-w-2xl space-y-2 md:mb-8">
-          <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
+          <p className="tk-eyebrow">
             Capabilities
           </p>
-          <h2 className="text-3xl leading-tight tracking-[-0.025em] md:text-4xl">
+          <h2 className="tk-section-title">
             How we work with you
           </h2>
-          <p className="text-muted-foreground max-w-xl text-sm leading-relaxed md:text-base">
+          <p className="tk-lead max-w-xl">
             Hover a row to preview a project reference—each line is a core discipline in
             our studio.
           </p>
@@ -104,7 +104,7 @@ export function ServicesHoverTable() {
               onMouseEnter={(e) => handleMouseEnter(e, index)}
               onMouseMove={handleMouseMove}
             >
-              <div className="nav-caps text-muted-foreground md:col-span-2 lg:col-span-1">
+              <div className="tk-meta-label md:col-span-2 lg:col-span-1">
                 {String(index + 1).padStart(2, '0')}
               </div>
               <div className="md:col-span-4 lg:col-span-3">

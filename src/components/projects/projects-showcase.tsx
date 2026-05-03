@@ -4,10 +4,8 @@ import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { Badge } from '@/components/ui/badge';
 import { CATEGORY_LABELS } from '@/lib/torekull';
 import type { ProjectFrontmatter } from '@/lib/types';
-import { cn } from '@/lib/utils';
 
 function excerpt(text: string, max = 200) {
   const t = text.trim();
@@ -32,7 +30,7 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
   }
 
   return (
-    <div className="grid gap-x-5 gap-y-9 pt-6 sm:grid-cols-2 md:pt-7 lg:grid-cols-3 lg:gap-y-11">
+    <div className="grid gap-x-5 gap-y-9 pt-5 sm:grid-cols-2 md:pt-6 lg:grid-cols-3 lg:gap-y-11">
       {projects.map((project, index) => {
         const primary = project.images[0] ?? {
           src: FALLBACK_IMG,
@@ -42,13 +40,10 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
           CATEGORY_LABELS[project.category] ?? project.industry ?? 'Project';
 
         return (
-          <article
-            key={project.id}
-            className={cn(index >= 9 && 'hidden xl:block')}
-          >
+          <article key={project.id} className="min-w-0">
             <Link
               href={`/projects/${project.slug}`}
-              className="group flex h-full flex-col gap-4 outline-none"
+              className="tk-panel-link group flex h-full flex-col gap-4"
             >
               <div
                 className="tk-image-frame relative aspect-[4/3] w-full"
@@ -74,9 +69,9 @@ export function ProjectsShowcase({ projects }: ProjectsShowcaseProps) {
               </div>
 
               <div className="flex min-w-0 flex-1 flex-col gap-3">
-                <Badge variant="outline" className="nav-caps w-fit text-[0.65rem] tracking-[0.12em]">
+                <span className="tk-meta-label w-fit rounded-full border border-border/80 bg-background/45 px-3 py-1.5 text-foreground/75">
                   {categoryLabel}
-                </Badge>
+                </span>
                 <div className="space-y-2">
                   <h2 className="tk-card-title transition-colors group-hover:text-foreground">
                     {project.name}

@@ -76,7 +76,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="tk-surface grid grid-cols-1 gap-x-6 gap-y-6 p-4 md:grid-cols-6 md:gap-y-7 md:p-6"
+      className="grid grid-cols-1 gap-x-6 gap-y-5 rounded-md border border-border/70 bg-card/20 p-4 md:grid-cols-6 md:gap-y-6 md:p-5 lg:p-6"
       noValidate
     >
       <div className="space-y-2 md:col-span-2">
@@ -217,8 +217,8 @@ export function ContactForm() {
         )}
       </div>
 
-      <div className="md:col-span-6 flex justify-start pt-1">
-        <Button type="submit" variant="default" size="lg" className="group gap-2">
+      <div className="flex justify-start pt-1 md:col-span-6">
+        <Button type="submit" variant="default" size="lg" className="group w-full gap-2 sm:w-auto">
           Send inquiry
           <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden />
         </Button>

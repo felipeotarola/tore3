@@ -18,10 +18,10 @@ export async function Hero() {
   );
 
   return (
-    <div className="pt-0 pb-4 md:pb-6 lg:pb-8">
+    <div className="pt-0 pb-3 md:pb-5 lg:pb-6">
       <section
         className={cn(
-          'relative flex min-h-[min(92dvh,702px)] w-full max-w-[100vw] flex-col items-center justify-center overflow-hidden px-8 py-5 md:min-h-[min(92dvh,900px)] md:px-8 md:py-6',
+          'relative flex min-h-[min(88dvh,690px)] w-full max-w-[100vw] flex-col items-center justify-center overflow-hidden px-6 py-5 md:min-h-[min(88dvh,820px)] md:px-8 md:py-6',
           'bg-foreground text-background',
         )}
       >
@@ -39,18 +39,18 @@ export async function Hero() {
         <div className="absolute inset-0 z-[1] bg-black/60" />
 
         <div className="relative z-10 flex min-h-0 flex-1 flex-col items-center justify-center px-2 py-10 text-center">
-          <h1 className="flex max-w-[min(94vw,1500px)] flex-wrap items-baseline justify-center gap-x-4 gap-y-2 text-center sm:gap-x-6 md:gap-x-8">
+          <h1 className="flex max-w-[min(94vw,1500px)] flex-col items-center justify-center gap-2 text-center md:gap-3">
             <EditableText
               as="span"
               copyKey="home.hero.kicker"
               fallback="TOREKULL"
-              className="nav-caps text-[clamp(3.25rem,10vw,10rem)] leading-[0.9]"
+              className="nav-caps text-5xl leading-[0.9] sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl"
             />
             <EditableText
               as="span"
               copyKey="home.hero.title"
               fallback="INTERIOR ARCHITECTURE & DESIGN"
-              className="nav-caps text-[clamp(0.8rem,1.3vw,1.4rem)] leading-none"
+              className="nav-caps text-xs leading-none sm:text-sm md:text-base"
             />
           </h1>
           <Link

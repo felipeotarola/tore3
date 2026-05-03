@@ -57,8 +57,8 @@ export function BlogPostDetail({ post }: Props) {
         title={post.title}
         description={post.excerpt}
         contentClassName="max-w-3xl"
-        titleClassName="font-semibold tracking-tight lg:text-[3.25rem] lg:leading-[1.1]"
-        descriptionClassName="text-lg md:text-xl md:leading-relaxed"
+        titleClassName="max-w-4xl"
+        descriptionClassName="max-w-2xl"
       />
 
       <article className="container max-w-3xl pb-10 md:pb-12 lg:pb-14">
@@ -90,7 +90,7 @@ export function BlogPostDetail({ post }: Props) {
         </header>
 
         {post.cover_image_url ? (
-          <figure className="mt-10 overflow-hidden rounded-xl border border-border shadow-sm">
+          <figure className="tk-image-frame mt-10">
             <div className="bg-muted relative aspect-[16/9] w-full md:aspect-[2/1]">
               <Image
                 src={post.cover_image_url}

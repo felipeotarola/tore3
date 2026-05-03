@@ -33,8 +33,8 @@ export default async function BlogPage() {
             Logga in på sajten som redaktör för att få fram formuläret längst ner.
           </>
         }
-        titleClassName="font-semibold tracking-tight"
-        descriptionClassName="max-w-2xl text-base md:text-lg"
+        titleClassName="max-w-4xl"
+        descriptionClassName="max-w-2xl"
       />
 
       <div className="container -mt-4 pb-8 md:-mt-5 md:pb-10">
@@ -48,7 +48,7 @@ export default async function BlogPage() {
         </div>
       </div>
 
-      <section id="inlagg" className="section-padding container scroll-mt-24">
+      <section id="inlagg" className="tk-section container scroll-mt-24">
         {posts.length === 0 ? (
           <p className="text-muted-foreground max-w-xl text-base">
             Inga publicerade inlägg än. Applicera migrationen{' '}
@@ -60,7 +60,7 @@ export default async function BlogPage() {
             {posts.map((post) => (
               <article
                 key={post.id}
-                className="border-border bg-card group flex flex-col overflow-hidden rounded-lg border shadow-sm transition-shadow hover:shadow-md"
+                className="group flex flex-col overflow-hidden rounded-md border border-border/70 bg-card/25 transition-colors hover:border-foreground/25"
               >
                 <Link
                   href={`/blog/${post.slug}`}
@@ -86,8 +86,8 @@ export default async function BlogPage() {
                     )}
                   </div>
                 </Link>
-                <div className="flex flex-1 flex-col gap-3 p-6 md:p-7">
-                  <h2 className="text-lg font-semibold tracking-tight md:text-xl">
+                  <div className="flex flex-1 flex-col gap-3 p-5 md:p-6">
+                  <h2 className="tk-card-title">
                     <Link
                       href={`/blog/${post.slug}`}
                       className="hover:text-primary focus-visible:ring-ring rounded-sm focus-visible:ring-2 focus-visible:outline-none"

@@ -116,7 +116,7 @@ function ProjectCredits({
               href={website}
               target="_blank"
               rel="noopener noreferrer"
-              className="animated-underline inline-flex max-w-full items-center gap-1.5 font-medium break-all"
+              className="animated-underline inline-flex max-w-full items-center gap-1.5 font-medium break-words [overflow-wrap:anywhere]"
             >
               <span className="min-w-0">{websiteHostLabel(website)}</span>
               <ExternalLink
@@ -160,7 +160,7 @@ function ProjectCredits({
       )}
     >
       {hasFacts ? (
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-5 xl:grid-cols-2">
           {factRows.map((fact) => (
             <div
               key={fact.key}
@@ -168,10 +168,10 @@ function ProjectCredits({
                 'min-w-0',
                 fact.key === 'location' &&
                   website &&
-                  'sm:border-border/60 sm:border-r sm:pr-4 md:pr-6',
-                fact.key === 'website' && location && 'sm:pl-4 md:pl-6',
+                  'xl:border-border/60 xl:border-r xl:pr-6',
+                fact.key === 'website' && location && 'xl:pl-6',
                 (fact.key === 'photo' || fact.key === 'via') &&
-                  'border-border/60 sm:col-span-2 sm:mt-2 sm:border-t sm:pt-5',
+                  'border-border/60 xl:col-span-2 xl:mt-2 xl:border-t xl:pt-5',
               )}
             >
               <CreditRow icon={fact.icon} label={fact.label}>
@@ -420,7 +420,7 @@ export function Project14Detail({
         >
           <motion.div
             className={cn(
-              'tk-surface mb-6 grid justify-items-stretch gap-y-5 p-4 text-left sm:divide-x md:mb-8 md:p-5',
+              'tk-metadata-grid mb-6 justify-items-stretch text-left md:mb-8',
               metaGridClass,
             )}
             variants={staggerContainer}
@@ -477,7 +477,7 @@ export function Project14Detail({
               className={cn(
                 'mx-auto text-left',
                 description && project && projectHasSupplementFields(project)
-                  ? 'grid max-w-7xl gap-7 md:grid-cols-[minmax(0,1fr)_minmax(320px,0.9fr)] md:gap-10 lg:gap-12'
+                  ? 'grid max-w-7xl gap-7 xl:grid-cols-[minmax(0,0.95fr)_minmax(360px,0.85fr)] xl:gap-12'
                   : 'max-w-3xl',
               )}
               variants={fadeInUp}
@@ -492,7 +492,7 @@ export function Project14Detail({
                 <div
                   className={cn(
                     description &&
-                      'border-border/60 md:border-l md:pl-8 lg:pl-10',
+                      'border-border/60 xl:border-l xl:pl-10',
                   )}
                 >
                   <ProjectCredits

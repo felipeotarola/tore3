@@ -1127,9 +1127,10 @@ export function LandingCopyEditorProvider({
         variant="secondary"
         className="fixed right-4 bottom-4 z-50 border border-black/20 bg-white/95 text-black backdrop-blur"
         onClick={() => setIsSidebarOpen(true)}
+        aria-label="Open content editor"
       >
-        <Pencil className="mr-2 h-4 w-4" />
-        Content Editor
+        <Pencil className="h-4 w-4 sm:mr-2" />
+        <span className="hidden sm:inline">Content Editor</span>
       </Button>
 
       {isSidebarOpen ? (

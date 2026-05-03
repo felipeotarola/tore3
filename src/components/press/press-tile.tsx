@@ -44,24 +44,24 @@ export function PressTile({
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
       className={cn(
-        'group border-border/70 bg-background block overflow-hidden rounded-md border',
-        'outline-none transition-all hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-sm',
+        'group block overflow-hidden rounded-md border border-border/70 bg-card/20',
+        'outline-none transition-colors hover:border-foreground/25',
         'focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',
       )}
       aria-label={ariaLabel}
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted/55">
         <Image
           src={image}
           alt=""
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+          className="object-contain transition-transform duration-500 group-hover:scale-[1.015]"
           sizes="(max-width: 768px) 100vw, 33vw"
           priority={priority}
         />
-        <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/0" aria-hidden />
+        <div className="absolute inset-0 bg-black/[0.03] transition-colors group-hover:bg-black/0" aria-hidden />
       </div>
-      <div className="flex min-h-28 flex-col gap-4 p-4 md:p-5">
+      <div className="flex min-h-28 flex-col gap-4 border-t border-border/50 p-4 md:p-5">
         <Heading className="tk-card-title line-clamp-3">
           {label}
         </Heading>

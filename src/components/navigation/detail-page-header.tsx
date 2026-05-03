@@ -29,7 +29,7 @@ export function DetailPageHeader({
   return (
     <section
       className={cn(
-        'container relative pt-7 pb-10 md:pt-8 md:pb-12 lg:pb-14',
+        'tk-page-hero',
         className,
       )}
     >
@@ -43,7 +43,7 @@ export function DetailPageHeader({
         {centered ? (
           <>
             <div>
-              <div className="tk-eyebrow mb-4 flex items-center justify-between gap-4">
+              <div className="tk-eyebrow mb-5 flex items-center justify-between gap-4">
                 {eyebrow ? <span>{eyebrow}</span> : <span aria-hidden />}
                 <DetailCloseButton fallbackHref={fallbackHref} compact />
               </div>
@@ -69,7 +69,7 @@ export function DetailPageHeader({
           </>
         ) : (
           <div>
-            <div className="tk-eyebrow mb-4 flex items-center justify-between gap-4">
+            <div className="tk-eyebrow mb-5 flex items-center justify-between gap-4">
               {eyebrow ? <span>{eyebrow}</span> : <span aria-hidden />}
               <DetailCloseButton fallbackHref={fallbackHref} compact />
             </div>

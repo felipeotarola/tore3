@@ -33,8 +33,8 @@ export default async function WhatWeDoPage({ searchParams }: WhatWeDoPageProps) 
           selectedService?.description ??
           'TOREKULL delivers interior architecture, furniture, and product work for hospitality and commercial spaces—from first sketch through site delivery.'
         }
-        titleClassName="max-w-4xl text-5xl leading-[0.95] tracking-[-0.045em] md:text-6xl lg:text-7xl"
-        descriptionClassName="max-w-2xl text-base md:text-lg"
+        titleClassName="max-w-4xl"
+        descriptionClassName="max-w-2xl"
       />
 
       <ServicesHoverTable />
@@ -45,14 +45,14 @@ export default async function WhatWeDoPage({ searchParams }: WhatWeDoPageProps) 
         steps={[...WHAT_WE_DO_PROCESS]}
       />
 
-      <section className="container pb-10 md:pb-12 lg:pb-14">
-        <div className="group flex items-start justify-between gap-8 rounded-lg border border-border bg-card/20 p-6 shadow-sm md:p-8 lg:p-10">
+      <section className="container tk-section-tight">
+        <div className="group flex items-start justify-between gap-8 rounded-md border border-border/70 bg-card/25 p-5 md:p-6 lg:p-8">
           <div>
             <p className="nav-caps text-[11px] tracking-[0.2em] text-muted-foreground">
               Specialties
             </p>
 
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-foreground md:text-xl">
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-foreground md:text-lg">
               TOREKULL specializes in commercial properties: hotels, restaurants,
               bars, cafes and boutiques.
             </p>

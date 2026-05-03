@@ -91,10 +91,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <section className="container relative z-20 h-16 md:h-20">
+      <section className="container relative z-20 h-12 md:h-14">
         <DetailCloseButton
           fallbackHref="/projects"
-          className="absolute top-4 right-0 md:top-6"
+          className="absolute top-3 right-0 md:top-4"
         />
       </section>
 
@@ -108,7 +108,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           brandLabel={frontmatter.industry}
           description={frontmatter.description}
           project={frontmatter}
-          className="!pt-3 md:!pt-4 lg:!pt-5"
+          className="!pt-2 md:!pt-3 lg:!pt-4"
         />
 
         {galleryAfterTemplate.length > 0 && (

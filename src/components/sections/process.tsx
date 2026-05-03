@@ -110,7 +110,7 @@ export const Process = ({
           containerClassName,
         )}
       >
-        <h2 className="self-start text-3xl leading-tight tracking-[-0.025em] md:sticky md:top-6 md:text-4xl">
+        <h2 className="tk-section-title self-start md:sticky md:top-6">
           {title}
         </h2>
 

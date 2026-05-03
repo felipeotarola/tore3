@@ -113,8 +113,8 @@
   --sidebar-ring: #8c7e6a;
   --tk-container: 1280px;
   --tk-container-wide: 1440px;
-  --tk-page-gap: clamp(3rem, 7vw, 6rem);
-  --tk-section-gap: clamp(2.25rem, 5vw, 4.5rem);
+  --tk-page-gap: 5rem;
+  --tk-section-gap: 4rem;
   --tk-radius: 0.5rem;
 }
 
@@ -188,23 +188,23 @@
 
 @layer utilities {
   .section-padding {
-    @apply py-12 md:py-16 lg:py-20;
+    @apply py-12 md:py-14 lg:py-16;
   }
 
   /** Tighter rhythm for long landing pages (e.g. home) so sections feel connected */
   .section-padding-tight {
-    @apply py-10 md:py-12 lg:py-14;
+    @apply py-9 md:py-11 lg:py-12;
   }
   .hero-padding {
-    @apply pt-10 pb-12 md:pt-14 md:pb-14 lg:pt-16 lg:pb-16;
+    @apply pt-10 pb-11 md:pt-12 md:pb-12 lg:pt-14 lg:pb-14;
   }
 
   .tk-section {
-    @apply py-12 md:py-16 lg:py-20;
+    @apply py-12 md:py-14 lg:py-16;
   }
 
   .tk-section-tight {
-    @apply py-10 md:py-12 lg:py-14;
+    @apply py-9 md:py-11 lg:py-12;
   }
 
   .tk-section-border {
@@ -212,11 +212,11 @@
   }
 
   .tk-page-title {
-    @apply text-balance text-4xl leading-[1.05] tracking-[0.005em] sm:text-5xl lg:text-6xl;
+    @apply text-balance text-4xl leading-[1.04] tracking-[0.005em] sm:text-5xl lg:text-[3.5rem];
   }
 
   .tk-section-title {
-    @apply text-balance text-2xl leading-tight tracking-[0.005em] md:text-3xl lg:text-4xl;
+    @apply text-balance text-2xl leading-tight tracking-[0.005em] md:text-3xl lg:text-[2.25rem];
   }
 
   .tk-card-title {
@@ -224,11 +224,11 @@
   }
 
   .tk-lead {
-    @apply max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base;
+    @apply max-w-2xl text-base leading-relaxed text-muted-foreground;
   }
 
   .tk-body {
-    @apply text-sm leading-relaxed text-muted-foreground md:text-base;
+    @apply text-base leading-relaxed text-muted-foreground;
   }
 
   .tk-eyebrow {
@@ -245,6 +245,30 @@
 
   .tk-image-frame {
     @apply overflow-hidden rounded-md border border-border/70 bg-muted;
+  }
+
+  .tk-page-hero {
+    @apply container relative pt-7 pb-9 md:pt-8 md:pb-10 lg:pt-9 lg:pb-12;
+  }
+
+  .tk-section-header {
+    @apply mb-7 grid gap-5 md:mb-8;
+  }
+
+  .tk-card-grid {
+    @apply grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-3;
+  }
+
+  .tk-metadata-grid {
+    @apply grid gap-4 rounded-md border border-border/70 bg-card/25 p-4 md:p-5;
+  }
+
+  .tk-meta-value {
+    @apply mt-1.5 text-sm font-medium leading-snug text-foreground md:text-base;
+  }
+
+  .tk-panel-link {
+    @apply rounded-sm outline-none transition-colors focus-visible:ring-2 focus-visible:ring-ring/45 focus-visible:ring-offset-2;
   }
 }
 
